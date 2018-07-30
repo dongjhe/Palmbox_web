@@ -203,12 +203,12 @@ template {
 }
 
 html {
-  font-family: "微軟正黑體", "Century Gothic", Arial, Helvetica, "Microsoft JhengHei", sans-serif, "Apple LiGothic Medium", "PMingLiU";
+  font-family: '微軟正黑體', 'Century Gothic', Arial, Helvetica, 'Microsoft JhengHei', sans-serif, 'Apple LiGothic Medium', 'PMingLiU';
   height: 100%;
   line-height: 1.5;
 }
 
-input[type=button] {
+input[type='button'] {
   cursor: pointer;
   outline: 0;
   border: none;
@@ -263,7 +263,7 @@ input[type=button] {
 }
 
 #gotop span {
-  content: "";
+  content: '';
   display: block;
   width: 60%;
   height: 4px;
@@ -274,7 +274,7 @@ input[type=button] {
 }
 
 #gotop span:before, #gotop span:after {
-  content: "";
+  content: '';
   display: block;
   width: 70%;
   height: 4px;
@@ -311,6 +311,7 @@ input[type=button] {
   padding-bottom: 5px;
   padding-left: 5px;
   border-radius: 15px;
+  z-index: 99;
 }
 
 #mess > a {
@@ -442,11 +443,11 @@ header nav > div a {
 }
 
 header nav > div a::after {
-  content: "";
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   position: absolute;
@@ -487,7 +488,7 @@ header nav .user_name > a::before {
   position: absolute;
   top: 20px;
   right: -5px;
-  content: " ";
+  content: ' ';
   display: block;
   width: 0;
   height: 0;
@@ -497,8 +498,8 @@ header nav .user_name > a::before {
 }
 
 header nav .user_name > a.active::before {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-width: 0 6px 6px 6px;
   border-color: transparent transparent #000 transparent;
 }
@@ -540,7 +541,7 @@ header nav .user_more ul a:hover {
 }
 
 header nav::after {
-  content: " ";
+  content: ' ';
   display: block;
   clear: both;
 }
@@ -584,14 +585,14 @@ header nav::after {
     background-color: rgba(0, 0, 0, 0.7);
   }
   .mask {
-    -webkit-transition: background-color .3s .2s;
-    transition: background-color .3s .2s;
+    -webkit-transition: background-color 0.3s 0.2s;
+    transition: background-color 0.3s 0.2s;
   }
   #menuBtn {
-    -webkit-transition: left .3s, -webkit-transform .8s;
-    transition: left .3s, -webkit-transform .8s;
-    transition: left .3s, transform .8s;
-    transition: left .3s, transform .8s, -webkit-transform .8s;
+    -webkit-transition: left 0.3s, -webkit-transform 0.8s;
+    transition: left 0.3s, -webkit-transform 0.8s;
+    transition: left 0.3s, transform 0.8s;
+    transition: left 0.3s, transform 0.8s, -webkit-transform 0.8s;
     border-radius: 50%;
     position: fixed;
     top: 15px;
@@ -605,9 +606,9 @@ header nav::after {
   #menuBtn:after,
   #menuBtn:before,
   #menuBtn span {
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    content: "";
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    content: '';
     display: block;
     width: 40%;
     height: 3px;
@@ -627,8 +628,8 @@ header nav::after {
     margin-left: auto;
   }
   header nav {
-    -webkit-transition: left .3s;
-    transition: left .3s;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: -webkit-box;
@@ -713,6 +714,15 @@ main .main_container {
   padding-left: 0;
 }
 
+@media (max-width: 480px) {
+  main .main_container {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
+
 main .signinbox {
   display: block;
   width: 420px;
@@ -772,11 +782,11 @@ main .signinbox .signtop a.active {
 }
 
 main .signinbox .signtop a.active::after {
-  content: "";
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   position: absolute;
@@ -846,8 +856,8 @@ main .signinbox .signcenter select {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-main .signinbox .signcenter input[type=text]:focus,
-main .signinbox .signcenter select[type=text]:focus {
+main .signinbox .signcenter input[type='text']:focus,
+main .signinbox .signcenter select[type='text']:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -910,7 +920,7 @@ main .signinbox .signcenter .inpbut input:hover {
   background-color: #8cb933;
 }
 
-main .signinbox .signcenter .inpbut input[type="checkbox"] {
+main .signinbox .signcenter .inpbut input[type='checkbox'] {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -926,16 +936,16 @@ main .signinbox .signcenter .inpbut input[type="checkbox"] {
   background-color: #fff;
   background-position: 50% 50%;
   background-size: 0 0;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   outline: 0;
 }
 
-main .signinbox .signcenter .inpbut input[type="checkbox"]:active {
+main .signinbox .signcenter .inpbut input[type='checkbox']:active {
   background-color: #ddd;
 }
 
-main .signinbox .signcenter .inpbut input[type="checkbox"]:checked {
+main .signinbox .signcenter .inpbut input[type='checkbox']:checked {
   background-size: 100% 100%;
 }
 
@@ -971,7 +981,7 @@ main .signinbox .signcenter .user_phone p {
 main .signinbox .signcenter .user_phone p::after, main .signinbox .signcenter .user_phone p::before {
   position: absolute;
   top: 0;
-  content: "";
+  content: '';
   background-color: #f0fbba;
   width: 50%;
   height: 100%;
@@ -1023,7 +1033,7 @@ main .signinbox .signbottom > div .facebook_login:hover {
 }
 
 main .signinbox .signbottom > div .google_login {
-  background-color: #EE4E3D;
+  background-color: #ee4e3d;
 }
 
 main .signinbox .signbottom > div .google_login:hover {
@@ -1042,30 +1052,239 @@ main .deliverybox {
   overflow: hidden;
 }
 
-main .deliverybox h1 {
+main .deliverybox .deliverytop {
+  overflow: hidden;
+}
+
+main .deliverybox .deliverytop > div {
+  display: inline-block;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
   margin-top: 0;
-  margin-right: 0;
+  margin-right: auto;
   margin-bottom: 0;
-  margin-left: 0;
+  margin-left: auto;
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .deliverytop > div {
+    display: block;
+  }
+}
+
+main .deliverybox .deliverytop h1 {
+  display: block;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
   font-size: 24px;
   line-height: 43.2px;
   font-weight: bolder;
+  text-align: center;
 }
 
-main .registerbox,
-main .itembox2 {
+main .deliverybox .deliverytop h2 {
+  display: block;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 25.2px;
+}
+
+main .deliverybox .deliverytop .togglebut {
+  float: left;
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .deliverytop .togglebut {
+    float: none;
+  }
+}
+
+main .deliverybox .deliverytop .togglebut a {
+  display: inline-block;
+  color: #fff;
+  background-color: #898989;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-top: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: 14px;
+  line-height: 25.2px;
+}
+
+main .deliverybox .deliverytop .togglebut a:hover {
+  background-color: #ff8400;
+}
+
+main .deliverybox .deliverytop .togglebut a.active {
+  background-color: #ff8400;
+}
+
+main .deliverybox .deliverytop .phonenum {
+  float: right;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(137, 137, 137, 0.6);
+  border-radius: 30px;
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .deliverytop .phonenum {
+    float: none;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+}
+
+main .deliverybox .deliverycenter {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .deliverycenter {
+    margin-top: 5%;
+  }
+}
+
+main .deliverybox .deliverycenter > div {
+  width: 30%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px solid #898989;
+  margin-bottom: 3%;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+main .deliverybox .deliverycenter > div:hover {
+  -webkit-transform: translate(0, -5px);
+          transform: translate(0, -5px);
+  -webkit-box-shadow: 0 2px 8px #bebebe;
+          box-shadow: 0 2px 8px #bebebe;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .deliverycenter > div {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .deliverycenter > div {
+    width: 100%;
+  }
+}
+
+main .deliverybox .deliverycenter .information_top {
+  border-bottom: 2px solid #898989;
+  background-color: #fbfaf7;
+}
+
+main .deliverybox .deliverycenter .information_top h6 {
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 25.2px;
+}
+
+main .deliverybox .deliverycenter .information_top h6.pickupcode {
+  color: #fff;
+  background-color: #ff8400;
+}
+
+main .deliverybox .deliverycenter .informationbot {
+  font-size: 14px;
+  line-height: 25.2px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
+main .deliverybox .deliverycenter .informationbot ul li {
+  position: relative;
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+}
+
+main .deliverybox .deliverycenter .informationbot ul li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid #898989;
+  background-color: #fff;
+  z-index: 1;
+}
+
+main .deliverybox .deliverycenter .informationbot ul li::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  width: 4px;
+  height: 100%;
+  background-color: #898989;
+}
+
+main .deliverybox .deliverycenter .informationbot ul li:last-child::after {
   display: none;
 }
 
-main #aa {
-  margin-top: 2px;
-  margin-right: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
+main .deliverybox .deliverycenter .informationbot ul li.active::before {
+  background-color: #898989;
+}
+
+main .deliverybox .deliverycenter .informationbot ul li span {
+  display: block;
+  font-size: 12px;
+  line-height: 21.6px;
+}
+
+main .registerbox, main .itembox2, main #unfetched {
+  display: none;
 }
 
 footer {
@@ -1284,7 +1503,7 @@ footer p {
 }
 
 .alertpopup .closeclose:before, .alertpopup .closeclose:after {
-  content: "";
+  content: '';
   display: block;
   width: 80%;
   height: 5px;

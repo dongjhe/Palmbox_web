@@ -38,7 +38,6 @@
 
 
     // 浮層打開關
-
     $('#Courier').on('click', function() {
         $('html body').css('overflow-y', 'hidden')
         $('#Courier_alert').toggleClass('ishow');
@@ -69,6 +68,19 @@
     })
     $('#forget').on('click', function() {
         $('.itembox2').css('display', 'block').siblings('.itembox1').css('display', 'none')
+    })
+
+    // 配送進度查詢配送中和未取件按鈕功能
+    $('.togglebut a').on('click',function () {
+        let index = $(this).index()
+        $(this).addClass('active').siblings('a').removeClass('active')
+        if (index === 0) {
+            $('#distribution').css('display', 'flex')
+            $('#unfetched').css('display', 'none')
+        } else {
+            $('#distribution').css('display', 'none')
+            $('#unfetched').css('display', 'flex')
+        }
     })
 
 
