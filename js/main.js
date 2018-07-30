@@ -4,8 +4,19 @@
 // })
 
 // JS
-(function() {
 
+// 生日
+$(function () {
+    $.ms_DatePicker({
+        YearSelector: ".sel_year",
+        MonthSelector: ".sel_month",
+        DaySelector: ".sel_day"
+    });
+    $.ms_DatePicker();
+}); 
+
+(function() {
+    
     //設定捲軸大於300px才顯示GOTOP
     $(window).scroll(function() {
         if (jQuery(this).scrollTop() > 300) {
@@ -82,6 +93,8 @@
             $('#unfetched').css('display', 'flex')
         }
     })
+
+
 
 
 })()
