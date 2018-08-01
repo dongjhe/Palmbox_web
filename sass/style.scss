@@ -498,13 +498,9 @@ main {
         width: 100%;
         @include margin_set(5%, auto, 5%, auto);
         > div {
-          @include margin_set(0, 0, 15px, 0);
-          @media (max-width: 768px) {
-            @include margin_set(0, 0, 0, 0);
-          }        
+          @include margin_set(0, 0, 15px, 0);  
         }
       }
-
       .containerleft,.containerright,.containerbottom{
         display: inline-block;
         width: 48%;

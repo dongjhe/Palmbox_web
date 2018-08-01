@@ -993,15 +993,6 @@ main .signinbox .signcenter form > div, main .signinbox .membercenter form > div
   margin-left: 0;
 }
 
-@media (max-width: 768px) {
-  main .signinbox .signcenter form > div, main .signinbox .membercenter form > div {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-  }
-}
-
 main .signinbox .signcenter .containerleft, main .signinbox .signcenter .containerright, main .signinbox .signcenter .containerbottom, main .signinbox .membercenter .containerleft, main .signinbox .membercenter .containerright, main .signinbox .membercenter .containerbottom {
   display: inline-block;
   width: 48%;
