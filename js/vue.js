@@ -1,5 +1,5 @@
 var app = new Vue({
-  el: '.signcenter',
+  el: '.main_container',
   data: {
     list: [
       { id: 'DHL' },
@@ -45,14 +45,6 @@ var app = new Vue({
       { number: '80~100' },
       { number: ' 100以上' }
     ],
-
-  },
-  methods: {}
-})
-
-var app1 = new Vue({
-  el: '.membercenter',
-  data: {
     edulev: [
       { level: '國中（含）以下' },
       { level: '高中(職)' },
@@ -60,19 +52,20 @@ var app1 = new Vue({
       { level: '研究所（含）以上' }
     ],
     careers: [
-      { job: '學生'},
-      { job: '軍公教'},
-      { job: '服務業'},
-      { job: '金融業'},
-      { job: '資訊／科技'},
-      { job: '傳播/廣告/設計'},
-      { job: '藝文'},
-      { job: '自由業'},
-      { job: '醫療'},
-      { job: '製造業'},
-      { job: '農林漁牧'},
-      { job: '家管／退休'},
-      { job: '其他'}
+      { job: '學生' },
+      { job: '軍公教' },
+      { job: '服務業' },
+      { job: '金融業' },
+      { job: '資訊／科技' },
+      { job: '傳播/廣告/設計' },
+      { job: '藝文' },
+      { job: '自由業' },
+      { job: '醫療' },
+      { job: '製造業' },
+      { job: '農林漁牧' },
+      { job: '家管／退休' },
+      { job: '其他' }
     ]
-  }
+  },
+  methods: {}
 })

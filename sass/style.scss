@@ -53,6 +53,7 @@ select{
   justify-content: center;
   transition: transform 450ms ease;
   transform: translateY(300%);
+  z-index: 99;
   cursor: pointer;
   span {
     content: '';
@@ -99,6 +100,10 @@ select{
   @include padding_set(5px, 5px, 5px, 5px);
   border-radius: 15px;
   z-index: 99;
+  @media (max-width:480px) {
+    width: 50px;
+  }
+
   > a {
     display: block;
     padding: 0;
@@ -115,6 +120,10 @@ select{
       background-repeat: no-repeat;
       background-position: top;
       background-size: contain;
+      @media (max-width:480px) {
+        width: 40px;
+        height: 40px;
+      }
     }
     .line_mess {
       background-image: url(../images/line_w.png);
@@ -454,38 +463,93 @@ main {
         font-weight: bolder;
       }
     }
+
+    .click_bt{
+      float: right;
+      margin-bottom: 20px;
+      width: 100%;
+      @media (max-width:768px) {
+        margin-bottom: 10px;
+      }
+      a{
+        float: right;
+        @include font_size(14px);
+        @include padding_set(5px, 10px, 5px, 10px);
+        @include margin_set(0, 0, 0, 20px);
+        color: $color_orange;
+        // background-color: $color_orange;
+        border: 2px solid $color_orange;
+        border-radius: 20px;
+        @media (max-width:480px) {
+          @include margin_set(0, 0, 0, 2%);
+        }
+        &:hover,&.active{
+        color: $color_white;
+        background-color: $color_orange;
+        }
+
+      }
+    }
+
     .signcenter,.membercenter {
+      clear: both;
       form{
         display: block;
         width: 100%;
         @include margin_set(5%, auto, 5%, auto);
         > div {
           @include margin_set(0, 0, 15px, 0);
+          @media (max-width: 768px) {
+            @include margin_set(0, 0, 0, 0);
+          }        
         }
       }
-      .containerleft,.containerright{
+
+      .containerleft,.containerright,.containerbottom{
         display: inline-block;
         width: 48%;
+        @media (max-width: 768px) {
+          float: none;
+          width: 100%;
+        }        
         > div {
-          @include margin_set(0, 0, 15px, 0);
+          @include margin_set(0, 0, 15px, 0); 
         }
       }
       .containerleft{
         float: left;
+      }
+      .containerright{
+        float: right;
         position: relative;
         &::after{
           position: absolute;
-          right: -15px;
+          left: -15px;
           top:0;
           content: "";
           height: 100%;
           width: 1px;
           background-color:rgba($text_color,0.3);
         }
+        .general,.delivery,.community{
+          >div{
+            @include margin_set(0, 0, 15px, 0);
+          }
+        }
+        .delivery,.community{
+          display: none;
+        } 
+
       }
-      .containerright{
-        float: right;
+      .containerbottom{
+        display:inline-block;
+        margin-top: -15px;
+        clear: both;
+        @media (max-width: 480px) {
+          margin-top:0;
+        }  
       }
+
       label {
         display: block;
         margin-bottom: 3px;
@@ -538,12 +602,16 @@ main {
           color: $color_orange;
         }
       }
-      .memberpassword,.memberphone,.birthday{
-        .box{
+
+      .memberpassword,.memberphone,.e_invoice,.birthday,.address{
+        .box,.box1{
           display: flex;
           justify-content:space-between;
-          align-items: center;
+          align-items: center;          
         }
+      }
+
+      .memberpassword,.memberphone,.e_invoice{
         input{
           &:nth-of-type(1){
             width: 75%;
@@ -567,7 +635,34 @@ main {
         }
       }
 
+      .address >input{
+        margin-top: 8px;
+      }
 
+      .quick_login{
+        >div{
+          margin-bottom: 8px;
+          input {
+            width: 100%;
+            @include font_size(14px);
+            @include padding_set(5px, 8px, 5px, 8px);
+            color: $color_white;
+            border: none;
+          }
+          .facebook_login {
+            background-color: #3b5998;
+            &:hover {
+              background-color: #314c88;
+            }
+          }
+          .google_login {
+            background-color: #ee4e3d;
+            &:hover {
+              background-color: rgb(223, 59, 41);
+            }
+          }
+        }
+      }      
       
       .inpbut {
         > div {
@@ -584,6 +679,9 @@ main {
         .memcheck{
           width: 60%;
           margin: 0 auto;
+          @media (max-width: 768px) {
+            width: 100%;
+          }  
         }
         input[type='checkbox'] {
           display: inline-block;
@@ -674,6 +772,9 @@ main {
   }
   .mebox{
     width: 700px;
+    @media (max-width: 980px) {
+      width: 100%;
+    }
   }
   .deliverybox {
     display: block;
