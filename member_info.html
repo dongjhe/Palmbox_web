@@ -71,40 +71,167 @@
         </header>
         <main>
             <div class="main_container">
-                <div class="signinbox">
-                    <div class="courier">
-                        <div class="signtop">
-                            <h1>成為掌櫃快遞員</h1>
+                <div class="signinbox mebox">
+                    <div class="memberbox">
+                        <div class="membertop">
+                            <h1>編輯會員資料</h1>
                         </div>
-                        <div class="signcenter">
+                        <div class="click_bt">
+                            <a class="active" href="javascript:;">一般用戶</a>
+                            <a href="javascript:;">快遞員專區</a>
+                            <a href="javascript:;">社區專區</a>
+                        </div>
+                        <div class="membercenter">
                             <form action="">
-                                <div class="courier_name">
-                                    <label for="couriername">姓名</label>
-                                    <input type="text" id="couriername" placeholder="請輸入姓名">
+                                <div class="containerleft">
+                                    <div class="membername">
+                                        <label for="membername">姓名</label>
+                                        <input type="text" id="membername" placeholder="請輸入姓名">
+                                    </div>
+                                    <div class="memberpassword">
+                                        <label for="memberpassword">密碼</label>
+                                        <div class="box">
+                                            <input type="password" id="memberpassword" value="**********" disabled>
+                                            <input type="button" value="修改">
+                                        </div>
+                                    </div>
+                                    <div class="memberphone">
+                                        <label for="memberphone">手機號碼</label>
+                                        <div class="box">
+                                            <input type="text" id="memberphone" value="**********" maxlength="10" disabled>
+                                            <input type="button" value="修改">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="logistics">
-                                    <label for="logistics">物流公司</label>
-                                    <select name="" id="logistics">
-                                        <option value="" selected disabled hidden>請選擇物流公司</option>
-                                        <option v-for="item in list" :value="item.id">{{item.id}}</option>
-                                    </select>
-                                </div>
-                                <div class="servicity">
-                                    <label for="servicity">服務地區</label>
-                                    <select name="" id="servicity">
-                                        <option value="" selected disabled hidden>請選擇服務地區</option>
-                                        <option v-for="city in citys" :value="city.area">{{city.area}}</option>
-                                    </select>
-                                </div>
-                                <div class="inpbut">
-                                    <input type="button" value="確認">
 
+                                <div class="containerright">
+                                    <div class="gender">
+                                        <label for="gender">性別</label>
+                                        <div class="form__radio">
+                                            <input type="radio" id="male" name="gender" checked>
+                                            <label for="male">男</label>
+                                            <span class="radio"></span>
+                                        </div>
+                                        <div class="form__radio">
+                                            <input type="radio" id="female" name="gender">
+                                            <label for="female">女</label>
+                                            <span class="radio"></span>
+                                        </div>
+                                    </div>
+                                    <div class="birthday">
+                                        <label for="birthday">生日</label>
+                                        <div class="box">
+                                            <select id="sel_year"></select>年
+                                            <select id="sel_month"></select>月
+                                            <select id="sel_day"></select>日
+                                        </div>
+                                    </div>
+
+                                    <div class="click_box">
+                                        <!-- 一般會員 -->
+                                        <div class="general">
+                                            <div class="education">
+                                                <label for="education">教育程度</label>
+                                                <select name="" id="education">
+                                                    <option value="" selected disabled hidden>請選擇教育程度</option>
+                                                    <option v-for="edu in edulev">{{edu.level}}</option>
+                                                </select>
+                                            </div>
+                                            <div class="career">
+                                                <label for="career">職業</label>
+                                                <select name="" id="career">
+                                                    <option value="" selected disabled hidden>請選擇職業</option>
+                                                    <option v-for="career in careers">{{career.job}}</option>
+                                                </select>
+                                            </div>
+                                            <div class="email">
+                                                <label for="email">E-mail</label>
+                                                <input type="text" id="email" placeholder="請輸入E-mail">
+                                            </div>
+                                            <div class="address">
+                                                <label for="address">地址</label>
+                                                <div class="box1 my-selector-c">
+                                                    <select class="county"></select>
+                                                    <select class="district"></select>
+                                                    <input type="text" class="zipcode">
+                                                </div>
+                                                <input type="text" name="地址" id="">
+                                            </div>
+                                        </div>
+                                        <!-- 快遞員會員 -->
+                                        <div class="delivery">
+                                            <div class="logistics">
+                                                <label for="logistics">物流公司</label>
+                                                <select name="" id="logistics">
+                                                    <option value="" selected disabled hidden>請選擇物流公司</option>
+                                                    <option v-for="item in list" :value="item.id">{{item.id}}</option>
+                                                </select>
+                                            </div>
+                                            <div class="servicity">
+                                                <label for="servicity">服務地區</label>
+                                                <select name="" id="servicity">
+                                                    <option value="" selected disabled hidden>請選擇服務地區</option>
+                                                    <option v-for="city in citys" :value="city.area">{{city.area}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- 社區會員 -->
+                                        <div class="community">
+                                            <div class="property">
+                                                <label for="property">物業公司</label>
+                                                <input type="text" id="property" placeholder="請輸入物業公司">
+                                            </div>
+                                            <div class="community_name">
+                                                <label for="communityname">社區名稱</label>
+                                                <input type="text" id="communityname" placeholder="請輸入社區名稱">
+                                            </div>
+                                            <div class="servicity">
+                                                <label for="com_servicity">服務地區</label>
+                                                <select name="" id="com_servicity">
+                                                    <option value="" selected disabled hidden>請選擇服務地區</option>
+                                                    <option v-for="city in citys" :value="city.area">{{city.area}}</option>
+                                                </select>
+                                            </div>
+                                            <div class="household">
+                                                <label for="household">住戶人數</label>
+                                                <select name="" id="household">
+                                                    <option value="" selected disabled hidden>請選擇住戶人數</option>
+                                                    <option v-for="peo in people" :value="peo.number">{{peo.number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="containerbottom">
+                                    <div class="e_invoice">
+                                        <label for="e_invoice">電子發票歸戶</label>
+                                        <div class="box">
+                                            <input type="text" id="e_invoice" value="" maxlength="8">
+                                            <input type="button" value="新增">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="quick_login">
+                                        <label for="quick_login">快速登入連結綁定</label>
+                                        <div>
+                                            <input class="facebook_login" type="button" value="建立Facebook帳號連結">
+                                        </div>
+                                        <div>
+                                            <input class="google_login" type="button" value="建立Google帳號連結">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inpbut">
+                                    <input class="memcheck" type="button" value="確定">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-
             </div>
         </main>
         <footer>
