@@ -110,19 +110,16 @@ $(window).on('load', function() {
         })
 
         // 配送進度查詢配送中和未取件按鈕功能
-        $('.togglebut a').on('click', function() {
-        let index = $(this).index()
-        $(this)
-            .addClass('active')
-            .siblings('a')
-            .removeClass('active')
-        if (index === 0) {
-            $('#distribution').css('display', 'flex')
-            $('#unfetched').css('display', 'none')
-        } else {
-            $('#distribution').css('display', 'none')
-            $('#unfetched').css('display', 'flex')
-        }
+        $('.deliverytop .togglebut a').on('click', function() {
+            let index = $(this).index()
+            $(this).addClass('active').siblings('a').removeClass('active')
+            if (index === 0) {
+                $('#distribution').css('display', 'flex')
+                $('#unfetched').css('display', 'none')
+            } else {
+                $('#distribution').css('display', 'none')
+                $('#unfetched').css('display', 'flex')
+            }
         })
 
         // 會員使用者狀態切換
