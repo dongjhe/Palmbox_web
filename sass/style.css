@@ -1385,17 +1385,17 @@ main .deliverybox, main .courier_access {
   background-color: #fff;
   padding-top: 2%;
   padding-right: 3%;
-  padding-bottom: 3%;
+  padding-bottom: 0;
   padding-left: 3%;
   margin-bottom: 5%;
   overflow: hidden;
 }
 
-main .deliverybox .deliverytop, main .deliverybox .courierytop, main .courier_access .deliverytop, main .courier_access .courierytop {
+main .deliverybox .deliverytop, main .deliverybox .couriertop, main .courier_access .deliverytop, main .courier_access .couriertop {
   overflow: hidden;
 }
 
-main .deliverybox .deliverytop > div, main .deliverybox .courierytop > div, main .courier_access .deliverytop > div, main .courier_access .courierytop > div {
+main .deliverybox .deliverytop > div, main .deliverybox .couriertop > div, main .courier_access .deliverytop > div, main .courier_access .couriertop > div {
   display: inline-block;
   padding-top: 0;
   padding-right: 0;
@@ -1408,12 +1408,12 @@ main .deliverybox .deliverytop > div, main .deliverybox .courierytop > div, main
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .deliverytop > div, main .deliverybox .courierytop > div, main .courier_access .deliverytop > div, main .courier_access .courierytop > div {
+  main .deliverybox .deliverytop > div, main .deliverybox .couriertop > div, main .courier_access .deliverytop > div, main .courier_access .couriertop > div {
     display: block;
   }
 }
 
-main .deliverybox .deliverytop h1, main .deliverybox .courierytop h1, main .courier_access .deliverytop h1, main .courier_access .courierytop h1 {
+main .deliverybox .deliverytop h1, main .deliverybox .couriertop h1, main .courier_access .deliverytop h1, main .courier_access .couriertop h1 {
   display: block;
   padding-top: 0;
   padding-right: 0;
@@ -1429,7 +1429,7 @@ main .deliverybox .deliverytop h1, main .deliverybox .courierytop h1, main .cour
   text-align: center;
 }
 
-main .deliverybox .deliverytop h2, main .deliverybox .courierytop h2, main .courier_access .deliverytop h2, main .courier_access .courierytop h2 {
+main .deliverybox .deliverytop h2, main .deliverybox .couriertop h2, main .courier_access .deliverytop h2, main .courier_access .couriertop h2 {
   display: block;
   padding-top: 0;
   padding-right: 0;
@@ -1444,12 +1444,12 @@ main .deliverybox .deliverytop h2, main .deliverybox .courierytop h2, main .cour
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .deliverytop .togglebut, main .deliverybox .courierytop .togglebut, main .courier_access .deliverytop .togglebut, main .courier_access .courierytop .togglebut {
+  main .deliverybox .deliverytop .togglebut, main .deliverybox .couriertop .togglebut, main .courier_access .deliverytop .togglebut, main .courier_access .couriertop .togglebut {
     float: none;
   }
 }
 
-main .deliverybox .deliverytop .togglebut a, main .deliverybox .courierytop .togglebut a, main .courier_access .deliverytop .togglebut a, main .courier_access .courierytop .togglebut a {
+main .deliverybox .deliverytop .togglebut a, main .deliverybox .couriertop .togglebut a, main .courier_access .deliverytop .togglebut a, main .courier_access .couriertop .togglebut a {
   display: inline-block;
   color: #fff;
   background-color: #898989;
@@ -1465,15 +1465,15 @@ main .deliverybox .deliverytop .togglebut a, main .deliverybox .courierytop .tog
   line-height: 25.2px;
 }
 
-main .deliverybox .deliverytop .togglebut a:hover, main .deliverybox .courierytop .togglebut a:hover, main .courier_access .deliverytop .togglebut a:hover, main .courier_access .courierytop .togglebut a:hover {
+main .deliverybox .deliverytop .togglebut a:hover, main .deliverybox .couriertop .togglebut a:hover, main .courier_access .deliverytop .togglebut a:hover, main .courier_access .couriertop .togglebut a:hover {
   background-color: #ff8400;
 }
 
-main .deliverybox .deliverytop .togglebut a.active, main .deliverybox .courierytop .togglebut a.active, main .courier_access .deliverytop .togglebut a.active, main .courier_access .courierytop .togglebut a.active {
+main .deliverybox .deliverytop .togglebut a.active, main .deliverybox .couriertop .togglebut a.active, main .courier_access .deliverytop .togglebut a.active, main .courier_access .couriertop .togglebut a.active {
   background-color: #ff8400;
 }
 
-main .deliverybox .deliverytop .phonenum, main .deliverybox .courierytop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .courierytop .phonenum {
+main .deliverybox .deliverytop .phonenum, main .deliverybox .couriertop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .couriertop .phonenum {
   float: right;
   padding-top: 5px;
   padding-right: 10px;
@@ -1485,14 +1485,14 @@ main .deliverybox .deliverytop .phonenum, main .deliverybox .courierytop .phonen
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .deliverytop .phonenum, main .deliverybox .courierytop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .courierytop .phonenum {
+  main .deliverybox .deliverytop .phonenum, main .deliverybox .couriertop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .couriertop .phonenum {
     float: none;
     text-align: center;
     margin-bottom: 5%;
   }
 }
 
-main .deliverybox .courierytop form, main .courier_access .courierytop form {
+main .deliverybox .couriertop form, main .courier_access .couriertop form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1500,12 +1500,13 @@ main .deliverybox .courierytop form, main .courier_access .courierytop form {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #898989;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierytop form, main .courier_access .courierytop form {
+  main .deliverybox .couriertop form, main .courier_access .couriertop form {
     display: block;
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
@@ -1513,16 +1514,16 @@ main .deliverybox .courierytop form, main .courier_access .courierytop form {
   }
 }
 
-main .deliverybox .courierytop label, main .courier_access .courierytop label {
+main .deliverybox .couriertop label, main .courier_access .couriertop label {
   display: block;
   margin-bottom: 3px;
   font-size: 14px;
   line-height: 25.2px;
 }
 
-main .deliverybox .courierytop input,
-main .deliverybox .courierytop select, main .courier_access .courierytop input,
-main .courier_access .courierytop select {
+main .deliverybox .couriertop input,
+main .deliverybox .couriertop select, main .courier_access .couriertop input,
+main .courier_access .couriertop select {
   display: block;
   width: 100%;
   padding-top: 5px;
@@ -1542,9 +1543,9 @@ main .courier_access .courierytop select {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-main .deliverybox .courierytop input[type='text']:focus,
-main .deliverybox .courierytop select[type='text']:focus, main .courier_access .courierytop input[type='text']:focus,
-main .courier_access .courierytop select[type='text']:focus {
+main .deliverybox .couriertop input[type='text']:focus,
+main .deliverybox .couriertop select[type='text']:focus, main .courier_access .couriertop input[type='text']:focus,
+main .courier_access .couriertop select[type='text']:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -1553,7 +1554,7 @@ main .courier_access .courierytop select[type='text']:focus {
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-main .deliverybox .courierytop .inquirebox, main .courier_access .courierytop .inquirebox {
+main .deliverybox .couriertop .inquirebox, main .courier_access .couriertop .inquirebox {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1564,7 +1565,7 @@ main .deliverybox .courierytop .inquirebox, main .courier_access .courierytop .i
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierytop .inquirebox, main .courier_access .courierytop .inquirebox {
+  main .deliverybox .couriertop .inquirebox, main .courier_access .couriertop .inquirebox {
     display: block;
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
@@ -1573,7 +1574,7 @@ main .deliverybox .courierytop .inquirebox, main .courier_access .courierytop .i
   }
 }
 
-main .deliverybox .courierytop .inquirebox > div, main .courier_access .courierytop .inquirebox > div {
+main .deliverybox .couriertop .inquirebox > div, main .courier_access .couriertop .inquirebox > div {
   padding-top: 0;
   padding-right: 5px;
   padding-bottom: 0;
@@ -1582,7 +1583,7 @@ main .deliverybox .courierytop .inquirebox > div, main .courier_access .couriery
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierytop .inquirebox > div, main .courier_access .courierytop .inquirebox > div {
+  main .deliverybox .couriertop .inquirebox > div, main .courier_access .couriertop .inquirebox > div {
     width: 100%;
     padding-top: 0;
     padding-right: 0;
@@ -1591,17 +1592,17 @@ main .deliverybox .courierytop .inquirebox > div, main .courier_access .couriery
   }
 }
 
-main .deliverybox .courierytop .inquirebox > div:nth-of-type(3), main .deliverybox .courierytop .inquirebox > div:nth-of-type(4), main .courier_access .courierytop .inquirebox > div:nth-of-type(3), main .courier_access .courierytop .inquirebox > div:nth-of-type(4) {
+main .deliverybox .couriertop .inquirebox > div:nth-of-type(3), main .deliverybox .couriertop .inquirebox > div:nth-of-type(4), main .courier_access .couriertop .inquirebox > div:nth-of-type(3), main .courier_access .couriertop .inquirebox > div:nth-of-type(4) {
   width: 100px;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierytop .inquirebox > div:nth-of-type(3), main .deliverybox .courierytop .inquirebox > div:nth-of-type(4), main .courier_access .courierytop .inquirebox > div:nth-of-type(3), main .courier_access .courierytop .inquirebox > div:nth-of-type(4) {
+  main .deliverybox .couriertop .inquirebox > div:nth-of-type(3), main .deliverybox .couriertop .inquirebox > div:nth-of-type(4), main .courier_access .couriertop .inquirebox > div:nth-of-type(3), main .courier_access .couriertop .inquirebox > div:nth-of-type(4) {
     width: 100%;
   }
 }
 
-main .deliverybox .courierytop .inquirebox > div:nth-of-type(3) input, main .deliverybox .courierytop .inquirebox > div:nth-of-type(4) input, main .courier_access .courierytop .inquirebox > div:nth-of-type(3) input, main .courier_access .courierytop .inquirebox > div:nth-of-type(4) input {
+main .deliverybox .couriertop .inquirebox > div:nth-of-type(3) input, main .deliverybox .couriertop .inquirebox > div:nth-of-type(4) input, main .courier_access .couriertop .inquirebox > div:nth-of-type(3) input, main .courier_access .couriertop .inquirebox > div:nth-of-type(4) input {
   margin-top: 28px;
   color: #fff;
   background-color: #9FCC42;
@@ -1609,16 +1610,16 @@ main .deliverybox .courierytop .inquirebox > div:nth-of-type(3) input, main .del
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierytop .inquirebox > div:nth-of-type(3) input, main .deliverybox .courierytop .inquirebox > div:nth-of-type(4) input, main .courier_access .courierytop .inquirebox > div:nth-of-type(3) input, main .courier_access .courierytop .inquirebox > div:nth-of-type(4) input {
+  main .deliverybox .couriertop .inquirebox > div:nth-of-type(3) input, main .deliverybox .couriertop .inquirebox > div:nth-of-type(4) input, main .courier_access .couriertop .inquirebox > div:nth-of-type(3) input, main .courier_access .couriertop .inquirebox > div:nth-of-type(4) input {
     margin-top: 5%;
   }
 }
 
-main .deliverybox .courierytop .inquirebox > div:nth-of-type(3) input:hover, main .deliverybox .courierytop .inquirebox > div:nth-of-type(4) input:hover, main .courier_access .courierytop .inquirebox > div:nth-of-type(3) input:hover, main .courier_access .courierytop .inquirebox > div:nth-of-type(4) input:hover {
+main .deliverybox .couriertop .inquirebox > div:nth-of-type(3) input:hover, main .deliverybox .couriertop .inquirebox > div:nth-of-type(4) input:hover, main .courier_access .couriertop .inquirebox > div:nth-of-type(3) input:hover, main .courier_access .couriertop .inquirebox > div:nth-of-type(4) input:hover {
   background-color: #8cb933;
 }
 
-main .deliverybox .courierytop .excel_but, main .courier_access .courierytop .excel_but {
+main .deliverybox .couriertop .excel_but, main .courier_access .couriertop .excel_but {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -1627,12 +1628,12 @@ main .deliverybox .courierytop .excel_but, main .courier_access .courierytop .ex
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .courierytop .excel_but, main .courier_access .courierytop .excel_but {
+  main .deliverybox .couriertop .excel_but, main .courier_access .couriertop .excel_but {
     margin-top: 5%;
   }
 }
 
-main .deliverybox .courierytop .excel_but input, main .courier_access .courierytop .excel_but input {
+main .deliverybox .couriertop .excel_but input, main .courier_access .couriertop .excel_but input {
   color: #fff;
   background-color: #9FCC42;
   border: none;
@@ -1644,14 +1645,128 @@ main .deliverybox .courierytop .excel_but input, main .courier_access .courieryt
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierytop .excel_but input, main .courier_access .courierytop .excel_but input {
+  main .deliverybox .couriertop .excel_but input, main .courier_access .couriertop .excel_but input {
     border-radius: 0.2em;
     border: 1px solid #9FCC42;
   }
 }
 
-main .deliverybox .courierytop .excel_but input:hover, main .courier_access .courierytop .excel_but input:hover {
+main .deliverybox .couriertop .excel_but input:hover, main .courier_access .couriertop .excel_but input:hover {
   background-color: #8cb933;
+}
+
+main .deliverybox .couriercontainer > table, main .courier_access .couriercontainer > table {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+
+main .deliverybox .couriercontainer > table tr, main .courier_access .couriercontainer > table tr {
+  display: table-row;
+  cursor: pointer;
+}
+
+main .deliverybox .couriercontainer > table tr:nth-child(2n+1), main .courier_access .couriercontainer > table tr:nth-child(2n+1) {
+  background-color: rgba(137, 137, 137, 0.1);
+}
+
+main .deliverybox .couriercontainer > table tr:hover, main .courier_access .couriercontainer > table tr:hover {
+  -webkit-transform: translate(0, -5px);
+          transform: translate(0, -5px);
+  -webkit-box-shadow: 0 2px 2px #bebebe;
+          box-shadow: 0 2px 2px #bebebe;
+}
+
+main .deliverybox .couriercontainer > table tr:first-child, main .courier_access .couriercontainer > table tr:first-child {
+  cursor: initial;
+}
+
+main .deliverybox .couriercontainer > table tr:first-child:hover, main .courier_access .couriercontainer > table tr:first-child:hover {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .couriercontainer > table tr th:last-child, main .deliverybox .couriercontainer > table tr td:last-child, main .courier_access .couriercontainer > table tr th:last-child, main .courier_access .couriercontainer > table tr td:last-child {
+    display: none;
+  }
+}
+
+main .deliverybox .couriercontainer > table th, main .courier_access .couriercontainer > table th {
+  background-color: #fbfaf7;
+}
+
+main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td {
+  display: table-cell;
+  margin: 0.5em 1em;
+  width: 20%;
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 25.2px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td {
+    width: 25%;
+  }
+}
+
+@media (max-width: 488px) {
+  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td {
+    font-size: 12px;
+    line-height: 21.6px;
+  }
+}
+
+main .deliverybox .courierbottom, main .courier_access .courierbottom {
+  text-align: right;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .courierbottom, main .courier_access .courierbottom {
+    text-align: center;
+  }
+}
+
+main .deliverybox .courierbottom a, main .courier_access .courierbottom a {
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-top: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
+  margin-left: 5px;
+  color: #898989;
+}
+
+@media (max-width: 488px) {
+  main .deliverybox .courierbottom a, main .courier_access .courierbottom a {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 12px;
+    line-height: 21.6px;
+  }
+}
+
+main .deliverybox .courierbottom a:hover, main .deliverybox .courierbottom a.active, main .courier_access .courierbottom a:hover, main .courier_access .courierbottom a.active {
+  color: #ff8400;
+  text-decoration: underline;
+}
+
+main .deliverybox .courierbottom a:first-child.active, main .deliverybox .courierbottom a:last-child.active, main .courier_access .courierbottom a:first-child.active, main .courier_access .courierbottom a:last-child.active {
+  color: #898989;
+  text-decoration: none;
 }
 
 main .deliverybox .deliverytop > .togglebut, main .courier_access .deliverytop > .togglebut {
@@ -1947,13 +2062,13 @@ footer p {
           align-items: center;
 }
 
-.alertpopup.ishow {
+.alertpopup.ishow, .popu_tr.ishow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.alertpopup {
+.alertpopup, .popu_tr {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1970,7 +2085,7 @@ footer p {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.alertpopup .popup_container {
+.alertpopup .popup_container, .popu_tr .popup_container {
   position: relative;
   width: 80%;
   max-width: 1200px;
@@ -1982,10 +2097,27 @@ footer p {
   padding-left: 2%;
 }
 
-.alertpopup .closeclose {
+.alertpopup .popu_tr_container, .popu_tr .popu_tr_container {
+  position: relative;
+  width: 400px;
+  max-width: 400px;
+  background-color: #fff;
+  padding-top: 3%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-left: 2%;
+}
+
+@media (max-width: 768px) {
+  .alertpopup .popu_tr_container, .popu_tr .popu_tr_container {
+    width: 80%;
+  }
+}
+
+.alertpopup .closeclose, .popu_tr .closeclose {
   position: absolute;
-  top: -30px;
-  right: -30px;
+  top: -20px;
+  right: -20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1995,15 +2127,15 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #9FCC42;
   -webkit-animation: bigsmall 1s infinite;
           animation: bigsmall 1s infinite;
 }
 
-.alertpopup .closeclose:before, .alertpopup .closeclose:after {
+.alertpopup .closeclose:before, .alertpopup .closeclose:after, .popu_tr .closeclose:before, .popu_tr .closeclose:after {
   content: '';
   display: block;
   width: 80%;
@@ -2011,14 +2143,29 @@ footer p {
   background-color: #fff;
 }
 
-.alertpopup .closeclose:before {
-  -webkit-transform: translateX(15px) rotate(45deg);
-          transform: translateX(15px) rotate(45deg);
+.alertpopup .closeclose:before, .popu_tr .closeclose:before {
+  -webkit-transform: translateX(13px) rotate(45deg);
+          transform: translateX(13px) rotate(45deg);
 }
 
-.alertpopup .closeclose:after {
-  -webkit-transform: translateX(-15px) rotate(-45deg);
-          transform: translateX(-15px) rotate(-45deg);
+.alertpopup .closeclose:after, .popu_tr .closeclose:after {
+  -webkit-transform: translateX(-13px) rotate(-45deg);
+          transform: translateX(-13px) rotate(-45deg);
+}
+
+@media (max-width: 480px) {
+  .alertpopup .closeclose, .popu_tr .closeclose {
+    width: 40px;
+    height: 40px;
+  }
+  .alertpopup .closeclose:before, .popu_tr .closeclose:before {
+    -webkit-transform: translateX(10px) rotate(45deg);
+            transform: translateX(10px) rotate(45deg);
+  }
+  .alertpopup .closeclose:after, .popu_tr .closeclose:after {
+    -webkit-transform: translateX(-10px) rotate(-45deg);
+            transform: translateX(-10px) rotate(-45deg);
+  }
 }
 
 @-webkit-keyframes bigsmall {
@@ -2051,7 +2198,7 @@ footer p {
   }
 }
 
-.alertpopup .conbox {
+.alertpopup .conbox, .popu_tr .conbox {
   height: 100%;
   text-align: justify;
   overflow-y: scroll;
@@ -2061,7 +2208,10 @@ footer p {
 .alertpopup .conbox h1,
 .alertpopup .conbox h2,
 .alertpopup .conbox h3,
-.alertpopup .conbox p {
+.alertpopup .conbox p, .popu_tr .conbox h1,
+.popu_tr .conbox h2,
+.popu_tr .conbox h3,
+.popu_tr .conbox p {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -2072,7 +2222,7 @@ footer p {
   margin-left: auto;
 }
 
-.alertpopup .conbox h1 {
+.alertpopup .conbox h1, .popu_tr .conbox h1 {
   font-size: 28px;
   line-height: 50.4px;
   font-weight: bolder;
@@ -2080,20 +2230,20 @@ footer p {
   padding-bottom: 5px;
 }
 
-.alertpopup .conbox h2 {
+.alertpopup .conbox h2, .popu_tr .conbox h2 {
   font-size: 16px;
   line-height: 28.8px;
   letter-spacing: -0.5px;
   padding-bottom: 10px;
 }
 
-.alertpopup .conbox h3 {
+.alertpopup .conbox h3, .popu_tr .conbox h3 {
   font-size: 18px;
   line-height: 32.4px;
   color: #ff8400;
 }
 
-.alertpopup .conbox ol {
+.alertpopup .conbox ol, .popu_tr .conbox ol {
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 0;
@@ -2102,11 +2252,11 @@ footer p {
   line-height: 25.2px;
 }
 
-.alertpopup .conbox ol li {
+.alertpopup .conbox ol li, .popu_tr .conbox ol li {
   margin-bottom: 5px;
 }
 
-.alertpopup .conbox ol li > ol {
+.alertpopup .conbox ol li > ol, .popu_tr .conbox ol li > ol {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -2114,11 +2264,49 @@ footer p {
   list-style: upper-latin;
 }
 
-.alertpopup .conbox ol li > ol li > ol {
+.alertpopup .conbox ol li > ol li > ol, .popu_tr .conbox ol li > ol li > ol {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 18px;
   list-style: square;
+}
+
+.alertpopup .popubox, .popu_tr .popubox {
+  height: 100%;
+  text-align: justify;
+}
+
+.alertpopup .popubox table, .popu_tr .popubox table {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+
+.alertpopup .popubox table tr, .popu_tr .popubox table tr {
+  border-bottom: 1px solid #898989;
+}
+
+.alertpopup .popubox table td, .popu_tr .popubox table td {
+  display: table-cell;
+  margin: 0.5em 1em;
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 25.2px;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .alertpopup .popubox table td, .popu_tr .popubox table td {
+    font-size: 12px;
+    line-height: 21.6px;
+  }
+}
+
+.alertpopup .popubox table td small, .popu_tr .popubox table td small {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

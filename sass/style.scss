@@ -790,10 +790,10 @@ main {
     display: block;
     width: 100%;
     background-color: $color_white;
-    @include padding_set(2%, 3%, 3%, 3%);
+    @include padding_set(2%, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
-    .deliverytop,.courierytop{
+    .deliverytop,.couriertop{
       overflow: hidden;
       >div{
         display: inline-block;
@@ -850,13 +850,14 @@ main {
         border-radius: 30px;
       }
     }
-    .courierytop{
+    .couriertop{
       form{
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $text_color;
         @media (max-width: 768px) {
           display: block;
           justify-content: initial;
@@ -943,6 +944,85 @@ main {
           @include padding_set(5px,15px,5px,15px)
           &:hover {
             background-color: rgb(140, 185, 51);
+          }
+        }
+      }
+    }
+    .couriercontainer{
+      >table{
+        display: table;
+        width: 100%;
+        overflow: hidden;
+        tr{
+          display: table-row;
+          cursor: pointer;
+          &:nth-child(2n+1){
+            background-color:rgba($text_color,0.1) 
+          }
+          &:hover{
+            transform: translate(0,-5px);
+            box-shadow: 0 2px 2px rgba(190, 190, 190, 1);
+          }
+          &:first-child{
+            cursor: initial;
+            &:hover{
+              transform:none;
+              box-shadow: none;
+            }
+          }
+          @media (max-width:768px) {
+            th,td{
+              &:last-child{
+                display: none;
+              }
+            }           
+          }
+
+        }
+        th{
+          background-color: $header_color;
+        }
+        td{
+        }
+        th,td{
+          display: table-cell;
+          margin: 0.5em 1em;
+          width: 20%;
+          @include padding_set(8px,5px,8px,5px);
+          @include font_size(14px);
+          text-align: center;
+          @media (max-width:768px) {
+            width: 25%;
+          }
+          @media (max-width:488px) {
+            @include font_size(12px);
+          }
+        }
+      }
+    }
+    .courierbottom{
+      text-align: right;
+      margin-top: 10px;
+      @media (max-width:768px) {
+        text-align: center;
+      }      
+      a{
+        display: inline-block;
+        @include padding_set(5px,5px,5px,5px)
+        @include margin_set(0,5px,0,5px)
+        color:$text_color;
+        @media (max-width:488px) {
+          @include padding_set(0,0,0,0)
+          @include font_size(12px);       
+        }
+        &:hover,&.active{
+          color: $color_orange;
+          text-decoration: underline;
+        }
+        &:first-child,&:last-child{
+          &.active{
+            color:$text_color;
+            text-decoration:none;
           }
         }
       }
@@ -1156,13 +1236,13 @@ footer {
   align-items: center;
 }
 
-.alertpopup {
+.alertpopup,.popu_tr{
   &.ishow {
     display: flex;
   }
 }
 
-.alertpopup {
+.alertpopup,.popu_tr{
   display: none;
   align-items: center;
   justify-content: center;
@@ -1181,15 +1261,25 @@ footer {
     background-color: $color_white;
     @include padding_set(3%, 2%, 3%, 2%);
   }
+  .popu_tr_container{
+    position: relative;
+    width: 400px;
+    max-width: 400px;
+    background-color: $color_white;
+    @include padding_set(3%, 2%, 3%, 2%);
+    @media (max-width:768px) {
+      width: 80%;
+    }
+  }
   .closeclose {
     position: absolute;
-    top: -30px;
-    right: -30px;
+    top: -20px;
+    right: -20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: $color_green;
     animation: bigsmall 1s infinite;
@@ -1202,10 +1292,20 @@ footer {
       background-color: $color_white;
     }
     &:before {
-      transform: translateX(15px) rotate(45deg);
+      transform: translateX(13px) rotate(45deg);
     }
     &:after {
-      transform: translateX(-15px) rotate(-45deg);
+      transform: translateX(-13px) rotate(-45deg);
+    }
+    @media (max-width:480px) {
+      width: 40px;
+      height: 40px;
+      &:before {
+        transform: translateX(10px) rotate(45deg);
+      }
+      &:after {
+        transform: translateX(-10px) rotate(-45deg);
+      }      
     }
   }
   @keyframes bigsmall {
@@ -1263,6 +1363,34 @@ footer {
         }
       }
     }
+  }
+  .popubox{
+    height: 100%;
+    text-align: justify;
+    table{
+      display: table;
+      width: 100%;
+      overflow: hidden;
+
+      
+      tr{
+        border-bottom: 1px solid $text_color;
+      }
+      td{
+        display: table-cell;
+        margin: 0.5em 1em;
+        @include padding_set(8px,5px,8px,5px);
+        @include font_size(14px);
+        text-align: left;
+        @media (max-width:480px) {
+          @include font_size(12px);
+        }
+        small{
+          display: block;
+        }
+      }
+    }
+
   }
 }
 
