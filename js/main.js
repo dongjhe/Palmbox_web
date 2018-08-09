@@ -22,7 +22,6 @@ $(window).on('load', function() {
       elZipcode: '.zipcode' // 在 el 裡查找 dom
     })
   })
-
   ;(function() {
     //設定捲軸大於300px才顯示GOTOP
     $(window).scroll(function() {
@@ -53,6 +52,14 @@ $(window).on('load', function() {
       document.querySelector('.user_name >a').classList.toggle('active')
       document.querySelector('.user_more').classList.toggle('active')
     })
+    document.querySelector('main').addEventListener('click', e => {
+      if ($('.user_more').attr('class') ==='user_more active') {
+        document.querySelector('.user_name >a').classList.toggle('active')
+        document.querySelector('.user_more').classList.toggle('active')
+      }
+    })
+
+
 
     // 浮層打開關
     $('#Courier').on('click', function() {
@@ -79,12 +86,10 @@ $(window).on('load', function() {
       $('.popu_tr').toggleClass('ishow')
     })
 
-    $('.popu_tr .closeclose').on('click', function () {
+    $('.popu_tr .closeclose').on('click', function() {
       $('html body').css('overflow-y', 'inherit')
-      $(this).parents('.popu_tr').toggleClass('ishow')      
+      $(this).parents('.popu_tr').toggleClass('ishow')
     })
-
-
 
     // 登入 | 註冊 | 忘記密碼切換
     $('.login > a').on('click', function() {
@@ -114,8 +119,8 @@ $(window).on('load', function() {
     })
 
     // 快遞員派件紀錄查詢
-    $('.couriertop .togglebut a').on('click', function () {
-      $(this).addClass('active').siblings('a').removeClass('active') 
+    $('.couriertop .togglebut a').on('click', function() {
+      $(this).addClass('active').siblings('a').removeClass('active')
     })
 
     // 會員使用者狀態切換
