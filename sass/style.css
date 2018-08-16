@@ -1379,7 +1379,7 @@ main .mebox {
   }
 }
 
-main .deliverybox, main .courier_access, main .orderinfo {
+main .deliverybox, main .courier_access, main .orderinfo, main .community_access {
   display: block;
   width: 100%;
   background-color: #fff;
@@ -1391,11 +1391,11 @@ main .deliverybox, main .courier_access, main .orderinfo {
   overflow: hidden;
 }
 
-main .deliverybox .deliverytop, main .deliverybox .couriertop, main .deliverybox .orderinfotop, main .courier_access .deliverytop, main .courier_access .couriertop, main .courier_access .orderinfotop, main .orderinfo .deliverytop, main .orderinfo .couriertop, main .orderinfo .orderinfotop {
+main .deliverybox .deliverytop, main .deliverybox .couriertop, main .deliverybox .orderinfotop, main .deliverybox .communitytop, main .courier_access .deliverytop, main .courier_access .couriertop, main .courier_access .orderinfotop, main .courier_access .communitytop, main .orderinfo .deliverytop, main .orderinfo .couriertop, main .orderinfo .orderinfotop, main .orderinfo .communitytop, main .community_access .deliverytop, main .community_access .couriertop, main .community_access .orderinfotop, main .community_access .communitytop {
   overflow: hidden;
 }
 
-main .deliverybox .deliverytop > div, main .deliverybox .couriertop > div, main .deliverybox .orderinfotop > div, main .courier_access .deliverytop > div, main .courier_access .couriertop > div, main .courier_access .orderinfotop > div, main .orderinfo .deliverytop > div, main .orderinfo .couriertop > div, main .orderinfo .orderinfotop > div {
+main .deliverybox .deliverytop > div, main .deliverybox .couriertop > div, main .deliverybox .orderinfotop > div, main .deliverybox .communitytop > div, main .courier_access .deliverytop > div, main .courier_access .couriertop > div, main .courier_access .orderinfotop > div, main .courier_access .communitytop > div, main .orderinfo .deliverytop > div, main .orderinfo .couriertop > div, main .orderinfo .orderinfotop > div, main .orderinfo .communitytop > div, main .community_access .deliverytop > div, main .community_access .couriertop > div, main .community_access .orderinfotop > div, main .community_access .communitytop > div {
   display: inline-block;
   padding-top: 0;
   padding-right: 0;
@@ -1408,12 +1408,12 @@ main .deliverybox .deliverytop > div, main .deliverybox .couriertop > div, main 
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .deliverytop > div, main .deliverybox .couriertop > div, main .deliverybox .orderinfotop > div, main .courier_access .deliverytop > div, main .courier_access .couriertop > div, main .courier_access .orderinfotop > div, main .orderinfo .deliverytop > div, main .orderinfo .couriertop > div, main .orderinfo .orderinfotop > div {
+  main .deliverybox .deliverytop > div, main .deliverybox .couriertop > div, main .deliverybox .orderinfotop > div, main .deliverybox .communitytop > div, main .courier_access .deliverytop > div, main .courier_access .couriertop > div, main .courier_access .orderinfotop > div, main .courier_access .communitytop > div, main .orderinfo .deliverytop > div, main .orderinfo .couriertop > div, main .orderinfo .orderinfotop > div, main .orderinfo .communitytop > div, main .community_access .deliverytop > div, main .community_access .couriertop > div, main .community_access .orderinfotop > div, main .community_access .communitytop > div {
     display: block;
   }
 }
 
-main .deliverybox .deliverytop h1, main .deliverybox .couriertop h1, main .deliverybox .orderinfotop h1, main .courier_access .deliverytop h1, main .courier_access .couriertop h1, main .courier_access .orderinfotop h1, main .orderinfo .deliverytop h1, main .orderinfo .couriertop h1, main .orderinfo .orderinfotop h1 {
+main .deliverybox .deliverytop h1, main .deliverybox .couriertop h1, main .deliverybox .orderinfotop h1, main .deliverybox .communitytop h1, main .courier_access .deliverytop h1, main .courier_access .couriertop h1, main .courier_access .orderinfotop h1, main .courier_access .communitytop h1, main .orderinfo .deliverytop h1, main .orderinfo .couriertop h1, main .orderinfo .orderinfotop h1, main .orderinfo .communitytop h1, main .community_access .deliverytop h1, main .community_access .couriertop h1, main .community_access .orderinfotop h1, main .community_access .communitytop h1 {
   display: block;
   padding-top: 0;
   padding-right: 0;
@@ -1429,7 +1429,7 @@ main .deliverybox .deliverytop h1, main .deliverybox .couriertop h1, main .deliv
   text-align: center;
 }
 
-main .deliverybox .deliverytop h2, main .deliverybox .couriertop h2, main .deliverybox .orderinfotop h2, main .courier_access .deliverytop h2, main .courier_access .couriertop h2, main .courier_access .orderinfotop h2, main .orderinfo .deliverytop h2, main .orderinfo .couriertop h2, main .orderinfo .orderinfotop h2 {
+main .deliverybox .deliverytop h2, main .deliverybox .couriertop h2, main .deliverybox .orderinfotop h2, main .deliverybox .communitytop h2, main .courier_access .deliverytop h2, main .courier_access .couriertop h2, main .courier_access .orderinfotop h2, main .courier_access .communitytop h2, main .orderinfo .deliverytop h2, main .orderinfo .couriertop h2, main .orderinfo .orderinfotop h2, main .orderinfo .communitytop h2, main .community_access .deliverytop h2, main .community_access .couriertop h2, main .community_access .orderinfotop h2, main .community_access .communitytop h2 {
   display: block;
   padding-top: 0;
   padding-right: 0;
@@ -1443,13 +1443,16 @@ main .deliverybox .deliverytop h2, main .deliverybox .couriertop h2, main .deliv
   line-height: 25.2px;
 }
 
-@media (max-width: 480px) {
-  main .deliverybox .deliverytop .togglebut, main .deliverybox .couriertop .togglebut, main .deliverybox .orderinfotop .togglebut, main .courier_access .deliverytop .togglebut, main .courier_access .couriertop .togglebut, main .courier_access .orderinfotop .togglebut, main .orderinfo .deliverytop .togglebut, main .orderinfo .couriertop .togglebut, main .orderinfo .orderinfotop .togglebut {
-    float: none;
-  }
+main .deliverybox .deliverytop .featuresbox, main .deliverybox .couriertop .featuresbox, main .deliverybox .orderinfotop .featuresbox, main .deliverybox .communitytop .featuresbox, main .courier_access .deliverytop .featuresbox, main .courier_access .couriertop .featuresbox, main .courier_access .orderinfotop .featuresbox, main .courier_access .communitytop .featuresbox, main .orderinfo .deliverytop .featuresbox, main .orderinfo .couriertop .featuresbox, main .orderinfo .orderinfotop .featuresbox, main .orderinfo .communitytop .featuresbox, main .community_access .deliverytop .featuresbox, main .community_access .couriertop .featuresbox, main .community_access .orderinfotop .featuresbox, main .community_access .communitytop .featuresbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-main .deliverybox .deliverytop .togglebut a, main .deliverybox .couriertop .togglebut a, main .deliverybox .orderinfotop .togglebut a, main .courier_access .deliverytop .togglebut a, main .courier_access .couriertop .togglebut a, main .courier_access .orderinfotop .togglebut a, main .orderinfo .deliverytop .togglebut a, main .orderinfo .couriertop .togglebut a, main .orderinfo .orderinfotop .togglebut a {
+main .deliverybox .deliverytop .featuresbox .togglebut a, main .deliverybox .couriertop .featuresbox .togglebut a, main .deliverybox .orderinfotop .featuresbox .togglebut a, main .deliverybox .communitytop .featuresbox .togglebut a, main .courier_access .deliverytop .featuresbox .togglebut a, main .courier_access .couriertop .featuresbox .togglebut a, main .courier_access .orderinfotop .featuresbox .togglebut a, main .courier_access .communitytop .featuresbox .togglebut a, main .orderinfo .deliverytop .featuresbox .togglebut a, main .orderinfo .couriertop .featuresbox .togglebut a, main .orderinfo .orderinfotop .featuresbox .togglebut a, main .orderinfo .communitytop .featuresbox .togglebut a, main .community_access .deliverytop .featuresbox .togglebut a, main .community_access .couriertop .featuresbox .togglebut a, main .community_access .orderinfotop .featuresbox .togglebut a, main .community_access .communitytop .featuresbox .togglebut a {
   display: inline-block;
   color: #fff;
   background-color: #898989;
@@ -1465,15 +1468,52 @@ main .deliverybox .deliverytop .togglebut a, main .deliverybox .couriertop .togg
   line-height: 25.2px;
 }
 
-main .deliverybox .deliverytop .togglebut a:hover, main .deliverybox .couriertop .togglebut a:hover, main .deliverybox .orderinfotop .togglebut a:hover, main .courier_access .deliverytop .togglebut a:hover, main .courier_access .couriertop .togglebut a:hover, main .courier_access .orderinfotop .togglebut a:hover, main .orderinfo .deliverytop .togglebut a:hover, main .orderinfo .couriertop .togglebut a:hover, main .orderinfo .orderinfotop .togglebut a:hover {
+main .deliverybox .deliverytop .featuresbox .togglebut a:hover, main .deliverybox .couriertop .featuresbox .togglebut a:hover, main .deliverybox .orderinfotop .featuresbox .togglebut a:hover, main .deliverybox .communitytop .featuresbox .togglebut a:hover, main .courier_access .deliverytop .featuresbox .togglebut a:hover, main .courier_access .couriertop .featuresbox .togglebut a:hover, main .courier_access .orderinfotop .featuresbox .togglebut a:hover, main .courier_access .communitytop .featuresbox .togglebut a:hover, main .orderinfo .deliverytop .featuresbox .togglebut a:hover, main .orderinfo .couriertop .featuresbox .togglebut a:hover, main .orderinfo .orderinfotop .featuresbox .togglebut a:hover, main .orderinfo .communitytop .featuresbox .togglebut a:hover, main .community_access .deliverytop .featuresbox .togglebut a:hover, main .community_access .couriertop .featuresbox .togglebut a:hover, main .community_access .orderinfotop .featuresbox .togglebut a:hover, main .community_access .communitytop .featuresbox .togglebut a:hover {
   background-color: #ff8400;
 }
 
-main .deliverybox .deliverytop .togglebut a.active, main .deliverybox .couriertop .togglebut a.active, main .deliverybox .orderinfotop .togglebut a.active, main .courier_access .deliverytop .togglebut a.active, main .courier_access .couriertop .togglebut a.active, main .courier_access .orderinfotop .togglebut a.active, main .orderinfo .deliverytop .togglebut a.active, main .orderinfo .couriertop .togglebut a.active, main .orderinfo .orderinfotop .togglebut a.active {
+main .deliverybox .deliverytop .featuresbox .togglebut a.active, main .deliverybox .couriertop .featuresbox .togglebut a.active, main .deliverybox .orderinfotop .featuresbox .togglebut a.active, main .deliverybox .communitytop .featuresbox .togglebut a.active, main .courier_access .deliverytop .featuresbox .togglebut a.active, main .courier_access .couriertop .featuresbox .togglebut a.active, main .courier_access .orderinfotop .featuresbox .togglebut a.active, main .courier_access .communitytop .featuresbox .togglebut a.active, main .orderinfo .deliverytop .featuresbox .togglebut a.active, main .orderinfo .couriertop .featuresbox .togglebut a.active, main .orderinfo .orderinfotop .featuresbox .togglebut a.active, main .orderinfo .communitytop .featuresbox .togglebut a.active, main .community_access .deliverytop .featuresbox .togglebut a.active, main .community_access .couriertop .featuresbox .togglebut a.active, main .community_access .orderinfotop .featuresbox .togglebut a.active, main .community_access .communitytop .featuresbox .togglebut a.active {
   background-color: #ff8400;
 }
 
-main .deliverybox .deliverytop .phonenum, main .deliverybox .couriertop .phonenum, main .deliverybox .orderinfotop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .couriertop .phonenum, main .courier_access .orderinfotop .phonenum, main .orderinfo .deliverytop .phonenum, main .orderinfo .couriertop .phonenum, main .orderinfo .orderinfotop .phonenum {
+main .deliverybox .deliverytop .featuresbox .excel_but, main .deliverybox .couriertop .featuresbox .excel_but, main .deliverybox .orderinfotop .featuresbox .excel_but, main .deliverybox .communitytop .featuresbox .excel_but, main .courier_access .deliverytop .featuresbox .excel_but, main .courier_access .couriertop .featuresbox .excel_but, main .courier_access .orderinfotop .featuresbox .excel_but, main .courier_access .communitytop .featuresbox .excel_but, main .orderinfo .deliverytop .featuresbox .excel_but, main .orderinfo .couriertop .featuresbox .excel_but, main .orderinfo .orderinfotop .featuresbox .excel_but, main .orderinfo .communitytop .featuresbox .excel_but, main .community_access .deliverytop .featuresbox .excel_but, main .community_access .couriertop .featuresbox .excel_but, main .community_access .orderinfotop .featuresbox .excel_but, main .community_access .communitytop .featuresbox .excel_but {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .deliverytop .featuresbox .excel_but, main .deliverybox .couriertop .featuresbox .excel_but, main .deliverybox .orderinfotop .featuresbox .excel_but, main .deliverybox .communitytop .featuresbox .excel_but, main .courier_access .deliverytop .featuresbox .excel_but, main .courier_access .couriertop .featuresbox .excel_but, main .courier_access .orderinfotop .featuresbox .excel_but, main .courier_access .communitytop .featuresbox .excel_but, main .orderinfo .deliverytop .featuresbox .excel_but, main .orderinfo .couriertop .featuresbox .excel_but, main .orderinfo .orderinfotop .featuresbox .excel_but, main .orderinfo .communitytop .featuresbox .excel_but, main .community_access .deliverytop .featuresbox .excel_but, main .community_access .couriertop .featuresbox .excel_but, main .community_access .orderinfotop .featuresbox .excel_but, main .community_access .communitytop .featuresbox .excel_but {
+    margin-top: 5%;
+    display: none;
+  }
+}
+
+main .deliverybox .deliverytop .featuresbox .excel_but input, main .deliverybox .couriertop .featuresbox .excel_but input, main .deliverybox .orderinfotop .featuresbox .excel_but input, main .deliverybox .communitytop .featuresbox .excel_but input, main .courier_access .deliverytop .featuresbox .excel_but input, main .courier_access .couriertop .featuresbox .excel_but input, main .courier_access .orderinfotop .featuresbox .excel_but input, main .courier_access .communitytop .featuresbox .excel_but input, main .orderinfo .deliverytop .featuresbox .excel_but input, main .orderinfo .couriertop .featuresbox .excel_but input, main .orderinfo .orderinfotop .featuresbox .excel_but input, main .orderinfo .communitytop .featuresbox .excel_but input, main .community_access .deliverytop .featuresbox .excel_but input, main .community_access .couriertop .featuresbox .excel_but input, main .community_access .orderinfotop .featuresbox .excel_but input, main .community_access .communitytop .featuresbox .excel_but input {
+  color: #fff;
+  background-color: #9FCC42;
+  border: none;
+  border-radius: 30px;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .deliverytop .featuresbox .excel_but input, main .deliverybox .couriertop .featuresbox .excel_but input, main .deliverybox .orderinfotop .featuresbox .excel_but input, main .deliverybox .communitytop .featuresbox .excel_but input, main .courier_access .deliverytop .featuresbox .excel_but input, main .courier_access .couriertop .featuresbox .excel_but input, main .courier_access .orderinfotop .featuresbox .excel_but input, main .courier_access .communitytop .featuresbox .excel_but input, main .orderinfo .deliverytop .featuresbox .excel_but input, main .orderinfo .couriertop .featuresbox .excel_but input, main .orderinfo .orderinfotop .featuresbox .excel_but input, main .orderinfo .communitytop .featuresbox .excel_but input, main .community_access .deliverytop .featuresbox .excel_but input, main .community_access .couriertop .featuresbox .excel_but input, main .community_access .orderinfotop .featuresbox .excel_but input, main .community_access .communitytop .featuresbox .excel_but input {
+    border-radius: 0.2em;
+    border: 1px solid #9FCC42;
+  }
+}
+
+main .deliverybox .deliverytop .featuresbox .excel_but input:hover, main .deliverybox .couriertop .featuresbox .excel_but input:hover, main .deliverybox .orderinfotop .featuresbox .excel_but input:hover, main .deliverybox .communitytop .featuresbox .excel_but input:hover, main .courier_access .deliverytop .featuresbox .excel_but input:hover, main .courier_access .couriertop .featuresbox .excel_but input:hover, main .courier_access .orderinfotop .featuresbox .excel_but input:hover, main .courier_access .communitytop .featuresbox .excel_but input:hover, main .orderinfo .deliverytop .featuresbox .excel_but input:hover, main .orderinfo .couriertop .featuresbox .excel_but input:hover, main .orderinfo .orderinfotop .featuresbox .excel_but input:hover, main .orderinfo .communitytop .featuresbox .excel_but input:hover, main .community_access .deliverytop .featuresbox .excel_but input:hover, main .community_access .couriertop .featuresbox .excel_but input:hover, main .community_access .orderinfotop .featuresbox .excel_but input:hover, main .community_access .communitytop .featuresbox .excel_but input:hover {
+  background-color: #8cb933;
+}
+
+main .deliverybox .deliverytop .phonenum, main .deliverybox .couriertop .phonenum, main .deliverybox .orderinfotop .phonenum, main .deliverybox .communitytop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .couriertop .phonenum, main .courier_access .orderinfotop .phonenum, main .courier_access .communitytop .phonenum, main .orderinfo .deliverytop .phonenum, main .orderinfo .couriertop .phonenum, main .orderinfo .orderinfotop .phonenum, main .orderinfo .communitytop .phonenum, main .community_access .deliverytop .phonenum, main .community_access .couriertop .phonenum, main .community_access .orderinfotop .phonenum, main .community_access .communitytop .phonenum {
   float: right;
   padding-top: 5px;
   padding-right: 10px;
@@ -1485,14 +1525,14 @@ main .deliverybox .deliverytop .phonenum, main .deliverybox .couriertop .phonenu
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .deliverytop .phonenum, main .deliverybox .couriertop .phonenum, main .deliverybox .orderinfotop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .couriertop .phonenum, main .courier_access .orderinfotop .phonenum, main .orderinfo .deliverytop .phonenum, main .orderinfo .couriertop .phonenum, main .orderinfo .orderinfotop .phonenum {
+  main .deliverybox .deliverytop .phonenum, main .deliverybox .couriertop .phonenum, main .deliverybox .orderinfotop .phonenum, main .deliverybox .communitytop .phonenum, main .courier_access .deliverytop .phonenum, main .courier_access .couriertop .phonenum, main .courier_access .orderinfotop .phonenum, main .courier_access .communitytop .phonenum, main .orderinfo .deliverytop .phonenum, main .orderinfo .couriertop .phonenum, main .orderinfo .orderinfotop .phonenum, main .orderinfo .communitytop .phonenum, main .community_access .deliverytop .phonenum, main .community_access .couriertop .phonenum, main .community_access .orderinfotop .phonenum, main .community_access .communitytop .phonenum {
     float: none;
     text-align: center;
     margin-bottom: 5%;
   }
 }
 
-main .deliverybox .couriertop form, main .deliverybox .orderinfotop form, main .courier_access .couriertop form, main .courier_access .orderinfotop form, main .orderinfo .couriertop form, main .orderinfo .orderinfotop form {
+main .deliverybox .couriertop form, main .deliverybox .orderinfotop form, main .deliverybox .communitytop form, main .courier_access .couriertop form, main .courier_access .orderinfotop form, main .courier_access .communitytop form, main .orderinfo .couriertop form, main .orderinfo .orderinfotop form, main .orderinfo .communitytop form, main .community_access .couriertop form, main .community_access .orderinfotop form, main .community_access .communitytop form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1506,7 +1546,7 @@ main .deliverybox .couriertop form, main .deliverybox .orderinfotop form, main .
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriertop form, main .deliverybox .orderinfotop form, main .courier_access .couriertop form, main .courier_access .orderinfotop form, main .orderinfo .couriertop form, main .orderinfo .orderinfotop form {
+  main .deliverybox .couriertop form, main .deliverybox .orderinfotop form, main .deliverybox .communitytop form, main .courier_access .couriertop form, main .courier_access .orderinfotop form, main .courier_access .communitytop form, main .orderinfo .couriertop form, main .orderinfo .orderinfotop form, main .orderinfo .communitytop form, main .community_access .couriertop form, main .community_access .orderinfotop form, main .community_access .communitytop form {
     display: block;
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
@@ -1514,7 +1554,7 @@ main .deliverybox .couriertop form, main .deliverybox .orderinfotop form, main .
   }
 }
 
-main .deliverybox .couriertop label, main .deliverybox .orderinfotop label, main .courier_access .couriertop label, main .courier_access .orderinfotop label, main .orderinfo .couriertop label, main .orderinfo .orderinfotop label {
+main .deliverybox .couriertop label, main .deliverybox .orderinfotop label, main .deliverybox .communitytop label, main .courier_access .couriertop label, main .courier_access .orderinfotop label, main .courier_access .communitytop label, main .orderinfo .couriertop label, main .orderinfo .orderinfotop label, main .orderinfo .communitytop label, main .community_access .couriertop label, main .community_access .orderinfotop label, main .community_access .communitytop label {
   display: block;
   margin-bottom: 3px;
   font-size: 14px;
@@ -1523,11 +1563,17 @@ main .deliverybox .couriertop label, main .deliverybox .orderinfotop label, main
 
 main .deliverybox .couriertop input,
 main .deliverybox .couriertop select, main .deliverybox .orderinfotop input,
-main .deliverybox .orderinfotop select, main .courier_access .couriertop input,
+main .deliverybox .orderinfotop select, main .deliverybox .communitytop input,
+main .deliverybox .communitytop select, main .courier_access .couriertop input,
 main .courier_access .couriertop select, main .courier_access .orderinfotop input,
-main .courier_access .orderinfotop select, main .orderinfo .couriertop input,
+main .courier_access .orderinfotop select, main .courier_access .communitytop input,
+main .courier_access .communitytop select, main .orderinfo .couriertop input,
 main .orderinfo .couriertop select, main .orderinfo .orderinfotop input,
-main .orderinfo .orderinfotop select {
+main .orderinfo .orderinfotop select, main .orderinfo .communitytop input,
+main .orderinfo .communitytop select, main .community_access .couriertop input,
+main .community_access .couriertop select, main .community_access .orderinfotop input,
+main .community_access .orderinfotop select, main .community_access .communitytop input,
+main .community_access .communitytop select {
   display: block;
   width: 100%;
   padding-top: 5px;
@@ -1549,11 +1595,17 @@ main .orderinfo .orderinfotop select {
 
 main .deliverybox .couriertop input[type='text']:focus,
 main .deliverybox .couriertop select[type='text']:focus, main .deliverybox .orderinfotop input[type='text']:focus,
-main .deliverybox .orderinfotop select[type='text']:focus, main .courier_access .couriertop input[type='text']:focus,
+main .deliverybox .orderinfotop select[type='text']:focus, main .deliverybox .communitytop input[type='text']:focus,
+main .deliverybox .communitytop select[type='text']:focus, main .courier_access .couriertop input[type='text']:focus,
 main .courier_access .couriertop select[type='text']:focus, main .courier_access .orderinfotop input[type='text']:focus,
-main .courier_access .orderinfotop select[type='text']:focus, main .orderinfo .couriertop input[type='text']:focus,
+main .courier_access .orderinfotop select[type='text']:focus, main .courier_access .communitytop input[type='text']:focus,
+main .courier_access .communitytop select[type='text']:focus, main .orderinfo .couriertop input[type='text']:focus,
 main .orderinfo .couriertop select[type='text']:focus, main .orderinfo .orderinfotop input[type='text']:focus,
-main .orderinfo .orderinfotop select[type='text']:focus {
+main .orderinfo .orderinfotop select[type='text']:focus, main .orderinfo .communitytop input[type='text']:focus,
+main .orderinfo .communitytop select[type='text']:focus, main .community_access .couriertop input[type='text']:focus,
+main .community_access .couriertop select[type='text']:focus, main .community_access .orderinfotop input[type='text']:focus,
+main .community_access .orderinfotop select[type='text']:focus, main .community_access .communitytop input[type='text']:focus,
+main .community_access .communitytop select[type='text']:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -1562,19 +1614,13 @@ main .orderinfo .orderinfotop select[type='text']:focus {
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-main .deliverybox .couriertop .inquirebox, main .deliverybox .orderinfotop .inquirebox, main .courier_access .couriertop .inquirebox, main .courier_access .orderinfotop .inquirebox, main .orderinfo .couriertop .inquirebox, main .orderinfo .orderinfotop .inquirebox {
+main .deliverybox .couriertop .inquirebox, main .deliverybox .orderinfotop .inquirebox, main .deliverybox .communitytop .inquirebox, main .courier_access .couriertop .inquirebox, main .courier_access .orderinfotop .inquirebox, main .courier_access .communitytop .inquirebox, main .orderinfo .couriertop .inquirebox, main .orderinfo .orderinfotop .inquirebox, main .orderinfo .communitytop .inquirebox, main .community_access .couriertop .inquirebox, main .community_access .orderinfotop .inquirebox, main .community_access .communitytop .inquirebox {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  max-width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriertop .inquirebox, main .deliverybox .orderinfotop .inquirebox, main .courier_access .couriertop .inquirebox, main .courier_access .orderinfotop .inquirebox, main .orderinfo .couriertop .inquirebox, main .orderinfo .orderinfotop .inquirebox {
+  main .deliverybox .couriertop .inquirebox, main .deliverybox .orderinfotop .inquirebox, main .deliverybox .communitytop .inquirebox, main .courier_access .couriertop .inquirebox, main .courier_access .orderinfotop .inquirebox, main .courier_access .communitytop .inquirebox, main .orderinfo .couriertop .inquirebox, main .orderinfo .orderinfotop .inquirebox, main .orderinfo .communitytop .inquirebox, main .community_access .couriertop .inquirebox, main .community_access .orderinfotop .inquirebox, main .community_access .communitytop .inquirebox {
     display: block;
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
@@ -1583,16 +1629,17 @@ main .deliverybox .couriertop .inquirebox, main .deliverybox .orderinfotop .inqu
   }
 }
 
-main .deliverybox .couriertop .inquirebox > div, main .deliverybox .orderinfotop .inquirebox > div, main .courier_access .couriertop .inquirebox > div, main .courier_access .orderinfotop .inquirebox > div, main .orderinfo .couriertop .inquirebox > div, main .orderinfo .orderinfotop .inquirebox > div {
+main .deliverybox .couriertop .inquirebox > div, main .deliverybox .orderinfotop .inquirebox > div, main .deliverybox .communitytop .inquirebox > div, main .courier_access .couriertop .inquirebox > div, main .courier_access .orderinfotop .inquirebox > div, main .courier_access .communitytop .inquirebox > div, main .orderinfo .couriertop .inquirebox > div, main .orderinfo .orderinfotop .inquirebox > div, main .orderinfo .communitytop .inquirebox > div, main .community_access .couriertop .inquirebox > div, main .community_access .orderinfotop .inquirebox > div, main .community_access .communitytop .inquirebox > div {
   padding-top: 0;
   padding-right: 5px;
   padding-bottom: 0;
   padding-left: 5px;
   width: 200px;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriertop .inquirebox > div, main .deliverybox .orderinfotop .inquirebox > div, main .courier_access .couriertop .inquirebox > div, main .courier_access .orderinfotop .inquirebox > div, main .orderinfo .couriertop .inquirebox > div, main .orderinfo .orderinfotop .inquirebox > div {
+  main .deliverybox .couriertop .inquirebox > div, main .deliverybox .orderinfotop .inquirebox > div, main .deliverybox .communitytop .inquirebox > div, main .courier_access .couriertop .inquirebox > div, main .courier_access .orderinfotop .inquirebox > div, main .courier_access .communitytop .inquirebox > div, main .orderinfo .couriertop .inquirebox > div, main .orderinfo .orderinfotop .inquirebox > div, main .orderinfo .communitytop .inquirebox > div, main .community_access .couriertop .inquirebox > div, main .community_access .orderinfotop .inquirebox > div, main .community_access .communitytop .inquirebox > div {
     width: 100%;
     padding-top: 0;
     padding-right: 0;
@@ -1601,97 +1648,111 @@ main .deliverybox .couriertop .inquirebox > div, main .deliverybox .orderinfotop
   }
 }
 
-main .deliverybox .couriertop .inquirebox > div.inquire, main .deliverybox .orderinfotop .inquirebox > div.inquire, main .courier_access .couriertop .inquirebox > div.inquire, main .courier_access .orderinfotop .inquirebox > div.inquire, main .orderinfo .couriertop .inquirebox > div.inquire, main .orderinfo .orderinfotop .inquirebox > div.inquire {
-  width: 150px;
+main .deliverybox .couriertop .inquirebox > div.checkshow, main .deliverybox .orderinfotop .inquirebox > div.checkshow, main .deliverybox .communitytop .inquirebox > div.checkshow, main .courier_access .couriertop .inquirebox > div.checkshow, main .courier_access .orderinfotop .inquirebox > div.checkshow, main .courier_access .communitytop .inquirebox > div.checkshow, main .orderinfo .couriertop .inquirebox > div.checkshow, main .orderinfo .orderinfotop .inquirebox > div.checkshow, main .orderinfo .communitytop .inquirebox > div.checkshow, main .community_access .couriertop .inquirebox > div.checkshow, main .community_access .orderinfotop .inquirebox > div.checkshow, main .community_access .communitytop .inquirebox > div.checkshow {
+  display: block;
+  width: initial;
+  margin-top: 10px;
+}
+
+main .deliverybox .couriertop .inquirebox > div.checkshow input[type='checkbox'], main .deliverybox .orderinfotop .inquirebox > div.checkshow input[type='checkbox'], main .deliverybox .communitytop .inquirebox > div.checkshow input[type='checkbox'], main .courier_access .couriertop .inquirebox > div.checkshow input[type='checkbox'], main .courier_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox'], main .courier_access .communitytop .inquirebox > div.checkshow input[type='checkbox'], main .orderinfo .couriertop .inquirebox > div.checkshow input[type='checkbox'], main .orderinfo .orderinfotop .inquirebox > div.checkshow input[type='checkbox'], main .orderinfo .communitytop .inquirebox > div.checkshow input[type='checkbox'], main .community_access .couriertop .inquirebox > div.checkshow input[type='checkbox'], main .community_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox'], main .community_access .communitytop .inquirebox > div.checkshow input[type='checkbox'] {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid #898989;
+  border-radius: 3px;
+  vertical-align: middle;
+  background-image: url("../images/check.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-size: 0 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  outline: 0;
+}
+
+main .deliverybox .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .deliverybox .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .deliverybox .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .courier_access .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .courier_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .courier_access .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .orderinfo .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .orderinfo .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .orderinfo .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .community_access .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .community_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .community_access .communitytop .inquirebox > div.checkshow input[type='checkbox']:active {
+  background-color: #ddd;
+}
+
+main .deliverybox .couriertop .inquirebox > div.checkshow input[type='checkbox']:checked, main .deliverybox .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:checked, main .deliverybox .communitytop .inquirebox > div.checkshow input[type='checkbox']:checked, main .courier_access .couriertop .inquirebox > div.checkshow input[type='checkbox']:checked, main .courier_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:checked, main .courier_access .communitytop .inquirebox > div.checkshow input[type='checkbox']:checked, main .orderinfo .couriertop .inquirebox > div.checkshow input[type='checkbox']:checked, main .orderinfo .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:checked, main .orderinfo .communitytop .inquirebox > div.checkshow input[type='checkbox']:checked, main .community_access .couriertop .inquirebox > div.checkshow input[type='checkbox']:checked, main .community_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:checked, main .community_access .communitytop .inquirebox > div.checkshow input[type='checkbox']:checked {
+  background-size: 100% 100%;
+}
+
+main .deliverybox .couriertop .inquirebox > div.checkshow label, main .deliverybox .orderinfotop .inquirebox > div.checkshow label, main .deliverybox .communitytop .inquirebox > div.checkshow label, main .courier_access .couriertop .inquirebox > div.checkshow label, main .courier_access .orderinfotop .inquirebox > div.checkshow label, main .courier_access .communitytop .inquirebox > div.checkshow label, main .orderinfo .couriertop .inquirebox > div.checkshow label, main .orderinfo .orderinfotop .inquirebox > div.checkshow label, main .orderinfo .communitytop .inquirebox > div.checkshow label, main .community_access .couriertop .inquirebox > div.checkshow label, main .community_access .orderinfotop .inquirebox > div.checkshow label, main .community_access .communitytop .inquirebox > div.checkshow label {
+  display: inline-block;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+main .deliverybox .couriertop .inquirebox > div.inquire, main .deliverybox .orderinfotop .inquirebox > div.inquire, main .deliverybox .communitytop .inquirebox > div.inquire, main .courier_access .couriertop .inquirebox > div.inquire, main .courier_access .orderinfotop .inquirebox > div.inquire, main .courier_access .communitytop .inquirebox > div.inquire, main .orderinfo .couriertop .inquirebox > div.inquire, main .orderinfo .orderinfotop .inquirebox > div.inquire, main .orderinfo .communitytop .inquirebox > div.inquire, main .community_access .couriertop .inquirebox > div.inquire, main .community_access .orderinfotop .inquirebox > div.inquire, main .community_access .communitytop .inquirebox > div.inquire {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriertop .inquirebox > div.inquire, main .deliverybox .orderinfotop .inquirebox > div.inquire, main .courier_access .couriertop .inquirebox > div.inquire, main .courier_access .orderinfotop .inquirebox > div.inquire, main .orderinfo .couriertop .inquirebox > div.inquire, main .orderinfo .orderinfotop .inquirebox > div.inquire {
+  main .deliverybox .couriertop .inquirebox > div.inquire, main .deliverybox .orderinfotop .inquirebox > div.inquire, main .deliverybox .communitytop .inquirebox > div.inquire, main .courier_access .couriertop .inquirebox > div.inquire, main .courier_access .orderinfotop .inquirebox > div.inquire, main .courier_access .communitytop .inquirebox > div.inquire, main .orderinfo .couriertop .inquirebox > div.inquire, main .orderinfo .orderinfotop .inquirebox > div.inquire, main .orderinfo .communitytop .inquirebox > div.inquire, main .community_access .couriertop .inquirebox > div.inquire, main .community_access .orderinfotop .inquirebox > div.inquire, main .community_access .communitytop .inquirebox > div.inquire {
     width: 100%;
   }
 }
 
-main .deliverybox .couriertop .inquirebox > div.inquire input, main .deliverybox .orderinfotop .inquirebox > div.inquire input, main .courier_access .couriertop .inquirebox > div.inquire input, main .courier_access .orderinfotop .inquirebox > div.inquire input, main .orderinfo .couriertop .inquirebox > div.inquire input, main .orderinfo .orderinfotop .inquirebox > div.inquire input {
-  margin-top: 28px;
+main .deliverybox .couriertop .inquirebox > div.inquire input, main .deliverybox .orderinfotop .inquirebox > div.inquire input, main .deliverybox .communitytop .inquirebox > div.inquire input, main .courier_access .couriertop .inquirebox > div.inquire input, main .courier_access .orderinfotop .inquirebox > div.inquire input, main .courier_access .communitytop .inquirebox > div.inquire input, main .orderinfo .couriertop .inquirebox > div.inquire input, main .orderinfo .orderinfotop .inquirebox > div.inquire input, main .orderinfo .communitytop .inquirebox > div.inquire input, main .community_access .couriertop .inquirebox > div.inquire input, main .community_access .orderinfotop .inquirebox > div.inquire input, main .community_access .communitytop .inquirebox > div.inquire input {
   color: #fff;
   background-color: #9FCC42;
   border: 1px solid #9FCC42;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriertop .inquirebox > div.inquire input, main .deliverybox .orderinfotop .inquirebox > div.inquire input, main .courier_access .couriertop .inquirebox > div.inquire input, main .courier_access .orderinfotop .inquirebox > div.inquire input, main .orderinfo .couriertop .inquirebox > div.inquire input, main .orderinfo .orderinfotop .inquirebox > div.inquire input {
+  main .deliverybox .couriertop .inquirebox > div.inquire input, main .deliverybox .orderinfotop .inquirebox > div.inquire input, main .deliverybox .communitytop .inquirebox > div.inquire input, main .courier_access .couriertop .inquirebox > div.inquire input, main .courier_access .orderinfotop .inquirebox > div.inquire input, main .courier_access .communitytop .inquirebox > div.inquire input, main .orderinfo .couriertop .inquirebox > div.inquire input, main .orderinfo .orderinfotop .inquirebox > div.inquire input, main .orderinfo .communitytop .inquirebox > div.inquire input, main .community_access .couriertop .inquirebox > div.inquire input, main .community_access .orderinfotop .inquirebox > div.inquire input, main .community_access .communitytop .inquirebox > div.inquire input {
     margin-top: 3%;
   }
 }
 
-main .deliverybox .couriertop .inquirebox > div.inquire input:hover, main .deliverybox .orderinfotop .inquirebox > div.inquire input:hover, main .courier_access .couriertop .inquirebox > div.inquire input:hover, main .courier_access .orderinfotop .inquirebox > div.inquire input:hover, main .orderinfo .couriertop .inquirebox > div.inquire input:hover, main .orderinfo .orderinfotop .inquirebox > div.inquire input:hover {
+main .deliverybox .couriertop .inquirebox > div.inquire input:hover, main .deliverybox .orderinfotop .inquirebox > div.inquire input:hover, main .deliverybox .communitytop .inquirebox > div.inquire input:hover, main .courier_access .couriertop .inquirebox > div.inquire input:hover, main .courier_access .orderinfotop .inquirebox > div.inquire input:hover, main .courier_access .communitytop .inquirebox > div.inquire input:hover, main .orderinfo .couriertop .inquirebox > div.inquire input:hover, main .orderinfo .orderinfotop .inquirebox > div.inquire input:hover, main .orderinfo .communitytop .inquirebox > div.inquire input:hover, main .community_access .couriertop .inquirebox > div.inquire input:hover, main .community_access .orderinfotop .inquirebox > div.inquire input:hover, main .community_access .communitytop .inquirebox > div.inquire input:hover {
   background-color: #8cb933;
 }
 
-main .deliverybox .couriertop .excel_but, main .deliverybox .orderinfotop .excel_but, main .courier_access .couriertop .excel_but, main .courier_access .orderinfotop .excel_but, main .orderinfo .couriertop .excel_but, main .orderinfo .orderinfotop .excel_but {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-top: 28px;
-}
-
-@media (max-width: 768px) {
-  main .deliverybox .couriertop .excel_but, main .deliverybox .orderinfotop .excel_but, main .courier_access .couriertop .excel_but, main .courier_access .orderinfotop .excel_but, main .orderinfo .couriertop .excel_but, main .orderinfo .orderinfotop .excel_but {
-    margin-top: 5%;
-    display: none;
-  }
-}
-
-main .deliverybox .couriertop .excel_but input, main .deliverybox .orderinfotop .excel_but input, main .courier_access .couriertop .excel_but input, main .courier_access .orderinfotop .excel_but input, main .orderinfo .couriertop .excel_but input, main .orderinfo .orderinfotop .excel_but input {
-  color: #fff;
-  background-color: #9FCC42;
-  border: none;
-  border-radius: 30px;
-  padding-top: 5px;
-  padding-right: 15px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-}
-
-@media (max-width: 768px) {
-  main .deliverybox .couriertop .excel_but input, main .deliverybox .orderinfotop .excel_but input, main .courier_access .couriertop .excel_but input, main .courier_access .orderinfotop .excel_but input, main .orderinfo .couriertop .excel_but input, main .orderinfo .orderinfotop .excel_but input {
-    border-radius: 0.2em;
-    border: 1px solid #9FCC42;
-  }
-}
-
-main .deliverybox .couriertop .excel_but input:hover, main .deliverybox .orderinfotop .excel_but input:hover, main .courier_access .couriertop .excel_but input:hover, main .courier_access .orderinfotop .excel_but input:hover, main .orderinfo .couriertop .excel_but input:hover, main .orderinfo .orderinfotop .excel_but input:hover {
-  background-color: #8cb933;
-}
-
-main .deliverybox .couriercontainer > table, main .courier_access .couriercontainer > table, main .orderinfo .couriercontainer > table {
-  display: table;
+main .deliverybox .couriercontainer > table, main .deliverybox .communitycontainer > table, main .courier_access .couriercontainer > table, main .courier_access .communitycontainer > table, main .orderinfo .couriercontainer > table, main .orderinfo .communitycontainer > table, main .community_access .couriercontainer > table, main .community_access .communitycontainer > table {
   width: 100%;
+  display: inline-table;
   overflow: hidden;
 }
 
-main .deliverybox .couriercontainer > table tr, main .courier_access .couriercontainer > table tr, main .orderinfo .couriercontainer > table tr {
+main .deliverybox .couriercontainer > table tr, main .deliverybox .communitycontainer > table tr, main .courier_access .couriercontainer > table tr, main .courier_access .communitycontainer > table tr, main .orderinfo .couriercontainer > table tr, main .orderinfo .communitycontainer > table tr, main .community_access .couriercontainer > table tr, main .community_access .communitycontainer > table tr {
   display: table-row;
-  cursor: pointer;
 }
 
-main .deliverybox .couriercontainer > table tr:nth-child(2n+1), main .courier_access .couriercontainer > table tr:nth-child(2n+1), main .orderinfo .couriercontainer > table tr:nth-child(2n+1) {
+main .deliverybox .couriercontainer > table tr:nth-child(2n+1), main .deliverybox .communitycontainer > table tr:nth-child(2n+1), main .courier_access .couriercontainer > table tr:nth-child(2n+1), main .courier_access .communitycontainer > table tr:nth-child(2n+1), main .orderinfo .couriercontainer > table tr:nth-child(2n+1), main .orderinfo .communitycontainer > table tr:nth-child(2n+1), main .community_access .couriercontainer > table tr:nth-child(2n+1), main .community_access .communitycontainer > table tr:nth-child(2n+1) {
   background-color: rgba(137, 137, 137, 0.1);
 }
 
-main .deliverybox .couriercontainer > table tr:hover, main .courier_access .couriercontainer > table tr:hover, main .orderinfo .couriercontainer > table tr:hover {
-  -webkit-transform: translate(0, -5px);
-          transform: translate(0, -5px);
-  -webkit-box-shadow: 0 2px 2px #bebebe;
-          box-shadow: 0 2px 2px #bebebe;
-}
-
-main .deliverybox .couriercontainer > table tr:first-child, main .courier_access .couriercontainer > table tr:first-child, main .orderinfo .couriercontainer > table tr:first-child {
+main .deliverybox .couriercontainer > table tr:first-child, main .deliverybox .communitycontainer > table tr:first-child, main .courier_access .couriercontainer > table tr:first-child, main .courier_access .communitycontainer > table tr:first-child, main .orderinfo .couriercontainer > table tr:first-child, main .orderinfo .communitycontainer > table tr:first-child, main .community_access .couriercontainer > table tr:first-child, main .community_access .communitycontainer > table tr:first-child {
   cursor: initial;
 }
 
-main .deliverybox .couriercontainer > table tr:first-child:hover, main .courier_access .couriercontainer > table tr:first-child:hover, main .orderinfo .couriercontainer > table tr:first-child:hover {
+main .deliverybox .couriercontainer > table tr:first-child:hover, main .deliverybox .communitycontainer > table tr:first-child:hover, main .courier_access .couriercontainer > table tr:first-child:hover, main .courier_access .communitycontainer > table tr:first-child:hover, main .orderinfo .couriercontainer > table tr:first-child:hover, main .orderinfo .communitycontainer > table tr:first-child:hover, main .community_access .couriercontainer > table tr:first-child:hover, main .community_access .communitycontainer > table tr:first-child:hover {
   -webkit-transform: none;
           transform: none;
   -webkit-box-shadow: none;
@@ -1699,16 +1760,20 @@ main .deliverybox .couriercontainer > table tr:first-child:hover, main .courier_
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriercontainer > table tr th:last-child, main .deliverybox .couriercontainer > table tr td:last-child, main .courier_access .couriercontainer > table tr th:last-child, main .courier_access .couriercontainer > table tr td:last-child, main .orderinfo .couriercontainer > table tr th:last-child, main .orderinfo .couriercontainer > table tr td:last-child {
+  main .deliverybox .couriercontainer > table tr th:last-child, main .deliverybox .couriercontainer > table tr td:last-child, main .deliverybox .communitycontainer > table tr th:last-child, main .deliverybox .communitycontainer > table tr td:last-child, main .courier_access .couriercontainer > table tr th:last-child, main .courier_access .couriercontainer > table tr td:last-child, main .courier_access .communitycontainer > table tr th:last-child, main .courier_access .communitycontainer > table tr td:last-child, main .orderinfo .couriercontainer > table tr th:last-child, main .orderinfo .couriercontainer > table tr td:last-child, main .orderinfo .communitycontainer > table tr th:last-child, main .orderinfo .communitycontainer > table tr td:last-child, main .community_access .couriercontainer > table tr th:last-child, main .community_access .couriercontainer > table tr td:last-child, main .community_access .communitycontainer > table tr th:last-child, main .community_access .communitycontainer > table tr td:last-child {
     display: none;
   }
 }
 
-main .deliverybox .couriercontainer > table th, main .courier_access .couriercontainer > table th, main .orderinfo .couriercontainer > table th {
+main .deliverybox .couriercontainer > table th, main .deliverybox .communitycontainer > table th, main .courier_access .couriercontainer > table th, main .courier_access .communitycontainer > table th, main .orderinfo .couriercontainer > table th, main .orderinfo .communitycontainer > table th, main .community_access .couriercontainer > table th, main .community_access .communitycontainer > table th {
   background-color: #fbfaf7;
 }
 
-main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td {
+main .deliverybox .couriercontainer > table td a, main .deliverybox .communitycontainer > table td a, main .courier_access .couriercontainer > table td a, main .courier_access .communitycontainer > table td a, main .orderinfo .couriercontainer > table td a, main .orderinfo .communitycontainer > table td a, main .community_access .couriercontainer > table td a, main .community_access .communitycontainer > table td a {
+  color: #ff8400;
+}
+
+main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td {
   display: table-cell;
   margin: 0.5em 1em;
   width: 20%;
@@ -1718,34 +1783,71 @@ main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontai
   padding-left: 5px;
   font-size: 14px;
   line-height: 25.2px;
+  height: 41px;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td {
+  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td {
     width: 25%;
   }
 }
 
 @media (max-width: 488px) {
-  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td {
+  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td {
     font-size: 12px;
     line-height: 21.6px;
   }
 }
 
-main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom {
+main .deliverybox .communitycontainer > table:nth-of-type(1), main .courier_access .communitycontainer > table:nth-of-type(1), main .orderinfo .communitycontainer > table:nth-of-type(1), main .community_access .communitycontainer > table:nth-of-type(1) {
+  width: 85%;
+}
+
+main .deliverybox .communitycontainer > table:nth-of-type(1) tr:nth-of-type(1), main .courier_access .communitycontainer > table:nth-of-type(1) tr:nth-of-type(1), main .orderinfo .communitycontainer > table:nth-of-type(1) tr:nth-of-type(1), main .community_access .communitycontainer > table:nth-of-type(1) tr:nth-of-type(1) {
+  cursor: initial;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .communitycontainer > table:nth-of-type(1), main .courier_access .communitycontainer > table:nth-of-type(1), main .orderinfo .communitycontainer > table:nth-of-type(1), main .community_access .communitycontainer > table:nth-of-type(1) {
+    width: 100%;
+  }
+}
+
+main .deliverybox .communitycontainer > table:nth-of-type(2), main .courier_access .communitycontainer > table:nth-of-type(2), main .orderinfo .communitycontainer > table:nth-of-type(2), main .community_access .communitycontainer > table:nth-of-type(2) {
+  width: 15%;
+  float: right;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .communitycontainer > table:nth-of-type(2), main .courier_access .communitycontainer > table:nth-of-type(2), main .orderinfo .communitycontainer > table:nth-of-type(2), main .community_access .communitycontainer > table:nth-of-type(2) {
+    display: none;
+  }
+}
+
+main .deliverybox .couriercontainer > table tr, main .deliverybox .communitycontainer > table tr, main .courier_access .couriercontainer > table tr, main .courier_access .communitycontainer > table tr, main .orderinfo .couriercontainer > table tr, main .orderinfo .communitycontainer > table tr, main .community_access .couriercontainer > table tr, main .community_access .communitycontainer > table tr {
+  cursor: pointer;
+}
+
+main .deliverybox .mousetouch, main .courier_access .mousetouch, main .orderinfo .mousetouch, main .community_access .mousetouch {
+  -webkit-transform: translate(0, -5px);
+          transform: translate(0, -5px);
+  -webkit-box-shadow: 0 2px 2px #bebebe;
+          box-shadow: 0 2px 2px #bebebe;
+}
+
+main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom, main .community_access .courierbottom, main .community_access .orderinfobottom {
   text-align: right;
   margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom {
+  main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom, main .community_access .courierbottom, main .community_access .orderinfobottom {
     text-align: center;
   }
 }
 
-main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a {
+main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a, main .community_access .courierbottom a, main .community_access .orderinfobottom a {
   display: inline-block;
   padding-top: 5px;
   padding-right: 5px;
@@ -1759,7 +1861,7 @@ main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .
 }
 
 @media (max-width: 488px) {
-  main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a {
+  main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a, main .community_access .courierbottom a, main .community_access .orderinfobottom a {
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -1769,21 +1871,21 @@ main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .
   }
 }
 
-main .deliverybox .courierbottom a:hover, main .deliverybox .courierbottom a.active, main .deliverybox .orderinfobottom a:hover, main .deliverybox .orderinfobottom a.active, main .courier_access .courierbottom a:hover, main .courier_access .courierbottom a.active, main .courier_access .orderinfobottom a:hover, main .courier_access .orderinfobottom a.active, main .orderinfo .courierbottom a:hover, main .orderinfo .courierbottom a.active, main .orderinfo .orderinfobottom a:hover, main .orderinfo .orderinfobottom a.active {
+main .deliverybox .courierbottom a:hover, main .deliverybox .courierbottom a.active, main .deliverybox .orderinfobottom a:hover, main .deliverybox .orderinfobottom a.active, main .courier_access .courierbottom a:hover, main .courier_access .courierbottom a.active, main .courier_access .orderinfobottom a:hover, main .courier_access .orderinfobottom a.active, main .orderinfo .courierbottom a:hover, main .orderinfo .courierbottom a.active, main .orderinfo .orderinfobottom a:hover, main .orderinfo .orderinfobottom a.active, main .community_access .courierbottom a:hover, main .community_access .courierbottom a.active, main .community_access .orderinfobottom a:hover, main .community_access .orderinfobottom a.active {
   color: #ff8400;
   text-decoration: underline;
 }
 
-main .deliverybox .courierbottom a:first-child.active, main .deliverybox .courierbottom a:last-child.active, main .deliverybox .orderinfobottom a:first-child.active, main .deliverybox .orderinfobottom a:last-child.active, main .courier_access .courierbottom a:first-child.active, main .courier_access .courierbottom a:last-child.active, main .courier_access .orderinfobottom a:first-child.active, main .courier_access .orderinfobottom a:last-child.active, main .orderinfo .courierbottom a:first-child.active, main .orderinfo .courierbottom a:last-child.active, main .orderinfo .orderinfobottom a:first-child.active, main .orderinfo .orderinfobottom a:last-child.active {
+main .deliverybox .courierbottom a:first-child.active, main .deliverybox .courierbottom a:last-child.active, main .deliverybox .orderinfobottom a:first-child.active, main .deliverybox .orderinfobottom a:last-child.active, main .courier_access .courierbottom a:first-child.active, main .courier_access .courierbottom a:last-child.active, main .courier_access .orderinfobottom a:first-child.active, main .courier_access .orderinfobottom a:last-child.active, main .orderinfo .courierbottom a:first-child.active, main .orderinfo .courierbottom a:last-child.active, main .orderinfo .orderinfobottom a:first-child.active, main .orderinfo .orderinfobottom a:last-child.active, main .community_access .courierbottom a:first-child.active, main .community_access .courierbottom a:last-child.active, main .community_access .orderinfobottom a:first-child.active, main .community_access .orderinfobottom a:last-child.active {
   color: #898989;
   text-decoration: none;
 }
 
-main .deliverybox .deliverytop > .togglebut, main .courier_access .deliverytop > .togglebut, main .orderinfo .deliverytop > .togglebut {
+main .deliverybox .deliverytop > .togglebut, main .courier_access .deliverytop > .togglebut, main .orderinfo .deliverytop > .togglebut, main .community_access .deliverytop > .togglebut {
   float: left;
 }
 
-main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .orderinfo .deliverycenter {
+main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .orderinfo .deliverycenter, main .community_access .deliverycenter {
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1796,12 +1898,12 @@ main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .o
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .orderinfo .deliverycenter {
+  main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .orderinfo .deliverycenter, main .community_access .deliverycenter {
     margin-top: 5%;
   }
 }
 
-main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > div, main .orderinfo .deliverycenter > div {
+main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > div, main .orderinfo .deliverycenter > div, main .community_access .deliverycenter > div {
   width: 30%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1813,7 +1915,7 @@ main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > 
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
-main .deliverybox .deliverycenter > div:hover, main .courier_access .deliverycenter > div:hover, main .orderinfo .deliverycenter > div:hover {
+main .deliverybox .deliverycenter > div:hover, main .courier_access .deliverycenter > div:hover, main .orderinfo .deliverycenter > div:hover, main .community_access .deliverycenter > div:hover {
   -webkit-transform: translate(0, -5px);
           transform: translate(0, -5px);
   -webkit-box-shadow: 0 2px 8px #bebebe;
@@ -1821,23 +1923,23 @@ main .deliverybox .deliverycenter > div:hover, main .courier_access .deliverycen
 }
 
 @media (max-width: 980px) {
-  main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > div, main .orderinfo .deliverycenter > div {
+  main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > div, main .orderinfo .deliverycenter > div, main .community_access .deliverycenter > div {
     width: 48%;
   }
 }
 
 @media (max-width: 480px) {
-  main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > div, main .orderinfo .deliverycenter > div {
+  main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > div, main .orderinfo .deliverycenter > div, main .community_access .deliverycenter > div {
     width: 100%;
   }
 }
 
-main .deliverybox .deliverycenter .information_top, main .courier_access .deliverycenter .information_top, main .orderinfo .deliverycenter .information_top {
+main .deliverybox .deliverycenter .information_top, main .courier_access .deliverycenter .information_top, main .orderinfo .deliverycenter .information_top, main .community_access .deliverycenter .information_top {
   border-bottom: 2px solid #898989;
   background-color: #fbfaf7;
 }
 
-main .deliverybox .deliverycenter .information_top h6, main .courier_access .deliverycenter .information_top h6, main .orderinfo .deliverycenter .information_top h6 {
+main .deliverybox .deliverycenter .information_top h6, main .courier_access .deliverycenter .information_top h6, main .orderinfo .deliverycenter .information_top h6, main .community_access .deliverycenter .information_top h6 {
   padding-top: 3px;
   padding-right: 10px;
   padding-bottom: 3px;
@@ -1850,12 +1952,12 @@ main .deliverybox .deliverycenter .information_top h6, main .courier_access .del
   line-height: 25.2px;
 }
 
-main .deliverybox .deliverycenter .information_top h6.pickupcode, main .courier_access .deliverycenter .information_top h6.pickupcode, main .orderinfo .deliverycenter .information_top h6.pickupcode {
+main .deliverybox .deliverycenter .information_top h6.pickupcode, main .courier_access .deliverycenter .information_top h6.pickupcode, main .orderinfo .deliverycenter .information_top h6.pickupcode, main .community_access .deliverycenter .information_top h6.pickupcode {
   color: #fff;
   background-color: #ff8400;
 }
 
-main .deliverybox .deliverycenter .informationbot, main .courier_access .deliverycenter .informationbot, main .orderinfo .deliverycenter .informationbot {
+main .deliverybox .deliverycenter .informationbot, main .courier_access .deliverycenter .informationbot, main .orderinfo .deliverycenter .informationbot, main .community_access .deliverycenter .informationbot {
   font-size: 14px;
   line-height: 25.2px;
   padding-top: 10px;
@@ -1864,7 +1966,7 @@ main .deliverybox .deliverycenter .informationbot, main .courier_access .deliver
   padding-left: 15px;
 }
 
-main .deliverybox .deliverycenter .informationbot ul li, main .courier_access .deliverycenter .informationbot ul li, main .orderinfo .deliverycenter .informationbot ul li {
+main .deliverybox .deliverycenter .informationbot ul li, main .courier_access .deliverycenter .informationbot ul li, main .orderinfo .deliverycenter .informationbot ul li, main .community_access .deliverycenter .informationbot ul li {
   position: relative;
   padding-top: 3px;
   padding-right: 10px;
@@ -1872,7 +1974,7 @@ main .deliverybox .deliverycenter .informationbot ul li, main .courier_access .d
   padding-left: 10px;
 }
 
-main .deliverybox .deliverycenter .informationbot ul li::before, main .courier_access .deliverycenter .informationbot ul li::before, main .orderinfo .deliverycenter .informationbot ul li::before {
+main .deliverybox .deliverycenter .informationbot ul li::before, main .courier_access .deliverycenter .informationbot ul li::before, main .orderinfo .deliverycenter .informationbot ul li::before, main .community_access .deliverycenter .informationbot ul li::before {
   content: "";
   position: absolute;
   top: 7px;
@@ -1885,7 +1987,7 @@ main .deliverybox .deliverycenter .informationbot ul li::before, main .courier_a
   z-index: 1;
 }
 
-main .deliverybox .deliverycenter .informationbot ul li::after, main .courier_access .deliverycenter .informationbot ul li::after, main .orderinfo .deliverycenter .informationbot ul li::after {
+main .deliverybox .deliverycenter .informationbot ul li::after, main .courier_access .deliverycenter .informationbot ul li::after, main .orderinfo .deliverycenter .informationbot ul li::after, main .community_access .deliverycenter .informationbot ul li::after {
   content: "";
   position: absolute;
   top: 8px;
@@ -1895,15 +1997,15 @@ main .deliverybox .deliverycenter .informationbot ul li::after, main .courier_ac
   background-color: #898989;
 }
 
-main .deliverybox .deliverycenter .informationbot ul li:last-child::after, main .courier_access .deliverycenter .informationbot ul li:last-child::after, main .orderinfo .deliverycenter .informationbot ul li:last-child::after {
+main .deliverybox .deliverycenter .informationbot ul li:last-child::after, main .courier_access .deliverycenter .informationbot ul li:last-child::after, main .orderinfo .deliverycenter .informationbot ul li:last-child::after, main .community_access .deliverycenter .informationbot ul li:last-child::after {
   display: none;
 }
 
-main .deliverybox .deliverycenter .informationbot ul li.active::before, main .courier_access .deliverycenter .informationbot ul li.active::before, main .orderinfo .deliverycenter .informationbot ul li.active::before {
+main .deliverybox .deliverycenter .informationbot ul li.active::before, main .courier_access .deliverycenter .informationbot ul li.active::before, main .orderinfo .deliverycenter .informationbot ul li.active::before, main .community_access .deliverycenter .informationbot ul li.active::before {
   background-color: #898989;
 }
 
-main .deliverybox .deliverycenter .informationbot ul li span, main .courier_access .deliverycenter .informationbot ul li span, main .orderinfo .deliverycenter .informationbot ul li span {
+main .deliverybox .deliverycenter .informationbot ul li span, main .courier_access .deliverycenter .informationbot ul li span, main .orderinfo .deliverycenter .informationbot ul li span, main .community_access .deliverycenter .informationbot ul li span {
   display: block;
   font-size: 12px;
   line-height: 21.6px;

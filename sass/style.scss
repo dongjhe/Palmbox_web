@@ -786,14 +786,14 @@ main {
       width: 100%;
     }
   }
-  .deliverybox,.courier_access,.orderinfo {
+  .deliverybox,.courier_access,.orderinfo,.community_access {
     display: block;
     width: 100%;
     background-color: $color_white;
     @include padding_set(2%, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
-    .deliverytop,.couriertop,.orderinfotop{
+    .deliverytop,.couriertop,.orderinfotop,.communitytop{
       overflow: hidden;
       >div{
         display: inline-block;
@@ -817,26 +817,48 @@ main {
         @include margin_set(0, auto, 0, auto);  
         @include font_size(14px);
       }
-      .togglebut {
-        @media (max-width: 480px) {
-          float: none;
-        }
-        a{
-          display: inline-block;
-          color: $color_white;
-          background-color: $text_color;
-          @include padding_set(5px,10px,5px,10px)
-          @include margin_set(0,5px,5px,0)
-          @include font_size(14px);    
-          &:hover{
-            background-color: $color_orange;
+      .featuresbox{
+        display: flex;
+        justify-content: space-between;
+        .togglebut {
+          a{
+            display: inline-block;
+            color: $color_white;
+            background-color: $text_color;
+            @include padding_set(5px,10px,5px,10px)
+            @include margin_set(0,5px,5px,0)
+            @include font_size(14px);    
+            &:hover{
+              background-color: $color_orange;
+            }
+            &.active{
+              background-color: $color_orange;
+            }
           }
-          &.active{
-            background-color: $color_orange;
+        }
+        .excel_but{
+          display: inline-block;
+          @include margin_set(0,0,0,0)
+          @media (max-width: 768px) {
+            margin-top: 5%;
+            display: none;
+          }   
+          input {
+            color: $color_white;
+            background-color: $color_green;
+            border: none;
+            border-radius: 30px;
+            @media (max-width: 768px) {
+              border-radius: 0.2em;
+              border: 1px solid $color_green;
+            }   
+            @include padding_set(5px,15px,5px,15px)
+            &:hover {
+              background-color: rgb(140, 185, 51);
+            }
           }
         }
       }
-
       .phonenum {
         float: right;
         @media (max-width: 480px) {
@@ -850,7 +872,7 @@ main {
         border-radius: 30px;
       }
     }
-    .couriertop,.orderinfotop{
+    .couriertop,.orderinfotop,.communitytop{
       form{
         display: flex;
         justify-content: space-between;
@@ -890,9 +912,7 @@ main {
       }
       .inquirebox{
         position: relative;
-        display: inline-flex;
-        justify-content:flex-start;
-        max-width: 80%;
+        width: 100%;
         @media (max-width: 768px) {
           display: block;
           justify-content: initial;
@@ -901,18 +921,54 @@ main {
         >div{
           @include padding_set(0,5px,0,5px);
           width: 200px;
+          display: inline-block;
           @media (max-width:768px) {
             width: 100%;
             @include padding_set(0,0,0,0);
-
+          }
+          &.checkshow{
+            display: block;
+            width: initial;
+            margin-top: 10px;
+            input[type='checkbox'] {
+                @include padding_set(0,0,0,0);
+                @include margin_set(0,0,0,0);
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                appearance: none;
+                border: 2px solid $text_color;
+                border-radius: 3px;
+                vertical-align: middle;
+                background-image: url('../images/check.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: $color_white;
+                background-position: 50% 50%;
+                background-size: 0 0;
+                transition: 0.3s ease;
+                outline: 0;
+              }
+              input[type='checkbox']:active {
+                background-color: #ddd;
+              }
+              input[type='checkbox']:checked {
+                background-size: 100% 100%;
+              }
+              label {
+                display: inline-block;
+                @include padding_set(0,0,0,0);
+                @include margin_set(0,0,0,0);
+              }
           }
           &.inquire{
-            width:150px;
+            display: block;
+            text-align: center;
+            @include margin_set(30px,auto,0,auto);
             @media (max-width: 768px) {
               width: 100%;
             }   
             input{
-              margin-top: 28px;
               @media (max-width: 768px) {
                 margin-top: 3%;
               }   
@@ -927,44 +983,20 @@ main {
           }
         }
       }
-      .excel_but{
-        @include margin_set(0,0,0,0)
-        margin-top:28px;
-        @media (max-width: 768px) {
-          margin-top: 5%;
-          display: none;
-        }   
-        input {
-          color: $color_white;
-          background-color: $color_green;
-          border: none;
-          border-radius: 30px;
-          @media (max-width: 768px) {
-            border-radius: 0.2em;
-            border: 1px solid $color_green;
-          }   
-          @include padding_set(5px,15px,5px,15px)
-          &:hover {
-            background-color: rgb(140, 185, 51);
-          }
-        }
-      }
+
     }
-    .couriercontainer{
+    .couriercontainer,.communitycontainer{
       >table{
-        display: table;
         width: 100%;
+        display: inline-table;
         overflow: hidden;
         tr{
           display: table-row;
-          cursor: pointer;
+          
           &:nth-child(2n+1){
             background-color:rgba($text_color,0.1) 
           }
-          &:hover{
-            transform: translate(0,-5px);
-            box-shadow: 0 2px 2px rgba(190, 190, 190, 1);
-          }
+
           &:first-child{
             cursor: initial;
             &:hover{
@@ -985,6 +1017,9 @@ main {
           background-color: $header_color;
         }
         td{
+          a{
+            color: $color_orange;
+          }
         }
         th,td{
           display: table-cell;
@@ -992,6 +1027,7 @@ main {
           width: 20%;
           @include padding_set(8px,5px,8px,5px);
           @include font_size(14px);
+          height: 41px;
           text-align: center;
           @media (max-width:768px) {
             width: 25%;
@@ -1001,6 +1037,37 @@ main {
           }
         }
       }
+    }
+    .communitycontainer{
+      >table{    
+        &:nth-of-type(1){
+          width: 85%;
+          tr:nth-of-type(1){
+            cursor: initial;
+          }
+          @media (max-width:980px) {
+            width: 100%;
+          }
+        }
+        &:nth-of-type(2){
+          width: 15%;
+          float: right;
+          @media (max-width:980px) {
+            display: none;
+          }
+        }
+      }
+    }
+    .couriercontainer,.communitycontainer{
+      >table{
+        tr{
+          cursor: pointer;
+        }   
+      }
+    }
+    .mousetouch{
+        transform: translate(0,-5px);
+        box-shadow: 0 2px 2px rgba(190, 190, 190, 1);
     }
     .courierbottom,.orderinfobottom{
       text-align: right;

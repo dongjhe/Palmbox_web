@@ -81,7 +81,7 @@ $(window).on('load', function() {
       $(this).parents('.alertpopup').toggleClass('ishow')
     })
 
-    $('.couriercontainer >table td').on('click', function() {
+    $('.popu >table:nth-child(1) td').on('click', function() {
       $('html body').css('overflow-y', 'hidden')
       $('.popu_tr').toggleClass('ishow')
     })
@@ -119,7 +119,7 @@ $(window).on('load', function() {
     })
 
     // 快遞員派件紀錄查詢
-    $('.couriertop .togglebut a').on('click', function() {
+    $('.featuresbox .togglebut a').on('click', function() {
       $(this).addClass('active').siblings('a').removeClass('active')
     })
 
@@ -130,5 +130,44 @@ $(window).on('load', function() {
       $(this).addClass('active').siblings('a').removeClass('active')
       click_box_d.eq(indexa).css('display', 'block').siblings('div').css('display', 'none')
     })
+
+    //表格陰影
+    let tr_num, tablethis, tablenum
+    let table = $('.popu table')
+
+    table.find('tr').hover(function() {
+        // over
+        tablenum = $(this).parents('table').index()
+        tablethis = $(this)
+        tr_num = $(this).index()
+        addmouse(tablenum,tablethis, tr_num)
+
+      }, function() {
+        // out
+        table.find('tr').removeClass('mousetouch') 
+      })
+
+    function addmouse(tablenum, tablethis, tr_num) {
+      if (tablenum == 0 && tr_num > 0) {
+        tablethis.addClass('mousetouch')
+        table.eq(1).find('tr').eq(tr_num).addClass('mousetouch')
+      } else if (tablenum == 1 && tr_num > 0){
+        tablethis.addClass('mousetouch')
+        table.eq(0).find('tr').eq(tr_num).addClass('mousetouch')
+      }
+    }
+
+    $('.popu table:nth-child(1) tr').hover(function () {
+        // over
+        tr_num = $(this).index()
+        if (tr_num > 0) {
+          $(this).addClass('mousetouch')
+        } 
+      }, function () {
+        // out
+        $(this).removeClass('mousetouch')
+      }
+    );
+
   })()
 })
