@@ -193,7 +193,7 @@ template {
 .form__radio {
   position: relative;
   display: inline-block;
-  width: 20%;
+  margin: 0 10px 0 0;
 }
 
 .form__radio input[type=radio] {
@@ -241,7 +241,7 @@ template {
   position: relative;
   z-index: 9;
   display: block;
-  font-weight: 300;
+  font-weight: 500;
   height: 20px;
   line-height: 20px;
   cursor: pointer;
@@ -1561,19 +1561,7 @@ main .deliverybox .couriertop label, main .deliverybox .orderinfotop label, main
   line-height: 25.2px;
 }
 
-main .deliverybox .couriertop input,
-main .deliverybox .couriertop select, main .deliverybox .orderinfotop input,
-main .deliverybox .orderinfotop select, main .deliverybox .communitytop input,
-main .deliverybox .communitytop select, main .courier_access .couriertop input,
-main .courier_access .couriertop select, main .courier_access .orderinfotop input,
-main .courier_access .orderinfotop select, main .courier_access .communitytop input,
-main .courier_access .communitytop select, main .orderinfo .couriertop input,
-main .orderinfo .couriertop select, main .orderinfo .orderinfotop input,
-main .orderinfo .orderinfotop select, main .orderinfo .communitytop input,
-main .orderinfo .communitytop select, main .community_access .couriertop input,
-main .community_access .couriertop select, main .community_access .orderinfotop input,
-main .community_access .orderinfotop select, main .community_access .communitytop input,
-main .community_access .communitytop select {
+main .deliverybox .couriertop input, main .deliverybox .couriertop select, main .deliverybox .orderinfotop input, main .deliverybox .orderinfotop select, main .deliverybox .communitytop input, main .deliverybox .communitytop select, main .courier_access .couriertop input, main .courier_access .couriertop select, main .courier_access .orderinfotop input, main .courier_access .orderinfotop select, main .courier_access .communitytop input, main .courier_access .communitytop select, main .orderinfo .couriertop input, main .orderinfo .couriertop select, main .orderinfo .orderinfotop input, main .orderinfo .orderinfotop select, main .orderinfo .communitytop input, main .orderinfo .communitytop select, main .community_access .couriertop input, main .community_access .couriertop select, main .community_access .orderinfotop input, main .community_access .orderinfotop select, main .community_access .communitytop input, main .community_access .communitytop select {
   display: block;
   width: 100%;
   padding-top: 5px;
@@ -1593,19 +1581,7 @@ main .community_access .communitytop select {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-main .deliverybox .couriertop input[type='text']:focus,
-main .deliverybox .couriertop select[type='text']:focus, main .deliverybox .orderinfotop input[type='text']:focus,
-main .deliverybox .orderinfotop select[type='text']:focus, main .deliverybox .communitytop input[type='text']:focus,
-main .deliverybox .communitytop select[type='text']:focus, main .courier_access .couriertop input[type='text']:focus,
-main .courier_access .couriertop select[type='text']:focus, main .courier_access .orderinfotop input[type='text']:focus,
-main .courier_access .orderinfotop select[type='text']:focus, main .courier_access .communitytop input[type='text']:focus,
-main .courier_access .communitytop select[type='text']:focus, main .orderinfo .couriertop input[type='text']:focus,
-main .orderinfo .couriertop select[type='text']:focus, main .orderinfo .orderinfotop input[type='text']:focus,
-main .orderinfo .orderinfotop select[type='text']:focus, main .orderinfo .communitytop input[type='text']:focus,
-main .orderinfo .communitytop select[type='text']:focus, main .community_access .couriertop input[type='text']:focus,
-main .community_access .couriertop select[type='text']:focus, main .community_access .orderinfotop input[type='text']:focus,
-main .community_access .orderinfotop select[type='text']:focus, main .community_access .communitytop input[type='text']:focus,
-main .community_access .communitytop select[type='text']:focus {
+main .deliverybox .couriertop input[type='text']:focus, main .deliverybox .couriertop select[type='text']:focus, main .deliverybox .orderinfotop input[type='text']:focus, main .deliverybox .orderinfotop select[type='text']:focus, main .deliverybox .communitytop input[type='text']:focus, main .deliverybox .communitytop select[type='text']:focus, main .courier_access .couriertop input[type='text']:focus, main .courier_access .couriertop select[type='text']:focus, main .courier_access .orderinfotop input[type='text']:focus, main .courier_access .orderinfotop select[type='text']:focus, main .courier_access .communitytop input[type='text']:focus, main .courier_access .communitytop select[type='text']:focus, main .orderinfo .couriertop input[type='text']:focus, main .orderinfo .couriertop select[type='text']:focus, main .orderinfo .orderinfotop input[type='text']:focus, main .orderinfo .orderinfotop select[type='text']:focus, main .orderinfo .communitytop input[type='text']:focus, main .orderinfo .communitytop select[type='text']:focus, main .community_access .couriertop input[type='text']:focus, main .community_access .couriertop select[type='text']:focus, main .community_access .orderinfotop input[type='text']:focus, main .community_access .orderinfotop select[type='text']:focus, main .community_access .communitytop input[type='text']:focus, main .community_access .communitytop select[type='text']:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -1645,6 +1621,10 @@ main .deliverybox .couriertop .inquirebox > div, main .deliverybox .orderinfotop
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
   }
 }
 
@@ -1734,25 +1714,55 @@ main .deliverybox .couriertop .inquirebox > div.inquire input:hover, main .deliv
   background-color: #8cb933;
 }
 
-main .deliverybox .couriercontainer > table, main .deliverybox .communitycontainer > table, main .courier_access .couriercontainer > table, main .courier_access .communitycontainer > table, main .orderinfo .couriercontainer > table, main .orderinfo .communitycontainer > table, main .community_access .couriercontainer > table, main .community_access .communitycontainer > table {
+main .deliverybox .couriertop .inquirebox .orderstatus, main .deliverybox .orderinfotop .inquirebox .orderstatus, main .deliverybox .communitytop .inquirebox .orderstatus, main .courier_access .couriertop .inquirebox .orderstatus, main .courier_access .orderinfotop .inquirebox .orderstatus, main .courier_access .communitytop .inquirebox .orderstatus, main .orderinfo .couriertop .inquirebox .orderstatus, main .orderinfo .orderinfotop .inquirebox .orderstatus, main .orderinfo .communitytop .inquirebox .orderstatus, main .community_access .couriertop .inquirebox .orderstatus, main .community_access .orderinfotop .inquirebox .orderstatus, main .community_access .communitytop .inquirebox .orderstatus {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .couriertop .inquirebox .orderstatus, main .deliverybox .orderinfotop .inquirebox .orderstatus, main .deliverybox .communitytop .inquirebox .orderstatus, main .courier_access .couriertop .inquirebox .orderstatus, main .courier_access .orderinfotop .inquirebox .orderstatus, main .courier_access .communitytop .inquirebox .orderstatus, main .orderinfo .couriertop .inquirebox .orderstatus, main .orderinfo .orderinfotop .inquirebox .orderstatus, main .orderinfo .communitytop .inquirebox .orderstatus, main .community_access .couriertop .inquirebox .orderstatus, main .community_access .orderinfotop .inquirebox .orderstatus, main .community_access .communitytop .inquirebox .orderstatus {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .couriertop .inquirebox .orderstatus .form__radio, main .deliverybox .orderinfotop .inquirebox .orderstatus .form__radio, main .deliverybox .communitytop .inquirebox .orderstatus .form__radio, main .courier_access .couriertop .inquirebox .orderstatus .form__radio, main .courier_access .orderinfotop .inquirebox .orderstatus .form__radio, main .courier_access .communitytop .inquirebox .orderstatus .form__radio, main .orderinfo .couriertop .inquirebox .orderstatus .form__radio, main .orderinfo .orderinfotop .inquirebox .orderstatus .form__radio, main .orderinfo .communitytop .inquirebox .orderstatus .form__radio, main .community_access .couriertop .inquirebox .orderstatus .form__radio, main .community_access .orderinfotop .inquirebox .orderstatus .form__radio, main .community_access .communitytop .inquirebox .orderstatus .form__radio {
+    width: 50%;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    float: left;
+  }
+}
+
+main .deliverybox .couriercontainer > table, main .deliverybox .communitycontainer > table, main .deliverybox .orderinfocontainer > table, main .courier_access .couriercontainer > table, main .courier_access .communitycontainer > table, main .courier_access .orderinfocontainer > table, main .orderinfo .couriercontainer > table, main .orderinfo .communitycontainer > table, main .orderinfo .orderinfocontainer > table, main .community_access .couriercontainer > table, main .community_access .communitycontainer > table, main .community_access .orderinfocontainer > table {
   width: 100%;
   display: inline-table;
   overflow: hidden;
 }
 
-main .deliverybox .couriercontainer > table tr, main .deliverybox .communitycontainer > table tr, main .courier_access .couriercontainer > table tr, main .courier_access .communitycontainer > table tr, main .orderinfo .couriercontainer > table tr, main .orderinfo .communitycontainer > table tr, main .community_access .couriercontainer > table tr, main .community_access .communitycontainer > table tr {
+main .deliverybox .couriercontainer > table tr, main .deliverybox .communitycontainer > table tr, main .deliverybox .orderinfocontainer > table tr, main .courier_access .couriercontainer > table tr, main .courier_access .communitycontainer > table tr, main .courier_access .orderinfocontainer > table tr, main .orderinfo .couriercontainer > table tr, main .orderinfo .communitycontainer > table tr, main .orderinfo .orderinfocontainer > table tr, main .community_access .couriercontainer > table tr, main .community_access .communitycontainer > table tr, main .community_access .orderinfocontainer > table tr {
   display: table-row;
 }
 
-main .deliverybox .couriercontainer > table tr:nth-child(2n+1), main .deliverybox .communitycontainer > table tr:nth-child(2n+1), main .courier_access .couriercontainer > table tr:nth-child(2n+1), main .courier_access .communitycontainer > table tr:nth-child(2n+1), main .orderinfo .couriercontainer > table tr:nth-child(2n+1), main .orderinfo .communitycontainer > table tr:nth-child(2n+1), main .community_access .couriercontainer > table tr:nth-child(2n+1), main .community_access .communitycontainer > table tr:nth-child(2n+1) {
+main .deliverybox .couriercontainer > table tr:nth-child(2n+1), main .deliverybox .communitycontainer > table tr:nth-child(2n+1), main .deliverybox .orderinfocontainer > table tr:nth-child(2n+1), main .courier_access .couriercontainer > table tr:nth-child(2n+1), main .courier_access .communitycontainer > table tr:nth-child(2n+1), main .courier_access .orderinfocontainer > table tr:nth-child(2n+1), main .orderinfo .couriercontainer > table tr:nth-child(2n+1), main .orderinfo .communitycontainer > table tr:nth-child(2n+1), main .orderinfo .orderinfocontainer > table tr:nth-child(2n+1), main .community_access .couriercontainer > table tr:nth-child(2n+1), main .community_access .communitycontainer > table tr:nth-child(2n+1), main .community_access .orderinfocontainer > table tr:nth-child(2n+1) {
   background-color: rgba(137, 137, 137, 0.1);
 }
 
-main .deliverybox .couriercontainer > table tr:first-child, main .deliverybox .communitycontainer > table tr:first-child, main .courier_access .couriercontainer > table tr:first-child, main .courier_access .communitycontainer > table tr:first-child, main .orderinfo .couriercontainer > table tr:first-child, main .orderinfo .communitycontainer > table tr:first-child, main .community_access .couriercontainer > table tr:first-child, main .community_access .communitycontainer > table tr:first-child {
+main .deliverybox .couriercontainer > table tr:first-child, main .deliverybox .communitycontainer > table tr:first-child, main .deliverybox .orderinfocontainer > table tr:first-child, main .courier_access .couriercontainer > table tr:first-child, main .courier_access .communitycontainer > table tr:first-child, main .courier_access .orderinfocontainer > table tr:first-child, main .orderinfo .couriercontainer > table tr:first-child, main .orderinfo .communitycontainer > table tr:first-child, main .orderinfo .orderinfocontainer > table tr:first-child, main .community_access .couriercontainer > table tr:first-child, main .community_access .communitycontainer > table tr:first-child, main .community_access .orderinfocontainer > table tr:first-child {
   cursor: initial;
 }
 
-main .deliverybox .couriercontainer > table tr:first-child:hover, main .deliverybox .communitycontainer > table tr:first-child:hover, main .courier_access .couriercontainer > table tr:first-child:hover, main .courier_access .communitycontainer > table tr:first-child:hover, main .orderinfo .couriercontainer > table tr:first-child:hover, main .orderinfo .communitycontainer > table tr:first-child:hover, main .community_access .couriercontainer > table tr:first-child:hover, main .community_access .communitycontainer > table tr:first-child:hover {
+main .deliverybox .couriercontainer > table tr:first-child:hover, main .deliverybox .communitycontainer > table tr:first-child:hover, main .deliverybox .orderinfocontainer > table tr:first-child:hover, main .courier_access .couriercontainer > table tr:first-child:hover, main .courier_access .communitycontainer > table tr:first-child:hover, main .courier_access .orderinfocontainer > table tr:first-child:hover, main .orderinfo .couriercontainer > table tr:first-child:hover, main .orderinfo .communitycontainer > table tr:first-child:hover, main .orderinfo .orderinfocontainer > table tr:first-child:hover, main .community_access .couriercontainer > table tr:first-child:hover, main .community_access .communitycontainer > table tr:first-child:hover, main .community_access .orderinfocontainer > table tr:first-child:hover {
   -webkit-transform: none;
           transform: none;
   -webkit-box-shadow: none;
@@ -1760,20 +1770,20 @@ main .deliverybox .couriercontainer > table tr:first-child:hover, main .delivery
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriercontainer > table tr th:last-child, main .deliverybox .couriercontainer > table tr td:last-child, main .deliverybox .communitycontainer > table tr th:last-child, main .deliverybox .communitycontainer > table tr td:last-child, main .courier_access .couriercontainer > table tr th:last-child, main .courier_access .couriercontainer > table tr td:last-child, main .courier_access .communitycontainer > table tr th:last-child, main .courier_access .communitycontainer > table tr td:last-child, main .orderinfo .couriercontainer > table tr th:last-child, main .orderinfo .couriercontainer > table tr td:last-child, main .orderinfo .communitycontainer > table tr th:last-child, main .orderinfo .communitycontainer > table tr td:last-child, main .community_access .couriercontainer > table tr th:last-child, main .community_access .couriercontainer > table tr td:last-child, main .community_access .communitycontainer > table tr th:last-child, main .community_access .communitycontainer > table tr td:last-child {
+  main .deliverybox .couriercontainer > table tr th:last-child, main .deliverybox .couriercontainer > table tr td:last-child, main .deliverybox .communitycontainer > table tr th:last-child, main .deliverybox .communitycontainer > table tr td:last-child, main .deliverybox .orderinfocontainer > table tr th:last-child, main .deliverybox .orderinfocontainer > table tr td:last-child, main .courier_access .couriercontainer > table tr th:last-child, main .courier_access .couriercontainer > table tr td:last-child, main .courier_access .communitycontainer > table tr th:last-child, main .courier_access .communitycontainer > table tr td:last-child, main .courier_access .orderinfocontainer > table tr th:last-child, main .courier_access .orderinfocontainer > table tr td:last-child, main .orderinfo .couriercontainer > table tr th:last-child, main .orderinfo .couriercontainer > table tr td:last-child, main .orderinfo .communitycontainer > table tr th:last-child, main .orderinfo .communitycontainer > table tr td:last-child, main .orderinfo .orderinfocontainer > table tr th:last-child, main .orderinfo .orderinfocontainer > table tr td:last-child, main .community_access .couriercontainer > table tr th:last-child, main .community_access .couriercontainer > table tr td:last-child, main .community_access .communitycontainer > table tr th:last-child, main .community_access .communitycontainer > table tr td:last-child, main .community_access .orderinfocontainer > table tr th:last-child, main .community_access .orderinfocontainer > table tr td:last-child {
     display: none;
   }
 }
 
-main .deliverybox .couriercontainer > table th, main .deliverybox .communitycontainer > table th, main .courier_access .couriercontainer > table th, main .courier_access .communitycontainer > table th, main .orderinfo .couriercontainer > table th, main .orderinfo .communitycontainer > table th, main .community_access .couriercontainer > table th, main .community_access .communitycontainer > table th {
+main .deliverybox .couriercontainer > table th, main .deliverybox .communitycontainer > table th, main .deliverybox .orderinfocontainer > table th, main .courier_access .couriercontainer > table th, main .courier_access .communitycontainer > table th, main .courier_access .orderinfocontainer > table th, main .orderinfo .couriercontainer > table th, main .orderinfo .communitycontainer > table th, main .orderinfo .orderinfocontainer > table th, main .community_access .couriercontainer > table th, main .community_access .communitycontainer > table th, main .community_access .orderinfocontainer > table th {
   background-color: #fbfaf7;
 }
 
-main .deliverybox .couriercontainer > table td a, main .deliverybox .communitycontainer > table td a, main .courier_access .couriercontainer > table td a, main .courier_access .communitycontainer > table td a, main .orderinfo .couriercontainer > table td a, main .orderinfo .communitycontainer > table td a, main .community_access .couriercontainer > table td a, main .community_access .communitycontainer > table td a {
+main .deliverybox .couriercontainer > table td a, main .deliverybox .communitycontainer > table td a, main .deliverybox .orderinfocontainer > table td a, main .courier_access .couriercontainer > table td a, main .courier_access .communitycontainer > table td a, main .courier_access .orderinfocontainer > table td a, main .orderinfo .couriercontainer > table td a, main .orderinfo .communitycontainer > table td a, main .orderinfo .orderinfocontainer > table td a, main .community_access .couriercontainer > table td a, main .community_access .communitycontainer > table td a, main .community_access .orderinfocontainer > table td a {
   color: #ff8400;
 }
 
-main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td {
+main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .deliverybox .orderinfocontainer > table th, main .deliverybox .orderinfocontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .courier_access .orderinfocontainer > table th, main .courier_access .orderinfocontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .orderinfo .orderinfocontainer > table th, main .orderinfo .orderinfocontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td, main .community_access .orderinfocontainer > table th, main .community_access .orderinfocontainer > table td {
   display: table-cell;
   margin: 0.5em 1em;
   width: 20%;
@@ -1788,13 +1798,13 @@ main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontai
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td {
+  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .deliverybox .orderinfocontainer > table th, main .deliverybox .orderinfocontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .courier_access .orderinfocontainer > table th, main .courier_access .orderinfocontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .orderinfo .orderinfocontainer > table th, main .orderinfo .orderinfocontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td, main .community_access .orderinfocontainer > table th, main .community_access .orderinfocontainer > table td {
     width: 25%;
   }
 }
 
 @media (max-width: 488px) {
-  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td {
+  main .deliverybox .couriercontainer > table th, main .deliverybox .couriercontainer > table td, main .deliverybox .communitycontainer > table th, main .deliverybox .communitycontainer > table td, main .deliverybox .orderinfocontainer > table th, main .deliverybox .orderinfocontainer > table td, main .courier_access .couriercontainer > table th, main .courier_access .couriercontainer > table td, main .courier_access .communitycontainer > table th, main .courier_access .communitycontainer > table td, main .courier_access .orderinfocontainer > table th, main .courier_access .orderinfocontainer > table td, main .orderinfo .couriercontainer > table th, main .orderinfo .couriercontainer > table td, main .orderinfo .communitycontainer > table th, main .orderinfo .communitycontainer > table td, main .orderinfo .orderinfocontainer > table th, main .orderinfo .orderinfocontainer > table td, main .community_access .couriercontainer > table th, main .community_access .couriercontainer > table td, main .community_access .communitycontainer > table th, main .community_access .communitycontainer > table td, main .community_access .orderinfocontainer > table th, main .community_access .orderinfocontainer > table td {
     font-size: 12px;
     line-height: 21.6px;
   }
@@ -1825,8 +1835,198 @@ main .deliverybox .communitycontainer > table:nth-of-type(2), main .courier_acce
   }
 }
 
-main .deliverybox .couriercontainer > table tr, main .deliverybox .communitycontainer > table tr, main .courier_access .couriercontainer > table tr, main .courier_access .communitycontainer > table tr, main .orderinfo .couriercontainer > table tr, main .orderinfo .communitycontainer > table tr, main .community_access .couriercontainer > table tr, main .community_access .communitycontainer > table tr {
+main .deliverybox .couriercontainer > table tr, main .deliverybox .communitycontainer > table tr, main .deliverybox .orderinfocontainer > table tr, main .courier_access .couriercontainer > table tr, main .courier_access .communitycontainer > table tr, main .courier_access .orderinfocontainer > table tr, main .orderinfo .couriercontainer > table tr, main .orderinfo .communitycontainer > table tr, main .orderinfo .orderinfocontainer > table tr, main .community_access .couriercontainer > table tr, main .community_access .communitycontainer > table tr, main .community_access .orderinfocontainer > table tr {
   cursor: pointer;
+}
+
+main .deliverybox .orderinfocontainer > table tr:nth-child(3n+1), main .courier_access .orderinfocontainer > table tr:nth-child(3n+1), main .orderinfo .orderinfocontainer > table tr:nth-child(3n+1), main .community_access .orderinfocontainer > table tr:nth-child(3n+1) {
+  background-color: rgba(137, 137, 137, 0.1);
+}
+
+main .deliverybox .orderinfocontainer > table th, main .deliverybox .orderinfocontainer > table td, main .courier_access .orderinfocontainer > table th, main .courier_access .orderinfocontainer > table td, main .orderinfo .orderinfocontainer > table th, main .orderinfo .orderinfocontainer > table td, main .community_access .orderinfocontainer > table th, main .community_access .orderinfocontainer > table td {
+  width: 14%;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .orderinfocontainer > table th, main .deliverybox .orderinfocontainer > table td, main .courier_access .orderinfocontainer > table th, main .courier_access .orderinfocontainer > table td, main .orderinfo .orderinfocontainer > table th, main .orderinfo .orderinfocontainer > table td, main .community_access .orderinfocontainer > table th, main .community_access .orderinfocontainer > table td {
+    width: 20%;
+  }
+  main .deliverybox .orderinfocontainer > table th:nth-last-of-type(1), main .deliverybox .orderinfocontainer > table th:nth-last-of-type(2), main .deliverybox .orderinfocontainer > table td:nth-last-of-type(1), main .deliverybox .orderinfocontainer > table td:nth-last-of-type(2), main .courier_access .orderinfocontainer > table th:nth-last-of-type(1), main .courier_access .orderinfocontainer > table th:nth-last-of-type(2), main .courier_access .orderinfocontainer > table td:nth-last-of-type(1), main .courier_access .orderinfocontainer > table td:nth-last-of-type(2), main .orderinfo .orderinfocontainer > table th:nth-last-of-type(1), main .orderinfo .orderinfocontainer > table th:nth-last-of-type(2), main .orderinfo .orderinfocontainer > table td:nth-last-of-type(1), main .orderinfo .orderinfocontainer > table td:nth-last-of-type(2), main .community_access .orderinfocontainer > table th:nth-last-of-type(1), main .community_access .orderinfocontainer > table th:nth-last-of-type(2), main .community_access .orderinfocontainer > table td:nth-last-of-type(1), main .community_access .orderinfocontainer > table td:nth-last-of-type(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .orderinfocontainer > table th, main .deliverybox .orderinfocontainer > table td, main .courier_access .orderinfocontainer > table th, main .courier_access .orderinfocontainer > table td, main .orderinfo .orderinfocontainer > table th, main .orderinfo .orderinfocontainer > table td, main .community_access .orderinfocontainer > table th, main .community_access .orderinfocontainer > table td {
+    width: 25%;
+  }
+  main .deliverybox .orderinfocontainer > table th:nth-last-of-type(3), main .deliverybox .orderinfocontainer > table td:nth-last-of-type(3), main .courier_access .orderinfocontainer > table th:nth-last-of-type(3), main .courier_access .orderinfocontainer > table td:nth-last-of-type(3), main .orderinfo .orderinfocontainer > table th:nth-last-of-type(3), main .orderinfo .orderinfocontainer > table td:nth-last-of-type(3), main .community_access .orderinfocontainer > table th:nth-last-of-type(3), main .community_access .orderinfocontainer > table td:nth-last-of-type(3) {
+    display: none;
+  }
+}
+
+main .deliverybox .orderinfocontainer .navtitle, main .deliverybox .orderinfocontainer .info, main .courier_access .orderinfocontainer .navtitle, main .courier_access .orderinfocontainer .info, main .orderinfo .orderinfocontainer .navtitle, main .orderinfo .orderinfocontainer .info, main .community_access .orderinfocontainer .navtitle, main .community_access .orderinfocontainer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fbfaf7;
+}
+
+main .deliverybox .orderinfocontainer .navtitle h1, main .deliverybox .orderinfocontainer .navtitle p, main .deliverybox .orderinfocontainer .info h1, main .deliverybox .orderinfocontainer .info p, main .courier_access .orderinfocontainer .navtitle h1, main .courier_access .orderinfocontainer .navtitle p, main .courier_access .orderinfocontainer .info h1, main .courier_access .orderinfocontainer .info p, main .orderinfo .orderinfocontainer .navtitle h1, main .orderinfo .orderinfocontainer .navtitle p, main .orderinfo .orderinfocontainer .info h1, main .orderinfo .orderinfocontainer .info p, main .community_access .orderinfocontainer .navtitle h1, main .community_access .orderinfocontainer .navtitle p, main .community_access .orderinfocontainer .info h1, main .community_access .orderinfocontainer .info p {
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: 14px;
+  line-height: 25.2px;
+  width: 14%;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .orderinfocontainer .navtitle h1, main .deliverybox .orderinfocontainer .navtitle p, main .deliverybox .orderinfocontainer .info h1, main .deliverybox .orderinfocontainer .info p, main .courier_access .orderinfocontainer .navtitle h1, main .courier_access .orderinfocontainer .navtitle p, main .courier_access .orderinfocontainer .info h1, main .courier_access .orderinfocontainer .info p, main .orderinfo .orderinfocontainer .navtitle h1, main .orderinfo .orderinfocontainer .navtitle p, main .orderinfo .orderinfocontainer .info h1, main .orderinfo .orderinfocontainer .info p, main .community_access .orderinfocontainer .navtitle h1, main .community_access .orderinfocontainer .navtitle p, main .community_access .orderinfocontainer .info h1, main .community_access .orderinfocontainer .info p {
+    width: 20%;
+  }
+  main .deliverybox .orderinfocontainer .navtitle h1:nth-last-of-type(1), main .deliverybox .orderinfocontainer .navtitle h1:nth-last-of-type(2), main .deliverybox .orderinfocontainer .navtitle p:nth-last-of-type(1), main .deliverybox .orderinfocontainer .navtitle p:nth-last-of-type(2), main .deliverybox .orderinfocontainer .info h1:nth-last-of-type(1), main .deliverybox .orderinfocontainer .info h1:nth-last-of-type(2), main .deliverybox .orderinfocontainer .info p:nth-last-of-type(1), main .deliverybox .orderinfocontainer .info p:nth-last-of-type(2), main .courier_access .orderinfocontainer .navtitle h1:nth-last-of-type(1), main .courier_access .orderinfocontainer .navtitle h1:nth-last-of-type(2), main .courier_access .orderinfocontainer .navtitle p:nth-last-of-type(1), main .courier_access .orderinfocontainer .navtitle p:nth-last-of-type(2), main .courier_access .orderinfocontainer .info h1:nth-last-of-type(1), main .courier_access .orderinfocontainer .info h1:nth-last-of-type(2), main .courier_access .orderinfocontainer .info p:nth-last-of-type(1), main .courier_access .orderinfocontainer .info p:nth-last-of-type(2), main .orderinfo .orderinfocontainer .navtitle h1:nth-last-of-type(1), main .orderinfo .orderinfocontainer .navtitle h1:nth-last-of-type(2), main .orderinfo .orderinfocontainer .navtitle p:nth-last-of-type(1), main .orderinfo .orderinfocontainer .navtitle p:nth-last-of-type(2), main .orderinfo .orderinfocontainer .info h1:nth-last-of-type(1), main .orderinfo .orderinfocontainer .info h1:nth-last-of-type(2), main .orderinfo .orderinfocontainer .info p:nth-last-of-type(1), main .orderinfo .orderinfocontainer .info p:nth-last-of-type(2), main .community_access .orderinfocontainer .navtitle h1:nth-last-of-type(1), main .community_access .orderinfocontainer .navtitle h1:nth-last-of-type(2), main .community_access .orderinfocontainer .navtitle p:nth-last-of-type(1), main .community_access .orderinfocontainer .navtitle p:nth-last-of-type(2), main .community_access .orderinfocontainer .info h1:nth-last-of-type(1), main .community_access .orderinfocontainer .info h1:nth-last-of-type(2), main .community_access .orderinfocontainer .info p:nth-last-of-type(1), main .community_access .orderinfocontainer .info p:nth-last-of-type(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .orderinfocontainer .navtitle h1, main .deliverybox .orderinfocontainer .navtitle p, main .deliverybox .orderinfocontainer .info h1, main .deliverybox .orderinfocontainer .info p, main .courier_access .orderinfocontainer .navtitle h1, main .courier_access .orderinfocontainer .navtitle p, main .courier_access .orderinfocontainer .info h1, main .courier_access .orderinfocontainer .info p, main .orderinfo .orderinfocontainer .navtitle h1, main .orderinfo .orderinfocontainer .navtitle p, main .orderinfo .orderinfocontainer .info h1, main .orderinfo .orderinfocontainer .info p, main .community_access .orderinfocontainer .navtitle h1, main .community_access .orderinfocontainer .navtitle p, main .community_access .orderinfocontainer .info h1, main .community_access .orderinfocontainer .info p {
+    width: 25%;
+  }
+  main .deliverybox .orderinfocontainer .navtitle h1:nth-last-of-type(3), main .deliverybox .orderinfocontainer .navtitle p:nth-last-of-type(3), main .deliverybox .orderinfocontainer .info h1:nth-last-of-type(3), main .deliverybox .orderinfocontainer .info p:nth-last-of-type(3), main .courier_access .orderinfocontainer .navtitle h1:nth-last-of-type(3), main .courier_access .orderinfocontainer .navtitle p:nth-last-of-type(3), main .courier_access .orderinfocontainer .info h1:nth-last-of-type(3), main .courier_access .orderinfocontainer .info p:nth-last-of-type(3), main .orderinfo .orderinfocontainer .navtitle h1:nth-last-of-type(3), main .orderinfo .orderinfocontainer .navtitle p:nth-last-of-type(3), main .orderinfo .orderinfocontainer .info h1:nth-last-of-type(3), main .orderinfo .orderinfocontainer .info p:nth-last-of-type(3), main .community_access .orderinfocontainer .navtitle h1:nth-last-of-type(3), main .community_access .orderinfocontainer .navtitle p:nth-last-of-type(3), main .community_access .orderinfocontainer .info h1:nth-last-of-type(3), main .community_access .orderinfocontainer .info p:nth-last-of-type(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .orderinfocontainer .navtitle h1, main .deliverybox .orderinfocontainer .navtitle p, main .deliverybox .orderinfocontainer .info h1, main .deliverybox .orderinfocontainer .info p, main .courier_access .orderinfocontainer .navtitle h1, main .courier_access .orderinfocontainer .navtitle p, main .courier_access .orderinfocontainer .info h1, main .courier_access .orderinfocontainer .info p, main .orderinfo .orderinfocontainer .navtitle h1, main .orderinfo .orderinfocontainer .navtitle p, main .orderinfo .orderinfocontainer .info h1, main .orderinfo .orderinfocontainer .info p, main .community_access .orderinfocontainer .navtitle h1, main .community_access .orderinfocontainer .navtitle p, main .community_access .orderinfocontainer .info h1, main .community_access .orderinfocontainer .info p {
+    font-size: 12px;
+    line-height: 21.6px;
+  }
+}
+
+main .deliverybox .orderinfocontainer .containerbox .item, main .courier_access .orderinfocontainer .containerbox .item, main .orderinfo .orderinfocontainer .containerbox .item, main .community_access .orderinfocontainer .containerbox .item {
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .item:nth-child(even), main .courier_access .orderinfocontainer .containerbox .item:nth-child(even), main .orderinfo .orderinfocontainer .containerbox .item:nth-child(even), main .community_access .orderinfocontainer .containerbox .item:nth-child(even) {
+  background-color: rgba(137, 137, 137, 0.1);
+}
+
+main .deliverybox .orderinfocontainer .containerbox .item:hover, main .courier_access .orderinfocontainer .containerbox .item:hover, main .orderinfo .orderinfocontainer .containerbox .item:hover, main .community_access .orderinfocontainer .containerbox .item:hover {
+  -webkit-transform: translate(0, -5px);
+          transform: translate(0, -5px);
+  -webkit-box-shadow: 0 2px 2px #bebebe;
+          box-shadow: 0 2px 2px #bebebe;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .info, main .courier_access .orderinfocontainer .containerbox .info, main .orderinfo .orderinfocontainer .containerbox .info, main .community_access .orderinfocontainer .containerbox .info {
+  background-color: initial;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process, main .courier_access .orderinfocontainer .containerbox .process, main .orderinfo .orderinfocontainer .containerbox .process, main .community_access .orderinfocontainer .containerbox .process {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul, main .courier_access .orderinfocontainer .containerbox .process ul, main .orderinfo .orderinfocontainer .containerbox .process ul, main .community_access .orderinfocontainer .containerbox .process ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .orderinfocontainer .containerbox .process ul, main .courier_access .orderinfocontainer .containerbox .process ul, main .orderinfo .orderinfocontainer .containerbox .process ul, main .community_access .orderinfocontainer .containerbox .process ul {
+    width: 100%;
+  }
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li, main .courier_access .orderinfocontainer .containerbox .process ul li, main .orderinfo .orderinfocontainer .containerbox .process ul li, main .community_access .orderinfocontainer .containerbox .process ul li {
+  font-size: 12px;
+  line-height: 21.6px;
+  position: relative;
+  width: 20%;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .orderinfocontainer .containerbox .process ul li, main .courier_access .orderinfocontainer .containerbox .process ul li, main .orderinfo .orderinfocontainer .containerbox .process ul li, main .community_access .orderinfocontainer .containerbox .process ul li {
+    width: 25%;
+    letter-spacing: -0.8px;
+  }
+  main .deliverybox .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .courier_access .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .orderinfo .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .community_access .orderinfocontainer .containerbox .process ul li:nth-of-type(3) {
+    display: none;
+  }
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li span, main .courier_access .orderinfocontainer .containerbox .process ul li span, main .orderinfo .orderinfocontainer .containerbox .process ul li span, main .community_access .orderinfocontainer .containerbox .process ul li span {
+  display: block;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  width: 15px;
+  height: 15px;
+  background-color: #999999;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li::before, main .deliverybox .orderinfocontainer .containerbox .process ul li::after, main .courier_access .orderinfocontainer .containerbox .process ul li::before, main .courier_access .orderinfocontainer .containerbox .process ul li::after, main .orderinfo .orderinfocontainer .containerbox .process ul li::before, main .orderinfo .orderinfocontainer .containerbox .process ul li::after, main .community_access .orderinfocontainer .containerbox .process ul li::before, main .community_access .orderinfocontainer .containerbox .process ul li::after {
+  position: absolute;
+  top: 8px;
+  content: '';
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #999999;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li::before, main .courier_access .orderinfocontainer .containerbox .process ul li::before, main .orderinfo .orderinfocontainer .containerbox .process ul li::before, main .community_access .orderinfocontainer .containerbox .process ul li::before {
+  left: 0;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li::after, main .courier_access .orderinfocontainer .containerbox .process ul li::after, main .orderinfo .orderinfocontainer .containerbox .process ul li::after, main .community_access .orderinfocontainer .containerbox .process ul li::after {
+  right: 0;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li:first-child::before, main .courier_access .orderinfocontainer .containerbox .process ul li:first-child::before, main .orderinfo .orderinfocontainer .containerbox .process ul li:first-child::before, main .community_access .orderinfocontainer .containerbox .process ul li:first-child::before {
+  display: none;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li:last-child::after, main .courier_access .orderinfocontainer .containerbox .process ul li:last-child::after, main .orderinfo .orderinfocontainer .containerbox .process ul li:last-child::after, main .community_access .orderinfocontainer .containerbox .process ul li:last-child::after {
+  display: none;
+}
+
+main .deliverybox .orderinfocontainer .containerbox .process ul li.active span, main .courier_access .orderinfocontainer .containerbox .process ul li.active span, main .orderinfo .orderinfocontainer .containerbox .process ul li.active span, main .community_access .orderinfocontainer .containerbox .process ul li.active span {
+  background-color: #ff8400;
 }
 
 main .deliverybox .mousetouch, main .courier_access .mousetouch, main .orderinfo .mousetouch, main .community_access .mousetouch {
@@ -2174,7 +2374,7 @@ footer p {
           align-items: center;
 }
 
-.alertpopup.ishow, .popu_tr.ishow {
+.alertpopup.ishow, .popu_tr.ishow, .orderpopu.ishow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2317,13 +2517,7 @@ footer p {
   padding-right: 20px;
 }
 
-.alertpopup .conbox h1,
-.alertpopup .conbox h2,
-.alertpopup .conbox h3,
-.alertpopup .conbox p, .popu_tr .conbox h1,
-.popu_tr .conbox h2,
-.popu_tr .conbox h3,
-.popu_tr .conbox p {
+.alertpopup .conbox h1, .alertpopup .conbox h2, .alertpopup .conbox h3, .alertpopup .conbox p, .popu_tr .conbox h1, .popu_tr .conbox h2, .popu_tr .conbox h3, .popu_tr .conbox p {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -2420,5 +2614,184 @@ footer p {
 
 .alertpopup .popubox table td small, .popu_tr .popubox table td small {
   display: block;
+}
+
+.orderpopu {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.orderpopu .orderpopu_container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  background-color: #fff;
+  padding-top: 3%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-left: 2%;
+}
+
+.orderpopu .orderbox {
+  height: 100%;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.orderpopu .orderbox .tablebox {
+  width: 48%;
+}
+
+.orderpopu .orderbox table {
+  width: 100%;
+}
+
+.orderpopu .orderbox td {
+  font-size: 14px;
+  line-height: 25.2px;
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+.orderpopu .orderbox td a {
+  display: block;
+  text-align: center;
+  color: #fff;
+  background-color: #9FCC42;
+  padding-top: 3px;
+  padding-right: 0;
+  padding-bottom: 3px;
+  padding-left: 0;
+  border-radius: 5px;
+}
+
+.orderpopu .orderbox td a:hover {
+  background-color: #898989;
+}
+
+.orderpopu .orderbox td:nth-of-type(1) {
+  width: 40%;
+}
+
+.orderpopu .orderbox td:nth-of-type(2) {
+  width: 60%;
+  color: #898989;
+  position: relative;
+}
+
+.orderpopu .orderbox td:nth-of-type(2) input {
+  display: inline-block;
+  width: 75%;
+  color: #898989;
+}
+
+.orderpopu .orderbox td:nth-of-type(2) small {
+  display: block;
+  font-size: 14px;
+  line-height: 25.2px;
+}
+
+.orderpopu .orderbox td:nth-of-type(2) .copy {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  display: inline-block;
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  border-radius: 0px;
+}
+
+.orderpopu .closeclose {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #9FCC42;
+  -webkit-animation: bigsmall 1s infinite;
+          animation: bigsmall 1s infinite;
+}
+
+.orderpopu .closeclose:before, .orderpopu .closeclose:after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 5px;
+  background-color: #fff;
+}
+
+.orderpopu .closeclose:before {
+  -webkit-transform: translateX(13px) rotate(45deg);
+          transform: translateX(13px) rotate(45deg);
+}
+
+.orderpopu .closeclose:after {
+  -webkit-transform: translateX(-13px) rotate(-45deg);
+          transform: translateX(-13px) rotate(-45deg);
+}
+
+@media (max-width: 480px) {
+  .orderpopu .closeclose {
+    width: 40px;
+    height: 40px;
+  }
+  .orderpopu .closeclose:before {
+    -webkit-transform: translateX(10px) rotate(45deg);
+            transform: translateX(10px) rotate(45deg);
+  }
+  .orderpopu .closeclose:after {
+    -webkit-transform: translateX(-10px) rotate(-45deg);
+            transform: translateX(-10px) rotate(-45deg);
+  }
+}
+
+@keyframes bigsmall {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */
