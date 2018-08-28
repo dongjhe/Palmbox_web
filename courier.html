@@ -85,17 +85,21 @@
                                 </div>
                                 <div class="logistics">
                                     <label for="logistics">物流公司</label>
-                                    <select name="" id="logistics">
-                                        <option value="" selected disabled hidden>請選擇物流公司</option>
-                                        <option v-for="item in list" :value="item.id">{{item.id}}</option>
-                                    </select>
+                                    <div class="arrow">
+                                        <select name="" id="logistics">
+                                            <option value="" selected disabled hidden>請選擇物流公司</option>
+                                            <option v-for="item in list" :value="item.id">{{item.id}}</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="servicity">
                                     <label for="servicity">服務地區</label>
-                                    <select name="" id="servicity">
-                                        <option value="" selected disabled hidden>請選擇服務地區</option>
-                                        <option v-for="city in citys" :value="city.area">{{city.area}}</option>
-                                    </select>
+                                    <div class="arrow">
+                                        <select name="" id="servicity">
+                                            <option value="" selected disabled hidden>請選擇服務地區</option>
+                                            <option v-for="city in citys" :value="city.area">{{city.area}}</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="inpbut">
                                     <input type="button" value="確認">

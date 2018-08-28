@@ -85,17 +85,23 @@
                                 </div>
                                 <div class="servicity">
                                     <label for="servicity">服務地區</label>
-                                    <select name="" id="servicity">
-                                        <option value="" selected disabled hidden>請選擇服務地區</option>
-                                        <option v-for="city in citys" :value="city.area">{{city.area}}</option>
-                                    </select>
+                                    <div class="arrow">
+                                        <select name="" id="servicity">
+                                            <option value="" selected disabled hidden>請選擇服務地區</option>
+                                            <option v-for="city in citys" :value="city.area">{{city.area}}</option>
+                                        </select>
+                                    </div>
+
                                 </div>
                                 <div class="household">
                                     <label for="household">住戶人數</label>
-                                    <select name="" id="household">
-                                        <option value="" selected disabled hidden>請選擇住戶人數</option>
-                                        <option v-for="peo in people" :value="peo.number">{{peo.number}}</option>
-                                    </select>
+                                    <div class="arrow">
+                                        <select name="" id="household">
+                                            <option value="" selected disabled hidden>請選擇住戶人數</option>
+                                            <option v-for="peo in people" :value="peo.number">{{peo.number}}</option>
+                                        </select>
+                                    </div>
+
                                 </div>
                                 <div class="inpbut">
                                     <input type="button" value="確認">
