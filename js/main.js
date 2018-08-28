@@ -190,7 +190,7 @@ $(window).on('load', function() {
       textArea.remove();
       document.execCommand("Copy")
 
-      alert('已複製訂單連結於您的剪貼簿請傳送給您的客戶進行填單' + '\n' + textArea.value)
+      alert('已複製訂單連結於您的剪貼簿請傳送給您的客戶進行填單')
       return false
     })
 
