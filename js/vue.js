@@ -65,6 +65,12 @@ var app = new Vue({
       { job: '農林漁牧' },
       { job: '家管／退休' },
       { job: '其他' }
+    ],
+    conditions: [
+      { info: '收件人姓名' },
+      { info: '收件人手機' },
+      { info: '收件人地址' },
+      { info: '運單號碼' }
     ]
   },
   methods: {}

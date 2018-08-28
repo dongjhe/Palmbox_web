@@ -2,7 +2,6 @@
 // $(function() {
 
 // })
-
 // JS
 $(window).on('load', function() {
   $(function() {
@@ -63,34 +62,55 @@ $(window).on('load', function() {
 
     // 浮層打開關
     $('#Courier').on('click', function() {
-      $('html body').css('overflow-y', 'hidden')
+      overflow()
       $('#Courier_alert').toggleClass('ishow')
     })
     $('#Plambox_Service').on('click', function() {
-      $('html body').css('overflow-y', 'hidden')
+      overflow()
       $('#Plambox_Service_alert').toggleClass('ishow')
     })
 
     $('#agree').on('click', function() {
-      $('html body').css('overflow-y', 'hidden')
+      overflow()
       $('#Plambox_Service_alert').toggleClass('ishow')
     })
 
     $('.alertpopup .closeclose ').on('click', function() {
-      $('html body').css('overflow-y', 'inherit')
-      $(this).parents('.alertpopup').toggleClass('ishow')
+      let poputhis = $(this).parent('div').parent('div')
+      closeclose(poputhis)
     })
 
-    $('.couriercontainer >table td').on('click', function() {
-      $('html body').css('overflow-y', 'hidden')
+    $('.popu >table:nth-child(1) td').on('click', function() {
+      overflow()
       $('.popu_tr').toggleClass('ishow')
     })
 
     $('.popu_tr .closeclose').on('click', function() {
-      $('html body').css('overflow-y', 'inherit')
-      $(this).parents('.popu_tr').toggleClass('ishow')
+      let poputhis = $(this).parent('div').parent('div')
+      closeclose(poputhis)
     })
 
+    $('.orderinfocontainer .containerbox .item').on('click', function() {
+      overflow()
+      $('.orderpopu').toggleClass('ishow')
+    })
+
+    $('.orderpopu .closeclose ').on('click', function () {
+      let poputhis = $(this).parent('div').parent('div')
+      closeclose(poputhis)
+    })
+
+    // 關閉共用function
+    function closeclose(res) {
+      $('html body').css('overflow-y', 'inherit')
+      res.toggleClass('ishow')
+    }
+    
+    // 關掉html | body 捲軸
+    function overflow(res) {
+      $('html body').css('overflow-y', 'hidden')
+    }
+    
     // 登入 | 註冊 | 忘記密碼切換
     $('.login > a').on('click', function() {
       $(this).addClass('active').parent('div').siblings('.register').find('a').removeClass('active')
@@ -119,7 +139,7 @@ $(window).on('load', function() {
     })
 
     // 快遞員派件紀錄查詢
-    $('.couriertop .togglebut a').on('click', function() {
+    $('.featuresbox .togglebut a').on('click', function() {
       $(this).addClass('active').siblings('a').removeClass('active')
     })
 
@@ -130,5 +150,51 @@ $(window).on('load', function() {
       $(this).addClass('active').siblings('a').removeClass('active')
       click_box_d.eq(indexa).css('display', 'block').siblings('div').css('display', 'none')
     })
+
+    //表格陰影
+    let tr_num, tablethis, tablenum
+    let table = $('.popu >table')
+
+    table.find('tr').hover(function() {
+        // over
+        tablenum = $(this).parents('table').index()
+        tablethis = $(this)
+        tr_num = $(this).index()
+        addmouse(tablenum,tablethis, tr_num)
+
+      }, function() {
+        // out
+        table.find('tr').removeClass('mousetouch') 
+      })
+
+    function addmouse(tablenum, tablethis, tr_num) {
+      if (tablenum == 0 && tr_num > 0) {
+        tablethis.addClass('mousetouch')
+        table.eq(1).find('tr').eq(tr_num).addClass('mousetouch')
+      } else if (tablenum == 1 && tr_num > 0){
+        tablethis.addClass('mousetouch')
+        table.eq(0).find('tr').eq(tr_num).addClass('mousetouch')
+      }
+    }
+
+
+    // 複製訂單連結
+    $(".copy").click(function () {
+
+      var textArea = document.createElement("textarea");
+      textArea.value = $(this).prev('input').val()
+      textArea.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("Copy");
+      textArea.remove();
+      document.execCommand("Copy")
+
+      alert('已複製訂單連結於您的剪貼簿請傳送給您的客戶進行填單')
+      return false
+    })
+
+
   })()
 })
+

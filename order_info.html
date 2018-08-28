@@ -94,16 +94,16 @@
         </header>
         <main>
             <div class="main_container">
-                <div class="courier_access">
-                    <div class="couriertop">
-                        <h1>快遞員派件紀錄查詢</h1>
+                <div class="orderinfo">
+                    <div class="orderinfotop">
+                        <h1>訂單紀錄查詢</h1>
                         <div class="featuresbox">
                             <div class="togglebut">
-                                <a href="javascript:;" class="active">全部</a>
-                                <a href="javascript:;">已退回</a>
-                                <a href="javascript:;" >滯留件</a>
-                                <a href="javascript:;">已取件</a>
-                                <a href="javascript:;">收件人未取</a>
+                                <a href="javascript:;">全部</a>
+                                <a href="javascript:;" class="active">進行中</a>
+                                <a href="javascript:;">已完成</a>
+                                <a href="javascript:;">已取消</a>
+                                <a href="javascript:;">訂單未成立</a>
                             </div>
                             <div class="excel_but">
                                 <input type="button" value="匯出excel">
@@ -111,9 +111,18 @@
                         </div>
                         <form action="">
                             <div class="inquirebox">
+                                <div class="query_conditions">
+                                    <label for="query_conditions">請選擇搜尋條件</label>
+                                    <div class="arrow">
+                                        <select name="" id="query_conditions">
+                                            <option value="" selected disabled hidden>請選擇搜尋條件</option>
+                                            <option v-for="con in conditions" :value="con.info">{{con.info}}</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="waybill_inquiry">
-                                    <label for="waybill_inquiry">依運單/手機號 查詢</label>
-                                    <input type="text" id="waybill_inquiry" placeholder="請輸入運單/手機號">
+                                    <label for="waybill_inquiry"></label>
+                                    <input type="text" id="waybill_inquiry" placeholder="">
                                 </div>
                                 <div class="timer">
                                     <label for="timer">派件時間</label>
@@ -121,136 +130,264 @@
                                         <input type="text" readonly name="reservation" id="reservation" value="2018-10-01 - 2018-12-31" />
                                     </div>
                                 </div>
+                                <div class="orderstatus">
+                                    <label for="orderstatus">訂單狀態</label>
+                                    <div class="form__radio">
+                                        <input type="radio" id="all" name="orderstatus" checked>
+                                        <label for="all">全部</label>
+                                        <span class="radio"></span>
+                                    </div>
+                                    <div class="form__radio">
+                                        <input type="radio" id="success" name="orderstatus">
+                                        <label for="success">下單成功</label>
+                                        <span class="radio"></span>
+                                    </div>
+                                    <div class="form__radio">
+                                        <input type="radio" id="payment" name="orderstatus">
+                                        <label for="payment">櫃寄付款完成</label>
+                                        <span class="radio"></span>
+                                    </div>
+                                    <div class="form__radio">
+                                        <input type="radio" id="shipment" name="orderstatus">
+                                        <label for="shipment">出貨中</label>
+                                        <span class="radio"></span>
+                                    </div>
+                                </div>
+
+                                <div class="checkshow">
+                                    <input id="yesmonth" type="checkbox">
+                                    <label for="yesmonth">只查詢本月的訂單</label>
+                                </div>
                                 <div class="inquire">
                                     <input type="button" value="查詢">
                                 </div>
                             </div>
                         </form>
-
                     </div>
-                    <div class="couriercontainer popu">
-                        <table>
-                            <tr>
-                                <th>運單編號</th>
-                                <th>櫃機名稱</th>
-                                <th>包裹狀態</th>
-                                <th>收件人電話</th>
-                                <th>派件時間</th>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                            <tr>
-                                <td>170000211682</td>
-                                <td>美廉社內湖店</td>
-                                <td>已取件</td>
-                                <td>0912345678</td>
-                                <td>2018/06/05 09:37</td>
-                            </tr>
-                        </table>
-                        <div class="popu_tr">
-                            <div class="popu_tr_container">
-                                <a href="javascript:;" class="closeclose" alt="關閉"></a>
-                                <div class="popubox">
-                                    <table>
-                                        <tr>
-                                            <td>派件時間</td>
-                                            <td>2018/06/05 09:37</td>
-                                        </tr>
-                                        <tr>
-                                            <td>運單編號</td>
-                                            <td>170000211682</td>
-                                        </tr>
-                                        <tr>
-                                            <td>收件人電話</td>
-                                            <td>0912345678</td>
-                                        </tr>
-                                        <tr>
-                                            <td>派件地址</td>
-                                            <td>
-                                                台北市內湖區瑞光路517號
-                                                <small>洲子街美食廣場</small>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>代收</td>
-                                            <td>是</td>
-                                        </tr>
-                                        <tr>
-                                            <td>金額</td>
-                                            <td>6,999</td>
-                                        </tr>
-                                        <tr>
-                                            <td>取件時間</td>
-                                            <td>2018/06/10 10:37</td>
-                                        </tr>
-                                    </table>
+                    <div class="orderinfocontainer">
+                        <div class="navtitle">
+                            <h1>訂單日期</h1>
+                            <h1>收件人姓名</h1>
+                            <h1>收件人電話號碼</h1>
+                            <h1>操作碼</h1>
+                            <h1>運單編號</h1>
+                            <h1>期限</h1>
+                            <h1>運費金額</h1>
+                        </div>
+                        <div class="containerbox">
+                            <div class="item">
+                                <div class="info">
+                                    <p>2018/04/27</p>
+                                    <p>luke</p>
+                                    <p>0912345678</p>
+                                    <p>123456</p>
+                                    <p>170001234</p>
+                                    <p>2018/04/14 04:13</p>
+                                    <p>$50</p>
+                                </div>
+                                <div class="process">
+                                    <ul>
+                                        <li class="active"><span></span>櫃寄付款完成</li>
+                                        <li><span></span>快遞員收件</li>
+                                        <li><span></span>包裹集貨</li>
+                                        <li><span></span>配達掌櫃</li>
+                                        <li class="active"><span></span>已取件</li>
+                                    </ul>
                                 </div>
                             </div>
-                            
+                            <div class="item">
+                                <div class="info">
+                                    <p>2018/04/27</p>
+                                    <p>luke</p>
+                                    <p>0912345678</p>
+                                    <p>123456</p>
+                                    <p>170001234</p>
+                                    <p>2018/04/14 04:13</p>
+                                    <p>$50</p>
+                                </div>
+                                <div class="process">
+                                    <ul>
+                                        <li class="active"><span></span>櫃寄付款完成</li>
+                                        <li><span></span>快遞員收件</li>
+                                        <li><span></span>包裹集貨</li>
+                                        <li><span></span>配達掌櫃</li>
+                                        <li class="active"><span></span>已取件</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+
+
+                        <div class="orderpopu">
+                            <div class="orderpopu_container">
+                                <a href="javascript:;" class="closeclose" alt="關閉"></a>
+                                <div class="order">
+                                    <div class="orderdata">
+                                        訂單日期
+                                        <span>2018-03-31 14:23:25</span>
+                                    </div>
+                                    <div class="orderbox">
+                                        <div class="tablebox">
+                                            <table>
+                                                <tr>
+                                                    <td>收件人姓名</td>
+                                                    <td>大掌櫃</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>收件人電話號碼</td>
+                                                    <td>0912345678</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>收件人地址</td>
+                                                    <td>台北市內湖區瑞光路510號<small>美廉社內湖店</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>寄件內容物</td>
+                                                    <td>麵包</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <a href="javascript:;">修改收件人資料</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>訂單連結</td>
+                                                    <td>
+                                                        <input id="copyinfo" type="text" name="URL" id="" value="https://www.palmbox.com.tw/11111" disabled>
+                                                        <a class="copy" href="javascript:;">複製</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>操作碼</td>
+                                                    <td>001234</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>訂單編號</td>
+                                                    <td>0300111007271800205</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>運單編號</td>
+                                                    <td>1700001234</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <a href="javascript:;">重新下載運單</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>快遞取件時間</td>
+                                                    <td>2018/07/27 11:33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>快遞員手機號碼</td>
+                                                    <td>0912345678</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>運送方式</td>
+                                                    <td>順豐速運</td>
+                                                </tr>
+                                    
+                                            </table>
+                                        </div>
+                                        <div class="tablebox">
+                                            <table>
+                                                <tr>
+                                                    <td>訂單成立</td>
+                                                    <td>2018/07/27 11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>寄方投遞入櫃</td>
+                                                    <td>2018/07/27 11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>快遞員收件</td>
+                                                    <td>2018/07/27 11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>包裹集貨</td>
+                                                    <td>2018/07/27 11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>快遞員配送中</td>
+                                                    <td>2018/07/27 11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>包裹配達掌櫃</td>
+                                                    <td>2018/07/27 11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>消費者已取件</td>
+                                                    <td>2018/07/27 11:30</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <i></i>
+                                        <div class="tablebox">
+                                            <table>
+                                                <tr>
+                                                    <td>取貨方式</td>
+                                                    <td>櫃取</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>溫層方式</td>
+                                                    <td>常溫</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>櫃門大小</td>
+                                                    <td>大</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>代收金額</td>
+                                                    <td>$100</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="tablebox">
+                                            <table>
+                                                <tr>
+                                                    <td>付款方式</td>
+                                                    <td>悠遊卡</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>發票方式</td>
+                                                    <td>紙本發票</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>發票號碼</td>
+                                                    <td>QA-23465</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>隨機碼</td>
+                                                    <td>1665</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>運費金額</td>
+                                                    <td>$50</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
-                    <div class="courierbottom">
+                    <div class="orderinfobottom">
                         <a href="javascript:;">上一頁</a>
                         <a href="javascript:;">1</a>
                         <a href="javascript:;">2</a>
@@ -261,7 +398,6 @@
                         <a href="javascript:;">10</a>
                         <a href="javascript:;">下一頁</a>
                     </div>
-
                 </div>
             </div>
         </main>
