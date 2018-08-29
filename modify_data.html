@@ -17,29 +17,21 @@
     <title>掌櫃-掌握生活 隨觸可及</title>
     <link rel="shortcut icon" type="png" href="./images/favicon.png">
     <link rel="stylesheet" href="./sass/style.css">
-    <link rel="stylesheet" href="./sass/bootstrap.min.css">
-    <link rel="stylesheet" href="./sass/daterangepicker.css">
-
 </head>
 
 <body>
     <div class="Wapper">
-        <div id="gotop" class="">
-            <span></span>
-        </div>
+        <div id="gotop" class=""><span></span></div>
         <div id="mess">
             <a href="https://line.me/R/ti/p/%40mmv9220v" target="_blank">
                 <figure class="line_mess"></figure>
             </a>
-            <a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F1008680512593021%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink"
-                target="_blank">
+            <a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F1008680512593021%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink" target="_blank">
                 <figure class="fb_mess"></figure>
             </a>
         </div>
         <header>
-            <a href="javascript:;" id="menuBtn">
-                <span></span>
-            </a>
+            <a href="javascript:;" id="menuBtn"><span></span></a>
             <div class="mask"></div>
             <div class="header_container">
                 <h1>
@@ -51,27 +43,13 @@
                             <a href="javascript:;">矇矇達</a>
                             <div class="user_more">
                                 <ul>
-                                    <li>
-                                        <a href="javascript:;">訂單資料</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">快遞員專區</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">社區專區</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">櫃寄(可批量)</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">編輯會員資料</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">電子發票/收據查詢</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">登出</a>
-                                    </li>
+                                    <li><a href="javascript:;">訂單資料</a></li>
+                                    <li><a href="javascript:;">快遞員專區</a></li>
+                                    <li><a href="javascript:;">社區專區</a></li>
+                                    <li><a href="javascript:;">櫃寄(可批量)</a></li>
+                                    <li><a href="javascript:;">編輯會員資料</a></li>
+                                    <li><a href="javascript:;">電子發票/收據查詢</a></li>
+                                    <li><a href="javascript:;">登出</a></li>
                                 </ul>
 
                             </div>
@@ -94,294 +72,55 @@
         </header>
         <main>
             <div class="main_container">
-                <div class="orderinfo">
-                    <div class="orderinfotop">
-                        <h1>訂單紀錄查詢</h1>
-                        <div class="featuresbox">
-                            <div class="togglebut">
-                                <a href="javascript:;">全部</a>
-                                <a href="javascript:;" class="active">進行中</a>
-                                <a href="javascript:;">已完成</a>
-                                <a href="javascript:;">已取消</a>
-                                <a href="javascript:;">訂單未成立</a>
-                            </div>
-                            <div class="excel_but">
-                                <input type="button" value="匯出excel">
-                            </div>
+                <div class="signinbox">
+                    <div class="modifydata">
+                        <div class="signtop">
+                            <h1>修改收件人資料</h1>
                         </div>
-                        <form action="">
-                            <div class="inquirebox">
-                                <div class="query_conditions">
-                                    <label for="query_conditions">請選擇搜尋條件</label>
-                                    <div class="arrow">
-                                        <select name="" id="query_conditions">
-                                            <option value="" selected disabled hidden>請選擇搜尋條件</option>
-                                            <option v-for="con in conditions" :value="con.info">{{con.info}}</option>
-                                        </select>
-                                    </div>
+                        <div class="signcenter">
+                            <form action="">
+                                <div class="product_name">
+                                    <label for="productname">商品名稱</label>
+                                    <input type="text" id="productname" value="保健食品">
                                 </div>
-                                <div class="waybill_inquiry">
-                                    <label for="waybill_inquiry"></label>
-                                    <input type="text" id="waybill_inquiry" placeholder="">
+                                <div class="recipient_name">
+                                    <label for="recipientname">收件人姓名</label>
+                                    <input type="text" id="recipientname" value="托魯克">
                                 </div>
-                                <div class="timer">
-                                    <label for="timer">派件時間</label>
-                                    <div class="well">
-                                        <input type="text" readonly name="reservation" id="reservation" value="2018-10-01 - 2018-12-31" />
-                                    </div>
+                                <div class="recipient_phone">
+                                    <label for="recipientphone">收件人手機號碼</label>
+                                    <input type="text" id="recipientphone" value="0912345678">
                                 </div>
-                                <div class="orderstatus">
-                                    <label for="orderstatus">訂單狀態</label>
-                                    <div class="form__radio">
-                                        <input type="radio" id="all" name="orderstatus" checked>
-                                        <label for="all">全部</label>
-                                        <span class="radio"></span>
+
+                                <div class="recipient_address">
+                                    <label for="recipientaddress">收件人地址</label>
+                                    <div class="addrs">
+                                        <span>美廉社板橋重慶店</span>新北市板橋區重慶路245巷70號
                                     </div>
-                                    <div class="form__radio">
-                                        <input type="radio" id="success" name="orderstatus">
-                                        <label for="success">下單成功</label>
-                                        <span class="radio"></span>
-                                    </div>
-                                    <div class="form__radio">
-                                        <input type="radio" id="payment" name="orderstatus">
-                                        <label for="payment">櫃寄付款完成</label>
-                                        <span class="radio"></span>
-                                    </div>
-                                    <div class="form__radio">
-                                        <input type="radio" id="shipment" name="orderstatus">
-                                        <label for="shipment">出貨中</label>
-                                        <span class="radio"></span>
+                                    <div class="searchmap">
+                                        <a href="javascript:;">依地圖選擇</a>
+                                        <a href="javascript:;">選擇常用櫃點</a>
                                     </div>
                                 </div>
 
-                                <div class="checkshow">
-                                    <input id="yesmonth" type="checkbox">
-                                    <label for="yesmonth">只查詢本月的訂單</label>
-                                </div>
-                                <div class="inquire">
-                                    <input type="button" value="查詢">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="orderinfocontainer">
-                        <div class="navtitle">
-                            <h1>訂單日期</h1>
-                            <h1>收件人姓名</h1>
-                            <h1>收件人電話號碼</h1>
-                            <h1>操作碼</h1>
-                            <h1>運單編號</h1>
-                            <h1>期限</h1>
-                            <h1>運費金額</h1>
-                        </div>
-                        <div class="containerbox">
-                            <div class="item">
-                                <div class="info">
-                                    <p>2018/04/27</p>
-                                    <p>luke</p>
-                                    <p>0912345678</p>
-                                    <p>123456</p>
-                                    <p>170001234</p>
-                                    <p>2018/04/14 04:13</p>
-                                    <p>$50</p>
-                                </div>
-                                <div class="process">
-                                    <ul>
-                                        <li class="active"><span></span>櫃寄付款完成</li>
-                                        <li><span></span>快遞員收件</li>
-                                        <li><span></span>包裹集貨</li>
-                                        <li><span></span>配達掌櫃</li>
-                                        <li class="active"><span></span>已取件</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="info">
-                                    <p>2018/04/27</p>
-                                    <p>luke</p>
-                                    <p>0912345678</p>
-                                    <p>123456</p>
-                                    <p>170001234</p>
-                                    <p>2018/04/14 04:13</p>
-                                    <p>$50</p>
-                                </div>
-                                <div class="process">
-                                    <ul>
-                                        <li class="active"><span></span>櫃寄付款完成</li>
-                                        <li><span></span>快遞員收件</li>
-                                        <li><span></span>包裹集貨</li>
-                                        <li><span></span>配達掌櫃</li>
-                                        <li class="active"><span></span>已取件</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="orderpopu">
-                            <div class="orderpopu_container">
-                                <a href="javascript:;" class="closeclose" alt="關閉"></a>
-                                <div class="order">
-                                    <div class="orderdata">
-                                        訂單日期
-                                        <span>2018-03-31 14:23:25</span>
+                                <div class="delivery_recipient">
+                                    <label for="address">宅配收件人地址</label>
+                                    <div class="box1 my-selector-c">
+                                        <select class="county"></select>
+                                        <select class="district"></select>
+                                        <input type="text" class="zipcode">
                                     </div>
-                                    <div class="orderbox">
-                                        <div class="tablebox">
-                                            <table>
-                                                <tr>
-                                                    <td>收件人姓名</td>
-                                                    <td>大掌櫃</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>收件人電話號碼</td>
-                                                    <td>0912345678</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>收件人地址</td>
-                                                    <td>台北市內湖區瑞光路510號<small>美廉社內湖店</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>寄件內容物</td>
-                                                    <td>麵包</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">
-                                                        <a href="javascript:;">修改收件人資料</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>訂單連結</td>
-                                                    <td>
-                                                        <input id="copyinfo" type="text" name="URL" id="" value="https://www.palmbox.com.tw/11111" disabled>
-                                                        <a class="copy" href="javascript:;">複製</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>操作碼</td>
-                                                    <td>001234</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>訂單編號</td>
-                                                    <td>0300111007271800205</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>運單編號</td>
-                                                    <td>1700001234</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">
-                                                        <a href="javascript:;">重新下載運單</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>快遞取件時間</td>
-                                                    <td>2018/07/27 11:33</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>快遞員手機號碼</td>
-                                                    <td>0912345678</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>運送方式</td>
-                                                    <td>順豐速運</td>
-                                                </tr>
-                                    
-                                            </table>
-                                        </div>
-                                        <div class="tablebox">
-                                            <table>
-                                                <tr>
-                                                    <td>訂單成立</td>
-                                                    <td>2018/07/27 11:30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>寄方投遞入櫃</td>
-                                                    <td>2018/07/27 11:30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>快遞員收件</td>
-                                                    <td>2018/07/27 11:30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>包裹集貨</td>
-                                                    <td>2018/07/27 11:30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>快遞員配送中</td>
-                                                    <td>2018/07/27 11:30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>包裹配達掌櫃</td>
-                                                    <td>2018/07/27 11:30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>消費者已取件</td>
-                                                    <td>2018/07/27 11:30</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <i></i>
-                                        <div class="tablebox">
-                                            <table>
-                                                <tr>
-                                                    <td>取貨方式</td>
-                                                    <td>櫃取</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>溫層方式</td>
-                                                    <td>常溫</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>櫃門大小</td>
-                                                    <td>大</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>代收金額</td>
-                                                    <td>$100</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="tablebox">
-                                            <table>
-                                                <tr>
-                                                    <td>付款方式</td>
-                                                    <td>悠遊卡</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>發票方式</td>
-                                                    <td>紙本發票</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>發票號碼</td>
-                                                    <td>QA-23465</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>隨機碼</td>
-                                                    <td>1665</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>運費金額</td>
-                                                    <td>$50</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
+                                    <input type="text" name="地址" id="">
                                 </div>
-                            </div>
+
+                                <div class="inpbut">
+                                    <input type="button" value="確認送出">
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <div class="orderinfobottom">
-                        <a href="javascript:;">上一頁</a>
-                        <a href="javascript:;">1</a>
-                        <a href="javascript:;">2</a>
-                        <a class="active" href="javascript:;">3</a>
-                        <a href="javascript:;">4</a>
-                        <a href="javascript:;">5</a>
-                        <a href="javascript:;">...</a>
-                        <a href="javascript:;">10</a>
-                        <a href="javascript:;">下一頁</a>
                     </div>
                 </div>
+
             </div>
         </main>
         <footer>
@@ -432,8 +171,7 @@
                                 Mon.-Fri. 9:00-18:00
                             </li>
                             <li>
-                                客服信箱
-                                <a href="mailto:pbcs@palmbox.com.tw">pbcs@palmbox.com.tw</a>
+                                客服信箱<a href="mailto:pbcs@palmbox.com.tw">pbcs@palmbox.com.tw</a>
                             </li>
                         </ul>
                     </div>
@@ -570,8 +308,7 @@
                                     <li>您遭到他人投訴，且對方已經提供了一定證據；</li>
                                     <li>您可能錯誤地使用他人帳戶或他人資訊進行認證。</li>
                                 </ol>
-                                <p>如您申請恢復服務、解除上述限制，您應按本公司要求如實提供相關資料及您的身份證明以及本公司要求的其他資訊檔案，以便本公司進行核實，且本公司有權依照自行判斷來決定是否同意您的申請。您應充分理解您的申請並不必然被允許。您拒絕如實提供相關資料及身份證明的，或未通過本公司審核的，則您確認本公司有權長期對該等帳戶停止提供服務且長期限制該等產品或者服務的部分或全部功能。
-                                    在本公司認為異常情況已經得到合理解釋或有效證據支持，或並未違反國家相關法律法規的情況下。本公司有進一步理由相信該異常情況仍可能對您或其他用戶或本公司造成損失的情形除外，包括但不限於：
+                                <p>如您申請恢復服務、解除上述限制，您應按本公司要求如實提供相關資料及您的身份證明以及本公司要求的其他資訊檔案，以便本公司進行核實，且本公司有權依照自行判斷來決定是否同意您的申請。您應充分理解您的申請並不必然被允許。您拒絕如實提供相關資料及身份證明的，或未通過本公司審核的，則您確認本公司有權長期對該等帳戶停止提供服務且長期限制該等產品或者服務的部分或全部功能。 在本公司認為異常情況已經得到合理解釋或有效證據支持，或並未違反國家相關法律法規的情況下。本公司有進一步理由相信該異常情況仍可能對您或其他用戶或本公司造成損失的情形除外，包括但不限於：
                                 </p>
                                 <ol>
                                     <li>收到針對該等異常的投訴；</li>
@@ -596,8 +333,7 @@
                 <ol>
                     <p>本公司重視對用戶隱私的保護。關於蒐集、處理及利用您的個人資料(包含但不限於身份資料和其他特定資料)依本協定受到保護與規範。又為因應新修正施行之個人資料保護法，以及保障用戶隱私權及促進個人資料之合理利用，本公司特為以下告知：</p>
                     <li>本著持續提升本公司服務品質及保障您的個人資料，本公司將會致力維持並不斷改良管理模式，落實資料維安，以防個人資料遭到非法讀取、外洩、竄改等。此外，本公司不會出售或透露個人資料予其他非相關業務之公司，除經由您的同意或依法律規定、主管機關或司法機關之要求，不會對第三人揭露。</li>
-                    <li>蒐集個人資料之目的：本公司對於您提供的個資，依照「法務部公布個人資料保護法之特定目的」，將作為○二九 公民營（辦）交通運輸、公共運輸及公共建設，○四○ 行銷，○六九 契約、類似契約或其他法律關係事務，○九○
-                        消費者、客戶管理與服務，一五七 調查、統計與研究分析等用途，一六八 護照、簽證及文件證明處理。</li>
+                    <li>蒐集個人資料之目的：本公司對於您提供的個資，依照「法務部公布個人資料保護法之特定目的」，將作為○二九 公民營（辦）交通運輸、公共運輸及公共建設，○四○ 行銷，○六九 契約、類似契約或其他法律關係事務，○九○ 消費者、客戶管理與服務，一五七 調查、統計與研究分析等用途，一六八 護照、簽證及文件證明處理。</li>
                     <li>蒐集個人資料之類別：本公司依照「法務部公布個人資料保護法之類別」，向您蒐集:
                         <ol>
                             <li>Ｃ○○一 辨識個人者（姓名、職稱、地址、聯絡電話）</li>
@@ -780,8 +516,7 @@
 
                 <h3>十八、資訊或建議</h3>
                 <ol>
-                    <p>掌櫃對於您使用本服務或經由本服務連結之其他網站而取得之資訊或建議（包括但不限於，商務、投資理財、醫療、法律等方面），不擔保其為完全正確無誤。掌櫃對於本服務所提供之資訊或建議有權隨時修改或刪除。您在做出任何相關規劃與決定之前，仍應請教專業人員針對您的情況提出意見，以符合您的個別需求。
-                        掌櫃隨時會與其他公司、廠商等第三人（「內容提供者」）合作，由其提供包括新聞、訊息、電子報等不同內容供掌櫃刊登，掌櫃於刊登時均將註明內容提供者。基於尊重內容提供者之智慧財產權，掌櫃對其所提供之內容並不做實質之審查或修改，對該等內容之正確真偽亦不負任何責任。對該等內容之正確真偽，您宜自行判斷之。您若認為某些內容涉及侵權或有所不實，請逕向該內容提供者反應意見。
+                    <p>掌櫃對於您使用本服務或經由本服務連結之其他網站而取得之資訊或建議（包括但不限於，商務、投資理財、醫療、法律等方面），不擔保其為完全正確無誤。掌櫃對於本服務所提供之資訊或建議有權隨時修改或刪除。您在做出任何相關規劃與決定之前，仍應請教專業人員針對您的情況提出意見，以符合您的個別需求。 掌櫃隨時會與其他公司、廠商等第三人（「內容提供者」）合作，由其提供包括新聞、訊息、電子報等不同內容供掌櫃刊登，掌櫃於刊登時均將註明內容提供者。基於尊重內容提供者之智慧財產權，掌櫃對其所提供之內容並不做實質之審查或修改，對該等內容之正確真偽亦不負任何責任。對該等內容之正確真偽，您宜自行判斷之。您若認為某些內容涉及侵權或有所不實，請逕向該內容提供者反應意見。
                     </p>
                 </ol>
 
@@ -803,8 +538,7 @@
                     <li>由本服務及軟體之使用而取得之結果為正確或可靠，</li>
                     <li>您經由本服務購買或取得之任何產品、服務、資訊或其他資料將符合您的期望及</li>
                     <li>任何軟體中之錯誤將被修正。</li>
-                    <p>是否經由本服務及軟體之使用下載或取得任何資料應由您自行考量且自負風險，並拋棄因前開任何資料之下載而導致您電腦系統、網路存取、下載或播放設備之任何損壞或資料流失，對掌櫃提出任何請求或採取法律行動，您應自負完全責任。
-                        您自掌櫃或經由本服務或軟體取得之建議和資訊，無論其為書面或口頭，均不構成本服務或軟體之保證。 您明確了解並同意掌櫃及其子公司、關係企業、經理人、受僱人、代理人、合夥人及授權人， 無須為您任何直接、間接、附隨、特別、衍生、懲罰性的損害負責，包括但不限於因下述事由所生利潤、商譽、使用、資料之損害或其他無形損失（即令掌櫃曾被告知該等損害之可能性亦同）：
+                    <p>是否經由本服務及軟體之使用下載或取得任何資料應由您自行考量且自負風險，並拋棄因前開任何資料之下載而導致您電腦系統、網路存取、下載或播放設備之任何損壞或資料流失，對掌櫃提出任何請求或採取法律行動，您應自負完全責任。 您自掌櫃或經由本服務或軟體取得之建議和資訊，無論其為書面或口頭，均不構成本服務或軟體之保證。 您明確了解並同意掌櫃及其子公司、關係企業、經理人、受僱人、代理人、合夥人及授權人， 無須為您任何直接、間接、附隨、特別、衍生、懲罰性的損害負責，包括但不限於因下述事由所生利潤、商譽、使用、資料之損害或其他無形損失（即令掌櫃曾被告知該等損害之可能性亦同）：
                     </p>
                     <li>使用或無法使用本服務；</li>
                     <li>替代商品及服務之購買成本；</li>
@@ -822,8 +556,7 @@
                 <h3>二十三、會員行為</h3>
                 <ol>
                     <p>由會員公開張貼或私下傳送的資訊、資料、文字、軟體、音樂、音訊、照片、圖形、視訊、信息或其他資料（以下簡稱「會員內容」），均由「會員內容」提供者自負責任。掌櫃無法控制經由本服務而張貼之「會員內容」，因此不保證其正確性、完整性或品質。您了解使用本服務時，可能會接觸到令人不快、不適當、令人厭惡之「會員內容」。在任何情況下，掌櫃均不為任何「會員內容」負責，包含但不限於任何錯誤或遺漏，以及經由本服務張貼、發送電子郵件或傳送而衍生之任何損失或損害。</p>
-                    <p>您了解掌櫃並未針對「會員內容」事先加以審查，但掌櫃有權（但無義務）依其自行之考量，拒絕或移除經由本服務提供之任何「會員內容」。在不限制前開規定之前提下，掌櫃及其指定人有權將有違反本服務條款或法令之虞、或令人厭惡之任何「會員內容」加以移除。您使用任何「會員內容」時，就前開「會員內容」之正確性、完整性或實用性之情形，您同意必須自行加以評估並承擔所有風險。
-                        您了解並同意，掌櫃依據法律的要求，或基於以下目的之合理必要範圍內，認定必須將您的帳戶資訊或「會員內容」加以保存或揭露予政府機關、司法警察或未成年人之監護人時，得加以保存及揭露：
+                    <p>您了解掌櫃並未針對「會員內容」事先加以審查，但掌櫃有權（但無義務）依其自行之考量，拒絕或移除經由本服務提供之任何「會員內容」。在不限制前開規定之前提下，掌櫃及其指定人有權將有違反本服務條款或法令之虞、或令人厭惡之任何「會員內容」加以移除。您使用任何「會員內容」時，就前開「會員內容」之正確性、完整性或實用性之情形，您同意必須自行加以評估並承擔所有風險。 您了解並同意，掌櫃依據法律的要求，或基於以下目的之合理必要範圍內，認定必須將您的帳戶資訊或「會員內容」加以保存或揭露予政府機關、司法警察或未成年人之監護人時，得加以保存及揭露：
                         <ol>
                             <li>遵守法令或政府機關之要求，</li>
                             <li>為提供本服務所必須者，</li>
@@ -841,9 +574,7 @@
 
                 <h3>二十五、您對掌櫃之授權</h3>
                 <ol>
-                    <p>若您無合法權利得授權他人使用、修改、重製、公開播送、改作、散布、發行、公開發表某資料，並將前述權利轉授權第三人，請勿擅自將該資料上傳、傳送、輸入 或提供予掌櫃。您所上傳、傳送、輸入或提供予掌櫃之任何資料，其權利仍為您或您的授權人所有；但任何資料一經您上傳、傳送、輸入
-                        或提供予掌櫃時，即表示您同意：
-                    </p>
+                    <p>若您無合法權利得授權他人使用、修改、重製、公開播送、改作、散布、發行、公開發表某資料，並將前述權利轉授權第三人，請勿擅自將該資料上傳、傳送、輸入 或提供予掌櫃。您所上傳、傳送、輸入或提供予掌櫃之任何資料，其權利仍為您或您的授權人所有；但任何資料一經您上傳、傳送、輸入 或提供予掌櫃時，即表示您同意：</p>
                     <li>由掌櫃及其關係企業儲存或管理該資料，並由掌櫃及其關係企業之搜尋工具進行索引及抓取，並公開刊登、使用於掌櫃及其關係企業的相關系統網路上，包括但不限於掌櫃所聯盟或合作的第三人網站上；</li>
                     <li>授權掌櫃及其關係企業可以基於公益或為宣傳、推廣或經營掌櫃及本服務之目的，進行使用、修改、重製、公開播送、改作、散布、發行、公開發表、公開傳輸、公開上映、翻譯該等資料，並得在此範圍內將前述權利轉授權他人。您並保證掌櫃及其關係企業使用、修改、重製、公開播送、改作、散布、發行、公開發表、公開傳輸、公開上映、翻譯、轉授權該等資料，不致侵害任何第三人之智慧財產權，否則應對掌櫃及其關係企業負損害賠償責任。</li>
                 </ol>
@@ -904,15 +635,7 @@
     <script src="./js/vue.js"></script>
     <script src="./js/birthday.js"></script>
     <script src="./js/tw_city_selector.js"></script>
-    <script src="./js/moment.js"></script>
-    <script src="./js/daterangepicker.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#reservation').daterangepicker(null, function (start, end, label) {
-                // console.log(start.toISOString(), end.toISOString(), label);
-            });
-        });
-    </script>
+
 </body>
 
 </html>

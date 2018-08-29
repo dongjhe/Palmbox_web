@@ -515,6 +515,54 @@ main {
         }
       }
 
+      .recipient_address{
+        .addrs{
+          @include padding_set(0,0,0,55px)
+          @include font_size(14px);
+          margin-bottom: 15px;
+          color:$input_text;
+          position: relative;
+          span{
+            display: block;
+          }
+          &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-image: url(../images/icon_map.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+        .searchmap{
+          display: flex;
+          justify-content:space-between;
+          a{
+            display: block;
+            width: 48%;
+            text-align: center;
+            color:$color_white;
+            background-color:$footer_color;
+            border-radius: 0.25rem;
+            @include font-size(14px);
+            @include padding_set(5px,8px,5px,8px);
+            &:hover{
+              background-color:$color_orange;
+            }
+          }
+        }
+      }
+
+      .delivery_recipient{
+        >input{
+          margin-top: 8px;
+        }
+      }
+
       .containerleft,.containerright,.containerbottom{
         display: inline-block;
         width: 48%;
@@ -584,14 +632,14 @@ main {
         width: 100%;
         @include padding_set(5px, 8px, 5px, 8px);
         @include font_size(14px);
-        color: #495057;
+        color: $input_text;
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid #ced4da;
         border-radius: 0.25rem;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         &[type='text']:focus {
-          color: #495057;
+          color: $input_text;
           background-color: #fff;
           border-color: #80bdff;
           outline: 0;
@@ -626,7 +674,7 @@ main {
         }
       }
 
-      .memberpassword,.memberphone,.e_invoice,.birthday,.address{
+      .memberpassword,.memberphone,.e_invoice,.birthday,.address,.delivery_recipient{
         .box,.box1{
           display: flex;
           justify-content:space-between;
@@ -923,14 +971,14 @@ main {
         width: 100%;
         @include padding_set(5px, 8px, 5px, 8px);
         @include font_size(14px);
-        color: #495057;
+        color: $input_text;
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid #ced4da;
         border-radius: 0.25rem;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         &[type='text']:focus {
-          color: #495057;
+          color: $input_text;
           background-color: #fff;
           border-color: #80bdff;
           outline: 0;
