@@ -300,7 +300,7 @@ template {
 }
 
 html {
-  font-family: '微軟正黑體', 'Century Gothic', Arial, Helvetica, 'Microsoft JhengHei', sans-serif, 'Apple LiGothic Medium', 'PMingLiU';
+  font-family: '微軟正黑體', 'Century Gothic', Arial, Helvetica, 'Microsoft JhengHei', sans-serif, 'Apple LiGothic Medium', 'PMingLiU';
   height: 100%;
   line-height: 1.5;
 }
@@ -2467,7 +2467,7 @@ footer p {
   display: flex;
 }
 
-.alertpopup, .popu_tr {
+.alertpopup, .popu_tr, .modifypopu {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2484,7 +2484,7 @@ footer p {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.alertpopup .popup_container, .popu_tr .popup_container {
+.alertpopup .popup_container, .alertpopup .modifypopu_container, .popu_tr .popup_container, .popu_tr .modifypopu_container, .modifypopu .popup_container, .modifypopu .modifypopu_container {
   position: relative;
   width: 80%;
   max-width: 1200px;
@@ -2496,7 +2496,7 @@ footer p {
   padding-left: 2%;
 }
 
-.alertpopup .popu_tr_container, .popu_tr .popu_tr_container {
+.alertpopup .popu_tr_container, .popu_tr .popu_tr_container, .modifypopu .popu_tr_container {
   position: relative;
   width: 400px;
   max-width: 400px;
@@ -2508,12 +2508,29 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  .alertpopup .popu_tr_container, .popu_tr .popu_tr_container {
+  .alertpopup .popu_tr_container, .popu_tr .popu_tr_container, .modifypopu .popu_tr_container {
     width: 80%;
   }
 }
 
-.alertpopup .closeclose, .popu_tr .closeclose {
+.alertpopup .modifypopu_container, .popu_tr .modifypopu_container, .modifypopu .modifypopu_container {
+  max-width: 800px;
+  height: auto;
+}
+
+@media (max-width: 980px) {
+  .alertpopup .modifypopu_container, .popu_tr .modifypopu_container, .modifypopu .modifypopu_container {
+    height: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .alertpopup .modifypopu_container, .popu_tr .modifypopu_container, .modifypopu .modifypopu_container {
+    height: auto;
+  }
+}
+
+.alertpopup .closeclose, .popu_tr .closeclose, .modifypopu .closeclose {
   position: absolute;
   top: -20px;
   right: -20px;
@@ -2534,7 +2551,7 @@ footer p {
           animation: bigsmall 1s infinite;
 }
 
-.alertpopup .closeclose:before, .alertpopup .closeclose:after, .popu_tr .closeclose:before, .popu_tr .closeclose:after {
+.alertpopup .closeclose:before, .alertpopup .closeclose:after, .popu_tr .closeclose:before, .popu_tr .closeclose:after, .modifypopu .closeclose:before, .modifypopu .closeclose:after {
   content: '';
   display: block;
   width: 80%;
@@ -2542,26 +2559,26 @@ footer p {
   background-color: #fff;
 }
 
-.alertpopup .closeclose:before, .popu_tr .closeclose:before {
+.alertpopup .closeclose:before, .popu_tr .closeclose:before, .modifypopu .closeclose:before {
   -webkit-transform: translateX(13px) rotate(45deg);
           transform: translateX(13px) rotate(45deg);
 }
 
-.alertpopup .closeclose:after, .popu_tr .closeclose:after {
+.alertpopup .closeclose:after, .popu_tr .closeclose:after, .modifypopu .closeclose:after {
   -webkit-transform: translateX(-13px) rotate(-45deg);
           transform: translateX(-13px) rotate(-45deg);
 }
 
 @media (max-width: 480px) {
-  .alertpopup .closeclose, .popu_tr .closeclose {
+  .alertpopup .closeclose, .popu_tr .closeclose, .modifypopu .closeclose {
     width: 40px;
     height: 40px;
   }
-  .alertpopup .closeclose:before, .popu_tr .closeclose:before {
+  .alertpopup .closeclose:before, .popu_tr .closeclose:before, .modifypopu .closeclose:before {
     -webkit-transform: translateX(10px) rotate(45deg);
             transform: translateX(10px) rotate(45deg);
   }
-  .alertpopup .closeclose:after, .popu_tr .closeclose:after {
+  .alertpopup .closeclose:after, .popu_tr .closeclose:after, .modifypopu .closeclose:after {
     -webkit-transform: translateX(-10px) rotate(-45deg);
             transform: translateX(-10px) rotate(-45deg);
   }
@@ -2597,14 +2614,14 @@ footer p {
   }
 }
 
-.alertpopup .conbox, .popu_tr .conbox {
+.alertpopup .conbox, .popu_tr .conbox, .modifypopu .conbox {
   height: 100%;
   text-align: justify;
   overflow-y: scroll;
   padding-right: 20px;
 }
 
-.alertpopup .conbox h1, .alertpopup .conbox h2, .alertpopup .conbox h3, .alertpopup .conbox p, .popu_tr .conbox h1, .popu_tr .conbox h2, .popu_tr .conbox h3, .popu_tr .conbox p {
+.alertpopup .conbox h1, .alertpopup .conbox h2, .alertpopup .conbox h3, .alertpopup .conbox p, .popu_tr .conbox h1, .popu_tr .conbox h2, .popu_tr .conbox h3, .popu_tr .conbox p, .modifypopu .conbox h1, .modifypopu .conbox h2, .modifypopu .conbox h3, .modifypopu .conbox p {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -2615,7 +2632,7 @@ footer p {
   margin-left: auto;
 }
 
-.alertpopup .conbox h1, .popu_tr .conbox h1 {
+.alertpopup .conbox h1, .popu_tr .conbox h1, .modifypopu .conbox h1 {
   font-size: 28px;
   line-height: 50.4px;
   font-weight: bolder;
@@ -2623,20 +2640,20 @@ footer p {
   padding-bottom: 5px;
 }
 
-.alertpopup .conbox h2, .popu_tr .conbox h2 {
+.alertpopup .conbox h2, .popu_tr .conbox h2, .modifypopu .conbox h2 {
   font-size: 16px;
   line-height: 28.8px;
   letter-spacing: -0.5px;
   padding-bottom: 10px;
 }
 
-.alertpopup .conbox h3, .popu_tr .conbox h3 {
+.alertpopup .conbox h3, .popu_tr .conbox h3, .modifypopu .conbox h3 {
   font-size: 18px;
   line-height: 32.4px;
   color: #ff8400;
 }
 
-.alertpopup .conbox ol, .popu_tr .conbox ol {
+.alertpopup .conbox ol, .popu_tr .conbox ol, .modifypopu .conbox ol {
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 0;
@@ -2645,11 +2662,11 @@ footer p {
   line-height: 25.2px;
 }
 
-.alertpopup .conbox ol li, .popu_tr .conbox ol li {
+.alertpopup .conbox ol li, .popu_tr .conbox ol li, .modifypopu .conbox ol li {
   margin-bottom: 5px;
 }
 
-.alertpopup .conbox ol li > ol, .popu_tr .conbox ol li > ol {
+.alertpopup .conbox ol li > ol, .popu_tr .conbox ol li > ol, .modifypopu .conbox ol li > ol {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -2657,7 +2674,7 @@ footer p {
   list-style: upper-latin;
 }
 
-.alertpopup .conbox ol li > ol li > ol, .popu_tr .conbox ol li > ol li > ol {
+.alertpopup .conbox ol li > ol li > ol, .popu_tr .conbox ol li > ol li > ol, .modifypopu .conbox ol li > ol li > ol {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -2665,22 +2682,22 @@ footer p {
   list-style: square;
 }
 
-.alertpopup .popubox, .popu_tr .popubox {
+.alertpopup .popubox, .popu_tr .popubox, .modifypopu .popubox {
   height: 100%;
   text-align: justify;
 }
 
-.alertpopup .popubox table, .popu_tr .popubox table {
+.alertpopup .popubox table, .popu_tr .popubox table, .modifypopu .popubox table {
   display: table;
   width: 100%;
   overflow: hidden;
 }
 
-.alertpopup .popubox table tr, .popu_tr .popubox table tr {
+.alertpopup .popubox table tr, .popu_tr .popubox table tr, .modifypopu .popubox table tr {
   border-bottom: 1px solid #898989;
 }
 
-.alertpopup .popubox table td, .popu_tr .popubox table td {
+.alertpopup .popubox table td, .popu_tr .popubox table td, .modifypopu .popubox table td {
   display: table-cell;
   margin: 0.5em 1em;
   padding-top: 8px;
@@ -2693,14 +2710,141 @@ footer p {
 }
 
 @media (max-width: 480px) {
-  .alertpopup .popubox table td, .popu_tr .popubox table td {
+  .alertpopup .popubox table td, .popu_tr .popubox table td, .modifypopu .popubox table td {
     font-size: 12px;
     line-height: 21.6px;
   }
 }
 
-.alertpopup .popubox table td small, .popu_tr .popubox table td small {
+.alertpopup .popubox table td small, .popu_tr .popubox table td small, .modifypopu .popubox table td small {
   display: block;
+}
+
+.alertpopup .modifybox, .popu_tr .modifybox, .modifypopu .modifybox {
+  text-align: center;
+  height: 80%;
+}
+
+.alertpopup .modifybox h1, .popu_tr .modifybox h1, .modifypopu .modifybox h1 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  font-size: 22px;
+  line-height: 39.6px;
+  color: #495057;
+  display: inline-block;
+}
+
+@media (max-width: 980px) {
+  .alertpopup .modifybox .tablebox, .popu_tr .modifybox .tablebox, .modifypopu .modifybox .tablebox {
+    height: 85%;
+    overflow-y: scroll;
+  }
+}
+
+.alertpopup .modifybox table, .popu_tr .modifybox table, .modifypopu .modifybox table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(73, 80, 87, 0.5);
+}
+
+.alertpopup .modifybox table tr, .popu_tr .modifybox table tr, .modifypopu .modifybox table tr {
+  border-bottom: 1px solid rgba(73, 80, 87, 0.5);
+}
+
+.alertpopup .modifybox table tr > td, .popu_tr .modifybox table tr > td, .modifypopu .modifybox table tr > td {
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  font-size: 16px;
+  line-height: 28.8px;
+  text-align: left;
+}
+
+.alertpopup .modifybox table tr > td:nth-of-type(1), .popu_tr .modifybox table tr > td:nth-of-type(1), .modifypopu .modifybox table tr > td:nth-of-type(1) {
+  width: 10%;
+  text-align: center;
+}
+
+.alertpopup .modifybox table tr > td:nth-of-type(1) .form__radio, .popu_tr .modifybox table tr > td:nth-of-type(1) .form__radio, .modifypopu .modifybox table tr > td:nth-of-type(1) .form__radio {
+  margin: 0 auto;
+}
+
+.alertpopup .modifybox table tr > td:nth-of-type(1) label, .popu_tr .modifybox table tr > td:nth-of-type(1) label, .modifypopu .modifybox table tr > td:nth-of-type(1) label {
+  padding: 0 10px;
+}
+
+.alertpopup .modifybox table tr > td:nth-of-type(2), .popu_tr .modifybox table tr > td:nth-of-type(2), .modifypopu .modifybox table tr > td:nth-of-type(2) {
+  width: 50%;
+}
+
+.alertpopup .modifybox table tr > td:nth-of-type(3), .popu_tr .modifybox table tr > td:nth-of-type(3), .modifypopu .modifybox table tr > td:nth-of-type(3) {
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .alertpopup .modifybox table tr > td, .popu_tr .modifybox table tr > td, .modifypopu .modifybox table tr > td {
+    font-size: 14px;
+    line-height: 25.2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alertpopup .modifybox table tr > td:nth-of-type(2), .popu_tr .modifybox table tr > td:nth-of-type(2), .modifypopu .modifybox table tr > td:nth-of-type(2) {
+    width: 90%;
+  }
+  .alertpopup .modifybox table tr > td:nth-of-type(3), .popu_tr .modifybox table tr > td:nth-of-type(3), .modifypopu .modifybox table tr > td:nth-of-type(3) {
+    display: none;
+  }
+}
+
+.alertpopup .modifybox table td span, .popu_tr .modifybox table td span, .modifypopu .modifybox table td span {
+  font-weight: bolder;
+}
+
+.alertpopup .modifybox table td span.green, .popu_tr .modifybox table td span.green, .modifypopu .modifybox table td span.green {
+  color: #3D9C00;
+}
+
+.alertpopup .modifybox table td span.red, .popu_tr .modifybox table td span.red, .modifypopu .modifybox table td span.red {
+  color: #DB1C1C;
+}
+
+.alertpopup .modifybox table td span.orange, .popu_tr .modifybox table td span.orange, .modifypopu .modifybox table td span.orange {
+  color: #FF7316;
+}
+
+.alertpopup .modifybox table td span.gray, .popu_tr .modifybox table td span.gray, .modifypopu .modifybox table td span.gray {
+  color: #4D4D4D;
+}
+
+.alertpopup .modifybox button, .popu_tr .modifybox button, .modifypopu .modifybox button {
+  width: 50%;
+  padding-top: 1%;
+  padding-right: 2%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  margin-top: 2%;
+  margin-right: auto;
+  margin-bottom: 2%;
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 28.8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #9FCC42;
+}
+
+.alertpopup .modifybox button:hover, .popu_tr .modifybox button:hover, .modifypopu .modifybox button:hover {
+  background-color: #898989;
 }
 
 .orderpopu {

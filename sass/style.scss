@@ -1542,7 +1542,7 @@ footer {
   }
 }
 
-.alertpopup,.popu_tr{
+.alertpopup,.popu_tr,.modifypopu{
   display: none;
   align-items: center;
   justify-content: center;
@@ -1553,7 +1553,7 @@ footer {
   left: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.7);
-  .popup_container {
+  .popup_container,.modifypopu_container{
     position: relative;
     width: 80%;
     max-width: 1200px;
@@ -1571,6 +1571,17 @@ footer {
       width: 80%;
     }
   }
+  .modifypopu_container{
+    max-width: 800px;
+    height: auto;
+    @media (max-width:980px) {
+      height: 80%;
+    }
+    @media (max-width:480px) {
+      height: auto;
+    }
+  }
+
   .closeclose {
     position: absolute;
     top: -20px;
@@ -1689,6 +1700,97 @@ footer {
     }
 
   }
+  .modifybox{
+    text-align:center;
+    height: 80%;
+    h1{
+      @include padding_set(0,0,0,0);
+      @include margin_set(0,auto,10px,auto);
+      @include font_size(22px);
+      color: $input_text;
+      display: inline-block;
+    }
+    .tablebox{
+      @media (max-width:980px) {
+        height: 85%;
+        overflow-y: scroll;
+      }
+
+    }
+    table{
+      width: 100%;
+      border-collapse:collapse;
+      border: 1px solid rgba($input_text,0.5);
+      tr{
+        border-bottom:1px solid rgba($input_text,0.5);
+      }
+      tr>td{
+        @include padding_set(1%,1%,1%,1%)
+        @include font_size(16px);
+        text-align:left;
+        &:nth-of-type(1){
+          width: 10%;
+          text-align: center;
+          .form__radio{
+            margin: 0 auto;
+          }
+          label{
+            padding: 0 10px;
+          }
+        }
+        &:nth-of-type(2){
+          width: 50%;
+        }
+        &:nth-of-type(3){
+          width: 40%;
+        }
+        @media (max-width:768px) {
+          @include font_size(14px);
+        }
+        @media (max-width:480px) {
+          &:nth-of-type(2){
+            width: 90%;
+          }
+          &:nth-of-type(3){
+            display: none;
+          }          
+        }
+      }
+      
+      td{
+        span{
+          font-weight: bolder;
+          &.green{
+            color: #3D9C00;
+          }
+          &.red{
+            color: #DB1C1C;
+          }
+          &.orange{
+            color:#FF7316;
+          }
+          &.gray{
+            color: #4D4D4D;
+          }
+        }
+      }
+    }
+    button{
+      width: 50%;
+      @include padding_set(1%,2%,1%,2%);
+      @include margin_set(2%,auto,2%,auto);
+      @include font_size(16px);
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: $color_white;
+      background-color:$color_green;
+      &:hover{
+        background-color:$text_color;
+      }
+    }
+  }
+
 }
 
 .orderpopu{
