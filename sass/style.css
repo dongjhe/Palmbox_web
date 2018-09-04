@@ -2912,6 +2912,12 @@ footer p {
   width: 48%;
 }
 
+@media (max-width: 768px) {
+  .orderpopu .orderbox .tablebox {
+    width: 100%;
+  }
+}
+
 .orderpopu .orderbox i {
   display: block;
   margin-top: 8px;
