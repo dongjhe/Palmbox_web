@@ -100,6 +100,19 @@ $(window).on('load', function() {
       closeclose(poputhis)
     })
 
+    $('.modifybt').on('click', function () {
+      overflow()
+      $('.modifypopu').toggleClass('ishow')
+    })
+
+    $('.modifypopu .closeclose ').on('click', function () {
+      let poputhis = $(this).parent('div').parent('div')
+      closeclose(poputhis)
+    })    
+
+
+
+
     // 關閉共用function
     function closeclose(res) {
       $('html body').css('overflow-y', 'inherit')

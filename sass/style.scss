@@ -1536,7 +1536,7 @@ footer {
   align-items: center;
 }
 
-.alertpopup,.popu_tr,.orderpopu{
+.alertpopup,.popu_tr,.orderpopu,.modifypopu{
   &.ishow {
     display: flex;
   }
@@ -1556,6 +1556,7 @@ footer {
   .popup_container,.modifypopu_container{
     position: relative;
     width: 80%;
+    min-width: 320px;
     max-width: 1200px;
     height: 500px;
     background-color: $color_white;
@@ -1564,6 +1565,7 @@ footer {
   .popu_tr_container{
     position: relative;
     width: 400px;
+    min-width: 320px;
     max-width: 400px;
     background-color: $color_white;
     @include padding_set(3%, 2%, 3%, 2%);

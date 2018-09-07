@@ -2461,7 +2461,7 @@ footer p {
           align-items: center;
 }
 
-.alertpopup.ishow, .popu_tr.ishow, .orderpopu.ishow {
+.alertpopup.ishow, .popu_tr.ishow, .orderpopu.ishow, .modifypopu.ishow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2487,6 +2487,7 @@ footer p {
 .alertpopup .popup_container, .alertpopup .modifypopu_container, .popu_tr .popup_container, .popu_tr .modifypopu_container, .modifypopu .popup_container, .modifypopu .modifypopu_container {
   position: relative;
   width: 80%;
+  min-width: 320px;
   max-width: 1200px;
   height: 500px;
   background-color: #fff;
@@ -2499,6 +2500,7 @@ footer p {
 .alertpopup .popu_tr_container, .popu_tr .popu_tr_container, .modifypopu .popu_tr_container {
   position: relative;
   width: 400px;
+  min-width: 320px;
   max-width: 400px;
   background-color: #fff;
   padding-top: 3%;
