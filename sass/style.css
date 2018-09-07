@@ -2461,81 +2461,43 @@ footer p {
           align-items: center;
 }
 
-.alertpopup.ishow, .popu_tr.ishow, .orderpopu.ishow, .modifypopu.ishow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.popu_modify, .popu_courier, .popu_palmbox_service, .popu_order, .popu_table_tr {
+  display: none;
 }
 
-.alertpopup, .popu_tr, .modifypopu {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
+.popu_modify.ishow, .popu_courier.ishow, .popu_palmbox_service.ishow, .popu_order.ishow, .popu_table_tr.ishow {
+  display: block;
+}
+
+.popu_modify .openclose, .popu_courier .openclose, .popu_palmbox_service .openclose, .popu_order .openclose, .popu_table_tr .openclose {
+  min-width: 320px;
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1050;
+  overflow-y: scroll;
+  outline: 0;
+  padding: 3%;
 }
 
-.alertpopup .popup_container, .alertpopup .modifypopu_container, .popu_tr .popup_container, .popu_tr .modifypopu_container, .modifypopu .popup_container, .modifypopu .modifypopu_container {
+.popu_modify .blackblack, .popu_courier .blackblack, .popu_palmbox_service .blackblack, .popu_order .blackblack, .popu_table_tr .blackblack {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popu_modify .modalbox, .popu_courier .modalbox, .popu_palmbox_service .modalbox, .popu_order .modalbox, .popu_table_tr .modalbox {
   position: relative;
-  width: 80%;
-  min-width: 320px;
-  max-width: 1200px;
-  height: 500px;
-  background-color: #fff;
-  padding-top: 3%;
-  padding-right: 2%;
-  padding-bottom: 3%;
-  padding-left: 2%;
-}
-
-.alertpopup .popu_tr_container, .popu_tr .popu_tr_container, .modifypopu .popu_tr_container {
-  position: relative;
-  width: 400px;
-  min-width: 320px;
-  max-width: 400px;
-  background-color: #fff;
-  padding-top: 3%;
-  padding-right: 2%;
-  padding-bottom: 3%;
-  padding-left: 2%;
-}
-
-@media (max-width: 768px) {
-  .alertpopup .popu_tr_container, .popu_tr .popu_tr_container, .modifypopu .popu_tr_container {
-    width: 80%;
-  }
-}
-
-.alertpopup .modifypopu_container, .popu_tr .modifypopu_container, .modifypopu .modifypopu_container {
   max-width: 800px;
-  height: auto;
-}
-
-@media (max-width: 980px) {
-  .alertpopup .modifypopu_container, .popu_tr .modifypopu_container, .modifypopu .modifypopu_container {
-    height: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .alertpopup .modifypopu_container, .popu_tr .modifypopu_container, .modifypopu .modifypopu_container {
-    height: auto;
-  }
-}
-
-.alertpopup .closeclose, .popu_tr .closeclose, .modifypopu .closeclose {
-  position: absolute;
-  top: -20px;
-  right: -20px;
+  width: 80%;
+  margin: 0 auto;
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2545,45 +2507,74 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50px;
-  height: 50px;
+  min-height: calc(100% - (.5rem * 2));
+}
+
+.popu_modify .modalbox::before, .popu_courier .modalbox::before, .popu_palmbox_service .modalbox::before, .popu_order .modalbox::before, .popu_table_tr .modalbox::before {
+  display: block;
+  height: calc(100vh - (.5rem * 2));
+  content: "";
+}
+
+.popu_modify .w100, .popu_courier .w100, .popu_palmbox_service .w100, .popu_order .w100, .popu_table_tr .w100 {
+  width: 90%;
+}
+
+.popu_modify .modal-content, .popu_courier .modal-content, .popu_palmbox_service .modal-content, .popu_order .modal-content, .popu_table_tr .modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.popu_modify .closeclose, .popu_courier .closeclose, .popu_palmbox_service .closeclose, .popu_order .closeclose, .popu_table_tr .closeclose {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 50%;
   background-color: #9FCC42;
   -webkit-animation: bigsmall 1s infinite;
           animation: bigsmall 1s infinite;
 }
 
-.alertpopup .closeclose:before, .alertpopup .closeclose:after, .popu_tr .closeclose:before, .popu_tr .closeclose:after, .modifypopu .closeclose:before, .modifypopu .closeclose:after {
-  content: '';
+.popu_modify .closeclose::before, .popu_modify .closeclose::after, .popu_courier .closeclose::before, .popu_courier .closeclose::after, .popu_palmbox_service .closeclose::before, .popu_palmbox_service .closeclose::after, .popu_order .closeclose::before, .popu_order .closeclose::after, .popu_table_tr .closeclose::before, .popu_table_tr .closeclose::after {
   display: block;
+  content: '';
   width: 80%;
   height: 5px;
   background-color: #fff;
 }
 
-.alertpopup .closeclose:before, .popu_tr .closeclose:before, .modifypopu .closeclose:before {
-  -webkit-transform: translateX(13px) rotate(45deg);
-          transform: translateX(13px) rotate(45deg);
+.popu_modify .closeclose::before, .popu_courier .closeclose::before, .popu_palmbox_service .closeclose::before, .popu_order .closeclose::before, .popu_table_tr .closeclose::before {
+  -webkit-transform: translateX(11px) rotate(45deg);
+          transform: translateX(11px) rotate(45deg);
 }
 
-.alertpopup .closeclose:after, .popu_tr .closeclose:after, .modifypopu .closeclose:after {
-  -webkit-transform: translateX(-13px) rotate(-45deg);
-          transform: translateX(-13px) rotate(-45deg);
-}
-
-@media (max-width: 480px) {
-  .alertpopup .closeclose, .popu_tr .closeclose, .modifypopu .closeclose {
-    width: 40px;
-    height: 40px;
-  }
-  .alertpopup .closeclose:before, .popu_tr .closeclose:before, .modifypopu .closeclose:before {
-    -webkit-transform: translateX(10px) rotate(45deg);
-            transform: translateX(10px) rotate(45deg);
-  }
-  .alertpopup .closeclose:after, .popu_tr .closeclose:after, .modifypopu .closeclose:after {
-    -webkit-transform: translateX(-10px) rotate(-45deg);
-            transform: translateX(-10px) rotate(-45deg);
-  }
+.popu_modify .closeclose::after, .popu_courier .closeclose::after, .popu_palmbox_service .closeclose::after, .popu_order .closeclose::after, .popu_table_tr .closeclose::after {
+  -webkit-transform: translateX(-10px) rotate(-45deg);
+          transform: translateX(-10px) rotate(-45deg);
 }
 
 @-webkit-keyframes bigsmall {
@@ -2616,118 +2607,23 @@ footer p {
   }
 }
 
-.alertpopup .conbox, .popu_tr .conbox, .modifypopu .conbox {
-  height: 100%;
-  text-align: justify;
-  overflow-y: scroll;
-  padding-right: 20px;
+.popu_modify .modal-header, .popu_courier .modal-header, .popu_palmbox_service .modal-header, .popu_order .modal-header, .popu_table_tr .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
 }
 
-.alertpopup .conbox h1, .alertpopup .conbox h2, .alertpopup .conbox h3, .alertpopup .conbox p, .popu_tr .conbox h1, .popu_tr .conbox h2, .popu_tr .conbox h3, .popu_tr .conbox p, .modifypopu .conbox h1, .modifypopu .conbox h2, .modifypopu .conbox h3, .modifypopu .conbox p {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-}
-
-.alertpopup .conbox h1, .popu_tr .conbox h1, .modifypopu .conbox h1 {
-  font-size: 28px;
-  line-height: 50.4px;
-  font-weight: bolder;
-  letter-spacing: -0.5px;
-  padding-bottom: 5px;
-}
-
-.alertpopup .conbox h2, .popu_tr .conbox h2, .modifypopu .conbox h2 {
-  font-size: 16px;
-  line-height: 28.8px;
-  letter-spacing: -0.5px;
-  padding-bottom: 10px;
-}
-
-.alertpopup .conbox h3, .popu_tr .conbox h3, .modifypopu .conbox h3 {
-  font-size: 18px;
-  line-height: 32.4px;
-  color: #ff8400;
-}
-
-.alertpopup .conbox ol, .popu_tr .conbox ol, .modifypopu .conbox ol {
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-  font-size: 14px;
-  line-height: 25.2px;
-}
-
-.alertpopup .conbox ol li, .popu_tr .conbox ol li, .modifypopu .conbox ol li {
-  margin-bottom: 5px;
-}
-
-.alertpopup .conbox ol li > ol, .popu_tr .conbox ol li > ol, .modifypopu .conbox ol li > ol {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 18px;
-  list-style: upper-latin;
-}
-
-.alertpopup .conbox ol li > ol li > ol, .popu_tr .conbox ol li > ol li > ol, .modifypopu .conbox ol li > ol li > ol {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 18px;
-  list-style: square;
-}
-
-.alertpopup .popubox, .popu_tr .popubox, .modifypopu .popubox {
-  height: 100%;
-  text-align: justify;
-}
-
-.alertpopup .popubox table, .popu_tr .popubox table, .modifypopu .popubox table {
-  display: table;
-  width: 100%;
-  overflow: hidden;
-}
-
-.alertpopup .popubox table tr, .popu_tr .popubox table tr, .modifypopu .popubox table tr {
-  border-bottom: 1px solid #898989;
-}
-
-.alertpopup .popubox table td, .popu_tr .popubox table td, .modifypopu .popubox table td {
-  display: table-cell;
-  margin: 0.5em 1em;
-  padding-top: 8px;
-  padding-right: 5px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  font-size: 14px;
-  line-height: 25.2px;
-  text-align: left;
-}
-
-@media (max-width: 480px) {
-  .alertpopup .popubox table td, .popu_tr .popubox table td, .modifypopu .popubox table td {
-    font-size: 12px;
-    line-height: 21.6px;
-  }
-}
-
-.alertpopup .popubox table td small, .popu_tr .popubox table td small, .modifypopu .popubox table td small {
-  display: block;
-}
-
-.alertpopup .modifybox, .popu_tr .modifybox, .modifypopu .modifybox {
-  text-align: center;
-  height: 80%;
-}
-
-.alertpopup .modifybox h1, .popu_tr .modifybox h1, .modifypopu .modifybox h1 {
+.popu_modify .modal-header h1, .popu_courier .modal-header h1, .popu_palmbox_service .modal-header h1, .popu_order .modal-header h1, .popu_table_tr .modal-header h1 {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -2736,30 +2632,31 @@ footer p {
   margin-right: auto;
   margin-bottom: 10px;
   margin-left: auto;
-  font-size: 22px;
-  line-height: 39.6px;
+  font-size: 20px;
+  line-height: 36px;
   color: #495057;
   display: inline-block;
 }
 
-@media (max-width: 980px) {
-  .alertpopup .modifybox .tablebox, .popu_tr .modifybox .tablebox, .modifypopu .modifybox .tablebox {
-    height: 85%;
-    overflow-y: scroll;
-  }
+.popu_modify .modal-body, .popu_courier .modal-body, .popu_palmbox_service .modal-body, .popu_order .modal-body, .popu_table_tr .modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 1rem;
 }
 
-.alertpopup .modifybox table, .popu_tr .modifybox table, .modifypopu .modifybox table {
+.popu_modify .modal-body > .tablebox table, .popu_courier .modal-body > .tablebox table, .popu_palmbox_service .modal-body > .tablebox table, .popu_order .modal-body > .tablebox table, .popu_table_tr .modal-body > .tablebox table {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid rgba(73, 80, 87, 0.5);
 }
 
-.alertpopup .modifybox table tr, .popu_tr .modifybox table tr, .modifypopu .modifybox table tr {
+.popu_modify .modal-body > .tablebox table tr, .popu_courier .modal-body > .tablebox table tr, .popu_palmbox_service .modal-body > .tablebox table tr, .popu_order .modal-body > .tablebox table tr, .popu_table_tr .modal-body > .tablebox table tr {
   border-bottom: 1px solid rgba(73, 80, 87, 0.5);
 }
 
-.alertpopup .modifybox table tr > td, .popu_tr .modifybox table tr > td, .modifypopu .modifybox table tr > td {
+.popu_modify .modal-body > .tablebox table tr > td, .popu_courier .modal-body > .tablebox table tr > td, .popu_palmbox_service .modal-body > .tablebox table tr > td, .popu_order .modal-body > .tablebox table tr > td, .popu_table_tr .modal-body > .tablebox table tr > td {
   padding-top: 1%;
   padding-right: 1%;
   padding-bottom: 1%;
@@ -2769,121 +2666,134 @@ footer p {
   text-align: left;
 }
 
-.alertpopup .modifybox table tr > td:nth-of-type(1), .popu_tr .modifybox table tr > td:nth-of-type(1), .modifypopu .modifybox table tr > td:nth-of-type(1) {
+.popu_modify .modal-body > .tablebox table tr > td:nth-of-type(1), .popu_courier .modal-body > .tablebox table tr > td:nth-of-type(1), .popu_palmbox_service .modal-body > .tablebox table tr > td:nth-of-type(1), .popu_order .modal-body > .tablebox table tr > td:nth-of-type(1), .popu_table_tr .modal-body > .tablebox table tr > td:nth-of-type(1) {
   width: 10%;
   text-align: center;
 }
 
-.alertpopup .modifybox table tr > td:nth-of-type(1) .form__radio, .popu_tr .modifybox table tr > td:nth-of-type(1) .form__radio, .modifypopu .modifybox table tr > td:nth-of-type(1) .form__radio {
+.popu_modify .modal-body > .tablebox table tr > td:nth-of-type(1) .form__radio, .popu_courier .modal-body > .tablebox table tr > td:nth-of-type(1) .form__radio, .popu_palmbox_service .modal-body > .tablebox table tr > td:nth-of-type(1) .form__radio, .popu_order .modal-body > .tablebox table tr > td:nth-of-type(1) .form__radio, .popu_table_tr .modal-body > .tablebox table tr > td:nth-of-type(1) .form__radio {
   margin: 0 auto;
 }
 
-.alertpopup .modifybox table tr > td:nth-of-type(1) label, .popu_tr .modifybox table tr > td:nth-of-type(1) label, .modifypopu .modifybox table tr > td:nth-of-type(1) label {
+.popu_modify .modal-body > .tablebox table tr > td:nth-of-type(1) label, .popu_courier .modal-body > .tablebox table tr > td:nth-of-type(1) label, .popu_palmbox_service .modal-body > .tablebox table tr > td:nth-of-type(1) label, .popu_order .modal-body > .tablebox table tr > td:nth-of-type(1) label, .popu_table_tr .modal-body > .tablebox table tr > td:nth-of-type(1) label {
   padding: 0 10px;
 }
 
-.alertpopup .modifybox table tr > td:nth-of-type(2), .popu_tr .modifybox table tr > td:nth-of-type(2), .modifypopu .modifybox table tr > td:nth-of-type(2) {
+.popu_modify .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_courier .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_palmbox_service .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_order .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_table_tr .modal-body > .tablebox table tr > td:nth-of-type(2) {
   width: 50%;
 }
 
-.alertpopup .modifybox table tr > td:nth-of-type(3), .popu_tr .modifybox table tr > td:nth-of-type(3), .modifypopu .modifybox table tr > td:nth-of-type(3) {
+.popu_modify .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_courier .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_palmbox_service .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_order .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_table_tr .modal-body > .tablebox table tr > td:nth-of-type(3) {
   width: 40%;
 }
 
 @media (max-width: 768px) {
-  .alertpopup .modifybox table tr > td, .popu_tr .modifybox table tr > td, .modifypopu .modifybox table tr > td {
+  .popu_modify .modal-body > .tablebox table tr > td, .popu_courier .modal-body > .tablebox table tr > td, .popu_palmbox_service .modal-body > .tablebox table tr > td, .popu_order .modal-body > .tablebox table tr > td, .popu_table_tr .modal-body > .tablebox table tr > td {
     font-size: 14px;
     line-height: 25.2px;
   }
 }
 
 @media (max-width: 480px) {
-  .alertpopup .modifybox table tr > td:nth-of-type(2), .popu_tr .modifybox table tr > td:nth-of-type(2), .modifypopu .modifybox table tr > td:nth-of-type(2) {
+  .popu_modify .modal-body > .tablebox table tr > td, .popu_courier .modal-body > .tablebox table tr > td, .popu_palmbox_service .modal-body > .tablebox table tr > td, .popu_order .modal-body > .tablebox table tr > td, .popu_table_tr .modal-body > .tablebox table tr > td {
+    font-size: 12px;
+    line-height: 21.6px;
+  }
+  .popu_modify .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_courier .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_palmbox_service .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_order .modal-body > .tablebox table tr > td:nth-of-type(2), .popu_table_tr .modal-body > .tablebox table tr > td:nth-of-type(2) {
     width: 90%;
   }
-  .alertpopup .modifybox table tr > td:nth-of-type(3), .popu_tr .modifybox table tr > td:nth-of-type(3), .modifypopu .modifybox table tr > td:nth-of-type(3) {
+  .popu_modify .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_courier .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_palmbox_service .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_order .modal-body > .tablebox table tr > td:nth-of-type(3), .popu_table_tr .modal-body > .tablebox table tr > td:nth-of-type(3) {
     display: none;
   }
 }
 
-.alertpopup .modifybox table td span, .popu_tr .modifybox table td span, .modifypopu .modifybox table td span {
+.popu_modify .modal-body > .tablebox table td span, .popu_courier .modal-body > .tablebox table td span, .popu_palmbox_service .modal-body > .tablebox table td span, .popu_order .modal-body > .tablebox table td span, .popu_table_tr .modal-body > .tablebox table td span {
   font-weight: bolder;
 }
 
-.alertpopup .modifybox table td span.green, .popu_tr .modifybox table td span.green, .modifypopu .modifybox table td span.green {
+.popu_modify .modal-body > .tablebox table td span.green, .popu_courier .modal-body > .tablebox table td span.green, .popu_palmbox_service .modal-body > .tablebox table td span.green, .popu_order .modal-body > .tablebox table td span.green, .popu_table_tr .modal-body > .tablebox table td span.green {
   color: #3D9C00;
 }
 
-.alertpopup .modifybox table td span.red, .popu_tr .modifybox table td span.red, .modifypopu .modifybox table td span.red {
+.popu_modify .modal-body > .tablebox table td span.red, .popu_courier .modal-body > .tablebox table td span.red, .popu_palmbox_service .modal-body > .tablebox table td span.red, .popu_order .modal-body > .tablebox table td span.red, .popu_table_tr .modal-body > .tablebox table td span.red {
   color: #DB1C1C;
 }
 
-.alertpopup .modifybox table td span.orange, .popu_tr .modifybox table td span.orange, .modifypopu .modifybox table td span.orange {
+.popu_modify .modal-body > .tablebox table td span.orange, .popu_courier .modal-body > .tablebox table td span.orange, .popu_palmbox_service .modal-body > .tablebox table td span.orange, .popu_order .modal-body > .tablebox table td span.orange, .popu_table_tr .modal-body > .tablebox table td span.orange {
   color: #FF7316;
 }
 
-.alertpopup .modifybox table td span.gray, .popu_tr .modifybox table td span.gray, .modifypopu .modifybox table td span.gray {
+.popu_modify .modal-body > .tablebox table td span.gray, .popu_courier .modal-body > .tablebox table td span.gray, .popu_palmbox_service .modal-body > .tablebox table td span.gray, .popu_order .modal-body > .tablebox table td span.gray, .popu_table_tr .modal-body > .tablebox table td span.gray {
   color: #4D4D4D;
 }
 
-.alertpopup .modifybox button, .popu_tr .modifybox button, .modifypopu .modifybox button {
-  width: 50%;
-  padding-top: 1%;
-  padding-right: 2%;
-  padding-bottom: 1%;
-  padding-left: 2%;
-  margin-top: 2%;
+.popu_modify .modal-body .conbox, .popu_courier .modal-body .conbox, .popu_palmbox_service .modal-body .conbox, .popu_order .modal-body .conbox, .popu_table_tr .modal-body .conbox {
+  height: 100%;
+  text-align: justify;
+}
+
+.popu_modify .modal-body .conbox h1, .popu_modify .modal-body .conbox h2, .popu_modify .modal-body .conbox h3, .popu_modify .modal-body .conbox p, .popu_courier .modal-body .conbox h1, .popu_courier .modal-body .conbox h2, .popu_courier .modal-body .conbox h3, .popu_courier .modal-body .conbox p, .popu_palmbox_service .modal-body .conbox h1, .popu_palmbox_service .modal-body .conbox h2, .popu_palmbox_service .modal-body .conbox h3, .popu_palmbox_service .modal-body .conbox p, .popu_order .modal-body .conbox h1, .popu_order .modal-body .conbox h2, .popu_order .modal-body .conbox h3, .popu_order .modal-body .conbox p, .popu_table_tr .modal-body .conbox h1, .popu_table_tr .modal-body .conbox h2, .popu_table_tr .modal-body .conbox h3, .popu_table_tr .modal-body .conbox p {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
   margin-right: auto;
-  margin-bottom: 2%;
+  margin-bottom: 0;
   margin-left: auto;
+}
+
+.popu_modify .modal-body .conbox h1, .popu_courier .modal-body .conbox h1, .popu_palmbox_service .modal-body .conbox h1, .popu_order .modal-body .conbox h1, .popu_table_tr .modal-body .conbox h1 {
+  font-size: 28px;
+  line-height: 50.4px;
+  font-weight: bolder;
+  letter-spacing: -0.5px;
+  padding-bottom: 5px;
+}
+
+.popu_modify .modal-body .conbox h2, .popu_courier .modal-body .conbox h2, .popu_palmbox_service .modal-body .conbox h2, .popu_order .modal-body .conbox h2, .popu_table_tr .modal-body .conbox h2 {
   font-size: 16px;
   line-height: 28.8px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  background-color: #9FCC42;
+  letter-spacing: -0.5px;
+  padding-bottom: 10px;
 }
 
-.alertpopup .modifybox button:hover, .popu_tr .modifybox button:hover, .modifypopu .modifybox button:hover {
-  background-color: #898989;
+.popu_modify .modal-body .conbox h3, .popu_courier .modal-body .conbox h3, .popu_palmbox_service .modal-body .conbox h3, .popu_order .modal-body .conbox h3, .popu_table_tr .modal-body .conbox h3 {
+  font-size: 18px;
+  line-height: 32.4px;
+  color: #ff8400;
 }
 
-.orderpopu {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.7);
+.popu_modify .modal-body .conbox ol, .popu_courier .modal-body .conbox ol, .popu_palmbox_service .modal-body .conbox ol, .popu_order .modal-body .conbox ol, .popu_table_tr .modal-body .conbox ol {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 25.2px;
 }
 
-.orderpopu .orderpopu_container {
-  position: relative;
-  width: 90%;
-  max-width: 1200px;
-  height: 90%;
-  background-color: #fff;
-  padding-top: 3%;
-  padding-right: 2%;
-  padding-bottom: 3%;
-  padding-left: 2%;
+.popu_modify .modal-body .conbox ol li, .popu_courier .modal-body .conbox ol li, .popu_palmbox_service .modal-body .conbox ol li, .popu_order .modal-body .conbox ol li, .popu_table_tr .modal-body .conbox ol li {
+  margin-bottom: 5px;
 }
 
-.orderpopu .order {
-  height: 100%;
-  overflow-y: scroll;
+.popu_modify .modal-body .conbox ol li > ol, .popu_courier .modal-body .conbox ol li > ol, .popu_palmbox_service .modal-body .conbox ol li > ol, .popu_order .modal-body .conbox ol li > ol, .popu_table_tr .modal-body .conbox ol li > ol {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 18px;
+  list-style: upper-latin;
 }
 
-.orderpopu .orderdata {
+.popu_modify .modal-body .conbox ol li > ol li > ol, .popu_courier .modal-body .conbox ol li > ol li > ol, .popu_palmbox_service .modal-body .conbox ol li > ol li > ol, .popu_order .modal-body .conbox ol li > ol li > ol, .popu_table_tr .modal-body .conbox ol li > ol li > ol {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 18px;
+  list-style: square;
+}
+
+.popu_modify .modal-body .order .orderdata, .popu_courier .modal-body .order .orderdata, .popu_palmbox_service .modal-body .order .orderdata, .popu_order .modal-body .order .orderdata, .popu_table_tr .modal-body .order .orderdata {
   display: block;
   font-size: 14px;
   line-height: 25.2px;
@@ -2894,12 +2804,12 @@ footer p {
   border-bottom: 1px solid #898989;
 }
 
-.orderpopu .orderdata span {
+.popu_modify .modal-body .order .orderdata span, .popu_courier .modal-body .order .orderdata span, .popu_palmbox_service .modal-body .order .orderdata span, .popu_order .modal-body .order .orderdata span, .popu_table_tr .modal-body .order .orderdata span {
   color: #9FCC42;
   margin-left: 10px;
 }
 
-.orderpopu .orderbox {
+.popu_modify .modal-body .order .orderbox, .popu_courier .modal-body .order .orderbox, .popu_palmbox_service .modal-body .order .orderbox, .popu_order .modal-body .order .orderbox, .popu_table_tr .modal-body .order .orderbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2910,17 +2820,17 @@ footer p {
       flex-wrap: wrap;
 }
 
-.orderpopu .orderbox .tablebox {
+.popu_modify .modal-body .order .orderbox > .tablebox, .popu_courier .modal-body .order .orderbox > .tablebox, .popu_palmbox_service .modal-body .order .orderbox > .tablebox, .popu_order .modal-body .order .orderbox > .tablebox, .popu_table_tr .modal-body .order .orderbox > .tablebox {
   width: 48%;
 }
 
 @media (max-width: 768px) {
-  .orderpopu .orderbox .tablebox {
+  .popu_modify .modal-body .order .orderbox > .tablebox, .popu_courier .modal-body .order .orderbox > .tablebox, .popu_palmbox_service .modal-body .order .orderbox > .tablebox, .popu_order .modal-body .order .orderbox > .tablebox, .popu_table_tr .modal-body .order .orderbox > .tablebox {
     width: 100%;
   }
 }
 
-.orderpopu .orderbox i {
+.popu_modify .modal-body .order .orderbox i, .popu_courier .modal-body .order .orderbox i, .popu_palmbox_service .modal-body .order .orderbox i, .popu_order .modal-body .order .orderbox i, .popu_table_tr .modal-body .order .orderbox i {
   display: block;
   margin-top: 8px;
   margin-right: 0;
@@ -2931,11 +2841,11 @@ footer p {
   background-color: #898989;
 }
 
-.orderpopu .orderbox table {
+.popu_modify .modal-body .order .orderbox table, .popu_courier .modal-body .order .orderbox table, .popu_palmbox_service .modal-body .order .orderbox table, .popu_order .modal-body .order .orderbox table, .popu_table_tr .modal-body .order .orderbox table {
   width: 100%;
 }
 
-.orderpopu .orderbox td {
+.popu_modify .modal-body .order .orderbox td, .popu_courier .modal-body .order .orderbox td, .popu_palmbox_service .modal-body .order .orderbox td, .popu_order .modal-body .order .orderbox td, .popu_table_tr .modal-body .order .orderbox td {
   font-size: 14px;
   line-height: 25.2px;
   padding-top: 8px;
@@ -2945,7 +2855,7 @@ footer p {
   vertical-align: top;
 }
 
-.orderpopu .orderbox td a {
+.popu_modify .modal-body .order .orderbox td a, .popu_courier .modal-body .order .orderbox td a, .popu_palmbox_service .modal-body .order .orderbox td a, .popu_order .modal-body .order .orderbox td a, .popu_table_tr .modal-body .order .orderbox td a {
   display: block;
   text-align: center;
   color: #fff;
@@ -2957,33 +2867,33 @@ footer p {
   border-radius: 5px;
 }
 
-.orderpopu .orderbox td a:hover {
+.popu_modify .modal-body .order .orderbox td a:hover, .popu_courier .modal-body .order .orderbox td a:hover, .popu_palmbox_service .modal-body .order .orderbox td a:hover, .popu_order .modal-body .order .orderbox td a:hover, .popu_table_tr .modal-body .order .orderbox td a:hover {
   background-color: #898989;
 }
 
-.orderpopu .orderbox td:nth-of-type(1) {
+.popu_modify .modal-body .order .orderbox td:nth-of-type(1), .popu_courier .modal-body .order .orderbox td:nth-of-type(1), .popu_palmbox_service .modal-body .order .orderbox td:nth-of-type(1), .popu_order .modal-body .order .orderbox td:nth-of-type(1), .popu_table_tr .modal-body .order .orderbox td:nth-of-type(1) {
   width: 40%;
 }
 
-.orderpopu .orderbox td:nth-of-type(2) {
+.popu_modify .modal-body .order .orderbox td:nth-of-type(2), .popu_courier .modal-body .order .orderbox td:nth-of-type(2), .popu_palmbox_service .modal-body .order .orderbox td:nth-of-type(2), .popu_order .modal-body .order .orderbox td:nth-of-type(2), .popu_table_tr .modal-body .order .orderbox td:nth-of-type(2) {
   width: 60%;
   color: #898989;
   position: relative;
 }
 
-.orderpopu .orderbox td:nth-of-type(2) input {
+.popu_modify .modal-body .order .orderbox td:nth-of-type(2) input, .popu_courier .modal-body .order .orderbox td:nth-of-type(2) input, .popu_palmbox_service .modal-body .order .orderbox td:nth-of-type(2) input, .popu_order .modal-body .order .orderbox td:nth-of-type(2) input, .popu_table_tr .modal-body .order .orderbox td:nth-of-type(2) input {
   display: inline-block;
   width: 75%;
   color: #898989;
 }
 
-.orderpopu .orderbox td:nth-of-type(2) small {
+.popu_modify .modal-body .order .orderbox td:nth-of-type(2) small, .popu_courier .modal-body .order .orderbox td:nth-of-type(2) small, .popu_palmbox_service .modal-body .order .orderbox td:nth-of-type(2) small, .popu_order .modal-body .order .orderbox td:nth-of-type(2) small, .popu_table_tr .modal-body .order .orderbox td:nth-of-type(2) small {
   display: block;
   font-size: 14px;
   line-height: 25.2px;
 }
 
-.orderpopu .orderbox td:nth-of-type(2) .copy {
+.popu_modify .modal-body .order .orderbox td:nth-of-type(2) .copy, .popu_courier .modal-body .order .orderbox td:nth-of-type(2) .copy, .popu_palmbox_service .modal-body .order .orderbox td:nth-of-type(2) .copy, .popu_order .modal-body .order .orderbox td:nth-of-type(2) .copy, .popu_table_tr .modal-body .order .orderbox td:nth-of-type(2) .copy {
   position: absolute;
   top: 8px;
   right: 5px;
@@ -2995,10 +2905,47 @@ footer p {
   border-radius: 0px;
 }
 
-.orderpopu .closeclose {
-  position: absolute;
-  top: -20px;
-  right: -20px;
+.popu_modify .modal-body .popubox, .popu_courier .modal-body .popubox, .popu_palmbox_service .modal-body .popubox, .popu_order .modal-body .popubox, .popu_table_tr .modal-body .popubox {
+  height: 100%;
+  text-align: justify;
+}
+
+.popu_modify .modal-body .popubox table, .popu_courier .modal-body .popubox table, .popu_palmbox_service .modal-body .popubox table, .popu_order .modal-body .popubox table, .popu_table_tr .modal-body .popubox table {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+
+.popu_modify .modal-body .popubox table tr, .popu_courier .modal-body .popubox table tr, .popu_palmbox_service .modal-body .popubox table tr, .popu_order .modal-body .popubox table tr, .popu_table_tr .modal-body .popubox table tr {
+  border-bottom: 1px solid #898989;
+}
+
+.popu_modify .modal-body .popubox table td, .popu_courier .modal-body .popubox table td, .popu_palmbox_service .modal-body .popubox table td, .popu_order .modal-body .popubox table td, .popu_table_tr .modal-body .popubox table td {
+  display: table-cell;
+  margin: 0.5em 1em;
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 25.2px;
+  text-align: left;
+}
+
+.popu_modify .modal-body .popubox table td small, .popu_courier .modal-body .popubox table td small, .popu_palmbox_service .modal-body .popubox table td small, .popu_order .modal-body .popubox table td small, .popu_table_tr .modal-body .popubox table td small {
+  display: block;
+  font-size: 14px;
+  line-height: 25.2px;
+}
+
+@media (max-width: 480px) {
+  .popu_modify .modal-body .popubox table td, .popu_courier .modal-body .popubox table td, .popu_palmbox_service .modal-body .popubox table td, .popu_order .modal-body .popubox table td, .popu_table_tr .modal-body .popubox table td {
+    font-size: 12px;
+    line-height: 21.6px;
+  }
+}
+
+.popu_modify .modal-footer, .popu_courier .modal-footer, .popu_palmbox_service .modal-footer, .popu_order .modal-footer, .popu_table_tr .modal-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3008,59 +2955,26 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  padding: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.popu_modify .modal-footer button, .popu_courier .modal-footer button, .popu_palmbox_service .modal-footer button, .popu_order .modal-footer button, .popu_table_tr .modal-footer button {
+  width: 50%;
+  padding-top: 1%;
+  padding-right: 2%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  font-size: 16px;
+  line-height: 28.8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
   background-color: #9FCC42;
-  -webkit-animation: bigsmall 1s infinite;
-          animation: bigsmall 1s infinite;
 }
 
-.orderpopu .closeclose:before, .orderpopu .closeclose:after {
-  content: '';
-  display: block;
-  width: 80%;
-  height: 5px;
-  background-color: #fff;
-}
-
-.orderpopu .closeclose:before {
-  -webkit-transform: translateX(13px) rotate(45deg);
-          transform: translateX(13px) rotate(45deg);
-}
-
-.orderpopu .closeclose:after {
-  -webkit-transform: translateX(-13px) rotate(-45deg);
-          transform: translateX(-13px) rotate(-45deg);
-}
-
-@media (max-width: 480px) {
-  .orderpopu .closeclose {
-    width: 40px;
-    height: 40px;
-  }
-  .orderpopu .closeclose:before {
-    -webkit-transform: translateX(10px) rotate(45deg);
-            transform: translateX(10px) rotate(45deg);
-  }
-  .orderpopu .closeclose:after {
-    -webkit-transform: translateX(-10px) rotate(-45deg);
-            transform: translateX(-10px) rotate(-45deg);
-  }
-}
-
-@keyframes bigsmall {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  25% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+.popu_modify .modal-footer button:hover, .popu_courier .modal-footer button:hover, .popu_palmbox_service .modal-footer button:hover, .popu_order .modal-footer button:hover, .popu_table_tr .modal-footer button:hover {
+  background-color: #898989;
 }
 /*# sourceMappingURL=style.css.map */

@@ -63,54 +63,38 @@ $(window).on('load', function() {
     // 浮層打開關
     $('#Courier').on('click', function() {
       overflow()
-      $('#Courier_alert').toggleClass('ishow')
+      $('.popu_courier').toggleClass('ishow')
+
     })
     $('#Plambox_Service').on('click', function() {
       overflow()
-      $('#Plambox_Service_alert').toggleClass('ishow')
+      $('.popu_palmbox_service').toggleClass('ishow')
     })
 
     $('#agree').on('click', function() {
       overflow()
-      $('#Plambox_Service_alert').toggleClass('ishow')
-    })
-
-    $('.alertpopup .closeclose ').on('click', function() {
-      let poputhis = $(this).parent('div').parent('div')
-      closeclose(poputhis)
+      $('.popu_palmbox_service').toggleClass('ishow')
     })
 
     $('.popu >table:nth-child(1) td').on('click', function() {
       overflow()
-      $('.popu_tr').toggleClass('ishow')
+      $('.popu_table_tr').toggleClass('ishow')
     })
 
-    $('.popu_tr .closeclose').on('click', function() {
-      let poputhis = $(this).parent('div').parent('div')
-      closeclose(poputhis)
-    })
-
-    $('.orderinfocontainer .containerbox .item').on('click', function() {
+    $('.containerbox .item').on('click', function() {
       overflow()
-      $('.orderpopu').toggleClass('ishow')
-    })
-
-    $('.orderpopu .closeclose ').on('click', function () {
-      let poputhis = $(this).parent('div').parent('div')
-      closeclose(poputhis)
+      $('.popu_order').toggleClass('ishow')
     })
 
     $('.modifybt').on('click', function () {
       overflow()
-      $('.modifypopu').toggleClass('ishow')
+      $('.popu_modify').toggleClass('ishow')
     })
 
-    $('.modifypopu .closeclose ').on('click', function () {
-      let poputhis = $(this).parent('div').parent('div')
+    $('.modal-content .closeclose ').on('click', function () {
+      let poputhis = $(this).parents('.openclose').parent('div')
       closeclose(poputhis)
     })    
-
-
 
 
     // 關閉共用function
