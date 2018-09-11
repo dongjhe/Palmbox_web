@@ -862,14 +862,14 @@ main {
       border-color: $color_black transparent transparent transparent;
     }
   }   
-  .deliverybox,.courier_access,.orderinfo,.community_access {
+  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access {
     display: block;
     width: 100%;
     background-color: $color_white;
     @include padding_set(2%, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
-    .deliverytop,.couriertop,.orderinfotop,.communitytop{
+    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop{
       overflow: hidden;
       >div{
         display: inline-block;
@@ -879,7 +879,7 @@ main {
           display:block;
         }
       }
-      h1 {
+      h1{
         display: block;
         @include padding_set(0, 0, 0, 0);
         @include margin_set(0, auto, 20px, auto);
@@ -896,6 +896,7 @@ main {
       .featuresbox{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 30px;
         .togglebut {
           a{
             display: inline-block;
@@ -912,7 +913,7 @@ main {
             }
           }
         }
-        .excel_but{
+        .excel_but,.eticket_but{
           display: inline-block;
           @include margin_set(0,0,0,0)
           @media (max-width: 768px) {
@@ -953,7 +954,6 @@ main {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding-top: 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid $text_color;
         @media (max-width: 768px) {
@@ -1080,7 +1080,7 @@ main {
       }
 
     }
-    .couriercontainer,.communitycontainer,.orderinfocontainer{
+    .couriercontainer,.communitycontainer,.orderinfocontainer,.eticketcontainer{
       >table{
         width: 100%;
         display: inline-table;
@@ -1133,7 +1133,40 @@ main {
         }
       }
     }
-    .communitycontainer{
+
+    .eticketcontainer{
+      &.invoice{
+        display: block;
+      }
+      &.receipt{
+        display: none;
+      }
+
+
+      @media (max-width:768px) {
+        >table{
+          tr{
+            th,td{
+              &:last-child{
+                display: table-cell;
+              }
+            }  
+          }
+        } 
+        >table:nth-of-type(1){
+          tr{
+            th:first-child,td:first-child{
+                display: none;
+            }
+          }
+        }        
+      }      
+
+      
+    }
+
+
+    .communitycontainer,.eticketcontainer{
       >table{    
         &:nth-of-type(1){
           width: 85%;
@@ -1153,7 +1186,7 @@ main {
         }
       }
     }
-    .couriercontainer,.communitycontainer,.orderinfocontainer{
+    .couriercontainer,.communitycontainer,.orderinfocontainer,.eticketcontainer{
       >table{
         tr{
           cursor: pointer;
@@ -1327,6 +1360,19 @@ main {
         }
       }
     }
+
+    .precautions{
+      h1{
+          @include padding_set(0,0,0,0);
+          @include margin_set(0,0,0,0);  
+          @include font_size(20px);
+          font-weight: bolder;      
+      }
+      p{
+          @include font_size(16px);      
+      }
+    }
+
 
     .deliverytop >.togglebut{
         float: left;
@@ -1865,7 +1911,55 @@ footer {
 
         }
       }
-    }    
+    }   
+    
+    .transaction_item{
+      @include padding_set(1%,1%,1%,1%);
+      .itemtop{
+        h1{
+          @include padding_set(0,0,0,0);
+          @include margin_set(0,0,0,0);
+          @include font_size(16px);
+          @media (max-width:480px) {
+            @include font_size(14px);
+          }
+        }
+        margin-bottom: 10px;
+      }
+      .itemtable{
+        table{
+          width: 100%;
+          border: 1px solid $text_color;
+          @include font_size(16px);
+          @media (max-width:480px) {
+            @include font_size(14px);
+          }
+        }
+        tr{
+          text-align: center;
+          
+          &:nth-of-type(1){
+            color: $color_white;
+            background-color: $color_green;
+          }
+        }
+        tr,td{
+          border: 1px solid $text_color;
+        }
+        .hid{
+          position: relative;
+          &::before{
+            content: "";
+            position: absolute;
+            top:0;
+            right: -2px;
+            width: 4px;
+            height: 100%;
+            background-color: $color_white;
+          }
+        }
+      }
+    }
 
   }
 

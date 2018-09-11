@@ -140,6 +140,18 @@ $(window).on('load', function() {
       $(this).addClass('active').siblings('a').removeClass('active')
     })
 
+    // 發票收據按鈕
+    $('.etickettop .featuresbox a').on('click',function(){
+      let ebutindex = $(this).index()
+      if ( ebutindex === 0) {
+        $('.invoice').css('display', 'block')
+        $('.receipt').css('display', 'none')
+      } else {
+        $('.invoice').css('display', 'none')
+        $('.receipt').css('display', 'block')        
+      }
+    })
+
     // 會員使用者狀態切換
     $('.click_bt a').on('click', function() {
       let indexa = $(this).index()
@@ -159,6 +171,8 @@ $(window).on('load', function() {
         tr_num = $(this).index()
         addmouse(tablenum,tablethis, tr_num)
 
+        console.log(tablenum, tablethis, tr_num);
+      
       }, function() {
         // out
         table.find('tr').removeClass('mousetouch') 
@@ -167,18 +181,21 @@ $(window).on('load', function() {
     function addmouse(tablenum, tablethis, tr_num) {
       if (tablenum == 0 && tr_num > 0) {
         tablethis.addClass('mousetouch')
-        table.eq(1).find('tr').eq(tr_num).addClass('mousetouch')
+        // table.eq(1).find('tr').eq(tr_num).addClass('mousetouch')
+        tablethis.parents('table').siblings('table').find('tr').eq(tr_num).addClass('mousetouch')
+
       } else if (tablenum == 1 && tr_num > 0){
         tablethis.addClass('mousetouch')
-        table.eq(0).find('tr').eq(tr_num).addClass('mousetouch')
+        // table.eq(0).find('tr').eq(tr_num).addClass('mousetouch')
+        tablethis.parents('table').siblings('table').find('tr').eq(tr_num).addClass('mousetouch')
+
       }
+
     }
 
-
     // 複製訂單連結
-    $(".copy").click(function () {
-
-      var textArea = document.createElement("textarea");
+    $('.copy').on('click',function () {
+      let textArea = document.createElement("textarea");
       textArea.value = $(this).prev('input').val()
       textArea.textContent;
       document.body.appendChild(textArea);
@@ -188,7 +205,7 @@ $(window).on('load', function() {
       document.execCommand("Copy")
 
       alert('已複製訂單連結於您的剪貼簿請傳送給您的客戶進行填單')
-      return false
+      return false 
     })
 
 

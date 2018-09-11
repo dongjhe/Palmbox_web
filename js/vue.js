@@ -71,6 +71,18 @@ var app = new Vue({
       { info: '收件人手機' },
       { info: '收件人地址' },
       { info: '運單號碼' }
+    ],
+    years:[
+      { info: '107'},
+      { info: '106'},
+    ],
+    months:[
+      { info: '1-2月' },
+      { info: '3-4月' },
+      { info: '5-6月' },
+      { info: '7-8月' },
+      { info: '9-10月' },
+      { info: '11-12月' },
     ]
   },
   methods: {}
