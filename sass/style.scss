@@ -259,7 +259,7 @@ header {
       @include padding_set(5px, 5px, 5px, 5px);
       ul {
         li {
-          line-height: 40px;
+          line-height: 30px;
         }
         a {
           float: none;
@@ -617,7 +617,7 @@ main {
             text-align: center;
             border-radius: 0.25rem;
             &:hover{
-              background-color: rgb(140, 185, 51);
+              background-color: $color_green_hover;
             }
           }
         }  
@@ -745,7 +745,7 @@ main {
           background-color: $color_green;
           border: none;
           &:hover {
-            background-color: rgb(140, 185, 51);
+            background-color: $color_green_hover;
           }
         }
         .memcheck{
@@ -863,14 +863,14 @@ main {
       border-color: $color_black transparent transparent transparent;
     }
   }   
-  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access {
+  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse {
     display: block;
     width: 100%;
     background-color: $color_white;
     @include padding_set(2%, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
-    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop{
+    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop{
       overflow: hidden;
       >div{
         display: inline-block;
@@ -932,7 +932,7 @@ main {
             }   
             @include padding_set(5px,15px,5px,15px)
             &:hover {
-              background-color: rgb(140, 185, 51);
+              background-color: $color_green_hover;
             }
           }
         }
@@ -948,6 +948,13 @@ main {
         color: rgba($color_black,0.7);
         border:1px solid rgba($text_color,0.6);
         border-radius: 30px;
+      }
+      .warehousexam{
+        display: block;
+        text-align: center;
+        a{
+          text-decoration: underline;
+        }
       }
     }
     .couriertop,.orderinfotop,.communitytop{
@@ -1053,7 +1060,7 @@ main {
               background-color: $color_green;
               border: 1px solid $color_green;
               &:hover{
-                background-color: rgb(140, 185, 51);
+                background-color: $color_green_hover;
               }
             }
 
@@ -1134,7 +1141,6 @@ main {
         }
       }
     }
-
     .eticketcontainer{
       &.invoice{
         display: block;
@@ -1165,8 +1171,6 @@ main {
 
       
     }
-
-
     .communitycontainer,.eticketcontainer{
       >table{    
         &:nth-of-type(1){
@@ -1330,11 +1334,106 @@ main {
         }
       }
     }
+    .warehousecontainer{
+      display: block;
+      width: 100%;
+      border: 5px solid $box_shadow;
+      border-radius: 20px;
+      .downloadbox{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        @include padding_set(3%,3%,3%,3%);
+        text-align: center;
+        label{
+          width: 250px;
+          height: 250px;
+          background-image: url(../images/download_icon.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          cursor: pointer;
+        }
+        input[type="file"]{
+          display: none;
+        }
+      }
+      .excel_order{
+        display: block;
+        width: 100%;
+        @include padding_set(1%,1%,1%,1%);
+        p{
+          display: block;
+          text-align: center;
+          &.error{
+            color: red;
+          }
+        }
+        table{
+          display: inline-table;
+          width: 96%;
+          @include font_size(14px);
+          tr{
+            display: table-row;
+            &:nth-child(2n+1){
+              background-color:rgba($text_color,0.1) 
+            }
+          }
+          th,td{
+            display: table-cell;
+            margin: 0.5em 1em;
+            @include padding_set(8px,5px,8px,5px);
+            @include font_size(14px);
+            height: 41px;
+            text-align: center;
+          }
+          th{
+            width: 18%;
+            background-color: $header_color;
+            &:nth-of-type(1){
+              width: 10%;
+            }
+          }
+          td{
+            span{
+              display: block;
+              color: red;
+              @include font_size(12px);
+            }
+          }
+        }     
+      }
+    }
+    .warehousebt{
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      a{
+        display: inline-block;
+        width: 200px;
+        @include padding_set(10px,10px,10px,10px);
+        @include margin_set(10px,10px,10px,10px);
+        color:$color_white;
+        background-color: $footer_color;
+        border-radius: 5px;
+        &:nth-last-child(1){
+          background-color: $color_green;
+        }
+        &:hover{
+          background-color: $text_color;
+          &:nth-last-child(1){
+            background-color: $color_green_hover;
+          }
+        }
+      }
+    }
+    
+
+
     .mousetouch{
         transform: translate(0,-5px);
         box-shadow: 0 2px 2px rgba(190, 190, 190, 1);
     }
-    .courierbottom,.orderinfobottom{
+    .courierbottom,.orderinfobottom,.warehousebottom{
       text-align: right;
       margin-top: 10px;
       @media (max-width:768px) {
@@ -1361,7 +1460,6 @@ main {
         }
       }
     }
-
     .precautions{
       h1{
           @include padding_set(0,0,0,0);
@@ -1373,8 +1471,6 @@ main {
           @include font_size(16px);      
       }
     }
-
-
     .deliverytop >.togglebut{
         float: left;
     }
@@ -1468,8 +1564,6 @@ main {
         }
       }
     }
-      
-    
   }
   .registerbox,.itembox2,#unfetched {
     display: none;
