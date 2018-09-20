@@ -16,6 +16,8 @@
     <meta property="fb:admin" content="">
     <title>掌櫃-掌握生活 隨觸可及</title>
     <link rel="shortcut icon" type="png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./sass/bootstrap.min.css">
+    <link rel="stylesheet" href="./sass/daterangepicker.css">
     <link rel="stylesheet" href="./sass/style.css">
 </head>
 
@@ -670,6 +672,15 @@
     <script src="./js/vue.js"></script>
     <script src="./js/birthday.js"></script>
     <script src="./js/tw_city_selector.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="./js/daterangepicker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#reservation').daterangepicker(null, function (start, end, label) {
+                // console.log(start.toISOString(), end.toISOString(), label);
+            });
+        });
+    </script>
 
 </body>
 
