@@ -675,7 +675,7 @@ main {
         }
       }
 
-      .memberpassword,.memberphone,.e_invoice,.birthday,.address,.delivery_recipient{
+      .memberpassword,.memberphone,.birthday,.address,.delivery_recipient{
         .box,.box1{
           display: flex;
           justify-content:space-between;
@@ -683,10 +683,11 @@ main {
         }
       }
 
-      .memberpassword,.memberphone,.e_invoice{
+      .memberpassword,.memberphone{
         input{
           &:nth-of-type(1){
             width: 75%;
+            background-color: rgba($footer_color,0.2);
           }
           &:nth-of-type(2){
             width: 20%;
@@ -1720,6 +1721,9 @@ footer {
       display: block;
       height: calc(100vh - (.5rem * 2));
       content: "";
+    }
+    &.w500{
+      max-width: 500px;
     }
   }
 

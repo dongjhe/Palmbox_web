@@ -1303,7 +1303,7 @@ main .signinbox .membercenter .user_setname small {
   color: #ff8400;
 }
 
-main .signinbox .signcenter .memberpassword .box, main .signinbox .signcenter .memberpassword .box1, main .signinbox .signcenter .memberphone .box, main .signinbox .signcenter .memberphone .box1, main .signinbox .signcenter .e_invoice .box, main .signinbox .signcenter .e_invoice .box1, main .signinbox .signcenter .birthday .box, main .signinbox .signcenter .birthday .box1, main .signinbox .signcenter .address .box, main .signinbox .signcenter .address .box1, main .signinbox .signcenter .delivery_recipient .box, main .signinbox .signcenter .delivery_recipient .box1, main .signinbox .membercenter .memberpassword .box, main .signinbox .membercenter .memberpassword .box1, main .signinbox .membercenter .memberphone .box, main .signinbox .membercenter .memberphone .box1, main .signinbox .membercenter .e_invoice .box, main .signinbox .membercenter .e_invoice .box1, main .signinbox .membercenter .birthday .box, main .signinbox .membercenter .birthday .box1, main .signinbox .membercenter .address .box, main .signinbox .membercenter .address .box1, main .signinbox .membercenter .delivery_recipient .box, main .signinbox .membercenter .delivery_recipient .box1 {
+main .signinbox .signcenter .memberpassword .box, main .signinbox .signcenter .memberpassword .box1, main .signinbox .signcenter .memberphone .box, main .signinbox .signcenter .memberphone .box1, main .signinbox .signcenter .birthday .box, main .signinbox .signcenter .birthday .box1, main .signinbox .signcenter .address .box, main .signinbox .signcenter .address .box1, main .signinbox .signcenter .delivery_recipient .box, main .signinbox .signcenter .delivery_recipient .box1, main .signinbox .membercenter .memberpassword .box, main .signinbox .membercenter .memberpassword .box1, main .signinbox .membercenter .memberphone .box, main .signinbox .membercenter .memberphone .box1, main .signinbox .membercenter .birthday .box, main .signinbox .membercenter .birthday .box1, main .signinbox .membercenter .address .box, main .signinbox .membercenter .address .box1, main .signinbox .membercenter .delivery_recipient .box, main .signinbox .membercenter .delivery_recipient .box1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1315,18 +1315,19 @@ main .signinbox .signcenter .memberpassword .box, main .signinbox .signcenter .m
           align-items: center;
 }
 
-main .signinbox .signcenter .memberpassword input:nth-of-type(1), main .signinbox .signcenter .memberphone input:nth-of-type(1), main .signinbox .signcenter .e_invoice input:nth-of-type(1), main .signinbox .membercenter .memberpassword input:nth-of-type(1), main .signinbox .membercenter .memberphone input:nth-of-type(1), main .signinbox .membercenter .e_invoice input:nth-of-type(1) {
+main .signinbox .signcenter .memberpassword input:nth-of-type(1), main .signinbox .signcenter .memberphone input:nth-of-type(1), main .signinbox .membercenter .memberpassword input:nth-of-type(1), main .signinbox .membercenter .memberphone input:nth-of-type(1) {
   width: 75%;
+  background-color: rgba(181, 181, 181, 0.2);
 }
 
-main .signinbox .signcenter .memberpassword input:nth-of-type(2), main .signinbox .signcenter .memberphone input:nth-of-type(2), main .signinbox .signcenter .e_invoice input:nth-of-type(2), main .signinbox .membercenter .memberpassword input:nth-of-type(2), main .signinbox .membercenter .memberphone input:nth-of-type(2), main .signinbox .membercenter .e_invoice input:nth-of-type(2) {
+main .signinbox .signcenter .memberpassword input:nth-of-type(2), main .signinbox .signcenter .memberphone input:nth-of-type(2), main .signinbox .membercenter .memberpassword input:nth-of-type(2), main .signinbox .membercenter .memberphone input:nth-of-type(2) {
   width: 20%;
   color: #fff;
   background-color: #b5b5b5;
   border: none;
 }
 
-main .signinbox .signcenter .memberpassword input:nth-of-type(2):hover, main .signinbox .signcenter .memberphone input:nth-of-type(2):hover, main .signinbox .signcenter .e_invoice input:nth-of-type(2):hover, main .signinbox .membercenter .memberpassword input:nth-of-type(2):hover, main .signinbox .membercenter .memberphone input:nth-of-type(2):hover, main .signinbox .membercenter .e_invoice input:nth-of-type(2):hover {
+main .signinbox .signcenter .memberpassword input:nth-of-type(2):hover, main .signinbox .signcenter .memberphone input:nth-of-type(2):hover, main .signinbox .membercenter .memberpassword input:nth-of-type(2):hover, main .signinbox .membercenter .memberphone input:nth-of-type(2):hover {
   background-color: #898989;
 }
 
@@ -2767,6 +2768,10 @@ footer p {
   display: block;
   height: calc(100vh - (.5rem * 2));
   content: "";
+}
+
+.popu_modify .modalbox.w500, .popu_courier .modalbox.w500, .popu_palmbox_service .modalbox.w500, .popu_order .modalbox.w500, .popu_table_tr .modalbox.w500 {
+  max-width: 500px;
 }
 
 .popu_modify .w100, .popu_courier .w100, .popu_palmbox_service .w100, .popu_order .w100, .popu_table_tr .w100 {

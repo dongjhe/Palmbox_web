@@ -141,14 +141,17 @@ $(window).on('load', function() {
     })
 
     // 發票收據按鈕
+    $('.etickettop #nameinfo').html('發票')
     $('.etickettop .featuresbox a').on('click',function(){
       let ebutindex = $(this).index()
       if ( ebutindex === 0) {
         $('.invoice').css('display', 'block')
         $('.receipt').css('display', 'none')
+        $('.etickettop #nameinfo').html('發票')
       } else {
         $('.invoice').css('display', 'none')
-        $('.receipt').css('display', 'block')        
+        $('.receipt').css('display', 'block')  
+        $('.etickettop #nameinfo').html('收據')      
       }
     })
 
@@ -206,6 +209,16 @@ $(window).on('load', function() {
 
       alert('已複製訂單連結於您的剪貼簿請傳送給您的客戶進行填單')
       return false 
+    })
+
+
+    //立即歸戶alert
+    $('.e_invoice >a').on('click',function(){
+      if (confirm('確認是否要進行電子發票歸戶？')) {
+        
+      } else {
+        
+      }
     })
 
 
