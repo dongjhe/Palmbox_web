@@ -1409,7 +1409,7 @@ main .signinbox .signcenter .inpbut input[type='checkbox'], main .signinbox .mem
           appearance: none;
   border: 2px solid #898989;
   border-radius: 3px;
-  vertical-align: middle;
+  vertical-align: top;
   background-image: url("../images/check.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1552,7 +1552,7 @@ main .deliverybox, main .courier_access, main .orderinfo, main .community_access
   display: block;
   width: 100%;
   background-color: #fff;
-  padding-top: 2%;
+  padding-top: 0;
   padding-right: 3%;
   padding-bottom: 0;
   padding-left: 3%;
@@ -1839,6 +1839,7 @@ main .deliverybox .couriertop .inquirebox > div.checkshow input[type='checkbox']
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   outline: 0;
+  cursor: pointer;
 }
 
 main .deliverybox .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .deliverybox .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .deliverybox .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .courier_access .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .courier_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .courier_access .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .orderinfo .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .orderinfo .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .orderinfo .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .community_access .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .community_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .community_access .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .eticket_access .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .eticket_access .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .eticket_access .communitytop .inquirebox > div.checkshow input[type='checkbox']:active, main .warehouse .couriertop .inquirebox > div.checkshow input[type='checkbox']:active, main .warehouse .orderinfotop .inquirebox > div.checkshow input[type='checkbox']:active, main .warehouse .communitytop .inquirebox > div.checkshow input[type='checkbox']:active {
@@ -1859,6 +1860,7 @@ main .deliverybox .couriertop .inquirebox > div.checkshow label, main .deliveryb
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
+  cursor: pointer;
 }
 
 main .deliverybox .couriertop .inquirebox > div.inquire, main .deliverybox .orderinfotop .inquirebox > div.inquire, main .deliverybox .communitytop .inquirebox > div.inquire, main .courier_access .couriertop .inquirebox > div.inquire, main .courier_access .orderinfotop .inquirebox > div.inquire, main .courier_access .communitytop .inquirebox > div.inquire, main .orderinfo .couriertop .inquirebox > div.inquire, main .orderinfo .orderinfotop .inquirebox > div.inquire, main .orderinfo .communitytop .inquirebox > div.inquire, main .community_access .couriertop .inquirebox > div.inquire, main .community_access .orderinfotop .inquirebox > div.inquire, main .community_access .communitytop .inquirebox > div.inquire, main .eticket_access .couriertop .inquirebox > div.inquire, main .eticket_access .orderinfotop .inquirebox > div.inquire, main .eticket_access .communitytop .inquirebox > div.inquire, main .warehouse .couriertop .inquirebox > div.inquire, main .warehouse .orderinfotop .inquirebox > div.inquire, main .warehouse .communitytop .inquirebox > div.inquire {
@@ -2321,6 +2323,12 @@ main .deliverybox .warehousebt, main .courier_access .warehousebt, main .orderin
   display: block;
   text-align: center;
   margin-top: 20px;
+}
+
+main .deliverybox .warehousebt p, main .courier_access .warehousebt p, main .orderinfo .warehousebt p, main .community_access .warehousebt p, main .eticket_access .warehousebt p, main .warehouse .warehousebt p {
+  padding: 0;
+  margin: 0 auto;
+  color: red;
 }
 
 main .deliverybox .warehousebt a, main .courier_access .warehousebt a, main .orderinfo .warehousebt a, main .community_access .warehousebt a, main .eticket_access .warehousebt a, main .warehouse .warehousebt a {

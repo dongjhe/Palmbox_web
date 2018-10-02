@@ -763,7 +763,7 @@ main {
           appearance: none;
           border: 2px solid $text_color;
           border-radius: 3px;
-          vertical-align: middle;
+          vertical-align: top;
           background-image: url('../images/check.png');
           background-repeat: no-repeat;
           background-size: cover;
@@ -868,7 +868,7 @@ main {
     display: block;
     width: 100%;
     background-color: $color_white;
-    @include padding_set(2%, 3%, 0, 3%);
+    @include padding_set(0, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
     .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop{
@@ -1033,6 +1033,7 @@ main {
                 background-size: 0 0;
                 transition: 0.3s ease;
                 outline: 0;
+                cursor: pointer;
               }
               input[type='checkbox']:active {
                 background-color: #ddd;
@@ -1044,6 +1045,7 @@ main {
                 display: inline-block;
                 @include padding_set(0,0,0,0);
                 @include margin_set(0,0,0,0);
+                cursor: pointer;
               }
           }
           &.inquire{
@@ -1408,6 +1410,11 @@ main {
       display: block;
       text-align: center;
       margin-top: 20px;
+      p{
+        padding: 0;
+        margin: 0 auto;
+        color: red;
+      }
       a{
         display: inline-block;
         width: 200px;
