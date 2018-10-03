@@ -1763,6 +1763,7 @@ footer {
     border-radius: 50%;
     background-color: #9FCC42;
     animation: bigsmall 1s infinite;
+    z-index: 100;
     &::before,&::after{
       display: block;
       content: '';
@@ -1973,6 +1974,7 @@ footer {
               display: inline-block;
               width: 75%;
               color: $text_color;
+              height: 31px;
             }
             small{
               display: block;

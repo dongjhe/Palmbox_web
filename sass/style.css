@@ -2823,6 +2823,7 @@ footer p {
   background-color: #9FCC42;
   -webkit-animation: bigsmall 1s infinite;
           animation: bigsmall 1s infinite;
+  z-index: 100;
 }
 
 .popu_modify .closeclose::before, .popu_modify .closeclose::after, .popu_courier .closeclose::before, .popu_courier .closeclose::after, .popu_palmbox_service .closeclose::before, .popu_palmbox_service .closeclose::after, .popu_order .closeclose::before, .popu_order .closeclose::after, .popu_table_tr .closeclose::before, .popu_table_tr .closeclose::after {
@@ -3151,6 +3152,7 @@ footer p {
   display: inline-block;
   width: 75%;
   color: #898989;
+  height: 31px;
 }
 
 .popu_modify .modal-body .order .orderbox td:nth-of-type(2) small, .popu_courier .modal-body .order .orderbox td:nth-of-type(2) small, .popu_palmbox_service .modal-body .order .orderbox td:nth-of-type(2) small, .popu_order .modal-body .order .orderbox td:nth-of-type(2) small, .popu_table_tr .modal-body .order .orderbox td:nth-of-type(2) small {
