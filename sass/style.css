@@ -1666,6 +1666,8 @@ main .deliverybox .deliverytop .featuresbox .excel_but input, main .deliverybox 
   background-color: #9FCC42;
   border: none;
   border-radius: 30px;
+  font-size: 14px;
+  line-height: 25.2px;
   padding-top: 5px;
   padding-right: 15px;
   padding-bottom: 5px;
@@ -2527,7 +2529,7 @@ main .deliverybox .deliverycenter .informationbot ul li::before, main .courier_a
   content: "";
   position: absolute;
   top: 7px;
-  left: -10px;
+  left: -7px;
   width: 10px;
   height: 10px;
   border-radius: 50%;

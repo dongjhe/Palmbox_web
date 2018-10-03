@@ -213,11 +213,9 @@ $(window).on('load', function() {
 
 
     //立即歸戶alert
-    $('.e_invoice >a').on('click',function(){
+    $('.e_invoice >a ,.eticket_but >input').on('click', function() {
       if (confirm('確認是否要進行電子發票歸戶？')) {
-        
       } else {
-        
       }
     })
 

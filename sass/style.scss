@@ -927,6 +927,7 @@ main {
             background-color: $color_green;
             border: none;
             border-radius: 30px;
+            @include font_size(14px);
             @media (max-width: 768px) {
               border-radius: 0.2em;
               border: 1px solid $color_green;
@@ -1537,7 +1538,7 @@ main {
               content: "";
               position: absolute;
               top: 7px;
-              left: -10px;
+              left: -7px;
               width: 10px;
               height: 10px;
               border-radius: 50%;
