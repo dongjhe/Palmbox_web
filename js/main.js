@@ -127,11 +127,11 @@ $(window).on('load', function() {
       let index = $(this).index()
       $(this).addClass('active').siblings('a').removeClass('active')
       if (index === 0) {
-        $('#distribution').css('display', 'flex')
-        $('#unfetched').css('display', 'none')
-      } else {
-        $('#distribution').css('display', 'none')
         $('#unfetched').css('display', 'flex')
+        $('#distribution').css('display', 'none')
+      } else {
+        $('#unfetched').css('display', 'none')
+        $('#distribution').css('display', 'flex')
       }
     })
 

@@ -1274,7 +1274,7 @@ main {
           justify-content: center;
           ul{
             display: flex;
-            justify-content:space-around;
+            // justify-content:space-around;
             width: 80%;
             @include padding_set(0,0,0,0);
             @include margin_set(0,0,0,0);
@@ -1490,19 +1490,31 @@ main {
       }
       display:flex;
       flex-wrap:wrap;
-      justify-content:space-between;
+      align-content: flex-start;
+      @media (max-width: 980px) {
+        justify-content:space-between;
+      }
       >div{
         width: 30%;
         flex-wrap:wrap;
         border: 2px solid $text_color;
         margin-bottom: 3%;
         transition: transform .3s ease;
+        &:nth-child(3n+1){
+          margin-right: 5%;
+        }
+        &:nth-child(3n){
+          margin-left: 5%;
+        }
         &:hover{
           transform: translate(0,-5px);
           box-shadow: 0 2px 8px rgba(190, 190, 190, 1);
         }
         @media (max-width: 980px) {
           width: 48%;
+          &:nth-child(3n+1),&:nth-child(3n){
+            @include margin_set(0,0,3%,0);
+          }
         }
         @media (max-width: 480px) {
           width: 100%;
@@ -1533,14 +1545,14 @@ main {
           // border-left: 4px solid $text_color;
           li{
             position: relative;
-            @include padding_set(3px,10px,3px,10px);
+            @include padding_set(3px,10px,3px,15px);
             &::before{
               content: "";
               position: absolute;
               top: 7px;
               left: -7px;
-              width: 10px;
-              height: 10px;
+              width: 15px;
+              height: 15px;
               border-radius: 50%;
               border: 3px solid $text_color;
               background-color: #fff;
@@ -1550,7 +1562,7 @@ main {
               content: "";
               position: absolute;
               top: 8px;
-              left: -4px;
+              left: -2px;
               width: 4px;
               height: 100%;
               background-color: $text_color;
@@ -1574,7 +1586,7 @@ main {
       }
     }
   }
-  .registerbox,.itembox2,#unfetched {
+  .registerbox,.itembox2,#distribution {
     display: none;
   }
 }

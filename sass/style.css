@@ -2147,8 +2147,6 @@ main .deliverybox .orderinfocontainer .containerbox .process ul, main .courier_a
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   width: 80%;
   padding-top: 0;
   padding-right: 0;
@@ -2443,14 +2441,21 @@ main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .o
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 @media (max-width: 480px) {
   main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .orderinfo .deliverycenter, main .community_access .deliverycenter, main .eticket_access .deliverycenter, main .warehouse .deliverycenter {
     margin-top: 5%;
+  }
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .deliverycenter, main .courier_access .deliverycenter, main .orderinfo .deliverycenter, main .community_access .deliverycenter, main .eticket_access .deliverycenter, main .warehouse .deliverycenter {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -2466,6 +2471,14 @@ main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > 
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
+main .deliverybox .deliverycenter > div:nth-child(3n+1), main .courier_access .deliverycenter > div:nth-child(3n+1), main .orderinfo .deliverycenter > div:nth-child(3n+1), main .community_access .deliverycenter > div:nth-child(3n+1), main .eticket_access .deliverycenter > div:nth-child(3n+1), main .warehouse .deliverycenter > div:nth-child(3n+1) {
+  margin-right: 5%;
+}
+
+main .deliverybox .deliverycenter > div:nth-child(3n), main .courier_access .deliverycenter > div:nth-child(3n), main .orderinfo .deliverycenter > div:nth-child(3n), main .community_access .deliverycenter > div:nth-child(3n), main .eticket_access .deliverycenter > div:nth-child(3n), main .warehouse .deliverycenter > div:nth-child(3n) {
+  margin-left: 5%;
+}
+
 main .deliverybox .deliverycenter > div:hover, main .courier_access .deliverycenter > div:hover, main .orderinfo .deliverycenter > div:hover, main .community_access .deliverycenter > div:hover, main .eticket_access .deliverycenter > div:hover, main .warehouse .deliverycenter > div:hover {
   -webkit-transform: translate(0, -5px);
           transform: translate(0, -5px);
@@ -2476,6 +2489,12 @@ main .deliverybox .deliverycenter > div:hover, main .courier_access .deliverycen
 @media (max-width: 980px) {
   main .deliverybox .deliverycenter > div, main .courier_access .deliverycenter > div, main .orderinfo .deliverycenter > div, main .community_access .deliverycenter > div, main .eticket_access .deliverycenter > div, main .warehouse .deliverycenter > div {
     width: 48%;
+  }
+  main .deliverybox .deliverycenter > div:nth-child(3n+1), main .deliverybox .deliverycenter > div:nth-child(3n), main .courier_access .deliverycenter > div:nth-child(3n+1), main .courier_access .deliverycenter > div:nth-child(3n), main .orderinfo .deliverycenter > div:nth-child(3n+1), main .orderinfo .deliverycenter > div:nth-child(3n), main .community_access .deliverycenter > div:nth-child(3n+1), main .community_access .deliverycenter > div:nth-child(3n), main .eticket_access .deliverycenter > div:nth-child(3n+1), main .eticket_access .deliverycenter > div:nth-child(3n), main .warehouse .deliverycenter > div:nth-child(3n+1), main .warehouse .deliverycenter > div:nth-child(3n) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 3%;
+    margin-left: 0;
   }
 }
 
@@ -2522,7 +2541,7 @@ main .deliverybox .deliverycenter .informationbot ul li, main .courier_access .d
   padding-top: 3px;
   padding-right: 10px;
   padding-bottom: 3px;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 main .deliverybox .deliverycenter .informationbot ul li::before, main .courier_access .deliverycenter .informationbot ul li::before, main .orderinfo .deliverycenter .informationbot ul li::before, main .community_access .deliverycenter .informationbot ul li::before, main .eticket_access .deliverycenter .informationbot ul li::before, main .warehouse .deliverycenter .informationbot ul li::before {
@@ -2530,8 +2549,8 @@ main .deliverybox .deliverycenter .informationbot ul li::before, main .courier_a
   position: absolute;
   top: 7px;
   left: -7px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   border: 3px solid #898989;
   background-color: #fff;
@@ -2542,7 +2561,7 @@ main .deliverybox .deliverycenter .informationbot ul li::after, main .courier_ac
   content: "";
   position: absolute;
   top: 8px;
-  left: -4px;
+  left: -2px;
   width: 4px;
   height: 100%;
   background-color: #898989;
@@ -2562,7 +2581,7 @@ main .deliverybox .deliverycenter .informationbot ul li span, main .courier_acce
   line-height: 21.6px;
 }
 
-main .registerbox, main .itembox2, main #unfetched {
+main .registerbox, main .itembox2, main #distribution {
   display: none;
 }
 
