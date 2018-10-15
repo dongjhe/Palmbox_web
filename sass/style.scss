@@ -864,14 +864,14 @@ main {
       border-color: $color_black transparent transparent transparent;
     }
   }   
-  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse {
+  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox {
     display: block;
     width: 100%;
     background-color: $color_white;
     @include padding_set(0, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
-    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop{
+    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop,.productop{
       overflow: hidden;
       >div{
         display: inline-block;
@@ -1436,8 +1436,6 @@ main {
       }
     }
     
-
-
     .mousetouch{
         transform: translate(0,-5px);
         box-shadow: 0 2px 2px rgba(190, 190, 190, 1);
@@ -1585,6 +1583,115 @@ main {
         }
       }
     }
+    .producontainer{
+      .productoggle{
+        ul{
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          @media (max-width:768px) {
+            justify-content: space-between;
+          }          
+        }
+        li{
+          width: 18%;
+          @media (max-width:768px) {
+            width: 48%;
+            @include margin_set(0,0,3%,0);
+          }
+          a{
+            @include font_size(14px);
+            display: block;
+            padding: 5px 0;
+            color: $text_color;
+            text-align: center;
+            border: 2px solid $text_color;
+            border-radius: 20px;
+            &:hover,&.active{
+              transition: all 450ms ease;
+              color: $color_green;
+              border: 2px solid $color_green;
+            }
+          }
+        }
+      }
+      .productab{
+        .tab{
+          display: none;
+          @include margin_set(5%,0,0,0);
+          ul{
+            margin: 0 auto;
+            text-align: center;
+          }
+          li{
+            display: inline-block;
+            width: 18%;
+            position: relative;
+            vertical-align: top;
+            @include margin_set(0,20px,0,20px);
+            @media (max-width:768px) {
+              display: block;
+              width: 40%;
+              @include margin_set(0,auto,0,auto);
+              text-align: center;
+            }
+            &::after{
+              content: "";
+              display: inline-block;
+              position: absolute;
+              width: 27px;
+              height: 15px;
+              background-image: url(../images/icon_steparrow@2x.png);
+              background-size: cover;
+              top: 35%;
+              right: -35px;
+              transform: rotate(0deg);
+              @media (max-width:768px) {
+                position: initial;
+                transform: rotate(90deg);
+                @include margin_set(5%,0,5%,0);
+              }
+            }
+            &:last-child{
+              &::after{
+                display: none;
+              }
+            }
+          }
+          .img,.text{
+            img{
+              width: 100%;
+              height: auto;
+            }
+          }
+          .text{
+            h1{
+              display: block;
+              text-align: center;
+              @include font_size(16px);
+              color: $color_green;
+              @include padding_set(0,0,0,0);
+              @include margin_set(5px,0,5px,0);
+            }
+            span{
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+        .app{
+          li{
+            &::after{
+              display: none;
+            }
+          }
+        }
+        .userSend{
+          display: block;
+        }
+      }
+    }
+    
   }
   .registerbox,.itembox2,#distribution {
     display: none;

@@ -219,6 +219,15 @@ $(window).on('load', function() {
       }
     })
 
+    // 產品服務按鈕切換
+    $('.productoggle li').on('click',function(){
+      let li_index = $(this).index()
+      let tabarry= $('.productab .tab')
+
+      $(this).find('a').addClass('active').parents('li').siblings().find('a').removeClass('active');
+      tabarry.eq(li_index).show().siblings().hide();
+      
+    })
 
   })()
 })
