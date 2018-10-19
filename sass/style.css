@@ -666,6 +666,7 @@ header nav > .navi {
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 10%;
+  float: right;
 }
 
 header nav > .user {
@@ -1419,6 +1420,7 @@ main .signinbox .signcenter .inpbut input[type='checkbox'], main .signinbox .mem
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   outline: 0;
+  cursor: pointer;
 }
 
 main .signinbox .signcenter .inpbut input[type='checkbox']:active, main .signinbox .membercenter .inpbut input[type='checkbox']:active {
@@ -1432,6 +1434,7 @@ main .signinbox .signcenter .inpbut input[type='checkbox']:checked, main .signin
 main .signinbox .signcenter .inpbut label, main .signinbox .membercenter .inpbut label {
   display: inline-block;
   color: #898989;
+  cursor: pointer;
 }
 
 main .signinbox .signcenter .inpbut label a, main .signinbox .membercenter .inpbut label a {
@@ -2731,7 +2734,7 @@ main .deliverybox .producontainer .productab .userSend, main .courier_access .pr
   display: block;
 }
 
-main .registerbox, main .itembox2, main #distribution {
+main .registerbox, main #distribution {
   display: none;
 }
 

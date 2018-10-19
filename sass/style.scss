@@ -211,6 +211,7 @@ header {
     }
     > .navi {
       @include padding_set(0, 0, 0, 10%);
+      float: right;
     }
     > .user {
       float: right;
@@ -772,6 +773,7 @@ main {
           background-size: 0 0;
           transition: 0.3s ease;
           outline: 0;
+          cursor: pointer;
         }
         input[type='checkbox']:active {
           background-color: #ddd;
@@ -782,6 +784,7 @@ main {
         label {
           display: inline-block;
           color: $text_color;
+          cursor: pointer;
           a {
             color: $color_orange;
             text-decoration: underline;
@@ -1693,7 +1696,7 @@ main {
     }
     
   }
-  .registerbox,.itembox2,#distribution {
+  .registerbox,#distribution {
     display: none;
   }
 }
