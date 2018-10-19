@@ -47,10 +47,12 @@ $(window).on('load', function() {
     })
 
     // 開關user的下拉功能Bar
-    document.querySelector('.user_name >a').addEventListener('click', e => {
+
+    $('.user_name >a').on('click',function(){
       document.querySelector('.user_name >a').classList.toggle('active')
       document.querySelector('.user_more').classList.toggle('active')
     })
+
     document.querySelector('main').addEventListener('click', e => {
       if ($('.user_more').attr('class') ==='user_more active') {
         document.querySelector('.user_name >a').classList.toggle('active')
