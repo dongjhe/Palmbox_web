@@ -25,8 +25,16 @@ input[type='button'] {
   outline: 0;
   border: none;
 }
+
 select{
   appearance: none;
+  &:focus {
+    color: $input_text;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }      
 }
 
 .Wapper {
@@ -640,6 +648,7 @@ main {
         border: 1px solid #ced4da;
         border-radius: 0.25rem;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
         &[type='text']:focus {
           color: $input_text;
           background-color: #fff;
@@ -854,6 +863,7 @@ main {
   }
   .arrow{
   position: relative;
+  width: 100%;
     &::before{
       position: absolute;
       top: 15px;
@@ -1698,6 +1708,204 @@ main {
   }
   .registerbox,#distribution {
     display: none;
+  }
+  .mapbox{
+    display: flex;
+    width: 100%;
+    height: auto;
+    @include margin_set(0,0,40px,0);
+    @media (max-width:768px) {
+      flex-direction: column;
+    }
+    >.mapinfo{
+      width: 300px;
+      @media (max-width:768px) {
+        width: 100%;
+      }
+      h1{
+        display: inline-block;
+        @include font_size(18px);
+        @include padding_set(0,0,0,0);
+        @include margin_set(10px,0,10px,0);
+        font-weight: bolder;
+        border-bottom: 3px solid $text_color;
+        >span{
+          @include margin_set(0,5px,0,5px);
+        }
+      }
+      h2{
+        @include padding_set(0,0,0,0);
+        @include margin_set(5px,0,5px,0);
+        @include font_size(16px);
+        font-weight: bolder;
+        color: $color_orange;
+      }
+      input,select,.filter{
+        display: block;
+        width: 100%;
+        @include padding_set(5px, 8px, 5px, 8px);
+        @include font_size(14px);
+        color: $input_text;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
+        &[type='text']:focus {
+          color: $input_text;
+          background-color: #fff;
+          border-color: #80bdff;
+          outline: 0;
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+      }
+      .filter{
+        padding-right: 30px;
+        margin-bottom: 10px;
+      }
+      .address .box1,.store_name_address,.mapicon{
+        display: flex;
+        justify-content:space-between;
+        align-items: center; 
+      }
+      .cabinetfilter{
+        .filterbox{
+          display: none;
+          position: relative;
+          top: -11px;
+          float: right;
+          @include padding_set(10px,10px,10px,10px);
+          width: 70%;
+          border: 1px solid #ced4da;
+          border-radius: 5px;
+          background-color: $color_white;
+          &.active{
+            display: block;
+          }
+            .checkbox {
+                display: block;
+                position: relative;
+                padding-left: 25px;
+                margin-top: 10px;
+            }
+            .checkbox label {
+                font-size: 14px;
+                cursor: pointer;
+            }
+            .checkbox:before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border: 1px solid $text_color;
+                display: block;
+                left: 0;
+                top: 0;
+            }
+            .checkbox input[type="checkbox"] {
+                opacity: 0;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                z-index: 2;
+                padding: 0;
+                margin: 0 auto;
+                cursor: pointer;
+            }
+            .checkbox input[type="checkbox"]:checked + label:after {
+                content: "";
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                background-color: $color_orange;
+                left: 3px;
+                top: 3px;
+            }
+            .checkbut{
+              text-align: center;
+              @include margin_set(5px,auto,5px,auto);
+              a{
+                @include padding_set(5px,15px,5px,15px);
+                color: $color_white;
+                background-color: $color_orange;
+                border-radius: 5px;
+                box-shadow: 2px 2px rgba($box_shadow,0.5);
+                &:hover{
+                  background-color:$color_orange_hover;
+                }
+              }
+            }
+          }
+        .store_name_address{
+          clear: both;
+          @include margin_set(0,0,10px,0);
+          .store_name{
+            width: 75%;
+          }
+          .search{
+            width: 20%;
+            button{
+              display: block;
+              width: 100%;
+              @include padding_set(5px, 8px, 5px, 8px);
+              @include font_size(14px);
+              color: $color_white;
+              background-color: $color_orange;
+              background-clip: padding-box;
+              border: none;
+              border-radius: 0.25rem;
+              box-shadow: 2px 2px rgba($box_shadow,0.5);
+              outline: none;
+              &:hover{
+                background-color:$color_orange_hover;
+              }
+            }
+          }
+        }
+      }
+
+      .mapseardata{
+        display: block;
+        width: 100%;
+        height: 250px;;
+        @include padding_set(5px, 8px, 5px, 8px);
+        @include font_size(14px);
+        color: $input_text;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        overflow-y:scroll;
+        div{
+          @include padding_set(5px,5px,5px,5px);
+          border-bottom: 1px solid #ced4da;
+          p{
+            margin: 0 auto;
+          }
+        } 
+      }
+      .mapicon{
+        @include margin_set(5px,0,5px,0);
+      }
+    }
+    >.mapcontent{
+      flex: 1;
+      @media (max-width:768px) {
+        width: 100%;
+        height: 100%;
+      }
+      .map{
+        background-color:$text_color;
+        width: 100%;
+        height: 100%;
+        @include margin_set(0,10px,0,10px);
+        @media (max-width:768px) {
+          @include margin_set(0,0,0,0);
+        }
+      }
+    }
   }
 }
 

@@ -231,6 +231,17 @@ $(window).on('load', function() {
       
     })
 
+    // 櫃機條件篩選開關
+    $('.cabinetfilter .arrow .filter').on('click', function() {
+      $('.cabinetfilter .arrow .filterbox').toggleClass('active')
+    })
+    $('.filterbox .checkbut a').on('click', function () {
+      $('.cabinetfilter .arrow .filterbox').toggleClass('active')
+    })
+
+
+
+
   })()
 })
 
