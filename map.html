@@ -72,176 +72,105 @@
         </header>
         <main>
             <div class="main_container">
-                <div class="signinbox mebox">
-                    <div class="memberbox">
-                        <div class="membertop">
-                            <h1>編輯會員資料</h1>
+                <div class="mapbox">
+                    <div class="mapinfo">
+                        <h1>服務據點<span>1,289</span>櫃</h1>
+                        <h2>請選擇要查詢的縣市及區域<span>:共60櫃</span></h2>
+                        <form action="">
+                            <div class="address">
+                                <div class="box1 my-selector-c">
+                                    <div class="arrow">
+                                        <select class="county"></select>
+                                    </div>
+                                    <div class="arrow">
+                                        <select class="district"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>櫃機條件篩選</h2>
+                            <div class="cabinetfilter">
+                                <div class="arrow">
+                                    <p class="filter">請選擇條件篩選</p>
+                                    <div class="filterbox">
+                                        <div class="checkbox">
+                                            <input id="all" type="checkbox" name="all" onclick="check_all(this,'all')">
+                                            <label for="all">選擇所有條件</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="simple" type="checkbox" name="all">
+                                            <label for="simple">美廉社&大美超市</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="smallnorth" type="checkbox" name="all">
+                                            <label for="smallnorth">小北百貨</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="community" type="checkbox" name="all">
+                                            <label for="community">社區</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="other" type="checkbox" name="all">
+                                            <label for="other">其他</label>
+                                        </div>
+                                        <div class="checkbut">
+                                            <a href="javascript:;">確認</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="store_name_address">
+                                    <div class="store_name">
+                                        <input type="text" placeholder="輸入店名和地址關鍵字">
+                                    </div>
+                                    <div class="search">
+                                        <button>查詢</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="mapseardata">
+                            <div>
+                                <p>櫃機場所：<span>美廉社-基隆南榮店</span></p>
+                                <p>營業時間：<span>07:00-23:59</span></p>
+                                <p>櫃機地址：<span>基隆市仁愛區南榮路211號</span></p>
+                            </div>
+                            <div>
+                                <p>櫃機場所：<span>美廉社-基隆南榮店</span></p>
+                                <p>營業時間：<span>07:00-23:59</span></p>
+                                <p>櫃機地址：<span>基隆市仁愛區南榮路211號</span></p>
+                            </div>
+                            <div>
+                                <p>櫃機場所：<span>美廉社-基隆南榮店</span></p>
+                                <p>營業時間：<span>07:00-23:59</span></p>
+                                <p>櫃機地址：<span>基隆市仁愛區南榮路211號</span></p>
+                            </div>
+                            <div>
+                                <p>櫃機場所：<span>美廉社-基隆南榮店</span></p>
+                                <p>營業時間：<span>07:00-23:59</span></p>
+                                <p>櫃機地址：<span>基隆市仁愛區南榮路211號</span></p>
+                            </div>
                         </div>
-                        <div class="click_bt">
-                            <a class="active" href="javascript:;">一般用戶</a>
-                            <a href="javascript:;">快遞員</a>
-                            <a href="javascript:;">管理員</a>
+                        <div class="mapicon">
+                            <div>
+                                <img src="./images/map_01.png" alt="正常服務">
+                                <span>正常服務</span>
+                            </div>
+                            <div>
+                                <img src="./images/map_02.png" alt="格口已滿">
+                                <span>格口已滿</span>
+                            </div>
+                            <div>
+                                <img src="./images/map_03.png" alt="暫停服務">
+                                <span>暫停服務</span>
+                            </div>
+                            <div>
+                                <img src="./images/map_04.png" alt="店家尚未營業">
+                                <span>店家尚未營業</span>
+                            </div>
                         </div>
-                        <div class="membercenter">
-                            <form action="">
-                                <div class="containerleft">
-                                    <div class="membername">
-                                        <label for="membername">姓名</label>
-                                        <input type="text" id="membername" placeholder="請輸入姓名">
-                                    </div>
-                                    <div class="memberpassword">
-                                        <label for="memberpassword">密碼</label>
-                                        <div class="box">
-                                            <input type="password" id="memberpassword" value="**********" disabled>
-                                            <input type="button" value="修改">
-                                        </div>
-                                    </div>
-                                    <div class="memberphone">
-                                        <label for="memberphone">手機號碼</label>
-                                        <div class="box">
-                                            <input type="text" id="memberphone" value="0912345678" maxlength="10" disabled>
-                                            <input type="button" value="修改">
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="mapcontent">
+                        <div class="map">
 
-                                <div class="containerright">
-                                    <div class="gender">
-                                        <label for="gender">性別</label>
-                                        <div class="form__radio">
-                                            <input type="radio" id="male" name="gender" checked>
-                                            <label for="male">男</label>
-                                            <span class="radio"></span>
-                                        </div>
-                                        <div class="form__radio">
-                                            <input type="radio" id="female" name="gender">
-                                            <label for="female">女</label>
-                                            <span class="radio"></span>
-                                        </div>
-                                    </div>
-                                    <div class="birthday">
-                                        <label for="birthday">生日</label>
-                                        <div class="box">
-                                            <select id="sel_year"></select>年
-                                            <select id="sel_month"></select>月
-                                            <select id="sel_day"></select>日
-                                        </div>
-                                    </div>
-
-                                    <div class="click_box">
-                                        <!-- 一般會員 -->
-                                        <div class="general">
-                                            <div class="education">
-                                                <label for="education">教育程度</label>
-                                                <div class="arrow">
-                                                    <select name="" id="education">
-                                                        <option value="" selected disabled hidden>請選擇教育程度</option>
-                                                        <option v-for="edu in edulev">{{edu.level}}</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="career">
-                                                <label for="career">職業</label>
-                                                <div class="arrow">
-                                                    <select name="" id="career">
-                                                        <option value="" selected disabled hidden>請選擇職業</option>
-                                                        <option v-for="career in careers">{{career.job}}</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="email">
-                                                <label for="email">E-mail</label>
-                                                <input type="text" id="email" placeholder="請輸入E-mail">
-                                            </div>
-                                            <div class="address">
-                                                <label for="address">地址</label>
-                                                <div class="box1 my-selector-c">
-                                                    <div class="arrow">
-                                                        <select class="county"></select>
-                                                    </div>
-                                                    <div class="arrow">
-                                                        <select class="district"></select>
-                                                    </div>
-                                                </div>
-                                                <input type="text" name="地址" id="">
-                                            </div>
-                                        </div>
-                                        <!-- 快遞員會員 -->
-                                        <div class="delivery">
-                                            <div class="logistics">
-                                                <label for="logistics">物流公司</label>
-                                                <div class="arrow">
-                                                    <select name="" id="logistics">
-                                                        <option value="" selected disabled hidden>請選擇物流公司</option>
-                                                        <option v-for="item in list" :value="item.id">{{item.id}}</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="servicity">
-                                                <label for="servicity">服務地區</label>
-                                                <div class="arrow">
-                                                    <select name="" id="servicity">
-                                                        <option value="" selected disabled hidden>請選擇服務地區</option>
-                                                        <option v-for="city in citys" :value="city.area">{{city.area}}</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 社區會員 -->
-                                        <div class="community">
-                                            <div class="property">
-                                                <label for="property">物業公司</label>
-                                                <input type="text" id="property" placeholder="請輸入物業公司">
-                                            </div>
-                                            <div class="community_name">
-                                                <label for="communityname">社區名稱</label>
-                                                <input type="text" id="communityname" placeholder="請輸入社區名稱">
-                                            </div>
-                                            <div class="servicity">
-                                                <label for="com_servicity">服務地區</label>
-                                                <div class="arrow">
-                                                    <select name="" id="com_servicity">
-                                                        <option value="" selected disabled hidden>請選擇服務地區</option>
-                                                        <option v-for="city in citys" :value="city.area">{{city.area}}</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="household">
-                                                <label for="household">住戶人數</label>
-                                                <div class="arrow">
-                                                    <select name="" id="household">
-                                                        <option value="" selected disabled hidden>請選擇住戶人數</option>
-                                                        <option v-for="peo in people" :value="peo.number">{{peo.number}}</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                                <div class="containerbottom">
-                                    <div class="e_invoice">
-                                        <label for="e_invoice">電子發票歸戶</label>
-                                        <a href="javascript:;">立即歸戶</a>
-                                    </div>
-                                
-                                    <div class="quick_login">
-                                        <label for="quick_login">快速登入連結綁定</label>
-                                        <div>
-                                            <input class="facebook_login" type="button" value="建立Facebook帳號連結">
-                                        </div>
-                                        <div>
-                                            <input class="google_login" type="button" value="建立Google帳號連結">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="inpbut">
-                                    <input class="memcheck" type="button" value="確定">
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -794,7 +723,7 @@
     </div>
 
     <!-- loading -->
-    <div class="loading">
+    <div class="loading" style="display:none">
         <div class="cp-spinner-block">
             <div class="cp-spinner cp-meter"></div>
         </div>
@@ -814,7 +743,15 @@
                 // console.log(start.toISOString(), end.toISOString(), label);
             });
         });
+        // 退貨全選和不全選
+        function check_all(obj, cName) {
+                var checkboxs = document.getElementsByName(cName);
+                for (var i = 0; i < checkboxs.length; i++) {
+                    checkboxs[i].checked = obj.checked;
+                }
+            }
     </script>
+
 </body>
 
 </html>
