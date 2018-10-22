@@ -1881,6 +1881,14 @@ main {
         div{
           @include padding_set(5px,5px,5px,5px);
           border-bottom: 1px solid #ced4da;
+          cursor: pointer;
+          &:hover{
+            background-color:rgba($text_color,0.3);
+          }
+          a{
+            display: block;
+            color:$input_text;
+          }
           p{
             margin: 0 auto;
           }

@@ -3016,6 +3016,16 @@ main .mapbox > .mapinfo .mapseardata div {
   padding-bottom: 5px;
   padding-left: 5px;
   border-bottom: 1px solid #ced4da;
+  cursor: pointer;
+}
+
+main .mapbox > .mapinfo .mapseardata div:hover {
+  background-color: rgba(137, 137, 137, 0.3);
+}
+
+main .mapbox > .mapinfo .mapseardata div a {
+  display: block;
+  color: #495057;
 }
 
 main .mapbox > .mapinfo .mapseardata div p {
