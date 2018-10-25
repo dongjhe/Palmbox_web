@@ -1,0 +1,77 @@
+
+@import 'util';
+.form__radio {
+    position: relative;
+    display: inline-block;
+    // width: 20%;
+    margin: 0 10px 0 0;
+}
+.form__radio input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+.form__radio input[type=radio][disabled] ~ .radio {
+    border-color: #eaedee;
+}
+.form__radio input[type=radio][disabled] ~ label {
+    color: #ccc;
+}
+.form__radio input[type=radio]:checked ~ .radio {
+    border-color:$color_orange;
+}
+.form__radio input[type=radio]:checked ~ .radio:before {
+    background:$color_orange;
+    transform: scale(1);
+}
+.form__radio input[type=radio]:checked ~ label {
+    color:$color_orange;
+}
+.form__radio input[type=radio]:checked[disabled] ~ .radio {
+    border-color: #eaedee;
+}
+.form__radio input[type=radio]:checked[disabled] ~ .radio:before {
+    background: #eaedee;
+    transform: scale(1);
+}
+.form__radio input[type=radio]:checked[disabled] ~ label {
+    color: #ccc;
+}
+.form__radio label {
+    position: relative;
+    z-index: 9;
+    display: block;
+    font-weight: 500;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    padding: 0 10px 0 25px;
+}
+.form__radio .radio {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 5;
+    display: block;
+    height: 20px;
+    width: 20px;
+    transition: border 0.2s ease-in-out;
+    border-radius: 100%;
+    border: 4px solid $footer_color;
+    margin-top: -10px;
+}
+.form__radio .radio:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    content: '';
+    height: 6px;
+    width: 6px;
+    transition: background 0.2s ease-in-out;
+    // transition: background 0.2s ease-in-out, transform 0.15s ease-in-out;
+    border-radius: 100%;
+    transform: scale(0);
+    margin: -3px 0 0 -3px;
+}
