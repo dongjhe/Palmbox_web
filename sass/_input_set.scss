@@ -69,7 +69,8 @@
     content: '';
     height: 6px;
     width: 6px;
-    transition: background 0.2s ease-in-out, transform 0.15s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    // transition: background 0.2s ease-in-out, transform 0.15s ease-in-out;
     border-radius: 100%;
     transform: scale(0);
     margin: -3px 0 0 -3px;

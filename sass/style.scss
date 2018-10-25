@@ -105,7 +105,7 @@ select{
   box-shadow: 2px 2px 2px $box_shadow;
   position: fixed;
   top: 50%;
-  left: 5%;
+  right: 0;
   @include padding_set(5px, 5px, 5px, 5px);
   border-radius: 15px;
   z-index: 99;
@@ -877,14 +877,14 @@ main {
       border-color: $color_black transparent transparent transparent;
     }
   }   
-  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox {
+  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox,.cabinetorderbox {
     display: block;
     width: 100%;
     background-color: $color_white;
     @include padding_set(0, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
-    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop,.productop{
+    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop,.productop,.cabinetordertop{
       overflow: hidden;
       >div{
         display: inline-block;
@@ -1448,7 +1448,6 @@ main {
         }
       }
     }
-    
     .mousetouch{
         transform: translate(0,-5px);
         box-shadow: 0 2px 2px rgba(190, 190, 190, 1);
@@ -1706,6 +1705,610 @@ main {
     }
     
   }
+
+  .cabinetorderbox >form >.cabinetorderinfo{
+    display: block;
+    width: 100%;
+    height: 100%;
+    .ordertoggle{
+      display: flex;
+      flex-direction:row;
+      @media (max-width:980px) {
+        display:none;
+      }         
+      a{
+        display: inline-block;
+        color: $color_black;
+        @include padding_set(8px,20px,8px,20px);
+        border: 1px solid $text_color;
+        border-bottom: none;
+        border-radius: 15px 15px 0 0;
+        background-color: $color_white;
+        &:first-child{
+          position: relative;
+          z-index: 2;
+          cursor: context-menu;
+          &::before{
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $color_white;
+          }
+        }
+        &:last-child{
+          margin-left: -5px;
+          z-index: 1;
+          &:hover{
+            color: $color_orange;
+          }
+        }
+      }
+    }
+    .ordercontainer{
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $text_color;
+      border-radius: 0 15px 15px 15px;
+      @include padding_set(5px,20px,5px,20px);
+      @include margin_set(0,0,20px,0);
+      @media (max-width:980px) {
+        border-radius: 15px 15px 15px 15px;
+      }      
+      .senderinfo{
+        display: flex;
+        flex-direction:row;
+        @include margin_set(10px,0,10px,0);
+        @media (max-width:768px) {
+          flex-direction: column;
+        } 
+        p{
+          color: $text_color;
+          @include margin_set(0,20px,0,0);
+          @media (max-width:768px) {
+            @include margin_set(5px,0,5px,0);
+          }           
+        }        
+      }
+      .selection{
+        display: flex;
+        justify-content:space-between;
+        .order_number{
+          display: inline-block;
+          position: relative;
+          @media (max-width:980px) {
+            display: none;
+          }
+          span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 6px;
+            right: 4px;
+            width: 30px;
+            height: 25px;
+            @include font_size(20px);
+            font-weight: bolder;
+          }
+        }
+        .orderselect{
+          display: flex;
+          justify-content:flex-start;
+          flex-wrap:wrap;
+          width: 100%;
+          height: 100%;
+          @include margin_set(0,0,0,20px);
+          @media (max-width:980px) {
+            @include margin_set(0,0,0,0);
+          }
+          >div{
+            display: block;
+            @include margin_set(0,0,10px,0);
+            width: 50%;
+            @media (max-width:768px) {
+              width:100%;
+            }
+            >.form__radio{
+              @include margin_set(10px,0,10px,0);
+            }
+            >label{
+              display: inline-block;
+              position: relative;
+              top: 3px;
+              @include font_size(20px);
+              @include margin_set(0,10px,5px,0);
+              @media (max-width:980px) {
+                display:block;
+              }                             
+              span{
+                @include font_size(14px);
+                color: $text_color;
+                @include margin_set(0,0,0,10px);
+              }
+            }
+            >input{
+              display: block;
+              width: 50%;
+              @media (max-width:980px) {
+                width: 100%;
+              }                 
+              @include padding_set(5px,5px,5px,5px);
+              @include margin_set(10px,0,10px,0);
+              @include font_size(14px);
+              color: $input_text;
+              background-color: #fff;
+              background-clip: padding-box;
+              border: 1px solid #ced4da;
+              border-radius: 0.25rem;
+              transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+              cursor: pointer;
+              &[type='text']:focus {
+                color: $input_text;
+                background-color: #fff;
+                border-color: #80bdff;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+              }
+            }
+          }
+          .grid_method{
+            width: 100%;
+            >label{
+              display: block;
+            }
+            .radio_pos{
+              position: relative;
+              label{
+                display: inline-block;
+              }
+              label >span{
+                @include font_size(12px);
+                color: $text_color;
+                @include margin_set(0,0,0,10px);
+                @media (max-width:980px) {
+                  display: none;
+                }              
+              }
+            }
+            .form__radio{
+              @media (max-width:980px) {
+                width: 30%;
+              }
+              @media (max-width:768px) {
+                width: 100%;
+              }
+            }
+          }
+          .logistics_method,.shipment_method,.recipientinfo{
+            width: 100%;
+            input[type="text"]{
+              display: inline-block;
+              width: 30%;
+              @media (max-width:768px) {
+                width: 100%;
+              }                
+            }
+          }
+          .recipientinfo{
+            .recipientitle h1{
+              display: inline-block;
+              position: relative;
+              top: 3px;
+              @include font_size(20px);
+              @include margin_set(0,10px,5px,0); 
+              font-weight: bolder;            
+            }
+            .checkbox {
+                display:inline-block;
+                position: relative;
+                padding-left: 25px;
+                margin-top: 10px;
+            }
+            .checkbox label {
+                font-size: 14px;
+                cursor: pointer;
+            }
+            .checkbox:before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border: 1px solid $text_color;
+                display: block;
+                left: 0;
+                top: 0;
+            }
+            .checkbox input[type="checkbox"] {
+                opacity: 0;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                z-index: 2;
+                padding: 0;
+                margin: 0 auto;
+                cursor: pointer;
+            }
+            .checkbox input[type="checkbox"]:checked + label:after {
+                content: "";
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                background-color: $color_orange;
+                left: 3px;
+                top: 3px;
+            }
+            .recipient,.recipient_adr{
+              display: inline-block;
+              width: 50%;
+              float: left;
+              @media (max-width:768px) {
+                width: 100%;
+                float: none;
+              }                 
+              label{
+                display: inline-block;
+                position: relative;
+                top: 3px;
+                @include font_size(20px);
+                @include margin_set(0,10px,5px,0);
+                @media (max-width:768px) {
+                  display:block;
+                }
+              }
+              input,select{
+                display: block;
+                width: 50%;
+                @include padding_set(5px,5px,5px,5px);
+                @include margin_set(10px,0,10px,0);
+                @include font_size(14px);
+                color: $input_text;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                cursor: pointer;
+                &[type="text"]{
+                  display: inline-block;
+                  width: 60%;
+                  @media (max-width:768px) {
+                    display:block;
+                    width: 100%;
+                  }                      
+                }
+                &[type='text']:focus {
+                  color: $input_text;
+                  background-color: #fff;
+                  border-color: #80bdff;
+                  outline: 0;
+                  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                }
+              }
+            }
+            // .cabinet_address,.home_address{
+            //   display: block;
+            //   width: 100%;
+            //   clear: both;
+            // }
+            .cabinet_address{
+              a{
+                display: inline-block;
+                color: $color_white;
+                background-color: $color_green;
+                @include padding_set(5px,10px,5px,10px);
+                border-radius: 5px;
+                &:hover{
+                  background-color: $color_green_hover;
+                }
+                @media (max-width:768px) {
+                  display: block;
+                  width: 100%;
+                  text-align: center;
+                  @include padding_set(2%,0,2%,0);
+                }
+              }
+              span{
+                clear: both;
+                display: block;
+                width: 100%;
+                @include padding_set(5px,0,5px,0);
+                @include margin_set(10px,0,10px,0);
+                dd{
+                  display: inline-block;
+                  @include font_size(14px);
+                  @include margin_set(0,10px,0,0);
+                  @media (max-width:768px) {
+                    display: block;
+                    @include margin_set(0,0,0,0);
+                  }
+                }
+              }
+            }
+            .home_address{
+              .recipient_adr{
+                .arrow{
+                  display: inline-block;
+                  width:30%;
+                  @media (max-width:768px) {
+                    display: block;
+                    width: 50%;
+                    float: left;
+                  }
+                  &::before{
+                    top: 25px;
+                  }
+                }
+                select{
+                  display: inline-block;
+                  width:100%;
+                }
+              }
+              .inputadr{
+                display: block;
+                width: 100%;
+                @include padding_set(5px,5px,5px,5px);
+                @include margin_set(10px,0,10px,0);
+                @include font_size(14px);
+                color: $input_text;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                cursor: pointer;
+                &[type="text"]{
+                  display: inline-block;
+                  width: 100%;
+                }
+                &[type='text']:focus {
+                  color: $input_text;
+                  background-color: #fff;
+                  border-color: #80bdff;
+                  outline: 0;
+                  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                }
+              }
+            }
+          }
+          .cabinet_address,.home_address,.invoice_method{
+            display: block;
+            width: 100%;
+            clear: both;
+          }
+          .invoice_method >.invoice_radio{
+            display: inline-block;
+            @include margin_set(5px,0,5px,0);
+          }
+          .invoice_method >.invoice_block{
+            display: block;
+            width: 100%;
+            @include margin_set(10px,0,10px,0);
+            p{
+              @include font_size(14px);
+              @include margin_set(0,0,0,0);
+              color: $text_color;
+              a{
+                text-decoration: underline;
+                color:blue;
+              }
+            }
+            .inputext{
+              @include margin_set(10px,0,10px,0);
+              input{
+                display: inline-block;
+                width: 30%;
+                @include padding_set(5px, 8px, 5px, 8px);
+                @include font_size(14px);
+                color: $input_text;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                cursor: pointer;
+                &[type='text']:focus {
+                  color: $input_text;
+                  background-color: #fff;
+                  border-color: #80bdff;
+                  outline: 0;
+                  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                }
+              }
+            }
+            .vehicle_toggle{
+              display: flex;
+              flex-direction: row;
+              a{
+                display: inline-block;
+                @include padding_set(5px,10px,5px,10px);
+                @include font_size(14px);
+                color: $text_color;
+                background-color: #EEEEEE;
+                border-radius: 10px 10px 0 0;
+                &.active{
+                  color: $color_white;
+                  background-color: #C9CBCA;
+                }
+              }
+            }
+            .vehicle_text{
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: #EEEEEE;
+              border-radius: 0 10px 10px 10px;
+              @include padding_set(10px,20px,10px,20px);
+            }
+            .donate_text,.triple_text{
+              @include padding_set(0,20px,0,20px);
+            }
+            .phonetext,.donate_text,.triple_text{
+              display: none;
+            }
+          }
+          .money{
+            display: block;
+            width: 100%;
+            border-top: 1px solid $color_black;
+            clear: both;
+            @include padding_set(10px,0,0,0);
+            p{
+              color: $color_orange;
+              @include font_size(20px);
+              font-weight: bolder;
+            }
+          }
+          .collection,.logistics_method,.collection_amount,.home_address{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .cabinetorderbox >form >.neworder{
+    color: $color_white;
+    background-color: $color_orange;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    @include padding_set(10px,15px,10px,15px);
+    @include margin_set(0,0,0,50px);
+    @media (max-width:768px) {
+      display: none;
+    }
+    &:hover{
+      background-color: $color_orange_hover;
+    }
+  }
+  .cabinetorderbox >form >.cabinetorderbottom{
+    @include padding_set(20px,0,20px,0);
+    .agree{
+      @include padding_set(0,0,10px,50px);
+      @media (max-width:980px) {
+        @include padding_set(0,0,10px,0);
+      }
+    }
+    .checkbox {
+        display:block;
+        position: relative;
+        padding-left: 25px;
+        margin-top: 10px;
+    }
+    .checkbox label {
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .checkbox:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $text_color;
+        display: block;
+        left: 0;
+        top: 0;
+    }
+    .checkbox input[type="checkbox"] {
+        opacity: 0;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        z-index: 2;
+        padding: 0;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    .checkbox input[type="checkbox"]:checked + label:after {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background-color: $color_orange;
+        left: 3px;
+        top: 3px;
+    }
+    .checkmoney{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid $color_black;
+      @include padding_set(10px,0,10px,0);
+      @media (max-width:980px) {
+        display: block;
+      }
+      .checktext{
+        display: flex;
+        flex-direction: row;
+        @media (max-width:480px) {
+          flex-direction: column;
+        }
+        p{
+          @include font_size(24px);
+          @include margin_set(0,20px,0,0);
+          color: $color_orange;
+          font-weight: bolder;
+          @media (max-width:980px) {
+            @include font_size(20px);
+          }
+          @media (max-width:480px) {
+            @include margin_set(0,0,0,0);
+          }
+        } 
+
+      }
+      .checkbut{
+        @media (max-width:980px) {
+          display: flex;
+          justify-content: space-between;
+          @include margin_set(10px,0,10px,0);
+        }
+        @media (max-width:480px) {
+          display: block;
+        }
+        button{
+          @include padding_set(10px,40px,10px,40px);
+          @include margin_set(0,0,0,15px);
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          color: $color_white;
+          @media (max-width:980px) {
+            @include margin_set(0,0,0,0);
+            width: 49%;
+          }          
+          @media (max-width:480px) {
+            width: 100%;
+            @include margin_set(0,0,10px,0);
+          }  
+          &:nth-of-type(1){
+            background-color:$footer_color;
+            &:hover{
+              background-color:$text_color;
+            }
+          }
+          &:nth-of-type(2){
+            background-color:$color_green;
+            &:hover{
+              background-color:$color_green_hover;
+            }
+          }          
+        }
+      }
+    }
+  }
+
+
+
+
   .registerbox,#distribution {
     display: none;
   }
@@ -2025,7 +2628,7 @@ footer {
 }
 
 
-.popu_modify,.popu_courier,.popu_palmbox_service,.popu_order,.popu_table_tr{
+.popu_modify,.popu_courier,.popu_palmbox_service,.popu_order,.popu_table_tr,.logisticscompany{
   display: none;
   &.ishow {
     display: block;
