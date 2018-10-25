@@ -68,9 +68,13 @@ $(window).on('load', function() {
       $('.popu_courier').toggleClass('ishow')
 
     })
-    $('#Plambox_Service').on('click', function() {
+    $('#Plambox_Service,#agreePalmbox').on('click', function() {
       overflow()
       $('.popu_palmbox_service').toggleClass('ishow')
+    })
+    $('#agreelogistics').on('click', function () {
+      overflow()
+      $('.logisticscompany').toggleClass('ishow')
     })
 
     $('#agree').on('click', function() {
@@ -239,7 +243,51 @@ $(window).on('load', function() {
       $('.cabinetfilter .arrow .filterbox').toggleClass('active')
     })
 
+    // 判斷櫃取還是宅配
+    $('.pick_method .form__radio label').on('click', function () {
+      let pickname = $(this).html()
+      if (pickname == '宅配') {
+        $('.collection,.logistics_method,.home_address').css('display', 'block')
+        $('.cabinet_address').css('display', 'none')
+      } else {
+        $('.collection,.logistics_method,.home_address').css('display', 'none')
+        $('.cabinet_address').css('display', 'block')
+      }
+    })
 
+    // 判斷是否代收
+    $('.collection .form__radio label').on('click', function () {
+      let collectioname = $(this).html()
+      if (collectioname =='是') {
+        $('.collection_amount').css('display', 'block')
+      } else {
+        $('.collection_amount').css('display', 'none')
+      }
+    })
+
+
+    // 發票資訊
+    $('.invoice_radio label').on('click',function(){
+      let label_name = $(this).html()
+      if (label_name == '個人電子發票') {
+        $('.member_vehicle').show().siblings('div').hide()
+      } else if(label_name == '捐贈發票') {
+        $('.donate_text').show().siblings('div').hide()
+      }else{
+        $('.triple_text').show().siblings('div').hide()
+      }
+    })
+    // 個人電子發票切換
+    $('.vehicle_toggle a').on('click',function () {
+      let a_index = $(this).index()
+      $(this).removeClass('active').siblings('a').addClass('active')
+      if (a_index) {
+        $('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
+      } else {
+        $('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
+      }
+      
+    })
 
 
   })()
