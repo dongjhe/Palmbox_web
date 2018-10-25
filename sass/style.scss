@@ -1429,7 +1429,9 @@ main {
         margin: 0 auto;
         color: red;
       }
-      a{
+      button{
+        border: none;
+        outline: none;
         display: inline-block;
         width: 200px;
         @include padding_set(10px,10px,10px,10px);

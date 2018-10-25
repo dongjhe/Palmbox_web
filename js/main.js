@@ -247,23 +247,23 @@ $(window).on('load', function() {
     $('.pick_method .form__radio label').on('click', function () {
       let pickname = $(this).html()
       if (pickname == '宅配') {
-        $('.collection,.logistics_method,.home_address').css('display', 'block')
+        $('.logistics_method,.home_address').css('display', 'block')
         $('.cabinet_address').css('display', 'none')
       } else {
-        $('.collection,.logistics_method,.home_address').css('display', 'none')
+        $('.logistics_method,.home_address').css('display', 'none')
         $('.cabinet_address').css('display', 'block')
       }
     })
 
     // 判斷是否代收
-    $('.collection .form__radio label').on('click', function () {
-      let collectioname = $(this).html()
-      if (collectioname =='是') {
-        $('.collection_amount').css('display', 'block')
-      } else {
-        $('.collection_amount').css('display', 'none')
-      }
-    })
+    // $('.collection .form__radio label').on('click', function () {
+    //   let collectioname = $(this).html()
+    //   if (collectioname =='是') {
+    //     $('.collection_amount').css('display', 'block')
+    //   } else {
+    //     $('.collection_amount').css('display', 'none')
+    //   }
+    // })
 
 
     // 發票資訊
