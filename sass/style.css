@@ -2380,18 +2380,18 @@ main .deliverybox .mousetouch, main .courier_access .mousetouch, main .orderinfo
           box-shadow: 0 2px 2px #bebebe;
 }
 
-main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .deliverybox .warehousebottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .courier_access .warehousebottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom, main .orderinfo .warehousebottom, main .community_access .courierbottom, main .community_access .orderinfobottom, main .community_access .warehousebottom, main .eticket_access .courierbottom, main .eticket_access .orderinfobottom, main .eticket_access .warehousebottom, main .warehouse .courierbottom, main .warehouse .orderinfobottom, main .warehouse .warehousebottom, main .productbox .courierbottom, main .productbox .orderinfobottom, main .productbox .warehousebottom, main .cabinetorderbox .courierbottom, main .cabinetorderbox .orderinfobottom, main .cabinetorderbox .warehousebottom {
+main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .deliverybox .warehousebottom, main .deliverybox .more_orderbottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .courier_access .warehousebottom, main .courier_access .more_orderbottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom, main .orderinfo .warehousebottom, main .orderinfo .more_orderbottom, main .community_access .courierbottom, main .community_access .orderinfobottom, main .community_access .warehousebottom, main .community_access .more_orderbottom, main .eticket_access .courierbottom, main .eticket_access .orderinfobottom, main .eticket_access .warehousebottom, main .eticket_access .more_orderbottom, main .warehouse .courierbottom, main .warehouse .orderinfobottom, main .warehouse .warehousebottom, main .warehouse .more_orderbottom, main .productbox .courierbottom, main .productbox .orderinfobottom, main .productbox .warehousebottom, main .productbox .more_orderbottom, main .cabinetorderbox .courierbottom, main .cabinetorderbox .orderinfobottom, main .cabinetorderbox .warehousebottom, main .cabinetorderbox .more_orderbottom {
   text-align: right;
   margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-  main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .deliverybox .warehousebottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .courier_access .warehousebottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom, main .orderinfo .warehousebottom, main .community_access .courierbottom, main .community_access .orderinfobottom, main .community_access .warehousebottom, main .eticket_access .courierbottom, main .eticket_access .orderinfobottom, main .eticket_access .warehousebottom, main .warehouse .courierbottom, main .warehouse .orderinfobottom, main .warehouse .warehousebottom, main .productbox .courierbottom, main .productbox .orderinfobottom, main .productbox .warehousebottom, main .cabinetorderbox .courierbottom, main .cabinetorderbox .orderinfobottom, main .cabinetorderbox .warehousebottom {
+  main .deliverybox .courierbottom, main .deliverybox .orderinfobottom, main .deliverybox .warehousebottom, main .deliverybox .more_orderbottom, main .courier_access .courierbottom, main .courier_access .orderinfobottom, main .courier_access .warehousebottom, main .courier_access .more_orderbottom, main .orderinfo .courierbottom, main .orderinfo .orderinfobottom, main .orderinfo .warehousebottom, main .orderinfo .more_orderbottom, main .community_access .courierbottom, main .community_access .orderinfobottom, main .community_access .warehousebottom, main .community_access .more_orderbottom, main .eticket_access .courierbottom, main .eticket_access .orderinfobottom, main .eticket_access .warehousebottom, main .eticket_access .more_orderbottom, main .warehouse .courierbottom, main .warehouse .orderinfobottom, main .warehouse .warehousebottom, main .warehouse .more_orderbottom, main .productbox .courierbottom, main .productbox .orderinfobottom, main .productbox .warehousebottom, main .productbox .more_orderbottom, main .cabinetorderbox .courierbottom, main .cabinetorderbox .orderinfobottom, main .cabinetorderbox .warehousebottom, main .cabinetorderbox .more_orderbottom {
     text-align: center;
   }
 }
 
-main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .deliverybox .warehousebottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .courier_access .warehousebottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a, main .orderinfo .warehousebottom a, main .community_access .courierbottom a, main .community_access .orderinfobottom a, main .community_access .warehousebottom a, main .eticket_access .courierbottom a, main .eticket_access .orderinfobottom a, main .eticket_access .warehousebottom a, main .warehouse .courierbottom a, main .warehouse .orderinfobottom a, main .warehouse .warehousebottom a, main .productbox .courierbottom a, main .productbox .orderinfobottom a, main .productbox .warehousebottom a, main .cabinetorderbox .courierbottom a, main .cabinetorderbox .orderinfobottom a, main .cabinetorderbox .warehousebottom a {
+main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .deliverybox .warehousebottom a, main .deliverybox .more_orderbottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .courier_access .warehousebottom a, main .courier_access .more_orderbottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a, main .orderinfo .warehousebottom a, main .orderinfo .more_orderbottom a, main .community_access .courierbottom a, main .community_access .orderinfobottom a, main .community_access .warehousebottom a, main .community_access .more_orderbottom a, main .eticket_access .courierbottom a, main .eticket_access .orderinfobottom a, main .eticket_access .warehousebottom a, main .eticket_access .more_orderbottom a, main .warehouse .courierbottom a, main .warehouse .orderinfobottom a, main .warehouse .warehousebottom a, main .warehouse .more_orderbottom a, main .productbox .courierbottom a, main .productbox .orderinfobottom a, main .productbox .warehousebottom a, main .productbox .more_orderbottom a, main .cabinetorderbox .courierbottom a, main .cabinetorderbox .orderinfobottom a, main .cabinetorderbox .warehousebottom a, main .cabinetorderbox .more_orderbottom a {
   display: inline-block;
   padding-top: 5px;
   padding-right: 5px;
@@ -2405,7 +2405,7 @@ main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .
 }
 
 @media (max-width: 488px) {
-  main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .deliverybox .warehousebottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .courier_access .warehousebottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a, main .orderinfo .warehousebottom a, main .community_access .courierbottom a, main .community_access .orderinfobottom a, main .community_access .warehousebottom a, main .eticket_access .courierbottom a, main .eticket_access .orderinfobottom a, main .eticket_access .warehousebottom a, main .warehouse .courierbottom a, main .warehouse .orderinfobottom a, main .warehouse .warehousebottom a, main .productbox .courierbottom a, main .productbox .orderinfobottom a, main .productbox .warehousebottom a, main .cabinetorderbox .courierbottom a, main .cabinetorderbox .orderinfobottom a, main .cabinetorderbox .warehousebottom a {
+  main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .deliverybox .warehousebottom a, main .deliverybox .more_orderbottom a, main .courier_access .courierbottom a, main .courier_access .orderinfobottom a, main .courier_access .warehousebottom a, main .courier_access .more_orderbottom a, main .orderinfo .courierbottom a, main .orderinfo .orderinfobottom a, main .orderinfo .warehousebottom a, main .orderinfo .more_orderbottom a, main .community_access .courierbottom a, main .community_access .orderinfobottom a, main .community_access .warehousebottom a, main .community_access .more_orderbottom a, main .eticket_access .courierbottom a, main .eticket_access .orderinfobottom a, main .eticket_access .warehousebottom a, main .eticket_access .more_orderbottom a, main .warehouse .courierbottom a, main .warehouse .orderinfobottom a, main .warehouse .warehousebottom a, main .warehouse .more_orderbottom a, main .productbox .courierbottom a, main .productbox .orderinfobottom a, main .productbox .warehousebottom a, main .productbox .more_orderbottom a, main .cabinetorderbox .courierbottom a, main .cabinetorderbox .orderinfobottom a, main .cabinetorderbox .warehousebottom a, main .cabinetorderbox .more_orderbottom a {
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -2415,12 +2415,12 @@ main .deliverybox .courierbottom a, main .deliverybox .orderinfobottom a, main .
   }
 }
 
-main .deliverybox .courierbottom a:hover, main .deliverybox .courierbottom a.active, main .deliverybox .orderinfobottom a:hover, main .deliverybox .orderinfobottom a.active, main .deliverybox .warehousebottom a:hover, main .deliverybox .warehousebottom a.active, main .courier_access .courierbottom a:hover, main .courier_access .courierbottom a.active, main .courier_access .orderinfobottom a:hover, main .courier_access .orderinfobottom a.active, main .courier_access .warehousebottom a:hover, main .courier_access .warehousebottom a.active, main .orderinfo .courierbottom a:hover, main .orderinfo .courierbottom a.active, main .orderinfo .orderinfobottom a:hover, main .orderinfo .orderinfobottom a.active, main .orderinfo .warehousebottom a:hover, main .orderinfo .warehousebottom a.active, main .community_access .courierbottom a:hover, main .community_access .courierbottom a.active, main .community_access .orderinfobottom a:hover, main .community_access .orderinfobottom a.active, main .community_access .warehousebottom a:hover, main .community_access .warehousebottom a.active, main .eticket_access .courierbottom a:hover, main .eticket_access .courierbottom a.active, main .eticket_access .orderinfobottom a:hover, main .eticket_access .orderinfobottom a.active, main .eticket_access .warehousebottom a:hover, main .eticket_access .warehousebottom a.active, main .warehouse .courierbottom a:hover, main .warehouse .courierbottom a.active, main .warehouse .orderinfobottom a:hover, main .warehouse .orderinfobottom a.active, main .warehouse .warehousebottom a:hover, main .warehouse .warehousebottom a.active, main .productbox .courierbottom a:hover, main .productbox .courierbottom a.active, main .productbox .orderinfobottom a:hover, main .productbox .orderinfobottom a.active, main .productbox .warehousebottom a:hover, main .productbox .warehousebottom a.active, main .cabinetorderbox .courierbottom a:hover, main .cabinetorderbox .courierbottom a.active, main .cabinetorderbox .orderinfobottom a:hover, main .cabinetorderbox .orderinfobottom a.active, main .cabinetorderbox .warehousebottom a:hover, main .cabinetorderbox .warehousebottom a.active {
+main .deliverybox .courierbottom a:hover, main .deliverybox .courierbottom a.active, main .deliverybox .orderinfobottom a:hover, main .deliverybox .orderinfobottom a.active, main .deliverybox .warehousebottom a:hover, main .deliverybox .warehousebottom a.active, main .deliverybox .more_orderbottom a:hover, main .deliverybox .more_orderbottom a.active, main .courier_access .courierbottom a:hover, main .courier_access .courierbottom a.active, main .courier_access .orderinfobottom a:hover, main .courier_access .orderinfobottom a.active, main .courier_access .warehousebottom a:hover, main .courier_access .warehousebottom a.active, main .courier_access .more_orderbottom a:hover, main .courier_access .more_orderbottom a.active, main .orderinfo .courierbottom a:hover, main .orderinfo .courierbottom a.active, main .orderinfo .orderinfobottom a:hover, main .orderinfo .orderinfobottom a.active, main .orderinfo .warehousebottom a:hover, main .orderinfo .warehousebottom a.active, main .orderinfo .more_orderbottom a:hover, main .orderinfo .more_orderbottom a.active, main .community_access .courierbottom a:hover, main .community_access .courierbottom a.active, main .community_access .orderinfobottom a:hover, main .community_access .orderinfobottom a.active, main .community_access .warehousebottom a:hover, main .community_access .warehousebottom a.active, main .community_access .more_orderbottom a:hover, main .community_access .more_orderbottom a.active, main .eticket_access .courierbottom a:hover, main .eticket_access .courierbottom a.active, main .eticket_access .orderinfobottom a:hover, main .eticket_access .orderinfobottom a.active, main .eticket_access .warehousebottom a:hover, main .eticket_access .warehousebottom a.active, main .eticket_access .more_orderbottom a:hover, main .eticket_access .more_orderbottom a.active, main .warehouse .courierbottom a:hover, main .warehouse .courierbottom a.active, main .warehouse .orderinfobottom a:hover, main .warehouse .orderinfobottom a.active, main .warehouse .warehousebottom a:hover, main .warehouse .warehousebottom a.active, main .warehouse .more_orderbottom a:hover, main .warehouse .more_orderbottom a.active, main .productbox .courierbottom a:hover, main .productbox .courierbottom a.active, main .productbox .orderinfobottom a:hover, main .productbox .orderinfobottom a.active, main .productbox .warehousebottom a:hover, main .productbox .warehousebottom a.active, main .productbox .more_orderbottom a:hover, main .productbox .more_orderbottom a.active, main .cabinetorderbox .courierbottom a:hover, main .cabinetorderbox .courierbottom a.active, main .cabinetorderbox .orderinfobottom a:hover, main .cabinetorderbox .orderinfobottom a.active, main .cabinetorderbox .warehousebottom a:hover, main .cabinetorderbox .warehousebottom a.active, main .cabinetorderbox .more_orderbottom a:hover, main .cabinetorderbox .more_orderbottom a.active {
   color: #ff8400;
   text-decoration: underline;
 }
 
-main .deliverybox .courierbottom a:first-child.active, main .deliverybox .courierbottom a:last-child.active, main .deliverybox .orderinfobottom a:first-child.active, main .deliverybox .orderinfobottom a:last-child.active, main .deliverybox .warehousebottom a:first-child.active, main .deliverybox .warehousebottom a:last-child.active, main .courier_access .courierbottom a:first-child.active, main .courier_access .courierbottom a:last-child.active, main .courier_access .orderinfobottom a:first-child.active, main .courier_access .orderinfobottom a:last-child.active, main .courier_access .warehousebottom a:first-child.active, main .courier_access .warehousebottom a:last-child.active, main .orderinfo .courierbottom a:first-child.active, main .orderinfo .courierbottom a:last-child.active, main .orderinfo .orderinfobottom a:first-child.active, main .orderinfo .orderinfobottom a:last-child.active, main .orderinfo .warehousebottom a:first-child.active, main .orderinfo .warehousebottom a:last-child.active, main .community_access .courierbottom a:first-child.active, main .community_access .courierbottom a:last-child.active, main .community_access .orderinfobottom a:first-child.active, main .community_access .orderinfobottom a:last-child.active, main .community_access .warehousebottom a:first-child.active, main .community_access .warehousebottom a:last-child.active, main .eticket_access .courierbottom a:first-child.active, main .eticket_access .courierbottom a:last-child.active, main .eticket_access .orderinfobottom a:first-child.active, main .eticket_access .orderinfobottom a:last-child.active, main .eticket_access .warehousebottom a:first-child.active, main .eticket_access .warehousebottom a:last-child.active, main .warehouse .courierbottom a:first-child.active, main .warehouse .courierbottom a:last-child.active, main .warehouse .orderinfobottom a:first-child.active, main .warehouse .orderinfobottom a:last-child.active, main .warehouse .warehousebottom a:first-child.active, main .warehouse .warehousebottom a:last-child.active, main .productbox .courierbottom a:first-child.active, main .productbox .courierbottom a:last-child.active, main .productbox .orderinfobottom a:first-child.active, main .productbox .orderinfobottom a:last-child.active, main .productbox .warehousebottom a:first-child.active, main .productbox .warehousebottom a:last-child.active, main .cabinetorderbox .courierbottom a:first-child.active, main .cabinetorderbox .courierbottom a:last-child.active, main .cabinetorderbox .orderinfobottom a:first-child.active, main .cabinetorderbox .orderinfobottom a:last-child.active, main .cabinetorderbox .warehousebottom a:first-child.active, main .cabinetorderbox .warehousebottom a:last-child.active {
+main .deliverybox .courierbottom a:first-child.active, main .deliverybox .courierbottom a:last-child.active, main .deliverybox .orderinfobottom a:first-child.active, main .deliverybox .orderinfobottom a:last-child.active, main .deliverybox .warehousebottom a:first-child.active, main .deliverybox .warehousebottom a:last-child.active, main .deliverybox .more_orderbottom a:first-child.active, main .deliverybox .more_orderbottom a:last-child.active, main .courier_access .courierbottom a:first-child.active, main .courier_access .courierbottom a:last-child.active, main .courier_access .orderinfobottom a:first-child.active, main .courier_access .orderinfobottom a:last-child.active, main .courier_access .warehousebottom a:first-child.active, main .courier_access .warehousebottom a:last-child.active, main .courier_access .more_orderbottom a:first-child.active, main .courier_access .more_orderbottom a:last-child.active, main .orderinfo .courierbottom a:first-child.active, main .orderinfo .courierbottom a:last-child.active, main .orderinfo .orderinfobottom a:first-child.active, main .orderinfo .orderinfobottom a:last-child.active, main .orderinfo .warehousebottom a:first-child.active, main .orderinfo .warehousebottom a:last-child.active, main .orderinfo .more_orderbottom a:first-child.active, main .orderinfo .more_orderbottom a:last-child.active, main .community_access .courierbottom a:first-child.active, main .community_access .courierbottom a:last-child.active, main .community_access .orderinfobottom a:first-child.active, main .community_access .orderinfobottom a:last-child.active, main .community_access .warehousebottom a:first-child.active, main .community_access .warehousebottom a:last-child.active, main .community_access .more_orderbottom a:first-child.active, main .community_access .more_orderbottom a:last-child.active, main .eticket_access .courierbottom a:first-child.active, main .eticket_access .courierbottom a:last-child.active, main .eticket_access .orderinfobottom a:first-child.active, main .eticket_access .orderinfobottom a:last-child.active, main .eticket_access .warehousebottom a:first-child.active, main .eticket_access .warehousebottom a:last-child.active, main .eticket_access .more_orderbottom a:first-child.active, main .eticket_access .more_orderbottom a:last-child.active, main .warehouse .courierbottom a:first-child.active, main .warehouse .courierbottom a:last-child.active, main .warehouse .orderinfobottom a:first-child.active, main .warehouse .orderinfobottom a:last-child.active, main .warehouse .warehousebottom a:first-child.active, main .warehouse .warehousebottom a:last-child.active, main .warehouse .more_orderbottom a:first-child.active, main .warehouse .more_orderbottom a:last-child.active, main .productbox .courierbottom a:first-child.active, main .productbox .courierbottom a:last-child.active, main .productbox .orderinfobottom a:first-child.active, main .productbox .orderinfobottom a:last-child.active, main .productbox .warehousebottom a:first-child.active, main .productbox .warehousebottom a:last-child.active, main .productbox .more_orderbottom a:first-child.active, main .productbox .more_orderbottom a:last-child.active, main .cabinetorderbox .courierbottom a:first-child.active, main .cabinetorderbox .courierbottom a:last-child.active, main .cabinetorderbox .orderinfobottom a:first-child.active, main .cabinetorderbox .orderinfobottom a:last-child.active, main .cabinetorderbox .warehousebottom a:first-child.active, main .cabinetorderbox .warehousebottom a:last-child.active, main .cabinetorderbox .more_orderbottom a:first-child.active, main .cabinetorderbox .more_orderbottom a:last-child.active {
   color: #898989;
   text-decoration: none;
 }
@@ -2778,15 +2778,19 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a {
   border-bottom: none;
   border-radius: 15px 15px 0 0;
   background-color: #fff;
-}
-
-main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a:first-child {
   position: relative;
-  z-index: 2;
-  cursor: context-menu;
+  z-index: 1;
 }
 
-main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a:first-child::before {
+main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a:hover {
+  color: #ff8400;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a.active {
+  z-index: 2;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a.active::before {
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -2799,11 +2803,6 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a:first-child::bef
 
 main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a:last-child {
   margin-left: -5px;
-  z-index: 1;
-}
-
-main .cabinetorderbox > form > .cabinetorderinfo .ordertoggle a:last-child:hover {
-  color: #ff8400;
 }
 
 main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer {
@@ -3551,6 +3550,117 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .orderclose spa
           transform: rotate(-45deg) translateY(0px) translateX(0px);
 }
 
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .more_orderexam {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .more_orderexam a {
+  text-decoration: underline;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .downloadbox {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-right: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  text-align: center;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .downloadbox label {
+  width: 250px;
+  height: 250px;
+  background-image: url(../images/download_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .downloadbox input[type="file"] {
+  display: none;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order {
+  display: block;
+  width: 100%;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order > .tablescroll {
+  overflow-x: scroll;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order p {
+  display: block;
+  text-align: center;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order p.error {
+  color: red;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table {
+  display: inline-table;
+  width: 1200px;
+  font-size: 14px;
+  line-height: 25.2px;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table tr {
+  display: table-row;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table tr:nth-child(2n+1) {
+  background-color: rgba(137, 137, 137, 0.1);
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table th, main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table td {
+  display: table-cell;
+  margin: 0.5em 1em;
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 25.2px;
+  height: 41px;
+  text-align: center;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table th {
+  width: 10%;
+  background-color: #fbfaf7;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table th:nth-of-type(1) {
+  width: 5%;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table th::last-child {
+  width: 15%;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .excel_order table td span {
+  display: block;
+  color: red;
+  font-size: 12px;
+  line-height: 21.6px;
+}
+
+main .cabinetorderbox > form > .cabinetorderinfo .more_order {
+  display: none;
+}
+
 main .cabinetorderbox > form > .neworder {
   color: #fff;
   background-color: #ff8400;
@@ -3647,15 +3757,7 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkbox input[type="checkbo
 }
 
 main .cabinetorderbox > form > .cabinetorderbottom .checkmoney {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
   border-top: 1px solid #000;
   padding-top: 10px;
   padding-right: 0;
@@ -3663,29 +3765,8 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney {
   padding-left: 0;
 }
 
-@media (max-width: 980px) {
-  main .cabinetorderbox > form > .cabinetorderbottom .checkmoney {
-    display: block;
-  }
-}
-
 main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checktext {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-@media (max-width: 480px) {
-  main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checktext {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  display: block;
 }
 
 main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checktext p {
@@ -3715,14 +3796,17 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checktext p {
   }
 }
 
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut {
+  display: block;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  text-align: center;
+}
+
 @media (max-width: 980px) {
   main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-top: 10px;
     margin-right: 0;
     margin-bottom: 10px;
@@ -3730,10 +3814,12 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checktext p {
   }
 }
 
-@media (max-width: 480px) {
-  main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut {
-    display: block;
-  }
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut p {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  color: red;
 }
 
 main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button {
@@ -3741,9 +3827,9 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button 
   padding-right: 40px;
   padding-bottom: 10px;
   padding-left: 40px;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
   margin-left: 15px;
   border: none;
   outline: none;
@@ -3763,6 +3849,7 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button 
 
 @media (max-width: 480px) {
   main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button {
+    display: block;
     width: 100%;
     margin-top: 0;
     margin-right: 0;
@@ -3785,6 +3872,10 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button:
 
 main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button:nth-of-type(2):hover {
   background-color: #8cb933;
+}
+
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut.batch {
+  display: none;
 }
 
 main .registerbox, main #distribution {

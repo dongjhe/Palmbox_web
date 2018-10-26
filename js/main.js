@@ -235,6 +235,23 @@ $(window).on('load', function() {
       
     })
 
+    $('.cabinetorderinfo .ordertoggle a').on('click',function(){
+      $(this).addClass('active').siblings('a').removeClass('active')
+      let ordertoggleindex = $(this).index()
+      if (ordertoggleindex === 0) {
+        $('.cabinetorderinfo .one_order').show().siblings('.more_order').hide()
+        $('.neworder').show()
+        $('.checkmoney .single').show()
+        $('.checkmoney .batch').hide()
+      } else {
+        $('.cabinetorderinfo .more_order').show().siblings('.one_order').hide()
+        $('.neworder').hide()
+        $('.checkmoney .single').hide()
+        $('.checkmoney .batch').show()
+      }
+    })
+
+
     // 櫃機條件篩選開關
     $('.cabinetfilter .arrow .filter').on('click', function() {
       $('.cabinetfilter .arrow .filterbox').toggleClass('active')
