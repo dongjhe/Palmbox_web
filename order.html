@@ -82,223 +82,456 @@
                                 <a href="javascript:;">單筆下單</a>
                                 <a href="javascript:;">批量下單</a>
                             </div>
-                            <div class="ordercontainer">
-                                <!-- <div class="senderinfo">
-                                    <p>寄件人姓名：<span>如如米</span></p>
-                                    <p>寄件人電話：<span>0912 345 678</span></p>
-                                </div> -->
-                                <div class="selection">
-                                    <div class="order_number">
-                                        <span>21</span>
-                                        <img src="./images/cake.png" alt="阿糕">
-                                    </div>
-                                    <div class="orderselect">
-                                        <div class="pick_method">
-                                            <label for="pick_method">請選擇取貨方式</label>
-                                            <div class="form__radio">
-                                                <input type="radio" id="cabinet" name="pick_method" checked>
-                                                <label for="cabinet">掌櫃櫃取</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                            <div class="form__radio">
-                                                <input type="radio" id="homedelivery" name="pick_method">
-                                                <label for="homedelivery">宅配</label>
-                                                <span class="radio"></span>
-                                            </div>
+                            <div class="one_order">
+                                <div class="ordercontainer">
+                                    <!-- <div class="senderinfo">
+                                        <p>寄件人姓名：<span>如如米</span></p>
+                                        <p>寄件人電話：<span>0912 345 678</span></p>
+                                    </div> -->
+                                    <div class="selection">
+                                        <div class="order_number">
+                                            <span>21</span>
+                                            <img src="./images/cake.png" alt="阿糕">
                                         </div>
-                                        <div class="temperate_method">
-                                            <label for="temperate_method">請選擇溫層方式</label>
-                                            <div class="form__radio">
-                                                <input type="radio" id="normaltemperature" name="temperate_method" checked>
-                                                <label for="normaltemperature">常溫</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                            <div class="form__radio">
-                                                <input type="radio" id="refrigeration" name="temperate_method" disabled>
-                                                <label for="refrigeration">冷藏</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                        </div>
-    
-                                        <!-- EC商才有代收功能 -->
-                                        <div class="collection">
-                                            <label for="collection">請選擇是否代收</label>
-                                            <div class="form__radio">
-                                                <input type="radio" id="collection_no" name="collection" checked>
-                                                <label for="collection_no">否</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                            <div class="form__radio">
-                                                <input type="radio" id="collection_yes" name="collection">
-                                                <label for="collection_yes">是</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                        </div>
-                                        <div class="collection_amount">
-                                            <label for="collection_amount">代收金額<span>橘子支付/信用卡</span></label>
-                                            <input type="text" placeholder="NT 請輸入代收金額">
-                                        </div>
-                                        <!-- EC商才有代收功能 -->
-    
-                                        <div class="grid_method">
-                                            <label for="grid_method">請選擇格口大小</label>
-                                            <div class="form__radio">
-                                                <div class="radio_pos">
-                                                    <input type="radio" id="small" name="grid_method" checked>
-                                                    <label for="small">小格<span>(約1-3件服飾或飾品)</span></label>
-                                                    <span class="radio"></span>
-                                                </div>
-                                                <div class="img">
-                                                    <img src="./images/small.png" alt="小格">
-                                                </div>
-                                            </div>
-                                            <div class="form__radio">
-                                                <div class="radio_pos">
-                                                    <input type="radio" id="medium" name="grid_method">
-                                                    <label for="medium">中格<span>(約6包抽取式衛生紙或1雙球鞋)</span></label>
-                                                    <span class="radio"></span>
-                                                </div>
-                                                <div class="img">
-                                                    <img src="./images/medium.png" alt="中格">
-                                                </div>
-                                            </div>
-                                            <div class="form__radio">
-                                                <div class="radio_pos">
-                                                    <input type="radio" id="big" name="grid_method">
-                                                    <label for="big">大格<span>(約1個10人份電鍋或2雙球鞋)</span></label>
-                                                    <span class="radio"></span>
-                                                </div>
-                                                <div class="img">
-                                                    <img src="./images/big.png" alt="大格">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="logistics_method">
-                                            <label for="logistics_method">請選擇物流公司</label>
-                                            <div class="form__radio">
-                                                <input type="radio" id="pelican" name="logistics_method" checked>
-                                                <label for="pelican">宅配通</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                            <div class="form__radio">
-                                                <input type="radio" id="sf-express" name="logistics_method">
-                                                <label for="sf-express">順豐速運</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                            <div class="form__radio">
-                                                <input type="radio" id="kerrytj" name="logistics_method">
-                                                <label for="kerrytj">嘉里大榮</label>
-                                                <span class="radio"></span>
-                                            </div>
-                                        </div>
-                                        <div class="shipment_method">
-                                            <label for="shipment_method">寄件物內容</label>
-                                            <input type="text" placeholder="請輸入寄件物內容">
-                                        </div>
-    
-                                        <!-- 收件人資訊 -->
-                                        <div class="recipientinfo">
-                                            <div class="recipientitle">
-                                                <h1>收件人資訊</h1>
-                                                <div class="checkbox">
-                                                    <input id="sender" type="checkbox" name="sender">
-                                                    <label for="sender">同寄件人資料</label>
-                                                </div>
-                                            </div>
-                                            <div class="recipient">
-                                                <label for="recipient_name">收件人姓名</label>
-                                                <input type="text" placeholder="請輸入收件人姓名">
-                                            </div>
-                                            <div class="recipient">
-                                                <label for="recipient_phone">收件人電話</label>
-                                                <input type="text" placeholder="請輸入收件人電話">
-                                            </div>
-                                            <!-- 櫃取打開 -->
-                                            <div class="cabinet_address">
-                                                <div class="recipient_adr">
-                                                    <label for="recipient_adr">收件人地址</label>
-                                                    <a href="javascript:;">請選擇櫃機位置</a>
-                                                </div>
-                                                <span><dd>小北百貨-寧夏店</dd><dd>台北市大同區寧夏路11號</dd><dd>營業時間:24小時</dd></span>
-                                            </div>
-                                            <!-- 宅配打開 -->
-                                            <div class="home_address">
-                                                <div class="recipient_adr my-selector-c">
-                                                    <label for="recipient_adr">收件人地址</label>
-                                                    <div class="arrow">
-                                                        <select class="county"></select>
-                                                    </div>
-                                                    <div class="arrow">
-                                                        <select class="district"></select>
-                                                    </div>
-                                                </div>
-                                                <input class="inputadr" type="text" placeholder="請輸入收件人地址">
-                                            </div>
-                                        </div>
-
-                                        <div class="invoice_method">
-                                            <label for="invoice_method">發票資訊</label>
-                                            <div class="invoice_radio">
+                                        <div class="orderselect">
+                                            <div class="pick_method">
+                                                <label for="pick_method">請選擇取貨方式</label>
                                                 <div class="form__radio">
-                                                    <input type="radio" id="personal_invoice" name="invoice_method" checked>
-                                                    <label for="personal_invoice">個人電子發票</label>
+                                                    <input type="radio" id="cabinet" name="pick_method" checked>
+                                                    <label for="cabinet">掌櫃櫃取</label>
                                                     <span class="radio"></span>
                                                 </div>
                                                 <div class="form__radio">
-                                                    <input type="radio" id="donation_invoice" name="invoice_method">
-                                                    <label for="donation_invoice">捐贈發票</label>
-                                                    <span class="radio"></span>
-                                                </div>
-                                                <div class="form__radio">
-                                                    <input type="radio" id="triple_invoice" name="invoice_method">
-                                                    <label for="triple_invoice">三聯式電子發票</label>
+                                                    <input type="radio" id="homedelivery" name="pick_method">
+                                                    <label for="homedelivery">宅配</label>
                                                     <span class="radio"></span>
                                                 </div>
                                             </div>
-                                            <div class="invoice_block">
-                                                <!-- 個人發票 -->
-                                                <div class="member_vehicle">
-                                                    <div class="vehicle_toggle">
-                                                        <a href="javascript:;">會員載具</a>
-                                                        <a class="active" href="javascript:;">手機載具</a>
+                                            <div class="temperate_method">
+                                                <label for="temperate_method">請選擇溫層方式</label>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="normaltemperature" name="temperate_method" checked>
+                                                    <label for="normaltemperature">常溫</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="refrigeration" name="temperate_method" disabled>
+                                                    <label for="refrigeration">冷藏</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                            </div>
+        
+                                            <!-- EC商才有代收功能 -->
+                                            <div class="collection">
+                                                <label for="collection">請選擇是否代收</label>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="collection_no" name="collection" checked>
+                                                    <label for="collection_no">否</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="collection_yes" name="collection">
+                                                    <label for="collection_yes">是</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                            </div>
+                                            <div class="collection_amount">
+                                                <label for="collection_amount">代收金額<span>橘子支付/信用卡</span></label>
+                                                <input type="text" placeholder="NT 請輸入代收金額">
+                                            </div>
+                                            <!-- EC商才有代收功能 -->
+        
+                                            <div class="grid_method">
+                                                <label for="grid_method">請選擇格口大小</label>
+                                                <div class="form__radio">
+                                                    <div class="radio_pos">
+                                                        <input type="radio" id="small" name="grid_method" checked>
+                                                        <label for="small">小格<span>(約1-3件服飾或飾品)</span></label>
+                                                        <span class="radio"></span>
                                                     </div>
-                                                    <div class="vehicle_text">
-                                                        <div class="membertext">
-                                                            <p>本發票依財政部臺北國稅局內湖稽徵所106年2月17日財政部核准字號第1061601210號函核准使用。</p>
-                                                            <p>依a「電子發票實施作業要點」之規定，本公司已採用會員載具進行歸戶，掌櫃每逢單月26日將根據國稅局公佈之統一發票中獎號碼進行電腦對獎(已索取、已作廢發票除外)，若有中獎將於當月底發出簡訊通知，並以掛號郵遞方式把中獎發票郵寄給您。
-                                                            若發生中獎發票因會員資料錯誤、無人招領等因素被郵局退件，視同中獎人放棄中獎發票領獎之權利。</p>
+                                                    <div class="img">
+                                                        <img src="./images/small.png" alt="小格">
+                                                    </div>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <div class="radio_pos">
+                                                        <input type="radio" id="medium" name="grid_method">
+                                                        <label for="medium">中格<span>(約6包抽取式衛生紙或1雙球鞋)</span></label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="img">
+                                                        <img src="./images/medium.png" alt="中格">
+                                                    </div>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <div class="radio_pos">
+                                                        <input type="radio" id="big" name="grid_method">
+                                                        <label for="big">大格<span>(約1個10人份電鍋或2雙球鞋)</span></label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="img">
+                                                        <img src="./images/big.png" alt="大格">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="logistics_method">
+                                                <label for="logistics_method">請選擇物流公司</label>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="pelican" name="logistics_method" checked>
+                                                    <label for="pelican">宅配通</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="sf-express" name="logistics_method">
+                                                    <label for="sf-express">順豐速運</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="kerrytj" name="logistics_method">
+                                                    <label for="kerrytj">嘉里大榮</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                            </div>
+                                            <div class="shipment_method">
+                                                <label for="shipment_method">寄件物內容</label>
+                                                <input type="text" placeholder="請輸入寄件物內容">
+                                            </div>
+        
+                                            <!-- 收件人資訊 -->
+                                            <div class="recipientinfo">
+                                                <div class="recipientitle">
+                                                    <h1>收件人資訊</h1>
+                                                    <div class="checkbox">
+                                                        <input id="sender" type="checkbox" name="sender">
+                                                        <label for="sender">同寄件人資料</label>
+                                                    </div>
+                                                </div>
+                                                <div class="recipient">
+                                                    <label for="recipient_name">收件人姓名</label>
+                                                    <input type="text" placeholder="請輸入收件人姓名">
+                                                </div>
+                                                <div class="recipient">
+                                                    <label for="recipient_phone">收件人電話</label>
+                                                    <input type="text" placeholder="請輸入收件人電話">
+                                                </div>
+                                                <!-- 櫃取打開 -->
+                                                <div class="cabinet_address">
+                                                    <div class="recipient_adr">
+                                                        <label for="recipient_adr">收件人地址</label>
+                                                        <a href="javascript:;">請選擇櫃機位置</a>
+                                                    </div>
+                                                    <span><dd>小北百貨-寧夏店</dd><dd>台北市大同區寧夏路11號</dd><dd>營業時間:24小時</dd></span>
+                                                </div>
+                                                <!-- 宅配打開 -->
+                                                <div class="home_address">
+                                                    <div class="recipient_adr my-selector-c">
+                                                        <label for="recipient_adr">收件人地址</label>
+                                                        <div class="arrow">
+                                                            <select class="county"></select>
                                                         </div>
-                                                        <div class="phonetext">
-                                                            <p>※若您持有手機載具，請填寫載具條碼。</p>
-                                                            <p>(請先前往<a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/GeneralCarrier/generalCarrier" target="_blank">財政部電子發票流程說明進行註冊</a>。請勿填寫手機號碼，謝謝。)</p>
-                                                            <div class="inputext">
-                                                                <input type="text" placeholder="請輸入手機載具條碼">
-                                                                <input type="text" placeholder="請再次確認載具條碼">
+                                                        <div class="arrow">
+                                                            <select class="district"></select>
+                                                        </div>
+                                                    </div>
+                                                    <input class="inputadr" type="text" placeholder="請輸入收件人地址">
+                                                </div>
+                                            </div>
+    
+                                            <div class="invoice_method">
+                                                <label for="invoice_method">發票資訊</label>
+                                                <div class="invoice_radio">
+                                                    <div class="form__radio">
+                                                        <input type="radio" id="personal_invoice" name="invoice_method" checked>
+                                                        <label for="personal_invoice">個人電子發票</label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="form__radio">
+                                                        <input type="radio" id="donation_invoice" name="invoice_method">
+                                                        <label for="donation_invoice">捐贈發票</label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="form__radio">
+                                                        <input type="radio" id="triple_invoice" name="invoice_method">
+                                                        <label for="triple_invoice">三聯式電子發票</label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="invoice_block">
+                                                    <!-- 個人發票 -->
+                                                    <div class="member_vehicle">
+                                                        <div class="vehicle_toggle">
+                                                            <a href="javascript:;">會員載具</a>
+                                                            <a class="active" href="javascript:;">手機載具</a>
+                                                        </div>
+                                                        <div class="vehicle_text">
+                                                            <div class="membertext">
+                                                                <p>本發票依財政部臺北國稅局內湖稽徵所106年2月17日財政部核准字號第1061601210號函核准使用。</p>
+                                                                <p>依a「電子發票實施作業要點」之規定，本公司已採用會員載具進行歸戶，掌櫃每逢單月26日將根據國稅局公佈之統一發票中獎號碼進行電腦對獎(已索取、已作廢發票除外)，若有中獎將於當月底發出簡訊通知，並以掛號郵遞方式把中獎發票郵寄給您。
+                                                                若發生中獎發票因會員資料錯誤、無人招領等因素被郵局退件，視同中獎人放棄中獎發票領獎之權利。</p>
+                                                            </div>
+                                                            <div class="phonetext">
+                                                                <p>※若您持有手機載具，請填寫載具條碼。</p>
+                                                                <p>(請先前往<a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/GeneralCarrier/generalCarrier" target="_blank">財政部電子發票流程說明進行註冊</a>。請勿填寫手機號碼，謝謝。)</p>
+                                                                <div class="inputext">
+                                                                    <input type="text" placeholder="請輸入手機載具條碼">
+                                                                    <input type="text" placeholder="請再次確認載具條碼">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <!-- 捐贈發票 -->
-                                                <div class="donate_text">
-                                                    <p>捐贈單位：兒童福利聯盟文教基金會</p>
-                                                    <div class="inputext">
-                                                        <input type="text" placeholder="捐贈其他單位請填寫愛心碼">
+                                                    <!-- 捐贈發票 -->
+                                                    <div class="donate_text">
+                                                        <p>捐贈單位：兒童福利聯盟文教基金會</p>
+                                                        <div class="inputext">
+                                                            <input type="text" placeholder="捐贈其他單位請填寫愛心碼">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <!-- 三聯式發票 -->
-                                                <div class="triple_text">
-                                                    <p>請輸入統一編號</p>
-                                                    <div class="inputext">
-                                                        <input type="text" placeholder="請輸入統一編號">
+                                                    <!-- 三聯式發票 -->
+                                                    <div class="triple_text">
+                                                        <p>請輸入統一編號</p>
+                                                        <div class="inputext">
+                                                            <input type="text" placeholder="請輸入統一編號">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+    
+                                            <!-- 運費 -->
+                                            <div class="money">
+                                                <p>運費:<span>50</span>元</p>
+                                            </div>
                                         </div>
-
-                                        <!-- 運費 -->
-                                        <div class="money">
-                                            <p>月結運費:<span>50</span>元</p>
+                                    </div>
+                                </div>
+                                <div class="ordercontainer">
+                                    <!-- <div class="senderinfo">
+                                        <p>寄件人姓名：<span>如如米</span></p>
+                                        <p>寄件人電話：<span>0912 345 678</span></p>
+                                    </div> -->
+                                    <div class="selection">
+                                        <div class="order_number">
+                                            <span>22</span>
+                                            <img src="./images/cake.png" alt="阿糕">
                                         </div>
+                                        <div class="orderselect">
+                                            <div class="pick_method">
+                                                <label for="pick_method">請選擇取貨方式</label>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="cabinet1" name="pick_method1" checked>
+                                                    <label for="cabinet1">掌櫃櫃取</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="homedelivery1" name="pick_method1">
+                                                    <label for="homedelivery1">宅配</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                            </div>
+                                            <div class="temperate_method">
+                                                <label for="temperate_method">請選擇溫層方式</label>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="normaltemperature1" name="temperate_method1" checked>
+                                                    <label for="normaltemperature1">常溫</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="refrigeration1" name="temperate_method1" disabled>
+                                                    <label for="refrigeration1">冷藏</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <!-- EC商才有代收功能 -->
+                                            <div class="collection">
+                                                <label for="collection">請選擇是否代收</label>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="collection_no1" name="collection1" checked>
+                                                    <label for="collection_no1">否</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="collection_yes1" name="collection1">
+                                                    <label for="collection_yes1">是</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                            </div>
+                                            <div class="collection_amount">
+                                                <label for="collection_amount1">代收金額<span>橘子支付/信用卡</span></label>
+                                                <input type="text" placeholder="NT 請輸入代收金額">
+                                            </div>
+                                            <!-- EC商才有代收功能 -->
+                                
+                                            <div class="grid_method">
+                                                <label for="grid_method">請選擇格口大小</label>
+                                                <div class="form__radio">
+                                                    <div class="radio_pos">
+                                                        <input type="radio" id="small1" name="grid_method1" checked>
+                                                        <label for="small1">小格<span>(約1-3件服飾或飾品)</span></label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="img">
+                                                        <img src="./images/small.png" alt="小格">
+                                                    </div>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <div class="radio_pos">
+                                                        <input type="radio" id="medium1" name="grid_method1">
+                                                        <label for="medium1">中格<span>(約6包抽取式衛生紙或1雙球鞋)</span></label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="img">
+                                                        <img src="./images/medium.png" alt="中格">
+                                                    </div>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <div class="radio_pos">
+                                                        <input type="radio" id="big1" name="grid_method1">
+                                                        <label for="big1">大格<span>(約1個10人份電鍋或2雙球鞋)</span></label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="img">
+                                                        <img src="./images/big.png" alt="大格">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="logistics_method">
+                                                <label for="logistics_method">請選擇物流公司</label>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="pelican1" name="logistics_method1" checked>
+                                                    <label for="pelican1">宅配通</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="sf-express1" name="logistics_method1">
+                                                    <label for="sf-express1">順豐速運</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" id="kerrytj1" name="logistics_method1">
+                                                    <label for="kerrytj1">嘉里大榮</label>
+                                                    <span class="radio"></span>
+                                                </div>
+                                            </div>
+                                            <div class="shipment_method">
+                                                <label for="shipment_method1">寄件物內容</label>
+                                                <input type="text" placeholder="請輸入寄件物內容">
+                                            </div>
+                                
+                                            <!-- 收件人資訊 -->
+                                            <div class="recipientinfo">
+                                                <div class="recipientitle">
+                                                    <h1>收件人資訊</h1>
+                                                    <div class="checkbox">
+                                                        <input id="sender1" type="checkbox" name="sender1">
+                                                        <label for="sender1">同寄件人資料</label>
+                                                    </div>
+                                                </div>
+                                                <div class="recipient">
+                                                    <label for="recipient_name1">收件人姓名</label>
+                                                    <input type="text" placeholder="請輸入收件人姓名">
+                                                </div>
+                                                <div class="recipient">
+                                                    <label for="recipient_phone1">收件人電話</label>
+                                                    <input type="text" placeholder="請輸入收件人電話">
+                                                </div>
+                                                <!-- 櫃取打開 -->
+                                                <div class="cabinet_address">
+                                                    <div class="recipient_adr">
+                                                        <label for="recipient_adr1">收件人地址</label>
+                                                        <a href="javascript:;">請選擇櫃機位置</a>
+                                                    </div>
+                                                    <span>
+                                                        <dd>小北百貨-寧夏店</dd>
+                                                        <dd>台北市大同區寧夏路11號</dd>
+                                                        <dd>營業時間:24小時</dd>
+                                                    </span>
+                                                </div>
+                                                <!-- 宅配打開 -->
+                                                <div class="home_address">
+                                                    <div class="recipient_adr my-selector-c">
+                                                        <label for="recipient_adr">收件人地址</label>
+                                                        <div class="arrow">
+                                                            <select class="county"></select>
+                                                        </div>
+                                                        <div class="arrow">
+                                                            <select class="district"></select>
+                                                        </div>
+                                                    </div>
+                                                    <input class="inputadr" type="text" placeholder="請輸入收件人地址">
+                                                </div>
+                                            </div>
+                                
+                                            <div class="invoice_method">
+                                                <label for="invoice_method">發票資訊</label>
+                                                <div class="invoice_radio">
+                                                    <div class="form__radio">
+                                                        <input type="radio" id="personal_invoice1" name="invoice_method1" checked>
+                                                        <label for="personal_invoice1">個人電子發票</label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="form__radio">
+                                                        <input type="radio" id="donation_invoice1" name="invoice_method1">
+                                                        <label for="donation_invoice1">捐贈發票</label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                    <div class="form__radio">
+                                                        <input type="radio" id="triple_invoice1" name="invoice_method1">
+                                                        <label for="triple_invoice1">三聯式電子發票</label>
+                                                        <span class="radio"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="invoice_block">
+                                                    <!-- 個人發票 -->
+                                                    <div class="member_vehicle">
+                                                        <div class="vehicle_toggle">
+                                                            <a href="javascript:;">會員載具</a>
+                                                            <a class="active" href="javascript:;">手機載具</a>
+                                                        </div>
+                                                        <div class="vehicle_text">
+                                                            <div class="membertext">
+                                                                <p>本發票依財政部臺北國稅局內湖稽徵所106年2月17日財政部核准字號第1061601210號函核准使用。</p>
+                                                                <p>依a「電子發票實施作業要點」之規定，本公司已採用會員載具進行歸戶，掌櫃每逢單月26日將根據國稅局公佈之統一發票中獎號碼進行電腦對獎(已索取、已作廢發票除外)，若有中獎將於當月底發出簡訊通知，並以掛號郵遞方式把中獎發票郵寄給您。
+                                                                    若發生中獎發票因會員資料錯誤、無人招領等因素被郵局退件，視同中獎人放棄中獎發票領獎之權利。</p>
+                                                            </div>
+                                                            <div class="phonetext">
+                                                                <p>※若您持有手機載具，請填寫載具條碼。</p>
+                                                                <p>(請先前往<a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/GeneralCarrier/generalCarrier"
+                                                                        target="_blank">財政部電子發票流程說明進行註冊</a>。請勿填寫手機號碼，謝謝。)</p>
+                                                                <div class="inputext">
+                                                                    <input type="text" placeholder="請輸入手機載具條碼">
+                                                                    <input type="text" placeholder="請再次確認載具條碼">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 捐贈發票 -->
+                                                    <div class="donate_text">
+                                                        <p>捐贈單位：兒童福利聯盟文教基金會</p>
+                                                        <div class="inputext">
+                                                            <input type="text" placeholder="捐贈其他單位請填寫愛心碼">
+                                                        </div>
+                                                    </div>
+                                                    <!-- 三聯式發票 -->
+                                                    <div class="triple_text">
+                                                        <p>請輸入統一編號</p>
+                                                        <div class="inputext">
+                                                            <input type="text" placeholder="請輸入統一編號">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                
+                                            <!-- 運費 -->
+                                            <div class="money">
+                                                <p>運費:<span>50</span>元</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="orderclose">
+                                        <a href="javascript:;">
+                                            <span></span>
+                                            <span></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -320,8 +553,8 @@
                             </div>
                             <div class="checkmoney">
                                 <div class="checktext">
-                                    <p>運費總計(月結)：50元</p>
-                                    <p>代收金額：50元</p>
+                                    <p>運費總計：50元</p>
+                                    <!-- <p>代收金額：50元</p>、 -->
                                 </div>
                                 <div class="checkbut">
                                     <button>取消</button>

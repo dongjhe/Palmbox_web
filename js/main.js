@@ -247,11 +247,11 @@ $(window).on('load', function() {
     $('.pick_method .form__radio label').on('click', function () {
       let pickname = $(this).html()
       if (pickname == '宅配') {
-        $('.logistics_method,.home_address').css('display', 'block')
-        $('.cabinet_address').css('display', 'none')
+        $(this).parents('.orderselect').find('.logistics_method,.home_address').css('display', 'block')
+        $(this).parents('.orderselect').find('.cabinet_address').css('display', 'none')
       } else {
-        $('.logistics_method,.home_address').css('display', 'none')
-        $('.cabinet_address').css('display', 'block')
+        $(this).parents('.orderselect').find('.logistics_method,.home_address').css('display', 'none')
+        $(this).parents('.orderselect').find('.cabinet_address').css('display', 'block')
       }
     })
 
@@ -270,11 +270,11 @@ $(window).on('load', function() {
     $('.invoice_radio label').on('click',function(){
       let label_name = $(this).html()
       if (label_name == '個人電子發票') {
-        $('.member_vehicle').show().siblings('div').hide()
+        $(this).parents('.orderselect').find('.member_vehicle').show().siblings('div').hide()
       } else if(label_name == '捐贈發票') {
-        $('.donate_text').show().siblings('div').hide()
+        $(this).parents('.orderselect').find('.donate_text').show().siblings('div').hide()
       }else{
-        $('.triple_text').show().siblings('div').hide()
+        $(this).parents('.orderselect').find('.triple_text').show().siblings('div').hide()
       }
     })
     // 個人電子發票切換
@@ -282,9 +282,9 @@ $(window).on('load', function() {
       let a_index = $(this).index()
       $(this).removeClass('active').siblings('a').addClass('active')
       if (a_index) {
-        $('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
+        $(this).parents('.orderselect').find('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
       } else {
-        $('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
+        $(this).parents('.orderselect').find('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
       }
       
     })
