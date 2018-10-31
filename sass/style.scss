@@ -547,7 +547,7 @@ main {
             display: inline-block;
             width: 50px;
             height: 50px;
-            background-image: url(../images/icon_map.png);
+            background-image: url("../images/icon_map.png");
             background-repeat: no-repeat;
             background-size: cover;
           }
@@ -2635,13 +2635,30 @@ main {
     width: 100%;
     height: auto;
     position: relative;
-    .queryinfo{
+    @media (max-width:980px) {
+      flex-direction: column;
+    }
+    >form{
       width: 50%;
+      @media (max-width:980px) {
+        width: 100%;
+        @include margin_set(0,0,20px,0);
+      }
+    }
+    .queryinfo{
       display: flex;
+      position: relative;
+      @media (max-width:480px) {
+        flex-direction: column;
+      }  
       .enquirybox{
         width: 49%;
         @include margin_set(0,1%,0,0);
         z-index: 2;
+        @media (max-width:480px) {
+          width: 100%;
+          @include margin_set(0,0,20px,0);
+        }        
         input,select,.filter{
           display: block;
           width: 100%;
@@ -2764,16 +2781,14 @@ main {
           }
         }
         .store_name_address{
-          display: flex;
-          justify-content:space-between;
-          align-items: center; 
           clear: both;
           @include margin_set(0,0,10px,0);
           .store_name{
-            width: 75%;
+            width: 100%;
+            @include margin_set(0,0,10px,0);
           }
           .search{
-            width: 20%;
+            width: 100%;
             button{
               display: block;
               width: 100%;
@@ -2798,12 +2813,16 @@ main {
         border: 1px solid #ced4da;
         border-radius: 0.25rem;
         overflow-y: scroll;
-        div{
+        >div{
           @include padding_set(5px,5px,5px,5px);
           border-bottom: 1px solid #ced4da;
+          >div{
+            display: flex;
+            justify-content: space-between;
+          }
           button{
             display:inline-block;
-            width: 49%;
+            width: 48%;
             color:$color_white;
             @include margin_set(5px,0,5px,0);
             @include padding_set(5px,5px,5px,5px);
@@ -2824,6 +2843,37 @@ main {
           p{
             margin: 0 auto;
             @include font_size(14px);
+          }
+        } 
+      }
+      .mapicon{
+        position: absolute;
+        bottom: 50px;
+        left: -10px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 50%;
+        @media (max-width:480px) {
+          position: static;
+          width: 100%;
+        }
+        >div{
+          width: 50%;
+          text-align: center;
+          margin-top: 10px;
+          @media (max-width:980px) {
+            width: 25%;
+          }
+          @media (max-width:768px) {
+            width: 50%;
+          } 
+          @media (max-width:480px) {
+            width: 25%;
+          }             
+          span{
+            @include font_size(12px);
           }
         } 
       }
