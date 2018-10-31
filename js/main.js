@@ -253,11 +253,9 @@ $(window).on('load', function() {
 
 
     // 櫃機條件篩選開關
-    $('.cabinetfilter .arrow .filter').on('click', function() {
+    $('.cabinetfilter .arrow .filter,.filterbox .checkbut a').on('click', function() {
       $('.cabinetfilter .arrow .filterbox').toggleClass('active')
-    })
-    $('.filterbox .checkbut a').on('click', function () {
-      $('.cabinetfilter .arrow .filterbox').toggleClass('active')
+      $(this).parents('.arrow').toggleClass('active')
     })
 
     // 判斷櫃取還是宅配
@@ -303,8 +301,25 @@ $(window).on('load', function() {
       } else {
         $(this).parents('.orderselect').find('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
       }
-      
     })
+
+    // 我的常用櫃點下拉區塊
+    $('.myusual .arrow > p').on('click',function(){
+      $(this).parents('.arrow').toggleClass('active')
+      $(this).siblings('.filterbox').toggleClass('active')
+      $(this).parents('.mapquerycontainer').find('.blackblack').toggleClass('active')
+    })
+
+    $('.datacheck button').on('click',function(){
+      $(this).parents('.arrow').toggleClass('active')
+      $(this).parents('.filterbox').toggleClass('active')
+      $(this).parents('.mapquerycontainer').find('.blackblack').toggleClass('active')
+    })
+
+    $('.arrow select').on('click',function(){
+      $(this).parents('.arrow').toggleClass('active')
+    })
+
 
 
   })()
