@@ -888,7 +888,7 @@ main {
       }
     }
   }   
-  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox,.cabinetorderbox,.mapquerybox {
+  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox,.cabinetorderbox,.mapquerybox,.commonbox {
     display: block;
     width: 100%;
     background-color: $color_white;
@@ -1173,8 +1173,6 @@ main {
       &.receipt{
         display: none;
       }
-
-
       @media (max-width:768px) {
         >table{
           tr{
@@ -2901,6 +2899,105 @@ main {
   .registerbox,#distribution {
     display: none;
   }
+
+  .commonbox{
+    .bannerbox{
+      @include margin_set(0,0,20px,0);
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .textbox{
+      h1{
+        display: block;
+        @include font_size(24px);
+        font-weight: bolder;
+        border-bottom: 3px solid $text_color;
+      }
+      .issuebox{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .issue{
+          width: 48%;
+          @include margin_set(0,0,50px,0);
+          h2{
+            position: relative;
+            display: block;
+            @include font_size(18px);
+            @include padding_set(40px,0,0,55px);
+            @include margin_set(0,auto,20px,auto);
+            font-weight: bolder;
+            &::before{
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: "";
+              display: block;
+              width: 63px;
+              height: 72px;
+              background-repeat: no-repeat;
+            }
+          }
+          &:nth-of-type(1) h2::before{
+              background-image: url("../images/cake1.png");
+          }
+          &:nth-of-type(2) h2::before{
+              background-image: url("../images/cake2.png");
+          }
+          &:nth-of-type(3) h2::before{
+              background-image: url("../images/cake3.png");
+          }
+          &:nth-of-type(4) h2::before{
+              background-image: url("../images/cake4.png");
+          }
+
+          >div{
+            @include margin_set(10px,0,0,0);
+            h3{
+              position: relative;
+              display: inline-block;
+              @include font_size(14px);
+              @include padding_set(0,0,0,35px);
+              @include margin_set(0,0,0,0);
+              cursor: pointer;
+              &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 27px;
+                height: 27px;
+                background-image: url("../images/common_Q.png");
+                background-repeat: no-repeat;
+              }
+            }
+            p{
+              position: relative;
+              @include margin_set(15px,auto,15px,auto);
+              @include padding_set(0,0,0,35px);
+              text-align: justify;
+              word-break: break-all;
+              &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 27px;
+                height: 27px;
+                background-image: url("../images/common_A.png");
+                background-repeat: no-repeat;
+              }              
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 footer {
