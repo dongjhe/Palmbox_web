@@ -548,19 +548,19 @@ select:focus {
 }
 
 #mess > a .line_mess {
-  background-image: url(../images/line_w.png);
+  background-image: url("../images/line_w.png");
 }
 
 #mess > a .line_mess:hover {
-  background-image: url(../images/line_g.png);
+  background-image: url("../images/line_g.png");
 }
 
 #mess > a .fb_mess {
-  background-image: url(../images/fb_w.png);
+  background-image: url("../images/fb_w.png");
 }
 
 #mess > a .fb_mess:hover {
-  background-image: url(../images/fb_g.png);
+  background-image: url("../images/fb_g.png");
 }
 
 header {
@@ -612,7 +612,7 @@ header h1 {
   width: 95px;
   height: 45px;
   overflow: hidden;
-  background-image: url(../images/palmbox_logo.png);
+  background-image: url("../images/palmbox_logo.png");
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
@@ -2271,7 +2271,7 @@ main .deliverybox .warehousecontainer .downloadbox, main .courier_access .wareho
 main .deliverybox .warehousecontainer .downloadbox label, main .courier_access .warehousecontainer .downloadbox label, main .orderinfo .warehousecontainer .downloadbox label, main .community_access .warehousecontainer .downloadbox label, main .eticket_access .warehousecontainer .downloadbox label, main .warehouse .warehousecontainer .downloadbox label, main .productbox .warehousecontainer .downloadbox label, main .cabinetorderbox .warehousecontainer .downloadbox label, main .mapquerybox .warehousecontainer .downloadbox label {
   width: 250px;
   height: 250px;
-  background-image: url(../images/download_icon.png);
+  background-image: url("../images/download_icon.png");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -2430,7 +2430,7 @@ main .deliverybox .courierbottom a:hover, main .deliverybox .courierbottom a.act
   text-decoration: underline;
 }
 
-main .deliverybox .courierbottom a:first-child.active, main .deliverybox .courierbottom a:last-child.active, main .deliverybox .orderinfobottom a:first-child.active, main .deliverybox .orderinfobottom a:last-child.active, main .deliverybox .warehousebottom a:first-child.active, main .deliverybox .warehousebottom a:last-child.active, main .deliverybox .more_orderbottom a:first-child.active, main .deliverybox .more_orderbottom a:last-child.active, main .courier_access .courierbottom a:first-child.active, main .courier_access .courierbottom a:last-child.active, main .courier_access .orderinfobottom a:first-child.active, main .courier_access .orderinfobottom a:last-child.active, main .courier_access .warehousebottom a:first-child.active, main .courier_access .warehousebottom a:last-child.active, main .courier_access .more_orderbottom a:first-child.active, main .courier_access .more_orderbottom a:last-child.active, main .orderinfo .courierbottom a:first-child.active, main .orderinfo .courierbottom a:last-child.active, main .orderinfo .orderinfobottom a:first-child.active, main .orderinfo .orderinfobottom a:last-child.active, main .orderinfo .warehousebottom a:first-child.active, main .orderinfo .warehousebottom a:last-child.active, main .orderinfo .more_orderbottom a:first-child.active, main .orderinfo .more_orderbottom a:last-child.active, main .community_access .courierbottom a:first-child.active, main .community_access .courierbottom a:last-child.active, main .community_access .orderinfobottom a:first-child.active, main .community_access .orderinfobottom a:last-child.active, main .community_access .warehousebottom a:first-child.active, main .community_access .warehousebottom a:last-child.active, main .community_access .more_orderbottom a:first-child.active, main .community_access .more_orderbottom a:last-child.active, main .eticket_access .courierbottom a:first-child.active, main .eticket_access .courierbottom a:last-child.active, main .eticket_access .orderinfobottom a:first-child.active, main .eticket_access .orderinfobottom a:last-child.active, main .eticket_access .warehousebottom a:first-child.active, main .eticket_access .warehousebottom a:last-child.active, main .eticket_access .more_orderbottom a:first-child.active, main .eticket_access .more_orderbottom a:last-child.active, main .warehouse .courierbottom a:first-child.active, main .warehouse .courierbottom a:last-child.active, main .warehouse .orderinfobottom a:first-child.active, main .warehouse .orderinfobottom a:last-child.active, main .warehouse .warehousebottom a:first-child.active, main .warehouse .warehousebottom a:last-child.active, main .warehouse .more_orderbottom a:first-child.active, main .warehouse .more_orderbottom a:last-child.active, main .productbox .courierbottom a:first-child.active, main .productbox .courierbottom a:last-child.active, main .productbox .orderinfobottom a:first-child.active, main .productbox .orderinfobottom a:last-child.active, main .productbox .warehousebottom a:first-child.active, main .productbox .warehousebottom a:last-child.active, main .productbox .more_orderbottom a:first-child.active, main .productbox .more_orderbottom a:last-child.active, main .cabinetorderbox .courierbottom a:first-child.active, main .cabinetorderbox .courierbottom a:last-child.active, main .cabinetorderbox .orderinfobottom a:first-child.active, main .cabinetorderbox .orderinfobottom a:last-child.active, main .cabinetorderbox .warehousebottom a:first-child.active, main .cabinetorderbox .warehousebottom a:last-child.active, main .cabinetorderbox .more_orderbottom a:first-child.active, main .cabinetorderbox .more_orderbottom a:last-child.active, main .mapquerybox .courierbottom a:first-child.active, main .mapquerybox .courierbottom a:last-child.active, main .mapquerybox .orderinfobottom a:first-child.active, main .mapquerybox .orderinfobottom a:last-child.active, main .mapquerybox .warehousebottom a:first-child.active, main .mapquerybox .warehousebottom a:last-child.active, main .mapquerybox .more_orderbottom a:first-child.active, main .mapquerybox .more_orderbottom a:last-child.active {
+main .deliverybox .courierbottom a.prevpage.active, main .deliverybox .courierbottom a.nextpage.active, main .deliverybox .orderinfobottom a.prevpage.active, main .deliverybox .orderinfobottom a.nextpage.active, main .deliverybox .warehousebottom a.prevpage.active, main .deliverybox .warehousebottom a.nextpage.active, main .deliverybox .more_orderbottom a.prevpage.active, main .deliverybox .more_orderbottom a.nextpage.active, main .courier_access .courierbottom a.prevpage.active, main .courier_access .courierbottom a.nextpage.active, main .courier_access .orderinfobottom a.prevpage.active, main .courier_access .orderinfobottom a.nextpage.active, main .courier_access .warehousebottom a.prevpage.active, main .courier_access .warehousebottom a.nextpage.active, main .courier_access .more_orderbottom a.prevpage.active, main .courier_access .more_orderbottom a.nextpage.active, main .orderinfo .courierbottom a.prevpage.active, main .orderinfo .courierbottom a.nextpage.active, main .orderinfo .orderinfobottom a.prevpage.active, main .orderinfo .orderinfobottom a.nextpage.active, main .orderinfo .warehousebottom a.prevpage.active, main .orderinfo .warehousebottom a.nextpage.active, main .orderinfo .more_orderbottom a.prevpage.active, main .orderinfo .more_orderbottom a.nextpage.active, main .community_access .courierbottom a.prevpage.active, main .community_access .courierbottom a.nextpage.active, main .community_access .orderinfobottom a.prevpage.active, main .community_access .orderinfobottom a.nextpage.active, main .community_access .warehousebottom a.prevpage.active, main .community_access .warehousebottom a.nextpage.active, main .community_access .more_orderbottom a.prevpage.active, main .community_access .more_orderbottom a.nextpage.active, main .eticket_access .courierbottom a.prevpage.active, main .eticket_access .courierbottom a.nextpage.active, main .eticket_access .orderinfobottom a.prevpage.active, main .eticket_access .orderinfobottom a.nextpage.active, main .eticket_access .warehousebottom a.prevpage.active, main .eticket_access .warehousebottom a.nextpage.active, main .eticket_access .more_orderbottom a.prevpage.active, main .eticket_access .more_orderbottom a.nextpage.active, main .warehouse .courierbottom a.prevpage.active, main .warehouse .courierbottom a.nextpage.active, main .warehouse .orderinfobottom a.prevpage.active, main .warehouse .orderinfobottom a.nextpage.active, main .warehouse .warehousebottom a.prevpage.active, main .warehouse .warehousebottom a.nextpage.active, main .warehouse .more_orderbottom a.prevpage.active, main .warehouse .more_orderbottom a.nextpage.active, main .productbox .courierbottom a.prevpage.active, main .productbox .courierbottom a.nextpage.active, main .productbox .orderinfobottom a.prevpage.active, main .productbox .orderinfobottom a.nextpage.active, main .productbox .warehousebottom a.prevpage.active, main .productbox .warehousebottom a.nextpage.active, main .productbox .more_orderbottom a.prevpage.active, main .productbox .more_orderbottom a.nextpage.active, main .cabinetorderbox .courierbottom a.prevpage.active, main .cabinetorderbox .courierbottom a.nextpage.active, main .cabinetorderbox .orderinfobottom a.prevpage.active, main .cabinetorderbox .orderinfobottom a.nextpage.active, main .cabinetorderbox .warehousebottom a.prevpage.active, main .cabinetorderbox .warehousebottom a.nextpage.active, main .cabinetorderbox .more_orderbottom a.prevpage.active, main .cabinetorderbox .more_orderbottom a.nextpage.active, main .mapquerybox .courierbottom a.prevpage.active, main .mapquerybox .courierbottom a.nextpage.active, main .mapquerybox .orderinfobottom a.prevpage.active, main .mapquerybox .orderinfobottom a.nextpage.active, main .mapquerybox .warehousebottom a.prevpage.active, main .mapquerybox .warehousebottom a.nextpage.active, main .mapquerybox .more_orderbottom a.prevpage.active, main .mapquerybox .more_orderbottom a.nextpage.active {
   color: #898989;
   text-decoration: none;
 }
@@ -2697,7 +2697,7 @@ main .deliverybox .producontainer .productab .tab li::after, main .courier_acces
   position: absolute;
   width: 27px;
   height: 15px;
-  background-image: url(../images/icon_steparrow@2x.png);
+  background-image: url("../images/icon_steparrow@2x.png");
   background-size: cover;
   top: 35%;
   right: -35px;
@@ -3587,7 +3587,7 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .downloadbox {
 main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .downloadbox label {
   width: 250px;
   height: 250px;
-  background-image: url(../images/download_icon.png);
+  background-image: url("../images/download_icon.png");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -4752,15 +4752,15 @@ footer .itembox > .item:nth-child(4) a figure {
 }
 
 footer .itembox > .item:nth-child(4) a .instagram {
-  background-image: url(../images/instagram.png);
+  background-image: url("../images/instagram.png");
 }
 
 footer .itembox > .item:nth-child(4) a .youtube {
-  background-image: url(../images/youtube.png);
+  background-image: url("../images/youtube.png");
 }
 
 footer .itembox > .item:nth-child(4) a .facebook {
-  background-image: url(../images/facebook.png);
+  background-image: url("../images/facebook.png");
 }
 
 footer p {

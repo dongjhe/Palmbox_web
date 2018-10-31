@@ -139,15 +139,15 @@ select{
       }
     }
     .line_mess {
-      background-image: url(../images/line_w.png);
+      background-image: url("../images/line_w.png");
       &:hover {
-        background-image: url(../images/line_g.png);
+        background-image: url("../images/line_g.png");
       }
     }
     .fb_mess {
-      background-image: url(../images/fb_w.png);
+      background-image: url("../images/fb_w.png");
       &:hover {
-        background-image: url(../images/fb_g.png);
+        background-image: url("../images/fb_g.png");
       }
     }
   }
@@ -179,7 +179,7 @@ header {
     width: 95px;
     height: 45px;
     overflow: hidden;
-    background-image: url(../images/palmbox_logo.png);
+    background-image: url("../images/palmbox_logo.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
@@ -778,7 +778,7 @@ main {
           border: 2px solid $text_color;
           border-radius: 3px;
           vertical-align: top;
-          background-image: url('../images/check.png');
+          background-image: url("../images/check.png");
           background-repeat: no-repeat;
           background-size: cover;
           background-color: $color_white;
@@ -1050,7 +1050,7 @@ main {
                 border: 2px solid $text_color;
                 border-radius: 3px;
                 vertical-align: middle;
-                background-image: url('../images/check.png');
+                background-image: url("../images/check.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-color: $color_white;
@@ -1372,7 +1372,7 @@ main {
         label{
           width: 250px;
           height: 250px;
-          background-image: url(../images/download_icon.png);
+          background-image: url("../images/download_icon.png");
           background-repeat: no-repeat;
           background-size: cover;
           cursor: pointer;
@@ -1478,7 +1478,7 @@ main {
           color: $color_orange;
           text-decoration: underline;
         }
-        &:first-child,&:last-child{
+        &.prevpage,&.nextpage{
           &.active{
             color:$text_color;
             text-decoration:none;
@@ -1656,7 +1656,7 @@ main {
               position: absolute;
               width: 27px;
               height: 15px;
-              background-image: url(../images/icon_steparrow@2x.png);
+              background-image: url("../images/icon_steparrow@2x.png");
               background-size: cover;
               top: 35%;
               right: -35px;
@@ -2233,7 +2233,7 @@ main {
         label{
           width: 250px;
           height: 250px;
-          background-image: url(../images/download_icon.png);
+          background-image: url("../images/download_icon.png");
           background-repeat: no-repeat;
           background-size: cover;
           cursor: pointer;
@@ -2974,13 +2974,13 @@ footer {
             background-size: contain;
           }
           .instagram {
-            background-image: url(../images/instagram.png);
+            background-image: url("../images/instagram.png");
           }
           .youtube {
-            background-image: url(../images/youtube.png);
+            background-image: url("../images/youtube.png");
           }
           .facebook {
-            background-image: url(../images/facebook.png);
+            background-image: url("../images/facebook.png");
           }
         }
       }
