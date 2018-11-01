@@ -4664,19 +4664,41 @@ main .commonbox .textbox .issuebox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 main .commonbox .textbox .issuebox .issue {
-  width: 48%;
+  width: 100%;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   margin-left: 0;
+  border-bottom: 1px solid #898989;
+}
+
+main .commonbox .textbox .issuebox .issue:last-child {
+  border-bottom: none;
+}
+
+main .commonbox .textbox .issuebox .issue:nth-child(odd) h2 {
+  color: #9FCC42;
+}
+
+main .commonbox .textbox .issuebox .issue:nth-child(odd) h3 span, main .commonbox .textbox .issuebox .issue:nth-child(odd) h3 span::before {
+  background-color: #9FCC42;
+}
+
+main .commonbox .textbox .issuebox .issue:nth-child(even) h2 {
+  color: #ff8400;
+}
+
+main .commonbox .textbox .issuebox .issue:nth-child(even) h3 span, main .commonbox .textbox .issuebox .issue:nth-child(even) h3 span::before {
+  background-color: #ff8400;
 }
 
 main .commonbox .textbox .issuebox .issue h2 {
@@ -4684,42 +4706,15 @@ main .commonbox .textbox .issuebox .issue h2 {
   display: block;
   font-size: 18px;
   line-height: 32.4px;
-  padding-top: 40px;
+  padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
-  padding-left: 55px;
+  padding-left: 0;
   margin-top: 0;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: auto;
   font-weight: bolder;
-}
-
-main .commonbox .textbox .issuebox .issue h2::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: block;
-  width: 63px;
-  height: 72px;
-  background-repeat: no-repeat;
-}
-
-main .commonbox .textbox .issuebox .issue:nth-of-type(1) h2::before {
-  background-image: url("../images/cake1.png");
-}
-
-main .commonbox .textbox .issuebox .issue:nth-of-type(2) h2::before {
-  background-image: url("../images/cake2.png");
-}
-
-main .commonbox .textbox .issuebox .issue:nth-of-type(3) h2::before {
-  background-image: url("../images/cake3.png");
-}
-
-main .commonbox .textbox .issuebox .issue:nth-of-type(4) h2::before {
-  background-image: url("../images/cake4.png");
 }
 
 main .commonbox .textbox .issuebox .issue > div {
@@ -4729,15 +4724,35 @@ main .commonbox .textbox .issuebox .issue > div {
   margin-left: 0;
 }
 
+main .commonbox .textbox .issuebox .issue > div.active h3 span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-color: transparent;
+}
+
+main .commonbox .textbox .issuebox .issue > div.active h3 span::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+main .commonbox .textbox .issuebox .issue > div.active .textanswer {
+  display: block;
+}
+
 main .commonbox .textbox .issuebox .issue > div h3 {
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 25.2px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: 28.8px;
+  font-weight: bolder;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
-  padding-left: 35px;
+  padding-left: 0;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -4745,47 +4760,57 @@ main .commonbox .textbox .issuebox .issue > div h3 {
   cursor: pointer;
 }
 
-main .commonbox .textbox .issuebox .issue > div h3::before {
-  content: "";
+main .commonbox .textbox .issuebox .issue > div h3 span {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 5px;
+  background-color: #898989;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+main .commonbox .textbox .issuebox .issue > div h3 span::before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 27px;
-  height: 27px;
-  background-image: url("../images/common_Q.png");
-  background-repeat: no-repeat;
+  content: "";
+  width: 18px;
+  height: 5px;
+  background-color: #898989;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+main .commonbox .textbox .issuebox .issue > div .textanswer {
+  display: none;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 28px;
 }
 
 main .commonbox .textbox .issuebox .issue > div p {
   position: relative;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-right: auto;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   margin-left: auto;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
-  padding-left: 35px;
+  padding-left: 0;
   text-align: justify;
   word-break: break-all;
 }
 
-main .commonbox .textbox .issuebox .issue > div p::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 27px;
-  height: 27px;
-  background-image: url("../images/common_A.png");
-  background-repeat: no-repeat;
-}
-
 main .commonbox .textbox .issuebox .issue > div table {
   display: table;
-  width: 100%;
+  width: 50%;
 }
 
 main .commonbox .textbox .issuebox .issue > div table th, main .commonbox .textbox .issuebox .issue > div table td {

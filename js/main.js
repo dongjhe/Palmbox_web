@@ -321,6 +321,18 @@ $(window).on('load', function() {
     })
 
 
+    $('.issue h3').on('click',function(){
+      $(this).parent('div').toggleClass('active').siblings().removeClass('active')
+      let issueindex = $(this).parents('.issue').index()
+      if (issueindex == 0 | issueindex == 2) {
+        $(this).css('color', '#9FCC42').parent('div').siblings().find('h3').css('color', '')
+      }else{
+        $(this).css('color', '#ff8400').parent('div').siblings().find('h3').css('color', '')
+      }
+    })
+
+
+
 
   })()
 })

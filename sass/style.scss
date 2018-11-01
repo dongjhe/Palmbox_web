@@ -2917,84 +2917,94 @@ main {
       }
       .issuebox{
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         .issue{
-          width: 48%;
-          @include margin_set(0,0,50px,0);
+          width: 100%;
+          @include padding_set(0,0,10px,0);
+          @include margin_set(0,0,20px,0);
+          border-bottom: 1px solid $text_color;
+          &:last-child{
+            border-bottom: none;
+          }
+          &:nth-child(odd){
+            h2{
+              color: $color_green;
+            }
+            h3 span,h3 span::before{
+              background-color: $color_green;
+            }
+          }         
+          &:nth-child(even){
+            h2{
+              color: $color_orange;
+            }
+            h3 span,h3 span::before{
+              background-color: $color_orange;
+            }            
+          }
           h2{
             position: relative;
             display: block;
             @include font_size(18px);
-            @include padding_set(40px,0,0,55px);
-            @include margin_set(0,auto,20px,auto);
+            @include padding_set(0,0,0,0);
+            @include margin_set(0,auto,10px,auto);
             font-weight: bolder;
-            &::before{
-              position: absolute;
-              top: 0;
-              left: 0;
-              content: "";
-              display: block;
-              width: 63px;
-              height: 72px;
-              background-repeat: no-repeat;
-            }
           }
-          &:nth-of-type(1) h2::before{
-              background-image: url("../images/cake1.png");
-          }
-          &:nth-of-type(2) h2::before{
-              background-image: url("../images/cake2.png");
-          }
-          &:nth-of-type(3) h2::before{
-              background-image: url("../images/cake3.png");
-          }
-          &:nth-of-type(4) h2::before{
-              background-image: url("../images/cake4.png");
-          }
-
           >div{
             @include margin_set(10px,0,0,0);
+            &.active{
+              h3 span{
+                transform: rotate(180deg);
+                background-color: transparent;
+                &::before{
+                  transform: rotate(180deg);
+                }
+              }
+              .textanswer{
+                display: block;
+              }
+            } 
             h3{
-              position: relative;
-              display: inline-block;
-              @include font_size(14px);
-              @include padding_set(0,0,0,35px);
+              display: inline-flex;
+              align-items: center;
+              @include font_size(16px);
+              font-weight: bolder;
+              @include padding_set(0,0,0,0);
               @include margin_set(0,0,0,0);
               cursor: pointer;
-              &::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                width: 27px;
-                height: 27px;
-                background-image: url("../images/common_Q.png");
-                background-repeat: no-repeat;
+              span{
+                transition: all 1s;
+                position: relative;
+                display: inline-block;
+                width: 18px;
+                height: 5px;
+                background-color: $text_color;
+                @include margin_set(0,10px,0,0);
+                &::before{
+                  transition: all 1s;
+                  position: absolute;
+                  content: "";
+                  width: 18px;
+                  height: 5px;
+                  background-color: $text_color;
+                  transform: rotate(90deg);                  
+                }
               }
+            }
+            .textanswer{
+              display: none;
+              @include padding_set(0,0,0,28px);
             }
             p{
               position: relative;
-              @include margin_set(15px,auto,15px,auto);
-              @include padding_set(0,0,0,35px);
+              @include margin_set(5px,auto,5px,auto);
+              @include padding_set(0,0,0,0);
               text-align: justify;
-              word-break: break-all;
-              &::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                width: 27px;
-                height: 27px;
-                background-image: url("../images/common_A.png");
-                background-repeat: no-repeat;
-              }              
+              word-break: break-all;            
             }
             table{
               display: table;
-              width: 100%;
+              width: 50%;
               th,td{
                 @include padding_set(8px,8px,8px,8px);
                 @include font_size(14px);
