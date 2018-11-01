@@ -888,14 +888,14 @@ main {
       }
     }
   }   
-  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox,.cabinetorderbox,.mapquerybox {
+  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox,.cabinetorderbox,.mapquerybox,.newsbox {
     display: block;
     width: 100%;
     background-color: $color_white;
     @include padding_set(0, 3%, 0, 3%);
     margin-bottom: 5%;
     overflow: hidden;
-    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop,.productop,.cabinetordertop,.mapquerytop{
+    .deliverytop,.couriertop,.orderinfotop,.communitytop,.etickettop,.warehousetop,.productop,.cabinetordertop,.mapquerytop,.newstop{
       overflow: hidden;
       >div{
         display: inline-block;
