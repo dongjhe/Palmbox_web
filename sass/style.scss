@@ -2992,6 +2992,23 @@ main {
                 background-repeat: no-repeat;
               }              
             }
+            table{
+              display: table;
+              width: 100%;
+              th,td{
+                @include padding_set(8px,8px,8px,8px);
+                @include font_size(14px);
+                text-align: center;
+                border: 1px solid $text_color;
+              }
+              tr{
+                th,td{
+                  &:first-child{
+                    width: 5em;
+                  }
+                }
+              }
+            }
           }
         }
       }
