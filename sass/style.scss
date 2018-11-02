@@ -2903,6 +2903,9 @@ main {
   .commonbox{
     .bannerbox{
       @include margin_set(0,0,20px,0);
+      @media (max-width:768px) {
+        display:none;
+      }
       img{
         width: 100%;
         height: auto;
@@ -2933,6 +2936,12 @@ main {
             h3 span,h3 span::before{
               background-color: $color_green;
             }
+            a{
+              color: $color_green;
+              span,span::before{
+                background-color:$color_green;
+              }              
+            }
           }         
           &:nth-child(even){
             h2{
@@ -2940,7 +2949,14 @@ main {
             }
             h3 span,h3 span::before{
               background-color: $color_orange;
-            }            
+            }
+            a{
+              color: $color_orange;
+              span,span::before{
+                background-color:$color_orange;
+              }
+            }
+                        
           }
           h2{
             position: relative;
@@ -2980,6 +2996,7 @@ main {
                 height: 5px;
                 background-color: $text_color;
                 @include margin_set(0,10px,0,0);
+                @include padding_set(0,18px,0,0);
                 &::before{
                   transition: all 1s;
                   position: absolute;
@@ -2989,6 +3006,12 @@ main {
                   background-color: $text_color;
                   transform: rotate(90deg);                  
                 }
+              }
+              &.green{
+                color: $color_green;
+              }
+              &.orange{
+                color: $color_orange;
               }
             }
             .textanswer{
@@ -3016,6 +3039,42 @@ main {
                   &:first-child{
                     width: 5em;
                   }
+                }
+              }
+            }
+          }
+          a{
+            display: inline-flex;
+            align-items: center;
+            @include font_size(16px);
+            font-weight: bolder;
+            color: $text_color;
+            @include margin_set(0,0,0,28px);
+            span{
+              transition: all 1s;
+              position: relative;
+              display: inline-block;
+              width: 18px;
+              height: 5px;
+              background-color: $text_color;
+              @include margin_set(0,10px,0,0);
+              @include padding_set(0,18px,0,0);
+              &::before{
+                transition: all 1s;
+                position: absolute;
+                content: "";
+                width: 18px;
+                height: 5px;
+                background-color: $text_color;
+                transform: rotate(90deg);                  
+              }
+            }
+            &.activea{
+              span{
+                transform: rotate(180deg);
+                background-color: transparent;
+                &::before{
+                  transform: rotate(180deg);
                 }
               }
             }

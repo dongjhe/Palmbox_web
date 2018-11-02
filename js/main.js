@@ -322,17 +322,41 @@ $(window).on('load', function() {
 
 
     $('.issue h3').on('click',function(){
-      $(this).parent('div').toggleClass('active').siblings().removeClass('active')
+      $(this).parent('div').toggleClass('active').siblings().removeClass('active').find('h3').removeClass('green orange')
+      $(this).parents('.issue').siblings().find('div').removeClass('active').find('h3').removeClass('green orange')
+      
       let issueindex = $(this).parents('.issue').index()
       if (issueindex == 0 | issueindex == 2) {
-        $(this).css('color', '#9FCC42').parent('div').siblings().find('h3').css('color', '')
+        $(this).toggleClass('green')
       }else{
-        $(this).css('color', '#ff8400').parent('div').siblings().find('h3').css('color', '')
+        $(this).toggleClass('orange')
       }
     })
 
-
-
+    // 判斷常見問答長度開關
+    issuelength()
+    function issuelength() {
+      for (let index = 0; index < 4; index++) {
+        let h3length = $('.issuebox .issue').eq(index).find('h3')
+        if (h3length.length > 4) {
+          for (let index1 = 4; index1 < h3length.length; index1++) {
+            h3length.eq(index1).attr('class', '').parent('div').attr('class', '').hide()
+          }
+        }
+      }
+    }
+    
+    // 展開更多和收合
+    $('.expand_more').on('click', function() {
+      let a_class = $(this).attr('class')
+      if (a_class === 'expand_more') {
+        $(this).toggleClass('activea').html('<span></span>收合')
+        $(this).siblings('div').show()
+      } else {
+        $(this).toggleClass('activea').html('<span></span>展開更多')
+        issuelength()
+      }
+    })
 
   })()
 })

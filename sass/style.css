@@ -4647,6 +4647,12 @@ main .commonbox .bannerbox {
   margin-left: 0;
 }
 
+@media (max-width: 768px) {
+  main .commonbox .bannerbox {
+    display: none;
+  }
+}
+
 main .commonbox .bannerbox img {
   width: 100%;
   height: auto;
@@ -4693,11 +4699,27 @@ main .commonbox .textbox .issuebox .issue:nth-child(odd) h3 span, main .commonbo
   background-color: #9FCC42;
 }
 
+main .commonbox .textbox .issuebox .issue:nth-child(odd) a {
+  color: #9FCC42;
+}
+
+main .commonbox .textbox .issuebox .issue:nth-child(odd) a span, main .commonbox .textbox .issuebox .issue:nth-child(odd) a span::before {
+  background-color: #9FCC42;
+}
+
 main .commonbox .textbox .issuebox .issue:nth-child(even) h2 {
   color: #ff8400;
 }
 
 main .commonbox .textbox .issuebox .issue:nth-child(even) h3 span, main .commonbox .textbox .issuebox .issue:nth-child(even) h3 span::before {
+  background-color: #ff8400;
+}
+
+main .commonbox .textbox .issuebox .issue:nth-child(even) a {
+  color: #ff8400;
+}
+
+main .commonbox .textbox .issuebox .issue:nth-child(even) a span, main .commonbox .textbox .issuebox .issue:nth-child(even) a span::before {
   background-color: #ff8400;
 }
 
@@ -4772,6 +4794,10 @@ main .commonbox .textbox .issuebox .issue > div h3 span {
   margin-right: 10px;
   margin-bottom: 0;
   margin-left: 0;
+  padding-top: 0;
+  padding-right: 18px;
+  padding-bottom: 0;
+  padding-left: 0;
 }
 
 main .commonbox .textbox .issuebox .issue > div h3 span::before {
@@ -4784,6 +4810,14 @@ main .commonbox .textbox .issuebox .issue > div h3 span::before {
   background-color: #898989;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+main .commonbox .textbox .issuebox .issue > div h3.green {
+  color: #9FCC42;
+}
+
+main .commonbox .textbox .issuebox .issue > div h3.orange {
+  color: #ff8400;
 }
 
 main .commonbox .textbox .issuebox .issue > div .textanswer {
@@ -4826,6 +4860,64 @@ main .commonbox .textbox .issuebox .issue > div table th, main .commonbox .textb
 
 main .commonbox .textbox .issuebox .issue > div table tr th:first-child, main .commonbox .textbox .issuebox .issue > div table tr td:first-child {
   width: 5em;
+}
+
+main .commonbox .textbox .issuebox .issue a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: 28.8px;
+  font-weight: bolder;
+  color: #898989;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 28px;
+}
+
+main .commonbox .textbox .issuebox .issue a span {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 5px;
+  background-color: #898989;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 18px;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+main .commonbox .textbox .issuebox .issue a span::before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 5px;
+  background-color: #898989;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+main .commonbox .textbox .issuebox .issue a.activea span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-color: transparent;
+}
+
+main .commonbox .textbox .issuebox .issue a.activea span::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 footer {
