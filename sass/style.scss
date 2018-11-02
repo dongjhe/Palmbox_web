@@ -888,7 +888,7 @@ main {
       }
     }
   }   
-  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox,.cabinetorderbox,.mapquerybox {
+  .deliverybox,.courier_access,.orderinfo,.community_access,.eticket_access,.warehouse,.productbox,.cabinetorderbox,.mapquerybox,.commonbox {
     display: block;
     width: 100%;
     background-color: $color_white;
@@ -1173,8 +1173,6 @@ main {
       &.receipt{
         display: none;
       }
-
-
       @media (max-width:768px) {
         >table{
           tr{
@@ -2901,6 +2899,191 @@ main {
   .registerbox,#distribution {
     display: none;
   }
+
+  .commonbox{
+    .bannerbox{
+      @include margin_set(0,0,20px,0);
+      @media (max-width:768px) {
+        display:none;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .textbox{
+      h1{
+        display: block;
+        @include font_size(24px);
+        font-weight: bolder;
+        border-bottom: 3px solid $text_color;
+      }
+      .issuebox{
+        display: flex;
+        flex-wrap: wrap;
+        .issue{
+          width: 100%;
+          @include padding_set(0,0,10px,0);
+          @include margin_set(0,0,20px,0);
+          border-bottom: 1px solid $text_color;
+          &:last-child{
+            border-bottom: none;
+          }
+          &:nth-child(odd){
+            h2{
+              color: $color_green;
+            }
+            h3 span,h3 span::before{
+              background-color: $color_green;
+            }
+            a{
+              color: $color_green;
+              span,span::before{
+                background-color:$color_green;
+              }              
+            }
+          }         
+          &:nth-child(even){
+            h2{
+              color: $color_orange;
+            }
+            h3 span,h3 span::before{
+              background-color: $color_orange;
+            }
+            a{
+              color: $color_orange;
+              span,span::before{
+                background-color:$color_orange;
+              }
+            }
+                        
+          }
+          h2{
+            position: relative;
+            display: block;
+            @include font_size(18px);
+            @include padding_set(0,0,0,0);
+            @include margin_set(0,auto,10px,auto);
+            font-weight: bolder;
+          }
+          >div{
+            @include margin_set(10px,0,0,0);
+            &.active{
+              h3 span{
+                transform: rotate(180deg);
+                background-color: transparent;
+                &::before{
+                  transform: rotate(180deg);
+                }
+              }
+              .textanswer{
+                display: block;
+              }
+            } 
+            h3{
+              display: inline-flex;
+              align-items: center;
+              @include font_size(16px);
+              font-weight: bolder;
+              @include padding_set(0,0,0,0);
+              @include margin_set(0,0,0,0);
+              cursor: pointer;
+              span{
+                transition: all 1s;
+                position: relative;
+                display: inline-block;
+                width: 18px;
+                height: 5px;
+                background-color: $text_color;
+                @include margin_set(0,10px,0,0);
+                @include padding_set(0,18px,0,0);
+                &::before{
+                  transition: all 1s;
+                  position: absolute;
+                  content: "";
+                  width: 18px;
+                  height: 5px;
+                  background-color: $text_color;
+                  transform: rotate(90deg);                  
+                }
+              }
+              &.green{
+                color: $color_green;
+              }
+              &.orange{
+                color: $color_orange;
+              }
+            }
+            .textanswer{
+              display: none;
+              @include padding_set(0,0,0,28px);
+            }
+            p{
+              position: relative;
+              @include margin_set(5px,auto,5px,auto);
+              @include padding_set(0,0,0,0);
+              text-align: justify;
+              word-break: break-all;            
+            }
+            table{
+              display: table;
+              width: 50%;
+              th,td{
+                @include padding_set(8px,8px,8px,8px);
+                @include font_size(14px);
+                text-align: center;
+                border: 1px solid $text_color;
+              }
+              tr{
+                th,td{
+                  &:first-child{
+                    width: 5em;
+                  }
+                }
+              }
+            }
+          }
+          a{
+            display: inline-flex;
+            align-items: center;
+            @include font_size(16px);
+            font-weight: bolder;
+            color: $text_color;
+            @include margin_set(0,0,0,28px);
+            span{
+              transition: all 1s;
+              position: relative;
+              display: inline-block;
+              width: 18px;
+              height: 5px;
+              background-color: $text_color;
+              @include margin_set(0,10px,0,0);
+              @include padding_set(0,18px,0,0);
+              &::before{
+                transition: all 1s;
+                position: absolute;
+                content: "";
+                width: 18px;
+                height: 5px;
+                background-color: $text_color;
+                transform: rotate(90deg);                  
+              }
+            }
+            &.activea{
+              span{
+                transform: rotate(180deg);
+                background-color: transparent;
+                &::before{
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 footer {
