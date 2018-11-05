@@ -324,7 +324,6 @@ $(window).on('load', function() {
     $('.issue h3').on('click',function(){
       $(this).parent('div').toggleClass('active').siblings().removeClass('active').find('h3').removeClass('green orange')
       $(this).parents('.issue').siblings().find('div').removeClass('active').find('h3').removeClass('green orange')
-      
       let issueindex = $(this).parents('.issue').index()
       if (issueindex == 0 | issueindex == 2) {
         $(this).toggleClass('green')

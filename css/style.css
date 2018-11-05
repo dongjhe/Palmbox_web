@@ -696,6 +696,8 @@ header nav .user_name {
 }
 
 header nav .user_name > a::before {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   position: absolute;
   top: 20px;
   right: -5px;
