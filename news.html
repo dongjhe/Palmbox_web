@@ -76,9 +76,104 @@
                     <div class="newstop">
                         <h1>最新消息</h1>
                         <div class="selectbar">
-                            <form action="">dd</form>
+                            <form action="">
+                                <div class="querymonth">
+                                    <label for="querymonth">查詢年份：</label>
+                                    <div class="arrow">
+                                        <select name="" id="selectyear">
+                                            <option value="" selected disabled hidden>請選擇年度</option>
+                                            <option v-for="year in years" :value="year.info">{{year.info}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="querysort">
+                                    <label for="querysort">查詢分類：</label>
+                                    <div class="arrow">
+                                        <select name="" id="selectsort">
+                                            <option value="" selected disabled hidden>請選擇分類</option>
+                                            <option v-for="sort in sorts" :value="sort.type">{{sort.type}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="querykeyword">
+                                    <label for="querykeyword">關鍵字：</label>
+                                    <div class="keyword">
+                                        <input type="text" name="關鍵字" id="querykeyword" placeholder="站內搜尋">
+                                        <button></button>
+                                    </div>
+                                </div>
+                            </form>                           
                         </div>
-                        
+                    </div>
+                    <div class="newcontainer">
+                        <div class="listbox">
+                            <div class="list">
+                                <a href="javascript:;">
+                                    <div class="title">
+                                        <h1 class="new">掌櫃歡慶滿周歲</h1>
+                                        <span>107/11/11</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>掌櫃智慧生活有限公司於 2016 年 9 月份創建,公司秉持著「掌握生活,隨觸可及」的信念,打造最安全專業、最便利迅速的智慧配送服務網,提供消費者多元便利寄取包裹的使用體驗。公司未來將致最便利迅速的智慧配送服務網,提供消費者多元便利寄取包裹的使用體驗。公司未來將致</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="javascript:;">
+                                    <div class="title">
+                                        <h1>掌櫃歡慶滿周歲掌櫃歡慶滿周歲</h1>
+                                        <span>107/11/10</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>掌櫃智慧生活有限公司於 2016 年 9 月份創建,公司秉持著「掌握生活,隨觸可及」的信念,打造最安全專業、最便利迅速的智慧配送服務網,最便利迅速的智慧配送服務網,提供消費者多元便利寄取包裹的使用體驗。公司未來將致</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="javascript:;">
+                                    <div class="title">
+                                        <h1 class="new">掌櫃歡慶滿周歲歡慶滿周歲</h1>
+                                        <span>107/11/07</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>掌櫃智慧生活有限公司於 2016 年 9 月份創建,公司秉持著「掌握生活,隨觸可及」,公司秉持著「掌握生活,隨觸可及」的信念,打造最安全專業、最便利迅速的智慧配送服務網,提供消費者多元便利寄取包裹的使用體驗。公司未來將致</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="javascript:;">
+                                    <div class="title">
+                                        <h1>掌櫃歡慶滿周歲</h1>
+                                        <span>107/11/03</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>掌櫃智慧生活有限公司於 2016 年 9 月份創建,公司秉持著「掌握生活,隨觸可司秉持著「掌握生活,隨觸可及」的信念,打造最安全專業、最便利迅速的智慧配送服務網,提供消費者多元便利寄取包裹的使用體驗。公司未來將致</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="javascript:;">
+                                    <div class="title">
+                                        <h1 class="new">掌櫃歡慶滿周歲掌櫃歡慶滿周歲掌</h1>
+                                        <span>107/11/01</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>掌櫃智慧生活有限公司於 2016 年 9 月份創建,公司秉持著「掌握生活,隨觸可及」的信念信念,打造最安全專業信念,打造最安全專業,打造最安全專業、最便利迅速的智慧配送服務網,提供消費者多元便利寄取包裹的使用體驗。公司未來將致</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="newsbottom">
+                            <a class="prevpage" href="javascript:;">上一頁</a>
+                            <a href="javascript:;">1</a>
+                            <a href="javascript:;">2</a>
+                            <a class="active" href="javascript:;">3</a>
+                            <a href="javascript:;">4</a>
+                            <a href="javascript:;">5</a>
+                            <a href="javascript:;">...</a>
+                            <a href="javascript:;">10</a>
+                            <a class="nextpage" href="javascript:;">下一頁</a>
+                        </div>
                     </div>
 
                 </div>

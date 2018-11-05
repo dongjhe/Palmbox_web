@@ -869,6 +869,7 @@ main {
     position: relative;
     width: 100%;
     &::before{
+      transition: 0.3s;
       position: absolute;
       top: 15px;
       right: 10px;
@@ -1459,7 +1460,7 @@ main {
         transform: translate(0,-5px);
         box-shadow: 0 2px 2px rgba(190, 190, 190, 1);
     }
-    .courierbottom,.orderinfobottom,.warehousebottom,.more_orderbottom{
+    .courierbottom,.orderinfobottom,.warehousebottom,.more_orderbottom,.communitybottom,.eticketbottom,.newsbottom{
       text-align: right;
       margin-top: 10px;
       @media (max-width:768px) {
@@ -1708,9 +1709,157 @@ main {
     }
     .newstop .selectbar{
       display: block;
-      background: rgba(#000,0.2);
       width: 100%;
-      height: 200px;
+      @include padding_set(0,0,10px,0);
+      border-bottom: 3px solid $text_color;
+      form{
+        display: flex;
+        justify-content: space-around;
+        @media (max-width:768px) {
+          flex-wrap: wrap;
+        }        
+        .arrow{
+          display: inline-block;
+          width: 70%;
+          @media (max-width:768px) {
+            width: 90%;
+          }            
+          &::before{
+            top: 45%;
+          }
+        }
+        >div{
+          display: flex;
+          width: 30%;
+          justify-content: space-around;
+          align-items: center;
+          @media (max-width:768px) {
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+        label{
+          width: 40%;
+          text-align: center;
+          @media (max-width:768px) {
+            width: 20%;
+            text-align: left;
+          }
+          @media (max-width:480px) {
+            width: 35%;
+          }             
+        }
+        input,select{
+          display: block;
+          width: 100%;
+          @include padding_set(5px,5px,5px,5px);
+          @include margin_set(10px,0,10px,0);
+          @include font_size(14px);
+          color: $input_text;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          cursor: pointer;
+          &[type="text"]{
+            display: inline-block;
+            width: 100%;                  
+          }
+          &[type='text']:focus {
+            color: $input_text;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          }
+        }
+        .keyword{
+          position: relative;
+          width: 70%;
+          @media (max-width:768px) {
+            width: 90%;
+          }   
+          button{
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+            border-radius:0 0.25rem 0.25rem 0;
+            background-image: url("/images/search.png");
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-position: center;
+            background-color: $text_color;
+          }
+        }        
+      }
+    }
+    .newcontainer .list{
+      @include padding_set(20px,0,10px,0);
+      border-bottom: 1px solid $text_color;
+      @media (max-width:768px) {
+        @include padding_set(10px,0,10px,0);
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+      .title{
+        display:inline-flex;
+        flex-direction: row;
+        align-items: baseline;
+        font-weight: bold;
+        @media (max-width:768px) {
+          flex-direction:column-reverse;
+        }
+        h1{
+          position: relative;
+          @include font_size(28px);
+          @include padding_set(0,0,0,0);
+          @include margin_set(0,0,0,0);
+          color: $color_green;
+          &.new::before{
+            position: absolute;
+            top: 0;
+            right: -145px;
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 45px;
+            background-image: url("/images/newicon.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          @media (max-width:768px) {
+            @include font_size(20px);
+            &.new::before{
+              top: inherit;
+              bottom: 0;
+              right: -45px;
+            }
+          }          
+        }
+        span{
+          display: inline-block;
+          @include margin_set(0,0,0,15px);
+          color: $color_orange;
+          @media (max-width:768px) {
+            display: block;
+            @include margin_set(0,0,0,0);
+          }          
+        }
+
+      }
+      .text{
+        p{
+          @include font_size(14px);
+          @include margin_set(0,0,10px,0);
+          text-align: justify;
+          color: $text_color;
+        }
+      }
     }
   }
   .cabinetorderbox >form >.cabinetorderinfo{
