@@ -179,8 +179,6 @@ $(window).on('load', function() {
         tablethis = $(this)
         tr_num = $(this).index()
         addmouse(tablenum,tablethis, tr_num)
-
-        console.log(tablenum, tablethis, tr_num);
       
       }, function() {
         // out
@@ -335,8 +333,13 @@ $(window).on('load', function() {
     // 判斷常見問答長度開關
     issuelength()
     function issuelength() {
-      for (let index = 0; index < 4; index++) {
+      for (let index = 0; index <= 4; index++) {
         let h3length = $('.issuebox .issue').eq(index).find('h3')
+        let expand = $('.issuebox .issue').eq(index).find('.expand_more')
+
+        if (expand.attr('class') === 'expand_more activea') {
+          expand.toggleClass('activea').html('<span></span>展開更多')
+        }
         if (h3length.length > 4) {
           for (let index1 = 4; index1 < h3length.length; index1++) {
             h3length.eq(index1).attr('class', '').parent('div').attr('class', '').hide()
@@ -344,7 +347,7 @@ $(window).on('load', function() {
         }
       }
     }
-    
+
     // 展開更多和收合
     $('.expand_more').on('click', function() {
       let a_class = $(this).attr('class')
@@ -352,11 +355,19 @@ $(window).on('load', function() {
         $(this).toggleClass('activea').html('<span></span>收合')
         $(this).siblings('div').show()
       } else {
-        $(this).toggleClass('activea').html('<span></span>展開更多')
+        // $(this).toggleClass('activea').html('<span></span>展開更多')
         issuelength()
       }
     })
 
+    // 判斷最新消息內文字數>125 加more
+      let $len = 150; // 超過125個字以"..."取代
+      $('.newcontainer .list p').each(function () {
+        if ($(this).text().length > $len) {
+          let $text = $(this).text().substring(0, $len - 1) + "...more";
+          $(this).text($text);
+        }
+      });
   })()
 })
 
