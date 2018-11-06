@@ -1860,6 +1860,53 @@ main {
           color: $text_color;
         }
       }
+    }
+    .newcontainer .listdetail{
+      @include padding_set(20px,0,10px,0);
+      @media (max-width:768px) {
+        @include padding_set(10px,0,10px,0);
+      }
+      .title{
+        display:block;
+        font-weight: bold;
+        h1{
+          @include font_size(28px);
+          @include padding_set(0,0,0,0);
+          @include margin_set(0,0,0,0);
+          color: $color_green;
+          @media (max-width:768px) {
+            @include font_size(20px);
+          }          
+        }
+        h2{
+          @include font_size(16px);
+          @include padding_set(0,0,0,0);
+          @include margin_set(0,0,0,0);
+          color: $color_orange;  
+          span{
+            display: inline-block;
+          }
+        }
+
+      }
+      .img{
+        @include margin_set(10px,0,10px,0);
+        img{
+          @include margin_set(0,0,0,0);
+          @media (max-width:980px) {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .text{
+        p{
+          @include font_size(14px);
+          @include margin_set(0,0,10px,0);
+          text-align: justify;
+          color: $text_color;
+        }
+      }      
     }    
     .newstop .selectbar{
       display: block;

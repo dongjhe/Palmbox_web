@@ -3015,6 +3015,98 @@ main .deliverybox .newcontainer .list .text p, main .courier_access .newcontaine
   color: #898989;
 }
 
+main .deliverybox .newcontainer .listdetail, main .courier_access .newcontainer .listdetail, main .orderinfo .newcontainer .listdetail, main .community_access .newcontainer .listdetail, main .eticket_access .newcontainer .listdetail, main .warehouse .newcontainer .listdetail, main .productbox .newcontainer .listdetail, main .cabinetorderbox .newcontainer .listdetail, main .mapquerybox .newcontainer .listdetail, main .newsbox .newcontainer .listdetail, main .commonbox .newcontainer .listdetail {
+  padding-top: 20px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .newcontainer .listdetail, main .courier_access .newcontainer .listdetail, main .orderinfo .newcontainer .listdetail, main .community_access .newcontainer .listdetail, main .eticket_access .newcontainer .listdetail, main .warehouse .newcontainer .listdetail, main .productbox .newcontainer .listdetail, main .cabinetorderbox .newcontainer .listdetail, main .mapquerybox .newcontainer .listdetail, main .newsbox .newcontainer .listdetail, main .commonbox .newcontainer .listdetail {
+    padding-top: 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+}
+
+main .deliverybox .newcontainer .listdetail .title, main .courier_access .newcontainer .listdetail .title, main .orderinfo .newcontainer .listdetail .title, main .community_access .newcontainer .listdetail .title, main .eticket_access .newcontainer .listdetail .title, main .warehouse .newcontainer .listdetail .title, main .productbox .newcontainer .listdetail .title, main .cabinetorderbox .newcontainer .listdetail .title, main .mapquerybox .newcontainer .listdetail .title, main .newsbox .newcontainer .listdetail .title, main .commonbox .newcontainer .listdetail .title {
+  display: block;
+  font-weight: bold;
+}
+
+main .deliverybox .newcontainer .listdetail .title h1, main .courier_access .newcontainer .listdetail .title h1, main .orderinfo .newcontainer .listdetail .title h1, main .community_access .newcontainer .listdetail .title h1, main .eticket_access .newcontainer .listdetail .title h1, main .warehouse .newcontainer .listdetail .title h1, main .productbox .newcontainer .listdetail .title h1, main .cabinetorderbox .newcontainer .listdetail .title h1, main .mapquerybox .newcontainer .listdetail .title h1, main .newsbox .newcontainer .listdetail .title h1, main .commonbox .newcontainer .listdetail .title h1 {
+  font-size: 28px;
+  line-height: 50.4px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #9FCC42;
+}
+
+@media (max-width: 768px) {
+  main .deliverybox .newcontainer .listdetail .title h1, main .courier_access .newcontainer .listdetail .title h1, main .orderinfo .newcontainer .listdetail .title h1, main .community_access .newcontainer .listdetail .title h1, main .eticket_access .newcontainer .listdetail .title h1, main .warehouse .newcontainer .listdetail .title h1, main .productbox .newcontainer .listdetail .title h1, main .cabinetorderbox .newcontainer .listdetail .title h1, main .mapquerybox .newcontainer .listdetail .title h1, main .newsbox .newcontainer .listdetail .title h1, main .commonbox .newcontainer .listdetail .title h1 {
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+
+main .deliverybox .newcontainer .listdetail .title h2, main .courier_access .newcontainer .listdetail .title h2, main .orderinfo .newcontainer .listdetail .title h2, main .community_access .newcontainer .listdetail .title h2, main .eticket_access .newcontainer .listdetail .title h2, main .warehouse .newcontainer .listdetail .title h2, main .productbox .newcontainer .listdetail .title h2, main .cabinetorderbox .newcontainer .listdetail .title h2, main .mapquerybox .newcontainer .listdetail .title h2, main .newsbox .newcontainer .listdetail .title h2, main .commonbox .newcontainer .listdetail .title h2 {
+  font-size: 16px;
+  line-height: 28.8px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #ff8400;
+}
+
+main .deliverybox .newcontainer .listdetail .title h2 span, main .courier_access .newcontainer .listdetail .title h2 span, main .orderinfo .newcontainer .listdetail .title h2 span, main .community_access .newcontainer .listdetail .title h2 span, main .eticket_access .newcontainer .listdetail .title h2 span, main .warehouse .newcontainer .listdetail .title h2 span, main .productbox .newcontainer .listdetail .title h2 span, main .cabinetorderbox .newcontainer .listdetail .title h2 span, main .mapquerybox .newcontainer .listdetail .title h2 span, main .newsbox .newcontainer .listdetail .title h2 span, main .commonbox .newcontainer .listdetail .title h2 span {
+  display: inline-block;
+}
+
+main .deliverybox .newcontainer .listdetail .img, main .courier_access .newcontainer .listdetail .img, main .orderinfo .newcontainer .listdetail .img, main .community_access .newcontainer .listdetail .img, main .eticket_access .newcontainer .listdetail .img, main .warehouse .newcontainer .listdetail .img, main .productbox .newcontainer .listdetail .img, main .cabinetorderbox .newcontainer .listdetail .img, main .mapquerybox .newcontainer .listdetail .img, main .newsbox .newcontainer .listdetail .img, main .commonbox .newcontainer .listdetail .img {
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+main .deliverybox .newcontainer .listdetail .img img, main .courier_access .newcontainer .listdetail .img img, main .orderinfo .newcontainer .listdetail .img img, main .community_access .newcontainer .listdetail .img img, main .eticket_access .newcontainer .listdetail .img img, main .warehouse .newcontainer .listdetail .img img, main .productbox .newcontainer .listdetail .img img, main .cabinetorderbox .newcontainer .listdetail .img img, main .mapquerybox .newcontainer .listdetail .img img, main .newsbox .newcontainer .listdetail .img img, main .commonbox .newcontainer .listdetail .img img {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .newcontainer .listdetail .img img, main .courier_access .newcontainer .listdetail .img img, main .orderinfo .newcontainer .listdetail .img img, main .community_access .newcontainer .listdetail .img img, main .eticket_access .newcontainer .listdetail .img img, main .warehouse .newcontainer .listdetail .img img, main .productbox .newcontainer .listdetail .img img, main .cabinetorderbox .newcontainer .listdetail .img img, main .mapquerybox .newcontainer .listdetail .img img, main .newsbox .newcontainer .listdetail .img img, main .commonbox .newcontainer .listdetail .img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+main .deliverybox .newcontainer .listdetail .text p, main .courier_access .newcontainer .listdetail .text p, main .orderinfo .newcontainer .listdetail .text p, main .community_access .newcontainer .listdetail .text p, main .eticket_access .newcontainer .listdetail .text p, main .warehouse .newcontainer .listdetail .text p, main .productbox .newcontainer .listdetail .text p, main .cabinetorderbox .newcontainer .listdetail .text p, main .mapquerybox .newcontainer .listdetail .text p, main .newsbox .newcontainer .listdetail .text p, main .commonbox .newcontainer .listdetail .text p {
+  font-size: 14px;
+  line-height: 25.2px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  text-align: justify;
+  color: #898989;
+}
+
 main .deliverybox .newstop .selectbar, main .courier_access .newstop .selectbar, main .orderinfo .newstop .selectbar, main .community_access .newstop .selectbar, main .eticket_access .newstop .selectbar, main .warehouse .newstop .selectbar, main .productbox .newstop .selectbar, main .cabinetorderbox .newstop .selectbar, main .mapquerybox .newstop .selectbar, main .newsbox .newstop .selectbar, main .commonbox .newstop .selectbar {
   display: block;
   width: 100%;
