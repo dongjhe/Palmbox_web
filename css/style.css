@@ -3506,6 +3506,10 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .ord
 @media (max-width: 980px) {
   main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect > div > label {
     display: block;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-left: 0;
   }
 }
 
@@ -3576,8 +3580,8 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .ord
 }
 
 main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .grid_method .radio_pos label > span {
-  font-size: 12px;
-  line-height: 21.6px;
+  font-size: 14px;
+  line-height: 25.2px;
   color: #898989;
   margin-top: 0;
   margin-right: 0;
@@ -3705,6 +3709,10 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .ord
 @media (max-width: 768px) {
   main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .recipientinfo .recipient label, main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .recipientinfo .recipient_adr label {
     display: block;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-left: 0;
   }
 }
 
@@ -3890,6 +3898,16 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .ord
   margin-left: 0;
 }
 
+@media (max-width: 480px) {
+  main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .invoice_method > .invoice_radio > .form__radio {
+    display: block;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+}
+
 main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .invoice_method > .invoice_block {
   display: block;
   width: 100%;
@@ -3949,6 +3967,16 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .ord
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+@media (max-width: 480px) {
+  main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .invoice_method > .invoice_block .inputext input {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-left: 0;
+  }
 }
 
 main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .invoice_method > .invoice_block .vehicle_toggle {
@@ -5646,6 +5674,13 @@ footer p {
   min-height: calc(100% - (.5rem * 2));
 }
 
+@media (max-width: 768px) {
+  .popu_modify .modalbox, .popu_courier .modalbox, .popu_palmbox_service .modalbox, .popu_order .modalbox, .popu_table_tr .modalbox, .logisticscompany .modalbox {
+    width: 95%;
+    margin: 5% auto;
+  }
+}
+
 .popu_modify .modalbox::before, .popu_courier .modalbox::before, .popu_palmbox_service .modalbox::before, .popu_order .modalbox::before, .popu_table_tr .modalbox::before, .logisticscompany .modalbox::before {
   display: block;
   height: calc(100vh - (.5rem * 2));
@@ -5771,12 +5806,19 @@ footer p {
   padding-left: 0;
   margin-top: 0;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   margin-left: auto;
   font-size: 20px;
   line-height: 36px;
   color: #495057;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .popu_modify .modal-header h1, .popu_courier .modal-header h1, .popu_palmbox_service .modal-header h1, .popu_order .modal-header h1, .popu_table_tr .modal-header h1, .logisticscompany .modal-header h1 {
+    font-size: 18px;
+    line-height: 32.4px;
+  }
 }
 
 .popu_modify .modal-body, .popu_courier .modal-body, .popu_palmbox_service .modal-body, .popu_order .modal-body, .popu_table_tr .modal-body, .logisticscompany .modal-body {
@@ -5899,6 +5941,13 @@ footer p {
   padding-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .popu_modify .modal-body .conbox h2, .popu_courier .modal-body .conbox h2, .popu_palmbox_service .modal-body .conbox h2, .popu_order .modal-body .conbox h2, .popu_table_tr .modal-body .conbox h2, .logisticscompany .modal-body .conbox h2 {
+    font-size: 14px;
+    line-height: 25.2px;
+  }
+}
+
 .popu_modify .modal-body .conbox h3, .popu_courier .modal-body .conbox h3, .popu_palmbox_service .modal-body .conbox h3, .popu_order .modal-body .conbox h3, .popu_table_tr .modal-body .conbox h3, .logisticscompany .modal-body .conbox h3 {
   font-size: 18px;
   line-height: 32.4px;
@@ -5912,6 +5961,15 @@ footer p {
   margin-left: auto;
   font-size: 14px;
   line-height: 25.2px;
+}
+
+@media (max-width: 768px) {
+  .popu_modify .modal-body .conbox ol, .popu_courier .modal-body .conbox ol, .popu_palmbox_service .modal-body .conbox ol, .popu_order .modal-body .conbox ol, .popu_table_tr .modal-body .conbox ol, .logisticscompany .modal-body .conbox ol {
+    padding-top: 0;
+    padding-right: 5%;
+    padding-bottom: 0;
+    padding-left: 5%;
+  }
 }
 
 .popu_modify .modal-body .conbox ol li, .popu_courier .modal-body .conbox ol li, .popu_palmbox_service .modal-body .conbox ol li, .popu_order .modal-body .conbox ol li, .popu_table_tr .modal-body .conbox ol li, .logisticscompany .modal-body .conbox ol li {
