@@ -899,6 +899,89 @@ main {
   padding-top: 80px;
 }
 
+main .navbanner {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 33.33%;
+  background-color: rgba(159, 204, 66, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main .palmbox_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+main .palmbox_container > div {
+  width: 50%;
+}
+
+main .palmbox_container > .containerLeft {
+  background-color: #ff8400;
+  margin-right: 10px;
+  position: relative;
+}
+
+main .palmbox_container > .containerLeft::before {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 48%;
+  background-image: url("../images/gujibg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .palmbox_container > .containerRight > div {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+main .palmbox_container > .containerRight > div h1 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 26px;
+  line-height: 46.8px;
+}
+
+main .palmbox_container > .containerRight > div:nth-of-type(1) {
+  background-color: #fc564d;
+}
+
+main .palmbox_container > .containerRight > div:nth-of-type(2) {
+  background-color: #9FCC42;
+}
+
+main .palmbox_container > .containerRight > div:nth-of-type(3) {
+  background-color: #00a0e9;
+}
+
 main .main_container {
   display: -webkit-box;
   display: -ms-flexbox;
