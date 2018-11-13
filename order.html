@@ -538,7 +538,7 @@
                             <div class="more_order">
                                 <div class="ordercontainer">
                                     <div class="more_orderexam">
-                                        <p>批量下單請先下載<a href="" download="">匯出清單範例</a></p>
+                                        <p>批量下單請先下載<a href="" download="">匯入清單範例</a></p>
                                     </div>
                                     <div class="downloadbox">
                                         <label for="download">
@@ -981,13 +981,16 @@
                                     <!-- <p>代收金額：50元</p> -->
                                 </div>
                                 <div class="checkbut single">
-                                    <button>取消</button>
-                                    <button>確認</button>
+                                    <input type="button" value="取消">
+                                    <input type="button" value="確認">
                                 </div>
                                 <div class="checkbut batch">
                                     <p>請更正失敗資料</p>
-                                    <button>重新匯入</button>
-                                    <button>確認，下載寄件碼</button>
+                                    <label for="reImport">
+                                        <input type="file" name="" id="reImport">
+                                        重新匯入
+                                    </label>
+                                    <input type="button" value="確認，下載寄件碼">
                                 </div>
                             </div>
                         </div>

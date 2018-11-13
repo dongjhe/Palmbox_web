@@ -1707,6 +1707,20 @@ main {
         }
       }
     }
+    .newsbottom .nextpage{
+      position: relative;
+      &::before{
+        position: absolute;
+        top: 8px;
+        left: -6px;
+        content: "";
+        display: block;
+        width: 1px;
+        height: 50%;
+        background-color: $text_color;
+      }
+      
+    }
     .precautions{
       h1{
           @include padding_set(0,0,0,0);
@@ -2980,9 +2994,11 @@ main {
           @include margin_set(0,auto,10px,auto);
           color: red;
         }
-        button{
-          @include padding_set(10px,40px,10px,40px);
-          @include margin_set(10px,15px,10px,15px);
+        input[type="button"],label{
+          width: 20%;
+          @include padding_set(5px,0,5px,0);
+          @include margin_set(5px,10px,5px,10px);
+          @include font_size(14px);
           border-radius: 5px;
           color: $color_white;
           @media (max-width:980px) {
@@ -3007,8 +3023,21 @@ main {
             }
           }          
         }
-        &.batch{
+        &.batch,input[type="file"]{
           display: none;
+          label{
+            background-color:$footer_color;
+            cursor: pointer;
+            &:hover{
+              background-color:$text_color;
+            }
+          }
+          >input[type="button"]{
+            background-color:$color_green;
+            &:hover{
+              background-color:$color_green_hover;
+            }
+          }
         }
       }
     }
@@ -3400,6 +3429,9 @@ main {
         border: 1px solid #ced4da;
         border-radius: 0.25rem;
         overflow-y: scroll;
+        @media (max-width:480px) {
+          height: 300px;
+        }
         >div{
           @include padding_set(5px,5px,5px,5px);
           border-bottom: 1px solid #ced4da;
