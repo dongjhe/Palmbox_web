@@ -417,7 +417,16 @@ main {
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color:rgba($color_green,0.5);
+    background-color:transparent;
+    >.banner{
+      width: 90%;
+      max-width: 1200px;
+      @include margin_set(0,auto,0,auto);
+      @media (max-width:980px) {
+        width: 100%;      
+      }
+    }
+
   }
 
   .palmbox_container{
@@ -439,10 +448,10 @@ main {
         width: 100%;
       }
       >div{
-        @include padding_set(20px,20px,20px,20px);
         position: relative;
       }
-      a{
+      a,.hotbox{
+        @include padding_set(20px,20px,20px,20px);
         display: flex;
         justify-content:flex-start;
         align-items: center;
@@ -464,7 +473,7 @@ main {
       }
       .title{
         display: block;
-        width: 70%;
+        width: 85%;
 
       }
       h1{
@@ -507,7 +516,18 @@ main {
       background-image: url("../images/gujibg.png");
       background-repeat: no-repeat;
       background-position: bottom left;
-          background-size: contain;
+      background-size: contain;
+      // background-position-x: -600px;
+      animation: bagckgPos 3s;
+      @keyframes bagckgPos {
+        0% {
+          background-position-x: -600px;
+        }
+        100%{
+          background-position-x: 0px;
+        }
+      }
+
       @media (max-width:768px) {
         margin-right: 0;
         background-image: none;
@@ -546,6 +566,9 @@ main {
     width: 90%;
     max-width: 1200px;
     @include margin_set(10px, auto, 10px, auto);
+    @media (max-width:980px) {
+      width: 100%;
+    }
     h1{
       display: block;
       @include padding_set(0, 0, 0, 0);
@@ -563,14 +586,31 @@ main {
         justify-content:flex-start;
         flex-wrap: wrap;
         >div{
-          
+          margin: 0 auto;
+          text-align: center;
+          @media (max-width:980px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
         }
         a{
           display: inline-block;
-          width: 15%;
+          width: 14%;
           border: 1px solid $box_shadow;
           @include margin_set(5px,8px,5px,8px);
           @include padding_set(8px,8px,8px,8px);
+          @media (max-width:980px) {
+            width: 24%;
+            text-align: left;
+            @include margin_set(3px,3px,3px,3px);
+          }
+          @media (max-width:768px) {
+            width: 23%;
+          }          
+          @media (max-width:480px) {
+            width: 48%;
+          }
         }
         img{
           width: 100%;
