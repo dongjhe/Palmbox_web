@@ -73,38 +73,6 @@
         <main>
             <div class="main_container">
                 <div class="newsbox">
-                    <div class="newstop">
-                        <h1>最新消息</h1>
-                        <div class="selectbar">
-                            <form action="">
-                                <div class="querymonth">
-                                    <label for="querymonth">查詢年份：</label>
-                                    <div class="arrow">
-                                        <select name="" id="selectyear">
-                                            <option value="" selected disabled hidden>請選擇年度</option>
-                                            <option v-for="year in years" :value="year.info">{{year.info}}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="querysort">
-                                    <label for="querysort">查詢分類：</label>
-                                    <div class="arrow">
-                                        <select name="" id="selectsort">
-                                            <option value="" selected disabled hidden>請選擇分類</option>
-                                            <option v-for="sort in sorts" :value="sort.type">{{sort.type}}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="querykeyword">
-                                    <label for="querykeyword">關鍵字：</label>
-                                    <div class="keyword">
-                                        <input type="text" name="關鍵字" id="querykeyword" placeholder="站內搜尋">
-                                        <button></button>
-                                    </div>
-                                </div>
-                            </form>                           
-                        </div>
-                    </div>
                     <div class="newcontainer">
                         <div class="listbox">
                             <div class="listdetail">
@@ -125,11 +93,11 @@
                             </div>
                         </div>
                         <div class="newsbottom">
-                            <a class="prevpage" href="javascript:;">上一則</a>
-                            <a class="nextpage" href="javascript:;">下一則</a>
+                            <a class="prevpage" href="javascript:;"><< 回列表頁</a>
+                            <a class="prevpage" href="javascript:;">< 上一則</a>
+                            <a class="nextpage" href="javascript:;">下一則 ></a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </main>

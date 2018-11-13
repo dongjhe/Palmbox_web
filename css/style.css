@@ -2437,6 +2437,21 @@ main .deliverybox .courierbottom a.prevpage.active, main .deliverybox .courierbo
   text-decoration: none;
 }
 
+main .deliverybox .newsbottom .nextpage, main .courier_access .newsbottom .nextpage, main .orderinfo .newsbottom .nextpage, main .community_access .newsbottom .nextpage, main .eticket_access .newsbottom .nextpage, main .warehouse .newsbottom .nextpage, main .productbox .newsbottom .nextpage, main .cabinetorderbox .newsbottom .nextpage, main .mapquerybox .newsbottom .nextpage, main .newsbox .newsbottom .nextpage, main .commonbox .newsbottom .nextpage {
+  position: relative;
+}
+
+main .deliverybox .newsbottom .nextpage::before, main .courier_access .newsbottom .nextpage::before, main .orderinfo .newsbottom .nextpage::before, main .community_access .newsbottom .nextpage::before, main .eticket_access .newsbottom .nextpage::before, main .warehouse .newsbottom .nextpage::before, main .productbox .newsbottom .nextpage::before, main .cabinetorderbox .newsbottom .nextpage::before, main .mapquerybox .newsbottom .nextpage::before, main .newsbox .newsbottom .nextpage::before, main .commonbox .newsbottom .nextpage::before {
+  position: absolute;
+  top: 8px;
+  left: -6px;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50%;
+  background-color: #898989;
+}
+
 main .deliverybox .precautions h1, main .courier_access .precautions h1, main .orderinfo .precautions h1, main .community_access .precautions h1, main .eticket_access .precautions h1, main .warehouse .precautions h1, main .productbox .precautions h1, main .cabinetorderbox .precautions h1, main .mapquerybox .precautions h1, main .newsbox .precautions h1, main .commonbox .precautions h1 {
   padding-top: 0;
   padding-right: 0;
@@ -4470,21 +4485,24 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut p {
   color: red;
 }
 
-main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button {
-  padding-top: 10px;
-  padding-right: 40px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  margin-top: 10px;
-  margin-right: 15px;
-  margin-bottom: 10px;
-  margin-left: 15px;
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="button"], main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut label {
+  width: 20%;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 25.2px;
   border-radius: 5px;
   color: #fff;
 }
 
 @media (max-width: 980px) {
-  main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button {
+  main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="button"], main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut label {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -4494,7 +4512,7 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button 
 }
 
 @media (max-width: 480px) {
-  main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button {
+  main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="button"], main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut label {
     display: block;
     width: 100%;
     margin-top: 0;
@@ -4504,24 +4522,41 @@ main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button 
   }
 }
 
-main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button:nth-of-type(1) {
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="button"]:nth-of-type(1), main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut label:nth-of-type(1) {
   background-color: #b5b5b5;
 }
 
-main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button:nth-of-type(1):hover {
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="button"]:nth-of-type(1):hover, main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut label:nth-of-type(1):hover {
   background-color: #898989;
 }
 
-main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button:nth-of-type(2) {
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="button"]:nth-of-type(2), main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut label:nth-of-type(2) {
   background-color: #9FCC42;
 }
 
-main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut button:nth-of-type(2):hover {
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="button"]:nth-of-type(2):hover, main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut label:nth-of-type(2):hover {
   background-color: #8cb933;
 }
 
-main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut.batch {
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut.batch, main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="file"] {
   display: none;
+}
+
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut.batch label, main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="file"] label {
+  background-color: #b5b5b5;
+  cursor: pointer;
+}
+
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut.batch label:hover, main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="file"] label:hover {
+  background-color: #898989;
+}
+
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut.batch > input[type="button"], main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="file"] > input[type="button"] {
+  background-color: #9FCC42;
+}
+
+main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut.batch > input[type="button"]:hover, main .cabinetorderbox > form > .cabinetorderbottom .checkmoney .checkbut input[type="file"] > input[type="button"]:hover {
+  background-color: #8cb933;
 }
 
 main .mapbox {
@@ -5140,6 +5175,12 @@ main .mapquerybox > .mapquerycontainer .queryinfo .enquirydata {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   overflow-y: scroll;
+}
+
+@media (max-width: 480px) {
+  main .mapquerybox > .mapquerycontainer .queryinfo .enquirydata {
+    height: 300px;
+  }
 }
 
 main .mapquerybox > .mapquerycontainer .queryinfo .enquirydata > div {
