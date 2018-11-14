@@ -965,6 +965,13 @@ main .palmbox_container > div {
 
 main .palmbox_container > div > div {
   position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+main .palmbox_container > div > div:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 main .palmbox_container > div a, main .palmbox_container > div .hotbox {
