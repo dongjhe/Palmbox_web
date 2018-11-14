@@ -473,14 +473,64 @@ main {
       }
       .title{
         display: block;
-        width: 85%;
-
+        width: 70%;
+        .marquee{
+          height: 25px;
+          overflow: hidden;
+          ul{
+            display: block;
+            width: 100%;
+            animation: marqee 10s linear infinite;
+          }
+          li{
+            overflow: hidden;
+          }
+          a{
+            position: relative;
+            white-space: nowrap;
+            display: inline-block;
+            @include padding_set(0,0,0,70px);
+            @include margin_set(5px,auto,5px,auto);
+            @include font_size(14px);
+            &::before{
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: "";
+              display: block;
+              width: 66px;
+              height: 25px;
+              background-image: url("../images/hot.png");
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+          }
+        }
+        @keyframes marqee{
+          0% {
+            transform: translateY(0%);
+          }
+          
+          100% {
+            transform: translateY(-100%);
+          }
+        }
       }
       h1{
         @include padding_set(0,0,0,0);
         @include margin_set(0, auto, 0, auto);
         font-weight: bolder;
         @include font_size(26px);
+        span{
+          display: inline-block;
+          a{
+            @include padding_set(0,10px,0,10px);
+            @include margin_set(0, 10px, 0, 10px);
+            border: 1px solid $color_white;
+            border-radius: 20px;
+            @include font_size(14px);
+          }
+        }
         @media (max-width:980px) {
           @include font_size(22px);
         }
@@ -1654,27 +1704,58 @@ main {
       margin-top: 20px;
       p{
         padding: 0;
-        margin: 0 auto;
+        @include margin_set(0,auto,10px,auto);
         color: red;
       }
-      button{
-        display: inline-block;
-        width: 200px;
-        @include padding_set(10px,10px,10px,10px);
-        @include margin_set(10px,10px,10px,10px);
-        color:$color_white;
-        background-color: $footer_color;
+
+      label{
+        width: 20%;
+        @include padding_set(5px,0,5px,0);
+        @include margin_set(5px,10px,5px,10px);
+        @include font_size(14px);
         border-radius: 5px;
-        &:nth-last-child(1){
-          background-color: $color_green;
+        color: $color_white;
+        background-color:$footer_color;
+        cursor: pointer;
+        @media (max-width:980px) {
+          @include margin_set(0,0,0,0);
+          width: 49%;
+        }          
+        @media (max-width:480px) {
+          display: block;
+          width: 100%;
+          @include margin_set(0,0,10px,0);
         }
         &:hover{
-          background-color: $text_color;
-          &:nth-last-child(1){
-            background-color: $color_green_hover;
-          }
+          background-color:$text_color;
         }
       }
+      input[type="file"]{
+        display: none;
+      }  
+      input[type="button"]{
+        width: 20%;
+        @include padding_set(5px,0,5px,0);
+        @include margin_set(5px,10px,5px,10px);
+        @include font_size(14px);
+        border-radius: 5px;
+        color: $color_white;
+        background-color:$color_green;
+        &:hover{
+          background-color:$color_green_hover;
+        }
+        @media (max-width:980px) {
+          @include margin_set(0,0,0,0);
+          width: 49%;
+        }          
+        @media (max-width:480px) {
+          display: block;
+          width: 100%;
+          @include margin_set(0,0,10px,0);
+        }
+        
+      }      
+
     }
     .mousetouch{
         transform: translate(0,-5px);

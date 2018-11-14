@@ -368,6 +368,16 @@ $(window).on('load', function() {
           $(this).text($text);
         }
       });
+      
+    // 判斷首頁最新消息字數>10 加more
+      let $lens = 10; // 超過125個字以"..."取代
+      $('.hotbox .marquee a').each(function () {
+        if ($(this).text().length > $len) {
+          let $text = $(this).text().substring(0, $len - 1) + "...more";
+          $(this).text($text);
+        }
+      });
+
   })()
 })
 

@@ -1002,7 +1002,74 @@ main .palmbox_container > div .icon::before {
 
 main .palmbox_container > div .title {
   display: block;
-  width: 85%;
+  width: 70%;
+}
+
+main .palmbox_container > div .title .marquee {
+  height: 25px;
+  overflow: hidden;
+}
+
+main .palmbox_container > div .title .marquee ul {
+  display: block;
+  width: 100%;
+  -webkit-animation: marqee 10s linear infinite;
+          animation: marqee 10s linear infinite;
+}
+
+main .palmbox_container > div .title .marquee li {
+  overflow: hidden;
+}
+
+main .palmbox_container > div .title .marquee a {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 70px;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 25.2px;
+}
+
+main .palmbox_container > div .title .marquee a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 66px;
+  height: 25px;
+  background-image: url("../images/hot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@-webkit-keyframes marqee {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes marqee {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
 }
 
 main .palmbox_container > div h1 {
@@ -1017,6 +1084,25 @@ main .palmbox_container > div h1 {
   font-weight: bolder;
   font-size: 26px;
   line-height: 46.8px;
+}
+
+main .palmbox_container > div h1 span {
+  display: inline-block;
+}
+
+main .palmbox_container > div h1 span a {
+  padding-top: 0;
+  padding-right: 10px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 25.2px;
 }
 
 @media (max-width: 980px) {
@@ -2690,36 +2776,100 @@ main .deliverybox .warehousebt, main .courier_access .warehousebt, main .orderin
 
 main .deliverybox .warehousebt p, main .courier_access .warehousebt p, main .orderinfo .warehousebt p, main .community_access .warehousebt p, main .eticket_access .warehousebt p, main .warehouse .warehousebt p, main .productbox .warehousebt p, main .cabinetorderbox .warehousebt p, main .mapquerybox .warehousebt p, main .newsbox .warehousebt p, main .commonbox .warehousebt p {
   padding: 0;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
   color: red;
 }
 
-main .deliverybox .warehousebt button, main .courier_access .warehousebt button, main .orderinfo .warehousebt button, main .community_access .warehousebt button, main .eticket_access .warehousebt button, main .warehouse .warehousebt button, main .productbox .warehousebt button, main .cabinetorderbox .warehousebt button, main .mapquerybox .warehousebt button, main .newsbox .warehousebt button, main .commonbox .warehousebt button {
-  display: inline-block;
-  width: 200px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  margin-top: 10px;
+main .deliverybox .warehousebt label, main .courier_access .warehousebt label, main .orderinfo .warehousebt label, main .community_access .warehousebt label, main .eticket_access .warehousebt label, main .warehouse .warehousebt label, main .productbox .warehousebt label, main .cabinetorderbox .warehousebt label, main .mapquerybox .warehousebt label, main .newsbox .warehousebt label, main .commonbox .warehousebt label {
+  width: 20%;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  margin-top: 5px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-left: 10px;
+  font-size: 14px;
+  line-height: 25.2px;
+  border-radius: 5px;
   color: #fff;
   background-color: #b5b5b5;
-  border-radius: 5px;
+  cursor: pointer;
 }
 
-main .deliverybox .warehousebt button:nth-last-child(1), main .courier_access .warehousebt button:nth-last-child(1), main .orderinfo .warehousebt button:nth-last-child(1), main .community_access .warehousebt button:nth-last-child(1), main .eticket_access .warehousebt button:nth-last-child(1), main .warehouse .warehousebt button:nth-last-child(1), main .productbox .warehousebt button:nth-last-child(1), main .cabinetorderbox .warehousebt button:nth-last-child(1), main .mapquerybox .warehousebt button:nth-last-child(1), main .newsbox .warehousebt button:nth-last-child(1), main .commonbox .warehousebt button:nth-last-child(1) {
-  background-color: #9FCC42;
+@media (max-width: 980px) {
+  main .deliverybox .warehousebt label, main .courier_access .warehousebt label, main .orderinfo .warehousebt label, main .community_access .warehousebt label, main .eticket_access .warehousebt label, main .warehouse .warehousebt label, main .productbox .warehousebt label, main .cabinetorderbox .warehousebt label, main .mapquerybox .warehousebt label, main .newsbox .warehousebt label, main .commonbox .warehousebt label {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 49%;
+  }
 }
 
-main .deliverybox .warehousebt button:hover, main .courier_access .warehousebt button:hover, main .orderinfo .warehousebt button:hover, main .community_access .warehousebt button:hover, main .eticket_access .warehousebt button:hover, main .warehouse .warehousebt button:hover, main .productbox .warehousebt button:hover, main .cabinetorderbox .warehousebt button:hover, main .mapquerybox .warehousebt button:hover, main .newsbox .warehousebt button:hover, main .commonbox .warehousebt button:hover {
+@media (max-width: 480px) {
+  main .deliverybox .warehousebt label, main .courier_access .warehousebt label, main .orderinfo .warehousebt label, main .community_access .warehousebt label, main .eticket_access .warehousebt label, main .warehouse .warehousebt label, main .productbox .warehousebt label, main .cabinetorderbox .warehousebt label, main .mapquerybox .warehousebt label, main .newsbox .warehousebt label, main .commonbox .warehousebt label {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+}
+
+main .deliverybox .warehousebt label:hover, main .courier_access .warehousebt label:hover, main .orderinfo .warehousebt label:hover, main .community_access .warehousebt label:hover, main .eticket_access .warehousebt label:hover, main .warehouse .warehousebt label:hover, main .productbox .warehousebt label:hover, main .cabinetorderbox .warehousebt label:hover, main .mapquerybox .warehousebt label:hover, main .newsbox .warehousebt label:hover, main .commonbox .warehousebt label:hover {
   background-color: #898989;
 }
 
-main .deliverybox .warehousebt button:hover:nth-last-child(1), main .courier_access .warehousebt button:hover:nth-last-child(1), main .orderinfo .warehousebt button:hover:nth-last-child(1), main .community_access .warehousebt button:hover:nth-last-child(1), main .eticket_access .warehousebt button:hover:nth-last-child(1), main .warehouse .warehousebt button:hover:nth-last-child(1), main .productbox .warehousebt button:hover:nth-last-child(1), main .cabinetorderbox .warehousebt button:hover:nth-last-child(1), main .mapquerybox .warehousebt button:hover:nth-last-child(1), main .newsbox .warehousebt button:hover:nth-last-child(1), main .commonbox .warehousebt button:hover:nth-last-child(1) {
+main .deliverybox .warehousebt input[type="file"], main .courier_access .warehousebt input[type="file"], main .orderinfo .warehousebt input[type="file"], main .community_access .warehousebt input[type="file"], main .eticket_access .warehousebt input[type="file"], main .warehouse .warehousebt input[type="file"], main .productbox .warehousebt input[type="file"], main .cabinetorderbox .warehousebt input[type="file"], main .mapquerybox .warehousebt input[type="file"], main .newsbox .warehousebt input[type="file"], main .commonbox .warehousebt input[type="file"] {
+  display: none;
+}
+
+main .deliverybox .warehousebt input[type="button"], main .courier_access .warehousebt input[type="button"], main .orderinfo .warehousebt input[type="button"], main .community_access .warehousebt input[type="button"], main .eticket_access .warehousebt input[type="button"], main .warehouse .warehousebt input[type="button"], main .productbox .warehousebt input[type="button"], main .cabinetorderbox .warehousebt input[type="button"], main .mapquerybox .warehousebt input[type="button"], main .newsbox .warehousebt input[type="button"], main .commonbox .warehousebt input[type="button"] {
+  width: 20%;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 25.2px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #9FCC42;
+}
+
+main .deliverybox .warehousebt input[type="button"]:hover, main .courier_access .warehousebt input[type="button"]:hover, main .orderinfo .warehousebt input[type="button"]:hover, main .community_access .warehousebt input[type="button"]:hover, main .eticket_access .warehousebt input[type="button"]:hover, main .warehouse .warehousebt input[type="button"]:hover, main .productbox .warehousebt input[type="button"]:hover, main .cabinetorderbox .warehousebt input[type="button"]:hover, main .mapquerybox .warehousebt input[type="button"]:hover, main .newsbox .warehousebt input[type="button"]:hover, main .commonbox .warehousebt input[type="button"]:hover {
   background-color: #8cb933;
+}
+
+@media (max-width: 980px) {
+  main .deliverybox .warehousebt input[type="button"], main .courier_access .warehousebt input[type="button"], main .orderinfo .warehousebt input[type="button"], main .community_access .warehousebt input[type="button"], main .eticket_access .warehousebt input[type="button"], main .warehouse .warehousebt input[type="button"], main .productbox .warehousebt input[type="button"], main .cabinetorderbox .warehousebt input[type="button"], main .mapquerybox .warehousebt input[type="button"], main .newsbox .warehousebt input[type="button"], main .commonbox .warehousebt input[type="button"] {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 49%;
+  }
+}
+
+@media (max-width: 480px) {
+  main .deliverybox .warehousebt input[type="button"], main .courier_access .warehousebt input[type="button"], main .orderinfo .warehousebt input[type="button"], main .community_access .warehousebt input[type="button"], main .eticket_access .warehousebt input[type="button"], main .warehouse .warehousebt input[type="button"], main .productbox .warehousebt input[type="button"], main .cabinetorderbox .warehousebt input[type="button"], main .mapquerybox .warehousebt input[type="button"], main .newsbox .warehousebt input[type="button"], main .commonbox .warehousebt input[type="button"] {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
 }
 
 main .deliverybox .mousetouch, main .courier_access .mousetouch, main .orderinfo .mousetouch, main .community_access .mousetouch, main .eticket_access .mousetouch, main .warehouse .mousetouch, main .productbox .mousetouch, main .cabinetorderbox .mousetouch, main .mapquerybox .mousetouch, main .newsbox .mousetouch, main .commonbox .mousetouch {

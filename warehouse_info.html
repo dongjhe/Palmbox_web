@@ -82,7 +82,7 @@
                     <div class="warehousetop">
                         <h1>倉到櫃(可批量)</h1>
                         <div class="warehousexam">
-                            <p>批量下單請先下載<a href="" download="">匯出清單範例</a></p>
+                            <p>批量下單請先下載<a href="" download="">匯入清單範例</a></p>
                         </div>
                     </div>
                     <form action="">
@@ -293,8 +293,11 @@
                         </div>
                         <div class="warehousebt">
                             <p>請更正失敗資料</p>
-                            <button>重新匯入</button>
-                            <button>確認，下載運單</button>
+                            <label for="reImport">
+                                <input type="file" name="" id="reImport">
+                                重新匯入
+                            </label>
+                            <input type="button" value="確認，下載寄件碼">
                         </div>
                     </form>
                 </div>
