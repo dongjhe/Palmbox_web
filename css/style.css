@@ -1006,15 +1006,15 @@ main .palmbox_container > div .title {
 }
 
 main .palmbox_container > div .title .marquee {
-  height: 25px;
+  height: 30px;
   overflow: hidden;
+  position: relative;
 }
 
 main .palmbox_container > div .title .marquee ul {
+  position: absolute;
   display: block;
   width: 100%;
-  -webkit-animation: marqee 10s linear infinite;
-          animation: marqee 10s linear infinite;
 }
 
 main .palmbox_container > div .title .marquee li {
@@ -1023,15 +1023,18 @@ main .palmbox_container > div .title .marquee li {
 
 main .palmbox_container > div .title .marquee a {
   position: relative;
+  height: 30px;
   white-space: nowrap;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 70px;
-  margin-top: 5px;
+  margin-top: 0;
   margin-right: auto;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   margin-left: auto;
   font-size: 14px;
   line-height: 25.2px;
@@ -1039,37 +1042,15 @@ main .palmbox_container > div .title .marquee a {
 
 main .palmbox_container > div .title .marquee a::before {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   content: "";
   display: block;
   width: 66px;
-  height: 25px;
+  height: 30px;
   background-image: url("../images/hot.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@-webkit-keyframes marqee {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
-@keyframes marqee {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
 }
 
 main .palmbox_container > div h1 {

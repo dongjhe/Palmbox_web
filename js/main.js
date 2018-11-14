@@ -372,12 +372,83 @@ $(window).on('load', function() {
     // 判斷首頁最新消息字數>10 加more
       let $lens = 10; // 超過125個字以"..."取代
       $('.hotbox .marquee a').each(function () {
-        if ($(this).text().length > $len) {
-          let $text = $(this).text().substring(0, $len - 1) + "...more";
+        if ($(this).text().length > $lens) {
+          let $text = $(this).text().substring(0, $lens - 1) + "...more";
           $(this).text($text);
         }
       });
 
+      // 首頁最新消息跑馬燈
+      let $marqueeUl = $('.hotbox .marquee ul'),
+        $marqueeli = $marqueeUl.append($marqueeUl.html()).children(),
+        _height = $('.hotbox .marquee').height() * -1,
+        scrollSpeed = 600,
+        timer,
+        speed = 2000 + scrollSpeed
+    
+        $marqueeli.hover(function () {
+          clearTimeout(timer);
+        }, function () {
+          timer = setTimeout(showad, speed);
+        });
+        
+        // 控制跑馬燈移動的處理函式
+        function showad() {
+          let _now = $marqueeUl.position().top / _height;
+          
+          _now = (_now + 1) % $marqueeli.length;
+          // $marqueeUl 移動
+          $marqueeUl.animate({
+            top: _now * _height
+          }, scrollSpeed, function () {
+            // 如果已經移動到第二組時...則馬上把 top 設 0 來回到第一組
+            // 藉此產生不間斷的輪播
+            if (_now == $marqueeli.length / 2) {
+              $marqueeUl.css('top', 0);
+            }
+          });
+
+          // 再啟動計時器
+          timer = setTimeout(showad, speed);
+
+        }
+
+        // 啟動計時器
+        timer = setTimeout(showad, speed);
+
+        // 捲軸到配送進度櫃機圖出現      
+        // $(window).scroll(function () {
+
+        //   let bannerH = $('.navbanner').outerHeight(true) / 1.2
+
+        //   if ($(window).scrollTop() > bannerH) {
+
+        //   } else {
+        //     var percent = $(window).scrollTop() / bannerH
+        //     if (percent > 1) percent = 1
+
+        //     $('.containerLeft').css({
+        //       // opacity: percent,
+        //       'background-position-x': percent * 600 - 600 + 'px'
+        //     })
+        //   }
+
+        //   // 440~800
+        //   if ($(window).scrollTop() < bannerH) {
+        //     var percent = 0
+        //   } else if ($(window).scrollTop() > bannerH) {
+        //     var percent = 1
+        //   } else {
+        //     var percent = ($(window).scrollTop() - bannerH) / 360
+        //   }
+
+        // })  
+
+
+
   })()
+
+
+
 })
 

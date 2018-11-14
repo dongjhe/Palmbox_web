@@ -475,46 +475,49 @@ main {
         display: block;
         width: 70%;
         .marquee{
-          height: 25px;
+          height: 30px;
           overflow: hidden;
+          position: relative;
           ul{
+            position: absolute;
             display: block;
             width: 100%;
-            animation: marqee 10s linear infinite;
+            // animation: marqee 10s linear infinite;
           }
           li{
             overflow: hidden;
           }
           a{
             position: relative;
+            height: 30px;
             white-space: nowrap;
-            display: inline-block;
+            display: inline-flex;
             @include padding_set(0,0,0,70px);
-            @include margin_set(5px,auto,5px,auto);
+            @include margin_set(0,auto,0,auto);
             @include font_size(14px);
             &::before{
               position: absolute;
-              top: 0;
+              top: -2px;
               left: 0;
               content: "";
               display: block;
               width: 66px;
-              height: 25px;
+              height: 30px;
               background-image: url("../images/hot.png");
               background-repeat: no-repeat;
               background-size: cover;
             }
           }
         }
-        @keyframes marqee{
-          0% {
-            transform: translateY(0%);
-          }
+        // @keyframes marqee{
+        //   0% {
+        //     transform: translateY(0%);
+        //   }
           
-          100% {
-            transform: translateY(-100%);
-          }
-        }
+        //   100% {
+        //     transform: translateY(-100%);
+        //   }
+        // }
       }
       h1{
         @include padding_set(0,0,0,0);
