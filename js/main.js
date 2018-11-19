@@ -444,6 +444,18 @@ $(window).on('load', function() {
 
         // })  
 
+        // 手機載具加/
+        $('.phonetext input[type="text"]').on('keydown',function(){
+          
+          let valStr = $(this).val()
+          if (valStr.length < 9) {
+            let subvalStr = valStr.substr(1)
+            let selectstart = '/'
+            let endVal = selectstart + subvalStr
+            $(this).val(endVal)
+          }
+        })
+
 
 
   })()
