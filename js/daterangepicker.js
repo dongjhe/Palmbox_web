@@ -128,7 +128,7 @@
 
             this.locale = {
                 applyLabel: '確定',
-                cancelLabel: '取消',
+                cancelLabel: '清除',
                 fromLabel: '從',
                 toLabel: '到',
                 weekLabel: 'W',
@@ -699,13 +699,21 @@
         },
 
         clickCancel: function (e) {
-            this.startDate = this.oldStartDate;
-            this.endDate = this.oldEndDate;
-            this.chosenLabel = this.oldChosenLabel;
-            this.updateView();
-            this.updateCalendars();
-            this.hide();
-            this.element.trigger('cancel.daterangepicker', this);
+            // this.startDate = this.oldStartDate;
+            // this.endDate = this.oldEndDate;
+            // this.chosenLabel = this.oldChosenLabel;
+            // this.updateView();
+            // this.updateCalendars();
+            // this.hide();
+            // this.element.trigger('cancel.daterangepicker', this);
+
+            this.updateInputText()
+            this.element.val('')
+            this.hide()
+            this.element.trigger('cancel.daterangepicker', this)
+
+
+
         },
 
         updateMonthYear: function (e) {
