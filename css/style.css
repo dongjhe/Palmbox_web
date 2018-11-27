@@ -380,8 +380,7 @@ template {
 }
 
 html {
-  font-family: '微軟正黑體', 'Century Gothic', Arial, Helvetica,
- 'Microsoft JhengHei', sans-serif, 'Apple LiGothic Medium', 'PMingLiU';
+  font-family: '微軟正黑體', 'Century Gothic', Arial, Helvetica, 'Microsoft JhengHei', sans-serif, 'Apple LiGothic Medium', 'PMingLiU';
   height: 100%;
   line-height: 1.5;
 }
@@ -3147,6 +3146,7 @@ main .deliverybox .producontainer .productoggle li a:hover, main .deliverybox .p
   transition: all 450ms ease;
   color: #9FCC42;
   border: 2px solid #9FCC42;
+  outline: none;
 }
 
 main .deliverybox .producontainer .productab .tab, main .courier_access .producontainer .productab .tab, main .orderinfo .producontainer .productab .tab, main .community_access .producontainer .productab .tab, main .eticket_access .producontainer .productab .tab, main .warehouse .producontainer .productab .tab, main .productbox .producontainer .productab .tab, main .cabinetorderbox .producontainer .productab .tab, main .mapquerybox .producontainer .productab .tab, main .newsbox .producontainer .productab .tab, main .commonbox .producontainer .productab .tab {
