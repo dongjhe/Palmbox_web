@@ -2848,7 +2848,7 @@ main {
               @include padding_set(0,20px,0,20px);
             }
             .phonetext,.donate_text,.triple_text{
-              display:block;
+              display: none;
             }
           }
           .money{

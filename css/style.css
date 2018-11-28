@@ -4611,7 +4611,7 @@ main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .ord
 }
 
 main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .invoice_method > .invoice_block .phonetext, main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .invoice_method > .invoice_block .donate_text, main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .invoice_method > .invoice_block .triple_text {
-  display: block;
+  display: none;
 }
 
 main .cabinetorderbox > form > .cabinetorderinfo .ordercontainer .selection .orderselect .money {
