@@ -294,11 +294,7 @@ $(window).on('load', function() {
     $('.vehicle_toggle a').on('click',function () {
       let a_index = $(this).index()
       $(this).removeClass('active').siblings('a').addClass('active')
-      if (a_index) {
-        $(this).parents('.orderselect').find('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
-      } else {
-        $(this).parents('.orderselect').find('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
-      }
+      $(this).parent('.vehicle_toggle').siblings('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
     })
 
     // 我的常用櫃點下拉區塊
@@ -394,7 +390,7 @@ $(window).on('load', function() {
         
         // 控制跑馬燈移動的處理函式
         function showad() {
-          let _now = $marqueeUl.position().top / _height;
+          let _now = $marqueeUl.position().top / _height
           
           _now = (_now + 1) % $marqueeli.length;
           // $marqueeUl 移動
