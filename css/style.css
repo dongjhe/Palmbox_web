@@ -6650,6 +6650,10 @@ footer p {
   width: 100%;
 }
 
+.popu_modify .modal-body .order .orderbox tr.tr_pd, .popu_courier .modal-body .order .orderbox tr.tr_pd, .popu_palmbox_service .modal-body .order .orderbox tr.tr_pd, .popu_order .modal-body .order .orderbox tr.tr_pd, .popu_table_tr .modal-body .order .orderbox tr.tr_pd, .logisticscompany .modal-body .order .orderbox tr.tr_pd {
+  display: table-row;
+}
+
 @media (max-width: 768px) {
   .popu_modify .modal-body .order .orderbox tr.tr_pd, .popu_courier .modal-body .order .orderbox tr.tr_pd, .popu_palmbox_service .modal-body .order .orderbox tr.tr_pd, .popu_order .modal-body .order .orderbox tr.tr_pd, .popu_table_tr .modal-body .order .orderbox tr.tr_pd, .logisticscompany .modal-body .order .orderbox tr.tr_pd {
     display: none;

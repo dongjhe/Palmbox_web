@@ -4173,6 +4173,7 @@ footer {
           width: 100%;
         }
         tr.tr_pd{
+          display: table-row;
           @media (max-width:768px) {
             display: none;
           }
