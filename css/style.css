@@ -6650,6 +6650,12 @@ footer p {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .popu_modify .modal-body .order .orderbox tr.tr_pd, .popu_courier .modal-body .order .orderbox tr.tr_pd, .popu_palmbox_service .modal-body .order .orderbox tr.tr_pd, .popu_order .modal-body .order .orderbox tr.tr_pd, .popu_table_tr .modal-body .order .orderbox tr.tr_pd, .logisticscompany .modal-body .order .orderbox tr.tr_pd {
+    display: none;
+  }
+}
+
 .popu_modify .modal-body .order .orderbox td, .popu_courier .modal-body .order .orderbox td, .popu_palmbox_service .modal-body .order .orderbox td, .popu_order .modal-body .order .orderbox td, .popu_table_tr .modal-body .order .orderbox td, .logisticscompany .modal-body .order .orderbox td {
   font-size: 14px;
   line-height: 25.2px;
