@@ -2606,17 +2606,13 @@ main .deliverybox .orderinfocontainer .containerbox .process ul li, main .courie
   font-size: 12px;
   line-height: 21.6px;
   position: relative;
-  width: 20%;
+  width: 25%;
   text-align: center;
 }
 
 @media (max-width: 480px) {
   main .deliverybox .orderinfocontainer .containerbox .process ul li, main .courier_access .orderinfocontainer .containerbox .process ul li, main .orderinfo .orderinfocontainer .containerbox .process ul li, main .community_access .orderinfocontainer .containerbox .process ul li, main .eticket_access .orderinfocontainer .containerbox .process ul li, main .warehouse .orderinfocontainer .containerbox .process ul li, main .productbox .orderinfocontainer .containerbox .process ul li, main .cabinetorderbox .orderinfocontainer .containerbox .process ul li, main .mapquerybox .orderinfocontainer .containerbox .process ul li, main .newsbox .orderinfocontainer .containerbox .process ul li, main .commonbox .orderinfocontainer .containerbox .process ul li {
-    width: 25%;
     letter-spacing: -0.8px;
-  }
-  main .deliverybox .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .courier_access .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .orderinfo .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .community_access .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .eticket_access .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .warehouse .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .productbox .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .cabinetorderbox .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .mapquerybox .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .newsbox .orderinfocontainer .containerbox .process ul li:nth-of-type(3), main .commonbox .orderinfocontainer .containerbox .process ul li:nth-of-type(3) {
-    display: none;
   }
 }
 
