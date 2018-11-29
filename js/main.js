@@ -280,18 +280,34 @@ $(window).on('load', function() {
 
 
     // 發票資訊
-    $('.invoice_radio label').on('click',function(){
+    // $('.invoice_radio label').on('click',function(){
+    //   let label_name = $(this).html()
+    //   if (label_name == '個人電子發票') {
+    //     $(this).parents('.orderselect').find('.member_vehicle').show().siblings('div').hide()
+    //   } else if(label_name == '捐贈發票') {
+    //     $(this).parents('.orderselect').find('.donate_text').show().siblings('div').hide()
+    //   }else{
+    //     $(this).parents('.orderselect').find('.triple_text').show().siblings('div').hide()
+    //   }
+    // })
+    $(document).on('click', '.invoice_radio label', function () {
       let label_name = $(this).html()
       if (label_name == '個人電子發票') {
         $(this).parents('.orderselect').find('.member_vehicle').show().siblings('div').hide()
-      } else if(label_name == '捐贈發票') {
+      } else if (label_name == '捐贈發票') {
         $(this).parents('.orderselect').find('.donate_text').show().siblings('div').hide()
-      }else{
+      } else {
         $(this).parents('.orderselect').find('.triple_text').show().siblings('div').hide()
       }
     })
     // 個人電子發票切換
-    $('.vehicle_toggle a').on('click',function () {
+    // $('.vehicle_toggle a').on('click',function () {
+    //   let a_index = $(this).index()
+    //   $(this).removeClass('active').siblings('a').addClass('active')
+    //   $(this).parent('.vehicle_toggle').siblings('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
+    // })
+
+    $(document).on('click', '.vehicle_toggle a', function () {
       let a_index = $(this).index()
       $(this).removeClass('active').siblings('a').addClass('active')
       $(this).parent('.vehicle_toggle').siblings('.vehicle_text').find('div').eq(a_index).fadeIn(0).siblings().fadeOut(0)
