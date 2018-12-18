@@ -627,11 +627,15 @@ $(window).on('load', function() {
         let TT
         $('.service_down >a').on('mouseenter', function() {
             TT = setTimeout(blackgoshop, 250)
-            $('.drop_down').fadeIn(400)
+            $('.drop_down')
+                .stop(true, true)
+                .fadeIn(400)
         })
         $('.service_down').on('mouseleave', function() {
             clearTimeout(TT)
-            $('.drop_down').fadeOut(400)
+            $('.drop_down')
+                .stop(true, true)
+                .fadeOut(400)
         })
 
         function blackgoshop() {
