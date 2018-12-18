@@ -224,6 +224,36 @@ header {
     > .navi {
       @include padding_set(0, 0, 0, 10%);
       float: right;
+      .service_down{
+        display: inline-block;
+        position: relative;
+        float: left;
+        .drop_down{
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 110px;
+          background-color: $color_white;
+          box-shadow: 0px 2px 2px $footer_color;
+          @include padding_set(5px, 5px, 5px, 5px);
+          ul {
+            li {
+              line-height: 30px;
+            }
+            a {
+              float: none;
+              &::after {
+                display: none;
+              }
+              &:hover {
+                background-color: $color_orange;
+                color: $color_white;
+              }
+            }
+          }
+        }
+      }
     }
     > .user {
       float: right;
@@ -381,6 +411,18 @@ header {
     }
     > .navi {
       @include padding_set(0, 0, 0, 0);
+      .service_down{
+        display: block;
+        position: relative;
+        float: none;
+        .drop_down{
+          display: none;
+          position: static;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
     }
     > .user {
       a {
