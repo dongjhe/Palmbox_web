@@ -470,7 +470,6 @@ main {
     }
 
   }
-
   .palmbox_container{
     display: flex;
     justify-content: space-around;
@@ -659,7 +658,6 @@ main {
       }
     }
   }
-
   .cooperation{
     display: block;
     width: 90%;
@@ -718,18 +716,6 @@ main {
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
   .main_container {
     display: flex;
     align-items: center;
@@ -992,8 +978,7 @@ main {
           }
         }
       }
-      .password,
-      .numbercode {
+      .password,.numbercode {
         small {
           text-align: right;
         }
@@ -1001,8 +986,7 @@ main {
           @include margin_set(10px, 0, 0, 0);
         }
       }
-      .phone,
-      .user_setname {
+      .phone,.user_setname {
         small {
           color: $color_orange;
         }
@@ -1261,7 +1245,7 @@ main {
         }
         .excel_but,.eticket_but{
           display: inline-block;
-          @include margin_set(0,0,0,0)
+          @include margin_set(0,0,0,0);
           @media (max-width: 768px) {
             margin-top: 5%;
             display: none;
@@ -1276,7 +1260,7 @@ main {
               border-radius: 0.2em;
               border: 1px solid $color_green;
             }   
-            @include padding_set(5px,15px,5px,15px)
+            @include padding_set(5px,15px,5px,15px);
             &:hover {
               background-color: $color_green_hover;
             }
@@ -1442,7 +1426,7 @@ main {
           display: table-row;
           
           &:nth-child(2n+1){
-            background-color:rgba($text_color,0.1) 
+            background-color:rgba($text_color,0.1);
           }
 
           &:first-child{
@@ -1547,7 +1531,7 @@ main {
       >table{
         tr{
           &:nth-child(3n+1){
-            background-color:rgba($text_color,0.1) 
+            background-color:rgba($text_color,0.1);
           }
         }
         th,td{
@@ -1590,7 +1574,7 @@ main {
             }
           }   
           @media (max-width:480px) {
-            @include font_size(12px)
+            @include font_size(12px);
           }          
         }
       }
@@ -1814,11 +1798,11 @@ main {
       }      
       a{
         display: inline-block;
-        @include padding_set(5px,5px,5px,5px)
-        @include margin_set(0,5px,0,5px)
+        @include padding_set(5px,5px,5px,5px);
+        @include margin_set(0,5px,0,5px);
         color:$text_color;
         @media (max-width:488px) {
-          @include padding_set(0,0,0,0)
+          @include padding_set(0,0,0,0);
           @include font_size(12px);       
         }
         &:hover,&.active{
@@ -1953,7 +1937,7 @@ main {
             }
             span{
               display: block;
-              @include font_size(12px)
+              @include font_size(12px);
             }
           }
         }
@@ -3830,6 +3814,50 @@ main {
       }
     }
   }
+  .senteachbox{
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    img{
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+    .topbanner{
+      .pc{
+        display: block;
+      }
+      .mo{
+        display: none;
+      }
+    }
+    .bottomimg_pc{
+      display: block;
+    }
+    .bottomimg_mo{
+      display: none;
+    }
+
+    @media (max-width:768px) {
+      .topbanner{
+        .pc{
+          display: none;
+        }
+        .mo{
+          display: block;
+        }
+      }
+      .bottomimg_pc{
+        display: none;
+      }
+      .bottomimg_mo{
+        display: block;
+      }
+    }
+
+
+
+  }
 }
 
 footer {
@@ -3938,7 +3966,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 
 .popu_modify,.popu_courier,.popu_palmbox_service,.popu_order,.popu_table_tr,.logisticscompany{
   display: none;

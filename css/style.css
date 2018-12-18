@@ -1762,24 +1762,18 @@ main .signinbox .signcenter small a:hover, main .signinbox .membercenter small a
   color: #ff8400;
 }
 
-main .signinbox .signcenter .password small,
-main .signinbox .signcenter .numbercode small, main .signinbox .membercenter .password small,
-main .signinbox .membercenter .numbercode small {
+main .signinbox .signcenter .password small, main .signinbox .signcenter .numbercode small, main .signinbox .membercenter .password small, main .signinbox .membercenter .numbercode small {
   text-align: right;
 }
 
-main .signinbox .signcenter .password #checkpassword,
-main .signinbox .signcenter .numbercode #checkpassword, main .signinbox .membercenter .password #checkpassword,
-main .signinbox .membercenter .numbercode #checkpassword {
+main .signinbox .signcenter .password #checkpassword, main .signinbox .signcenter .numbercode #checkpassword, main .signinbox .membercenter .password #checkpassword, main .signinbox .membercenter .numbercode #checkpassword {
   margin-top: 10px;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
 }
 
-main .signinbox .signcenter .phone small,
-main .signinbox .signcenter .user_setname small, main .signinbox .membercenter .phone small,
-main .signinbox .membercenter .user_setname small {
+main .signinbox .signcenter .phone small, main .signinbox .signcenter .user_setname small, main .signinbox .membercenter .phone small, main .signinbox .membercenter .user_setname small {
   color: #ff8400;
 }
 
@@ -6124,6 +6118,49 @@ main .commonbox .textbox .issuebox .issue a.activea span {
 main .commonbox .textbox .issuebox .issue a.activea span::before {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+main .senteachbox {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+main .senteachbox img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+main .senteachbox .topbanner .pc {
+  display: block;
+}
+
+main .senteachbox .topbanner .mo {
+  display: none;
+}
+
+main .senteachbox .bottomimg_pc {
+  display: block;
+}
+
+main .senteachbox .bottomimg_mo {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  main .senteachbox .topbanner .pc {
+    display: none;
+  }
+  main .senteachbox .topbanner .mo {
+    display: block;
+  }
+  main .senteachbox .bottomimg_pc {
+    display: none;
+  }
+  main .senteachbox .bottomimg_mo {
+    display: block;
+  }
 }
 
 footer {
