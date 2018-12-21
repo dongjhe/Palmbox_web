@@ -6120,45 +6120,45 @@ main .commonbox .textbox .issuebox .issue a.activea span::before {
           transform: rotate(180deg);
 }
 
-main .senteachbox {
+main .senteachbox, main .smartreturnbox {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
 }
 
-main .senteachbox img {
+main .senteachbox img, main .smartreturnbox img {
   width: 100%;
   height: auto;
   vertical-align: top;
 }
 
-main .senteachbox .topbanner .pc {
+main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc {
   display: block;
 }
 
-main .senteachbox .topbanner .mo {
+main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo {
   display: none;
 }
 
-main .senteachbox .bottomimg_pc {
+main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc {
   display: block;
 }
 
-main .senteachbox .bottomimg_mo {
+main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo {
   display: none;
 }
 
 @media (max-width: 768px) {
-  main .senteachbox .topbanner .pc {
+  main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc {
     display: none;
   }
-  main .senteachbox .topbanner .mo {
+  main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo {
     display: block;
   }
-  main .senteachbox .bottomimg_pc {
+  main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc {
     display: none;
   }
-  main .senteachbox .bottomimg_mo {
+  main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo {
     display: block;
   }
 }
