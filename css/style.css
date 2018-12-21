@@ -1325,7 +1325,6 @@ main .cooperation .logobox .page > div {
 
 main .cooperation .logobox .page a {
   display: inline-block;
-  width: 14%;
   border: 1px solid #9e9e9e;
   margin-top: 5px;
   margin-right: 8px;
@@ -6120,45 +6119,45 @@ main .commonbox .textbox .issuebox .issue a.activea span::before {
           transform: rotate(180deg);
 }
 
-main .senteachbox, main .smartreturnbox {
+main .senteachbox, main .smartreturnbox, main .pickupbox {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
 }
 
-main .senteachbox img, main .smartreturnbox img {
+main .senteachbox img, main .smartreturnbox img, main .pickupbox img {
   width: 100%;
   height: auto;
   vertical-align: top;
 }
 
-main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc {
+main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc, main .pickupbox .topbanner .pc {
   display: block;
 }
 
-main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo {
+main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo, main .pickupbox .topbanner .mo {
   display: none;
 }
 
-main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc {
+main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc, main .pickupbox .bottomimg_pc {
   display: block;
 }
 
-main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo {
+main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo, main .pickupbox .bottomimg_mo {
   display: none;
 }
 
 @media (max-width: 768px) {
-  main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc {
+  main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc, main .pickupbox .topbanner .pc {
     display: none;
   }
-  main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo {
+  main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo, main .pickupbox .topbanner .mo {
     display: block;
   }
-  main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc {
+  main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc, main .pickupbox .bottomimg_pc {
     display: none;
   }
-  main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo {
+  main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo, main .pickupbox .bottomimg_mo {
     display: block;
   }
 }

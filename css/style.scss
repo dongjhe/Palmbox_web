@@ -693,7 +693,7 @@ main {
         }
         a{
           display: inline-block;
-          width: 14%;
+          // width: 14%;
           border: 1px solid $box_shadow;
           @include margin_set(5px,8px,5px,8px);
           @include padding_set(8px,8px,8px,8px);
@@ -3814,7 +3814,7 @@ main {
       }
     }
   }
-  .senteachbox,.smartreturnbox{
+  .senteachbox,.smartreturnbox,.pickupbox{
     width: 100%;
     max-width: 1220px;
     margin: 0 auto;
