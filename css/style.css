@@ -1306,6 +1306,7 @@ main .cooperation .logobox .page {
 }
 
 main .cooperation .logobox .page > div {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -1325,6 +1326,7 @@ main .cooperation .logobox .page > div {
 
 main .cooperation .logobox .page a {
   display: inline-block;
+  width: 14%;
   border: 1px solid #9e9e9e;
   margin-top: 5px;
   margin-right: 8px;

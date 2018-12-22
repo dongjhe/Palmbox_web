@@ -683,6 +683,7 @@ main {
         justify-content:flex-start;
         flex-wrap: wrap;
         >div{
+          width: 100%;
           margin: 0 auto;
           text-align: center;
           @media (max-width:980px) {
@@ -693,7 +694,7 @@ main {
         }
         a{
           display: inline-block;
-          // width: 14%;
+          width: 14%;
           border: 1px solid $box_shadow;
           @include margin_set(5px,8px,5px,8px);
           @include padding_set(8px,8px,8px,8px);
