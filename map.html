@@ -19,9 +19,116 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/daterangepicker.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <script type="text/javascript" src="https://maps.golife.ai/GOLiFE_API/GL.aspx" charset="utf-8"></script>
+    <script type="text/javascript">
+        let pMap;			//建立初始化地圖
+        let pFWMarker;		//Marker物件
+        let markerPoint;	//Marker位置
+        let markerTitle;	//Marker標題
+        let markerImg;		//Marker圖片
+        let messageBox;		//訊息視窗
+        let opacity;		//訊息視窗透明度
+        let content;		//訊息視窗內文
+        let imgUrl;			//Marker圖示連結
+        let mapDiv, map;
+        let markers = [];
+
+        let mapGreen = new GOLiFE.GLImage("./images/map_01.png",
+            new GOLiFE.GLSize(40, 40), new GOLiFE.GLPoint(0, 0), new GOLiFE.GLPoint(10, 33));
+        let mapOrange = new GOLiFE.GLImage("./images/map_02.png",
+            new GOLiFE.GLSize(40, 40), new GOLiFE.GLPoint(0, 0), new GOLiFE.GLPoint(10, 33));
+        let mapRed = new GOLiFE.GLImage("./images/map_03.png",
+            new GOLiFE.GLSize(40, 40), new GOLiFE.GLPoint(0, 0), new GOLiFE.GLPoint(10, 33));
+        let mapGray = new GOLiFE.GLImage("./images/map_04.png",
+            new GOLiFE.GLSize(40, 40), new GOLiFE.GLPoint(0, 0), new GOLiFE.GLPoint(10, 33));
+
+        //此處模擬資料的取得
+        let stringP0 = "櫃機編號 : FC0100820<br>櫃機場所名稱 : 美廉社內湖內湖店<br>櫃機地址 : 台北市內湖區內湖路一段285巷65弄28號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP1 = "櫃機編號 : FC0101437<br>櫃機場所名稱 : 德明財經科技大學<br>德明財經科技大學聯合服務中心旁<br>櫃機地址 : 台北市內湖區環山路一段56號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 24小時<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP2 = "櫃機編號 : FC0100789<br>櫃機場所名稱 : 美廉社內湖文湖店<br>櫃機地址 : 台北市內湖區文湖街45號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP3 = "櫃機編號 : FC0100800<br>櫃機場所名稱 : 麗陽洲子街美食廣場<br>櫃機地址 : 台北市內湖區瑞光路517號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP4 = "櫃機編號 : FC0100820<br>櫃機場所名稱 : 美廉社內湖內湖店<br>櫃機地址 : 台北市內湖區內湖路一段285巷65弄28號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP5 = "櫃機編號 : FC0101437<br>櫃機場所名稱 : 德明財經科技大學<br德明財經科技大學聯合服務中心旁<br>櫃機地址 : 台北市內湖區環山路一段56號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 24小時<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP6 = "櫃機編號 : FC0100789<br>櫃機場所名稱 : 美廉社內湖文湖店<br>櫃機地址 : 台北市內湖區文湖街45號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP7 = "櫃機編號 : FC0100800<br>櫃機場所名稱 : 麗陽洲子街美食廣場<br>櫃機地址 : 台北市內湖區瑞光路517號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP8 = "櫃機編號 : FC0100789<br>櫃機場所名稱 : 美廉社內湖文湖店<br>櫃機地址 : 台北市內湖區文湖街45號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+        let stringP9 = "櫃機編號 : FC0100800<br>櫃機場所名稱 : 麗陽洲子街美食廣場<br>櫃機地址 : 台北市內湖區瑞光路517號<br>櫃機狀態 : <sapn style='color:green;'>正常服務</sapn><br>營業時間 : 07:00-23:59<br>櫃機可用大格口 : <sapn style='color:green'>有</sapn><br>櫃機可用中格口 : <sapn style='color:green'>有</sapn><br>櫃機可用小格口 : <sapn style='color:green'>有</sapn><br>更新時間 : 2019-01-21 19:44:03";
+                
+        let markerArray = [
+            { x: 121.423865, y: 25.068048, markerName: "美廉社內湖內湖店", message: stringP0, mapIcon: mapGreen },
+            { x: 121.567304, y: 25.082395, markerName: "德明財經科技大學", message: stringP1, mapIcon: mapGreen },
+            { x: 121.518884, y: 25.055236, markerName: "美廉社內湖文湖店", message: stringP2, mapIcon: mapGreen },
+            { x: 121.568278, y: 25.081290, markerName: "麗陽洲子街美食廣場", message: stringP3, mapIcon: mapGreen },
+            { x: 121.575196, y: 25.078355, markerName: "美廉社內湖內湖店", message: stringP4, mapIcon: mapGreen },
+            { x: 121.575711, y: 25.074011, markerName: "德明財經科技大學", message: stringP5, mapIcon: mapOrange },
+            { x: 121.559343, y: 25.071097, markerName: "美廉社內湖文湖店", message: stringP6, mapIcon: mapRed },
+            { x: 121.545344, y: 25.072097, markerName: "麗陽洲子街美食廣場", message: stringP7, mapIcon: mapGray },
+            { x: 121.531928, y: 25.075021, markerName: "美廉社內湖文湖店", message: stringP8, mapIcon: mapRed },
+            { x: 121.526233, y: 25.078568, markerName: "麗陽洲子街美食廣場", message: stringP9, mapIcon: mapGray },
+        ];
+
+        //地圖初始化
+        function InitWnd() {
+            mapDiv = document.getElementById('OMap');
+            map = new GOLiFE.GLOnlineMap(mapDiv, {
+                scaleControlOptions: {
+                    controlPosition: GOLiFE.GLControlPosition.BOTTOM_RIGHT,
+                },
+            });
+            map.setZoom(1);
+            markers = createMarkers(); //建立隨機散布的FWMarker陣列
+            setMapCenter(1);
+        }
+
+        //用既有的資料先建立 Markers
+        function createMarkers() {
+            for (let i = 0; i <= markerArray.length - 1; i++) {
+                markerPoint = new GOLiFE.GLPoint(markerArray[i].x, markerArray[i].y);//標記點坐標
+                map.setCenter(markerPoint);
+
+                pFWMarker = new GOLiFE.GLMarker(map, markerPoint, markerArray[i].markerName, markerArray[i].mapIcon);
+                pFWMarker.i = i;
+
+                markers.push(pFWMarker);
+                GOLiFE.GLEvent.addListener(pFWMarker, "click", openInfoWindow);//滑鼠監聽事件
+                GOLiFE.GLEvent.addListener(pFWMarker, "closeclick", closeInfoWindow);
+                //加入Marker(地圖物件,Marker坐標,Marker標題,Marker圖案)
+            }
+        }
+
+        function setMapCenter(markerIndex) {
+            map.setCenter(new GOLiFE.GLPoint(markerArray[markerIndex].x, markerArray[markerIndex].y));
+        }
+
+        //用同一個訊息視窗, 並於必要時設定其內容及位置, 或者關閉
+        function openInfoWindow(evt) {
+            let markerIndex = evt.target.i;
+            let InfoWindowOptions = {
+                maxWidth: 4000, //訊息視窗的最大寬度
+                pixelOffset: new GOLiFE.GLSize(5, -30), //InfoWindow起始位置的偏移量, 使用FWSize設定, 向右X為正, 向上Y為負  
+                zIndex: 99 //視窗堆疊順序
+            };
+            markerPoint = new GOLiFE.GLPoint(markerArray[markerIndex].x, markerArray[markerIndex].y);
+            let strMessage = markerArray[markerIndex].message;
+            if (messageBox == null) {
+                messageBox = new GOLiFE.GLInfoWindow(strMessage, markerPoint, InfoWindowOptions);//訊息視窗出現位
+            }
+            else {
+                messageBox.setContent(strMessage);
+                messageBox.setPosition(new GOLiFE.GLPoint(markerArray[markerIndex].x, markerArray[markerIndex].y));
+            }
+            messageBox.open(map);
+            setMapCenter(markerIndex);
+        }
+        function closeInfoWindow() {
+            messageBox.close();
+        }
+
+    </script>
 </head>
 
-<body>
+<body onload="InitWnd();">
     <div class="Wapper">
         <div id="gotop" class=""><span></span></div>
         <div id="mess">
@@ -191,7 +298,7 @@
                         </div>
                     </div>
                     <div class="mapcontent">
-                        <div class="map">
+                        <div id="OMap" class="map" style="width:100%;height:100%;" >
 
                         </div>
                     </div>
@@ -767,8 +874,8 @@
         });
         // 退貨全選和不全選
         function check_all(obj, cName) {
-                var checkboxs = document.getElementsByName(cName);
-                for (var i = 0; i < checkboxs.length; i++) {
+                let checkboxs = document.getElementsByName(cName);
+                for (let i = 0; i < checkboxs.length; i++) {
                     checkboxs[i].checked = obj.checked;
                 }
             }
