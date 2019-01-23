@@ -6121,45 +6121,45 @@ main .commonbox .textbox .issuebox .issue a.activea span::before {
           transform: rotate(180deg);
 }
 
-main .senteachbox, main .smartreturnbox, main .pickupbox {
+main .senteachbox, main .smartreturnbox, main .pickupbox, main .lifebox {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
 }
 
-main .senteachbox img, main .smartreturnbox img, main .pickupbox img {
+main .senteachbox img, main .smartreturnbox img, main .pickupbox img, main .lifebox img {
   width: 100%;
   height: auto;
   vertical-align: top;
 }
 
-main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc, main .pickupbox .topbanner .pc {
+main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc, main .pickupbox .topbanner .pc, main .lifebox .topbanner .pc {
   display: block;
 }
 
-main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo, main .pickupbox .topbanner .mo {
+main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo, main .pickupbox .topbanner .mo, main .lifebox .topbanner .mo {
   display: none;
 }
 
-main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc, main .pickupbox .bottomimg_pc {
+main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc, main .pickupbox .bottomimg_pc, main .lifebox .bottomimg_pc {
   display: block;
 }
 
-main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo, main .pickupbox .bottomimg_mo {
+main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo, main .pickupbox .bottomimg_mo, main .lifebox .bottomimg_mo {
   display: none;
 }
 
 @media (max-width: 768px) {
-  main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc, main .pickupbox .topbanner .pc {
+  main .senteachbox .topbanner .pc, main .smartreturnbox .topbanner .pc, main .pickupbox .topbanner .pc, main .lifebox .topbanner .pc {
     display: none;
   }
-  main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo, main .pickupbox .topbanner .mo {
+  main .senteachbox .topbanner .mo, main .smartreturnbox .topbanner .mo, main .pickupbox .topbanner .mo, main .lifebox .topbanner .mo {
     display: block;
   }
-  main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc, main .pickupbox .bottomimg_pc {
+  main .senteachbox .bottomimg_pc, main .smartreturnbox .bottomimg_pc, main .pickupbox .bottomimg_pc, main .lifebox .bottomimg_pc {
     display: none;
   }
-  main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo, main .pickupbox .bottomimg_mo {
+  main .senteachbox .bottomimg_mo, main .smartreturnbox .bottomimg_mo, main .pickupbox .bottomimg_mo, main .lifebox .bottomimg_mo {
     display: block;
   }
 }
