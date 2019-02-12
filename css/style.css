@@ -6255,6 +6255,10 @@ footer .itembox > .item ul li a:hover {
   color: #fff;
 }
 
+footer .itembox > .item span {
+  color: #fff;
+}
+
 footer .itembox > .item:nth-child(3) li {
   width: 100%;
 }
